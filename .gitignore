@@ -1,0 +1,23 @@
+.htaccess
+.DS_Store
+.sass-cache/
+robots.txt
+node_modules/
+
+# Wordpress specific
+
+styleguide/wordpress/
+styleguide/wordpress/*
+wordpress/
+wordpress/*
+wp-config.php
+uploads/
+upgrade/*
+backup-db/*
+advanced-cache.php
+wp-cache-config.php
+w3tc-config/*
+cache/*
+supercache/*
+ewww/
+ewww/*
