@@ -1,0 +1,71 @@
+.two-column {
+	margin: 60px -25% 60px -20%;
+	@include flexalignstart;
+	@include flex-direction(column);
+	@include media($bp-small) {
+		margin: 40px -5%;
+	}
+	@include media($bp-med) {
+		margin: 40px -5%;
+	}
+	@include media($mobile-landscape) {
+		margin: 40px -5%;
+	}
+	@include media($bp-large) {
+		@include flex-direction(row);
+	}
+}
+
+.two-column__half {
+	@include media($bp-large) {
+		@include flex(0 0 50%);
+	}
+	@include media($bp-small) {
+	}
+}
+
+.services-testimonial {
+	padding: 0 70px 25px 0;
+	@include media($bp-small) {
+		padding: 25px 15px 50px;
+	}
+	@include media($bp-med) {
+		padding: 25px;
+	}
+	@include media($mobile-landscape) {
+		padding: 0 15px 25px;
+	}
+	@include media($bp-large) {
+		@include flex(0 0 60%);
+	}
+}
+
+.services-cta {
+	background: $yellow;
+	padding: 40px;
+	@include media($bp-small) {
+		padding: 30px;
+	}
+	@include media($bp-large) {
+		@include flex(0 0 40%);
+	}
+	@include media($mobile-landscape) {
+		padding: 30px;
+	}
+}
+
+// Specific Styles
+
+// General Contracting
+.general-cont {
+	.two-column__half:first-child blockquote {
+		padding-right: 40px;
+	}
+	.two-column__half:last-child {
+		padding-left: 40px;
+	}
+	blockquote {
+		font-size: modular-scale(1);
+		line-height: modular-scale(1);
+	}
+}

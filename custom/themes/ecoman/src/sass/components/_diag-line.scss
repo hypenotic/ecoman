@@ -1,0 +1,18 @@
+.diagonal-svg__wrapper {
+	position: relative;
+	.diagonal-svg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		#the-line {
+			stroke: rgba(252, 216, 56, 1);
+			stroke-width: 350;
+			@include media($bp-small) {
+				stroke-width: 200;
+			}
+		}
+	}
+}
+
+

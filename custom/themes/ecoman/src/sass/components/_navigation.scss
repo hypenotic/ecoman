@@ -1,0 +1,752 @@
+.site-width {
+  img#home-logo {
+    max-height: 170px;
+    width: auto;
+    padding-top: 25px;
+    @include media($bp-small) {
+      // display: none;
+      display: block;
+      max-height: 140px;
+      position: absolute;
+      top: 0;
+      left: 15px;
+    }
+    @include media($bp-xsmall) {
+      // display: none;
+      display: block;
+      max-height: 130px;
+    }
+    @include media($bp-xxlarge) {
+      max-height: 200px; 
+      width: auto;
+    }
+    @include media($mobile-landscape) {
+      display: none;
+    }
+  }
+  img#default-logo {
+    max-height: 170px;
+    width: auto;
+    padding-top: 25px;
+    transition: all 0.5s;
+    opacity: 1;
+    @include media($bp-small) {
+      display: none;
+    }
+    @include media($mobile-landscape) {
+      display: none;
+    }
+    &.smaller {
+      max-height:75px;
+      opacity: 0;
+    }
+  }
+}
+
+
+/* when navigation is shown, don’t allow scrolling of content */
+body.no_scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right */
+@-moz-document url-prefix() {
+  body.no_scroll {
+    /*margin-right: 23px;*/
+  }
+
+  body.no_scroll .expanded {
+    /*padding-right: 7px;*/
+    // background: rgba(0, 0, 0,.98); /* because FF no blur, reduce bg transparency */
+  }
+}
+
+
+
+/* === TOP MENU LAYOUT === */
+
+nav {
+  color: $yellow;
+  background-color: rgba(0,0,0,0);
+  font-family: $main-headings;
+  font-size: modular-scale(2);
+  letter-spacing: 3px;
+  position: absolute;
+  box-shadow: 0px 0px 7px rgba(0,0,0, 0.0);
+  top: 0;
+  width: 100%;
+  height: 170px; /* smaller height because font is smaller */
+  // padding-top: 25px;
+  right: 0;
+  z-index: 900;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
+  -moz-transition: -moz-transform .4s, height .3s, background .4s;
+  transition: transform .4s, height .3s, background .4s;
+  -webkit-animation: firstFadeInAndDrop .5s;
+  -moz-animation: firstFadeInAndDrop .5s;
+  animation: firstFadeInAndDrop .5s;
+  &.logo-appear {
+    height: 80px;
+    @include media($mobile-landscape) {
+      height: 60px;
+    }
+  }
+  @include media($bp-small) {
+    height: 68px;
+    background-color: $black;
+  }
+  @include media($bp-xxlarge) {
+    height: 270px;
+  }
+  @include media($mobile-landscape) {
+    height: 60px;
+    background-color: $black;
+  }
+}
+
+nav.home-header {
+  @include media($bp-small) {
+    height: 150px;
+    background-color: transparent;
+  }
+}
+
+/* on intial load fade in the menu */
+@-webkit-keyframes firstFadeInAndDrop {
+  0%   {-webkit-transform: translate(0,-54px);}
+  100% {-webkit-transform: translate(0,0);}
+}
+
+@-moz-keyframes firstFadeInAndDrop {
+  0%   {-moz-transform: translate(0,-54px);}
+  100% {-moz-transform: translate(0,0);}
+}
+
+@keyframes firstFadeInAndDrop {
+  0%   {transform: translate(0,-54px);}
+  100% {transform: translate(0,0);}
+}
+
+/* on navigation hover add slight white bg */
+nav.default-home-header:hover {
+  // background: rgba(0,0,0,0);
+}
+
+nav.default-home-header.logo-appear.detached {
+  @include media($bp-small) {
+    height: 70px;
+  }
+}
+
+nav.home-header:hover {
+  // background: rgba(0,0,0,1.0);
+}
+
+nav.home-header.expanded:hover {
+  background-color: rgba(252, 216, 56, 1);
+}
+
+/* limits width of menu to site width */
+.site-width {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 9%;
+  @include media($bp-small) {
+    padding: 10px 20px 0;
+  }
+}
+
+.site-width.default-width {
+  padding: 0 10%;
+}
+
+/* name of site in main menu (not user selectable) */
+.site-width>a {
+  font-weight: bold;
+  color: $yellow;
+  line-height: 1.9em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  @include media($bp-small) {
+    font-size: modular-scale(1); 
+    line-height: modular-scale(1); 
+  }
+  @include media($mobile-landscape) {
+    font-size: modular-scale(1); 
+    line-height: modular-scale(1); 
+  }
+}
+
+#default-logo-text {
+  display: none;
+  transition: all 0.5s;
+  font-family: $main-headings;
+  font-weight: 800;
+  @include media($bp-small) {
+    display: block;
+    font-size: modular-scale(1); 
+    line-height: modular-scale(1);
+    margin: 0;
+    margin-top: 20px;
+  }
+  @include media($mobile-landscape) {
+    display: inline-block;
+    font-size: modular-scale(1); 
+    line-height: modular-scale(1);
+    margin: 0;
+    margin-top: 20px;
+  }
+  &.logo-appear {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    max-width: 50%;
+  }
+}
+
+.home-header #default-logo-text {
+  @include media($bp-small) {
+    // margin: 0;
+    // margin-top: 12px;
+    display: none;
+  }
+}
+
+/* when hidden it goes up */
+nav.invisible {
+  -webkit-transform: translate(0,-64px);
+  -moz-transform: translate(0,-64px);
+  -o-transform: translate(0,-64px);
+  transform: translate(0,-64px);
+  -webkit-transition: -webkit-transform .2s;
+  -moz-transition: -moz-transform .2s;
+  -o-transition: -o-transform .2s;
+  transition: transform .2s;
+  opacity: 0;
+}
+
+/* when shown & detached position is fixed */
+nav.detached {
+  position: fixed;
+  background: rgba(0, 0, 0,0.9);
+  -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
+  -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
+  -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
+  transition: transform .3s, height .3s, background .4s, opacity .3s;
+}
+
+
+
+/* === MENU NAVIGATION === */
+/* ======================= */
+
+/* increases menu width & height */
+nav.expanded {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  cursor: default;
+  background: rgba(252, 216, 56, 0.95);
+  overflow-y: scroll;
+  .site-width>a {
+    color: $black;
+  }
+  .default-width #default-logo-text,
+  .home-width #default-logo-text {
+    color: $black;
+  }
+  
+}
+
+nav.default-home-header.logo-appear.detached.expanded {
+  @include media($bp-small) {
+    background: rgba(252, 216, 56, 0.95);
+    height: 100%;
+  }
+}
+
+/* increases menu width & height */
+nav.expanded {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  cursor: default;
+  background: rgba(252, 216, 56, 1);
+  overflow-y: scroll;
+  .site-width>a {
+    color: $black;
+  }
+  img#default-logo,
+  img#home-logo {
+    display: none;
+  }
+}
+
+.home-header #navigation ul {
+  margin-top: -20px;
+  li {
+    padding: 10px 15% 2px;
+  }
+}
+
+/* positions navigation content */
+#navigation {
+  -webkit-transform: translate(0,-700px);
+  -moz-transform: translate(0,-700px);
+  -o-transform: translate(0,-700px);
+  transform: translate(0,-700px);
+  opacity: 0;
+  // padding-top: 1em;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform .15s, opacity .7s;
+  -moz-transition: -moz-transform .15s, opacity .7s;
+  -o-transition: -o-transform .15s, opacity .7s;
+  transition: transform .15s, opacity .7s;
+  @include media($bp-small) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+nav.logo-appear #navigation ul#menu-main-menu {
+  margin-top: -70px;
+  @include media($bp-small) {
+    margin-top: 0;
+  }
+  @include media($mobile-landscape) {
+    margin-top: 0;
+  }
+}
+
+nav.default-home-header.logo-appear-top.expanded #navigation ul {
+  margin-top: -50px;
+  @include media($bp-small) {
+    margin-top: 20px;
+  }
+  @include media($mobile-landscape) {
+    margin-top: 0px;
+  }
+}
+
+nav.home-header.expanded #navigation ul,
+nav.default-home-header.expanded #navigation ul {
+  @include media($bp-small) {
+    margin-top: 20px;
+  }
+}
+
+#navigation ul {
+  text-transform: uppercase;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  @include media($bp-med) {
+    padding-top: 200px;
+  }
+  @include media($bp-large) {
+    padding-top: 10%;
+  }
+  @include media($bp-xlarge) {
+    padding-top: 8%;
+  }
+  @include media($bp-xxlarge) {
+    padding-top: 5%;
+  }
+  a {
+    color: $black;
+    width: 100%;
+  }
+  li {
+    padding: 2px 15%;
+    padding-top: 10px;
+    font-size: modular-scale(4,0.8rem);
+    line-height: modular-scale(4,0.8rem);
+    font-weight: 400;
+    font-family: $main-headings;
+    z-index: 390;
+    &:hover{
+      background-color: $black;
+      color: $yellow;
+      cursor: pointer;
+      a {
+        color: $yellow;
+        width: 100%;
+      }
+    }
+    @include media($bp-small) {
+      font-size: modular-scale(2,1rem);
+      line-height: modular-scale(2,1rem);
+      padding-bottom: 15px;
+    }
+    @include media($mobile-landscape) {
+      font-size: modular-scale(0,1rem);
+      line-height: modular-scale(0,1rem);
+    }
+    @include media($bp-xlarge) {
+      font-size: modular-scale(4,1.2rem);
+      line-height: modular-scale(4, 1.2rem);
+      z-index: 390;
+    }
+    @include media($bp-xxlarge) {
+      font-size: modular-scale(5, 1.3rem);
+      line-height: modular-scale(5, 1.3rem);
+      z-index: 390;
+    }
+    ul {
+      li {
+        font-size: modular-scale(2,1rem);
+        line-height: modular-scale(2,1rem);
+        padding-left: 20px;
+        font-weight: 300;
+        font-family: $lite-headings;
+        span {
+          // padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+#menu-main-menu,
+.menu-item.menu-item-type-post_type.menu-item-object-page {
+  z-index: 390;
+}
+
+/* shows navigation */
+nav.expanded #navigation {
+  -webkit-transform: translate(0,0); /* hardware acceleration */
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+/* === MENU ICONS === */
+/* ================== */
+
+/* adds padding to icons */
+.icon {
+  padding: 2% 3%;
+  padding-top: 40px; 
+  margin: -2% -3%; /* center icon in vertical middle of top menu */
+  cursor: pointer;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-size: modular-scale(0,1rem);
+  @include media($bp-small) {
+    padding: 15px 0 0;
+  }
+}
+
+#default-menu-icon {
+  position: relative;
+  z-index: 1000 !important;
+  @include media($bp-small) {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+  &.logo-appear {
+    padding: 0;
+    float: right;
+    margin: 0;
+    margin-top: -40px;
+    @include media($bp-small) {
+      position: absolute;
+      top: 30px;
+      right: 25px;
+      margin: 0;
+    }
+    @include media($bp-xxlarge) {
+      position: relative;
+      // top: 10px;
+      // right: 55px;
+      z-index: 1000 !important;
+    }
+    @include media($mobile-landscape) {
+      position: absolute;
+      top: 23px;
+      right: 25px;
+      margin: 0;
+    }
+  }
+}
+
+.home-header #default-menu-icon{
+  @include media($bp-small) {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+  }
+}
+
+/* hides extra text of icon (accessibility) */
+.icon span {
+  // display: none;
+}
+
+/* on focus, don’t show outline */
+.icon:focus {
+  outline: none;
+}
+
+/* icon colour */
+.icon:before, .icon:active:before {
+  color: $yellow;
+}
+
+/* changes colour on hover or keyboard focus */
+.icon:hover:before, .icon:focus:before {
+  color: #555;
+}
+
+/* changes icon to an “X” */
+.expanded .icon:before {
+  content: 'x';
+  font-size: 1.4em;
+  line-height: 1.4em;
+  padding-right: .15em;
+  @include media($bp-small) {
+    position: relative;
+    top: -15px;
+    right: -20px;
+  }
+}
+
+
+
+/* === CONTENT BLURRING === */
+/* ======================== */
+
+/* adds transition to the content */
+#container {
+  -webkit-transition: -webkit-transform .2s, filter .2s;
+  -moz-transition: -moz-transform .2s, filter .2s;
+  -o-transition: -o-transform .2s, filter .2s;
+  transition: transform .2s, filter .2s;
+}
+
+/* blurring content */
+.blurred {
+  -webkit-transform: scale(.99);
+  -moz-transform: scale(.99);
+  -o-transform: scale(.99);
+  transform: scale(.99);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition: -webkit-transform .5s, -webkit-filter .5s;
+  -moz-transition: -moz-transform .5s, -moz-filter .5s;
+  -o-transition: -o-transform .5s, -o-filter .5s;
+  transition: transform .5s, filter .5s;
+}
+
+
+// =======================================
+
+span.menu.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  @include media($bp-small) {
+    padding-top: 28px;
+    padding-right: 10px;
+  }
+  @include media($mobile-landscape) {
+    padding-top: 30px;
+  }
+}
+
+.home-header span.menu.icon {
+  @include media($bp-small) {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  @include media($bp-xsmall) {
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+}
+
+#nav-menu-text {
+  font-family: $main-headings;
+  // font-weight: 300;
+  text-transform: uppercase;
+  font-size: modular-scale(0, 1.2rem);
+  // margin-top: 5px;
+  // margin-top: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 3px;
+  @include media($bp-small) {
+    display: none;
+  }
+}
+
+.home-header #nav-menu-text {
+  @include media($bp-small) {
+    // display: none;
+    display: initial;
+  }
+  @include media($bp-xsmall) {
+    // display: none;
+    display: none;
+  }
+}
+
+
+// =========== General button styles & variables ==================
+#menu-toggle {
+  display:inline-block;
+  margin: 0;
+  border:none;
+  background:none;
+  
+  span{
+    display:block;
+  }
+}
+
+$color : $yellow;
+$transition: .3s;// increase this to see the transformations happen in slow motion
+
+/* ====================== lines button =======================*/
+
+$button-size : 1.5rem; 
+//common to all three-liners
+.lines-button {
+  // padding: $button-size/2 $button-size/4;
+  padding: 0;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $button-size/7;
+/* */
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transition: 0;
+  }
+}
+//common to all three-liners
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: $button-size/8;
+  background: $color;
+  border-radius: $button-size/16; 
+  transition: $transition;
+}
+//common to all three-liners
+.lines {
+  @include line;
+  position: relative;
+  // left: 30px; 
+
+  &:before, &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    -webkit-transform-origin: $button-size/14 center;
+            transform-origin: $button-size/14 center;
+  }
+  &:before { 
+    top: $button-size/4; 
+  }
+  &:after { 
+    top: -$button-size/4; 
+  }
+}
+
+//common to all three-liners
+.lines-button:hover {
+  .lines {
+    &:before { 
+      top: $button-size/3.5; 
+    }
+    &:after { 
+      top: -$button-size/3.5; 
+    }
+  }
+}
+.lines-button.close {
+  -webkit-transform: scale3d(.8,.8,.8);
+          transform: scale3d(.8,.8,.8);
+}
+
+//three-lines to x
+.lines-button.x.close{
+  .lines {
+    background: transparent;
+    &:before, &:after{
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      top: 25px; // default = 0
+      width: 5rem; // change to $button-size if you want it the same size
+      background: $white;
+    }
+    &:before{
+      -webkit-transform: rotate3d(0,0,1,45deg); 
+              transform: rotate3d(0,0,1,45deg); 
+    }
+    &:after{
+      -webkit-transform: rotate3d(0,0,1,-45deg); 
+              transform: rotate3d(0,0,1,-45deg); 
+    }
+  }
+}
+
+//three-lines to x method 2
+.lines-button.x2{
+    .lines{
+      transition: background .3s .5s ease;
+
+      &:before, &:after{
+        //set transform origin
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+        transition: top .3s .6s ease, -webkit-transform .3s ease;
+        transition: top .3s .6s ease, transform .3s ease;
+      }
+    }
+}
+
+.lines-button.x2.close{
+  .lines {
+    transition: background .3s 0s ease;
+    background: transparent;
+
+    &:before, &:after{
+      transition: top .3s ease, -webkit-transform .3s .5s ease;//delay the formation of the x till the minus is formed  
+      transition: top .3s ease, transform .3s .5s ease;//delay the formation of the x till the minus is formed  
+      top:0;
+      width: $button-size;
+    }
+    &:before{
+      -webkit-transform: rotate3d(0,0,1,45deg); 
+              transform: rotate3d(0,0,1,45deg); 
+    }
+    &:after{
+      -webkit-transform: rotate3d(0,0,1,-45deg); 
+              transform: rotate3d(0,0,1,-45deg); 
+    }
+  }
+}

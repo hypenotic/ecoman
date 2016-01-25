@@ -1,0 +1,41 @@
+.blog-single-post.wow {
+	@include media($bp-large) {
+		padding-bottom: 50px;
+	}
+	@include media($bp-xlarge) {
+		padding-bottom: 50px;
+	}
+}
+
+.prev-next-links {
+	width: 100%;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	background: $yellow;
+	.blog-nav__arrow {
+		background-color: $yellow;
+		padding: 10px 20px;
+		p {
+			margin-bottom: 0;
+			color: $black;
+		}
+	}
+}
+
+.hint--left,
+.hint--top {
+	color: $white;
+	background: $grey;
+	width: 30px;
+	height: 30px;
+	// padding: 5px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: modular-scale(0, 1.2rem);
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+

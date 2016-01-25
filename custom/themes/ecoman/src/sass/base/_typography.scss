@@ -1,0 +1,1236 @@
+
+
+// TABLE OF CONTENTS
+
+	// GLOBAL
+	// HERO HEADERS
+	// MAIN
+	// SIDEBARS
+	// HOME
+	// ABOUT US
+	// TEAM
+	// SERVICES
+	// BLOG
+	// PROJECTS
+	// SINGLE PROJECTS
+	// CONTACT
+	// FOOTER
+
+// ============================================================
+
+// GLOBAL
+// Modular scale is in relation to 1.5rem = 24px
+body {
+	// color: $d-grey;
+	color: #444;
+	font-family: $main-body-font;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	color: $grey;
+	&:hover {
+		// text-decoration: underline;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $title-font;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	color: $yellow;
+	text-align: center;
+	font-family: $main-headings;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: modular-scale(3, 1rem); //32px
+	line-height: modular-scale(3, 1rem);
+	margin-bottom: 20px;
+	margin-top: 20px;
+	@include media($bp-large) {
+	    font-size: modular-scale(4, 1.2rem); //32px
+	    line-height: modular-scale(4, 1.2rem);
+	    margin: 20px 100px;
+	}
+	@include media($bp-xlarge) {
+	    font-size: modular-scale(5, 1.15rem); //32px
+	    line-height: modular-scale(5, 1rem);
+	    margin-bottom: 20px;
+	    margin-top: 20px;
+	}
+}
+
+.home-hero {
+	h1 {
+		@include media($bp-large) {
+		    font-size: modular-scale(7, 1rem); //32px
+		    line-height: modular-scale(7, 1rem);
+		    margin: 20px 100px;
+		    text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+		}
+	}
+}
+
+h2 {
+	font-family: $title-font;
+	font-style: normal;
+	font-weight: 400;
+	font-size: modular-scale(1); 
+	line-height: modular-scale(1); 
+	color: $white;
+	text-transform: uppercase;
+	@include media($bp-large) {
+	    font-size: modular-scale(3); 
+		line-height: modular-scale(3); 
+	}	
+}
+
+h3,
+.project__testimonial blockquote {
+	font-family: $main-headings;
+	font-size: modular-scale(2); 
+	line-height: modular-scale(2, 1.5rem); 
+}
+
+h3 {
+	font-family: $lite-headings;
+	font-size: modular-scale(2, 1.4rem); 
+	line-height: modular-scale(2, 1.4rem); 
+	@include media($bp-small) {
+	    font-size: modular-scale(2, 1.2rem); 
+	    line-height: modular-scale(2, 1.2rem); 
+	}
+}
+
+h4 {
+	font-family: $main-headings;
+	font-size: modular-scale(1); 
+	line-height: modular-scale(1, 1.7rem); 
+}
+
+h5 {
+}
+
+h6 {
+	font-family: $lite-headings;
+	font-size: modular-scale(0, 0.9rem); 
+	line-height: modular-scale(0, 0.9rem); 
+	margin-top: 20px;
+}
+
+ul,
+ol {
+	font-family: $main-body-font;
+	font-weight: 400;
+	@include media($bp-small) {
+	    font-size: modular-scale(0, 1.1rem);
+	    line-height: modular-scale(1, 1.1rem);
+	}
+	@include media($bp-med) {
+	    font-size: modular-scale(0, 1.5rem);
+	    line-height: modular-scale(1, 1.5rem);
+	}
+	@include media($bp-large) {
+		font-size: modular-scale(0, 1.5rem);
+		line-height: modular-scale(1, 1.7rem);
+	}
+	@include media($mobile-landscape) {
+		font-size: modular-scale(0, 1.3rem);
+		line-height:modular-scale(1, 1.3rem);
+	}
+}
+
+ol {
+	margin: -15px 0 15px;
+	padding-left: 55px;
+	li {
+		padding: 7px 0;
+	}
+}
+
+// hanging quotation shortcode
+span.hanging-q {
+	display: block;
+	margin-left: 10px;
+	&:before {
+	    content: '“';
+	    position: absolute;
+	    margin-left: -0.6em;
+	    // font-size: modular-scale(0, 1.6rem);
+	}
+
+	&:after {
+	    content: '”';
+	    margin-left: -0.2em;
+	}
+}
+
+ul.post-categories {
+	font-family: $main-body-font;
+	padding: 0 0 0 10px;
+	margin: 0;
+	list-style-type: none;
+	li {
+		
+	}
+}
+
+
+blockquote {
+	font-style: italic;
+	font-family: $lite-headings;
+	font-size: modular-scale(3, 1.6rem); 
+	line-height: modular-scale(3, 1.6rem); 
+}
+
+figcaption {
+	font-family: $main-body-font;
+	font-size: modular-scale(0); 
+	line-height: modular-scale(1); 
+}
+
+::selection {
+	background-color: $yellow;
+}
+
+span.yellow-highlight {
+	background-color: $yellow;
+}
+
+span.black-highlight {
+	background-color: $black;
+	padding: 5px 10px;
+}
+
+// HERO HEADERS =========================== 
+
+.home-hero,
+.default-hero {
+	h2 {
+		color: $white;
+		text-align: center;
+		margin: 20px 125px;
+		@include media($bp-large) {
+		    font-size: modular-scale(5); 
+			line-height: modular-scale(5); 
+		}
+	}
+}
+
+.home-hero {
+	h2 {
+		text-align: left;
+	}
+}
+
+.default-hero {
+	h1 {
+		font-size: modular-scale(3, 1.3rem);
+		line-height:modular-scale(3, 1.3rem);
+		margin: 0 10%;
+		padding-bottom: 0;
+		color: $white;
+		text-align: left;
+		@include media($bp-small) {
+			font-size: modular-scale(3, 1.2rem);
+			line-height:modular-scale(3, 1.2rem);
+		}
+		@include media($bp-xsmall) {
+			font-size: modular-scale(2, 1.4rem);
+			line-height:modular-scale(2, 1.4rem);
+		}
+		@include media($bp-med) {
+			font-size: modular-scale(4, 1.3rem);
+			line-height:modular-scale(4, 1.3rem);
+		}
+		@include media($mobile-landscape) {
+			font-size: modular-scale(2, 1.3rem);
+			line-height:modular-scale(2, 1.3rem);
+		}
+		@include media($bp-large) {
+			font-size: modular-scale(5, 1.2rem);
+			line-height:modular-scale(5, 1.2rem);
+		}
+		@include media($bp-xlarge) {
+			font-size: modular-scale(6, 1.2rem);
+			line-height:modular-scale(6, 1.2rem);
+		}
+	}
+	h2,
+	h2 p {
+		font-family: $lite-headings;
+		font-weight: 300;
+		font-size: modular-scale(2, 1rem);
+		line-height:modular-scale(2, 1rem);
+		letter-spacing: 1px;
+		text-align: left;
+		margin: 0 20% 0 10%;
+		@include media($bp-small) {
+			font-size: modular-scale(1, 0.9rem);
+			line-height:modular-scale(1, 0.9rem);
+	    }
+	}
+	h2 p {
+		margin: 0;
+	}
+}
+
+.default-hero.about-header {
+	h1 {
+		@include media($bp-small) {
+			font-size: modular-scale(2, 1rem);
+			line-height:modular-scale(2, 1.2rem);
+		}
+		@include media($mobile-landscape) {
+			font-size: modular-scale(3, 1rem);
+			line-height:modular-scale(3, 1.2rem);
+		}
+	}
+}
+
+.default-hero.blog-hero {
+	h1 {
+		font-size: modular-scale(3, 1.3rem);
+		line-height:modular-scale(3, 1.3rem);
+		margin: 0 10%;
+		padding-bottom: 0;
+		color: $white;
+		text-align: left;
+		@include media($bp-med) {
+			font-size: modular-scale(4, 1.3rem);
+			line-height:modular-scale(4, 1.3rem);
+		}
+		@include media($bp-large) {
+			font-size: modular-scale(6, 1.3rem);
+			line-height:modular-scale(6, 1.3rem);
+		}
+	}
+	h2 {
+		font-family: $lite-headings;
+		p{
+			font-family: $lite-headings;
+		}
+	}
+}
+
+.default-hero.no-banner {
+	color: $black;
+	h1 {
+		color: $black;
+		font-size: modular-scale(4);
+		line-height: modular-scale(4, 1.3rem);
+		font-family: $main-headings;
+	}
+}
+
+.default-hero.not-found {
+	h1 {
+		font-size: modular-scale(4);
+		line-height: modular-scale(4, 1.3rem);
+		font-family: $main-headings;
+		margin-bottom: 15px;
+	}
+	a.error-home {
+		border-bottom: 1px solid rgba(255,255,255,0.7);
+		&:hover {
+			color: $black;
+			background-color: $yellow;
+		}
+	}
+}
+
+// MAIN ============================
+
+.navigation {
+	font-family: $main-headings;
+}
+
+main {
+	p { 
+		font-family: $main-body-font;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 30px;
+		// letter-spacing: 1px;
+		@include media($bp-large) {
+		    font-size: modular-scale(0, 1.5rem);
+		    line-height: modular-scale(1, 1.7rem);
+		}
+	}
+	p.no-space {
+		margin-bottom: 0;
+	}
+}
+
+.main-content,
+.blog-entry {
+	h1, h2, h3, h4, h5, h6 {
+		color: #444;
+		margin-bottom: 10px;
+		margin-top: 50px;
+	}
+	h1 {
+		font-family: $main-headings;
+		font-size: modular-scale(4, 1.4rem);	
+		line-height: modular-scale(4, 1.3rem);
+		font-weight: 600;
+		color: #444;
+	}
+	h2 {
+		font-family: $main-headings;
+		font-size: modular-scale(3, 1.4rem);	
+		line-height: modular-scale(3, 1.3rem);
+		font-weight: 600;
+		color: #444;
+	}
+	h3 {
+		text-transform: uppercase;
+		margin-bottom: 8px;
+		font-family: $main-headings;
+		@include media($mobile-landscape) {
+		    margin-top: 20px;
+		}
+	}
+	h5 {
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+	h6 {
+		font-family: $lite-headings;
+		font-size: modular-scale(0, 0.9rem); 
+		line-height: modular-scale(0, 0.9rem); 
+		margin-top: 20px;
+	}
+	p {
+		margin-bottom: 20px;
+		@include media($bp-small) {
+		    font-size: modular-scale(0, 1.1rem);
+		    line-height: modular-scale(1, 1.1rem);
+		}
+		@include media($bp-med) {
+		    font-size: modular-scale(0, 1.5rem);
+		    line-height: modular-scale(1, 1.5rem);
+		}
+		@include media($mobile-landscape) {
+			font-size: modular-scale(0, 1.3rem);
+			line-height:modular-scale(1, 1.3rem);
+		}
+	}
+}
+
+.blog-entry > p:first-child,
+.blog-entry > blockquote:first-child {
+	&::first-letter {
+	    float: left; 
+        font-size: modular-scale(7); 
+        line-height: modular-scale(6);
+        padding: 7px 25px 0px 0px;
+        // font-family: $main-headings;
+        @include media($bp-small) {
+            font-size: modular-scale(3);
+            line-height: modular-scale(3);
+            padding: 0 10px 0 5px;
+            float: left;
+        }
+        @include media($mobile-landscape) {
+            font-size: modular-scale(3, 1.6rem);
+            line-height: modular-scale(3, 1.6rem);
+            padding: 0 10px 0 5px;
+            float: left;
+        }
+	}
+}
+
+.blog-entry > blockquote:first-child,
+.blog-entry > blockquote:first-child > p:first-child {
+	&::first-letter {
+	    float: left;
+        font-size: modular-scale(7); 
+        line-height: modular-scale(6);
+        padding: 7px 25px 0px 0px;
+        @include media($bp-small) {
+            font-size: modular-scale(3);
+            line-height: modular-scale(3);
+            padding: 0 10px 0 5px;
+            float: left;
+        }
+        @include media($mobile-landscape) {
+            font-size: modular-scale(3, 1.6rem);
+            line-height: modular-scale(3, 1.6rem);
+            padding: 0 10px 0 5px;
+            float: left;
+        }
+	}
+}
+
+.blog-entry.blog-page,
+.main-content.about-page {
+	blockquote {
+		margin: 30px;
+		margin-right: -10%;
+		color: $black;
+		background: $yellow;
+		padding: 30px 25px 25px;
+		border-left: 5px solid rgba(0,0,0,0.8);
+		@include media($bp-small) {
+			padding: 30px 25px 25px;
+			margin: 10px;
+	    }
+		p {
+			padding-left: 30px;
+			font-family: $lite-headings;
+			font-size: modular-scale(3, 1.2rem); 
+			line-height: modular-scale(3, 1.2rem); 
+			@include media($bp-small) {
+				font-size: modular-scale(1, 1.3em); 
+				line-height: modular-scale(1, 1.5rem); 
+		    }
+		    @include media($mobile-landscape) {
+		    	font-size: modular-scale(1, 1.3rem);
+		    	line-height:modular-scale(1, 1.5rem);
+		    }
+			&:last-child {
+				&:after {
+				}
+			}
+		}
+		&:before {
+		    content: '“';
+		    position: absolute;
+		    margin: 10px -0.2em;
+		    font-size: modular-scale(5, 1.8rem);
+		    color: rgba(0,0,0,0.3);
+		    @include media($bp-small) {
+		    	font-size: modular-scale(6);
+		    	margin-top: 15px 0 15px -1em;
+		    }
+		}
+	}
+}
+
+.main-content.about-page {
+	blockquote {
+		// color: $white;
+		background-color: $yellow;
+	}
+}
+
+.main-content,
+.blog-entry {
+    blockquote {
+    	margin: 0;
+    	border-left: 0;
+		@include media($bp-small) {
+			font-size: modular-scale(0, 1.5rem);
+			line-height: modular-scale(1, 1.5rem);
+			p {
+				font-size: modular-scale(0, 1.1rem);
+				line-height: modular-scale(1, 1.1rem);
+			}
+	    }
+    }
+    ul {
+    	margin: -15px 0 15px 0;
+    	li {
+    		padding: 7px 0;
+    	}
+    }
+}
+
+//category label
+#left p.sidebar-cats {
+	margin-bottom: 0;
+}
+
+
+// CTAs =============================
+
+// Call to Action Panels
+.industry-cta {
+	color: $black;
+	text-align: center;
+	p {
+		font-size: modular-scale(0);
+		color: $black;
+		letter-spacing: 1px;
+	}
+	a {
+		color: $black;
+		font-weight: 300;
+		border-bottom: none;
+	}
+	.cta-wrapper {
+		margin: 0 15%;
+		@include media($bp-small) {
+			margin: 0 10%;
+		}
+		h2 {
+			color: $black;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: modular-scale(2); 
+			line-height: modular-scale(2, 1.6rem); 
+			@include media($bp-small) {
+				font-size: modular-scale(2, 1.3rem);
+				line-height: modular-scale(2, 1.3rem);
+			}
+		}
+	}
+}
+
+.cta-contact {
+	text-align: center;
+	margin-top: 25px;
+	a:hover button {
+	    -webkit-animation: pulse 1s;
+	    animation: pulse 1s;
+		background-color: $black;
+		p {
+			color: $yellow;
+		}
+	}
+	button {
+		border: 1px solid $black;
+		background-color: $black;
+		padding: 15px 20px;
+		transition: all 0.5s;
+		@include media($bp-small) {
+			// padding: 10px;
+		}
+		p {
+			color: $yellow;
+			font-family: $lite-headings;
+		}
+	}
+	p {
+		text-transform: uppercase;
+		margin-bottom: 0;
+		font-size: modular-scale(0);
+		line-height: modular-scale(0);
+		@include media($bp-small) {
+			font-size: modular-scale(1, 0.8rem);
+			line-height: modular-scale(1, 0.8rem);
+		}
+	}
+}
+
+// SIDEBARS =========================
+
+aside {
+	a {
+		color: $d-grey;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+	}
+    p {
+    	margin: 0;
+    	font-size: modular-scale(0, 1rem);
+    }
+    ul.post-categories {
+    	list-style-type: none;
+    	padding-left: 0;
+    	padding-bottom: 0;
+    	// text-transform: uppercase;
+    	font-size: modular-scale(0, 0.9rem);
+    	line-height: modular-scale(0, 0.9rem);
+    	li {
+			padding-bottom: 3px;
+			a {
+				color: $d-grey;
+				border-bottom: 1px solid rgba(0,0,0,0.2);
+			}
+    	}
+    }
+}
+
+
+// HOME =============================
+
+
+
+// ABOUT US =========================
+
+h3.mission {
+	font-family: $main-headings;
+	font-size: modular-scale(3, 1.4rem);	
+	line-height: modular-scale(3, 1.3rem);
+	font-weight: 600;
+	color: rgba(0,0,0,0.90);
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+// TEAM =============================
+
+h1.team__hero-heading {
+	font-size: modular-scale(5, 1.3rem);
+	line-height:modular-scale(5, 1.3rem);
+	margin: 0 10%;
+	padding-bottom: 0;
+	color: $white;
+}
+
+h2.team__hero-subheading {
+	font-family: $p-font;
+	font-weight: 300;
+	font-size: modular-scale(0, 1rem);
+	line-height:modular-scale(1, 1rem);
+	// text-transform: none;
+	margin: 0 20% 0 12%;
+	letter-spacing: 1px;
+}
+
+.team__name {
+	font-size: modular-scale(3);
+	line-height:modular-scale(2);
+	position: relative;
+	color: rgba(0,0,0,0.8);
+	// transition: all 0.5s;
+	@include media($bp-med) {
+		font-size: modular-scale(5);
+		line-height: modular-scale(4);
+	}
+	@include media($mobile-landscape) {
+		font-size: modular-scale(3);
+		line-height: modular-scale(2);
+	}
+	@include media($bp-large) {
+		font-size: modular-scale(7);
+		line-height: modular-scale(6);
+	}
+	@include media($bp-xlarge) {
+		font-size: modular-scale(8);
+		line-height: modular-scale(7);
+	}
+}
+
+.team__title {
+	font-size: modular-scale(1);
+	line-height:modular-scale(1);
+	padding-left: 13px;
+	color: rgba(0,0,0,0.8);
+	// transition: all 0.5s;
+}
+
+.team__creds {
+	font-size: modular-scale(0);
+	line-height:modular-scale(0);
+	color: rgba(0,0,0,0.8);
+}
+
+.team__single {
+	h3, 
+	figcaption {
+		margin-top: 20px;
+	}
+	h3 {
+		font-family: $main-headings;
+	}
+}
+
+.drop-down-panel {
+	color: $white;
+	button {
+		display: none;
+		color: $black;
+		background-color: $yellow;
+		border: none;
+		padding: 15px 35px;
+		margin-top: 25px;
+		font-family: $lite-headings;
+		font-size: modular-scale(1);
+		&:hover {
+			background-color: darken($yellow, 10%); 
+		}
+		@include media($bp-small) {
+			display: block;
+			padding: 10px 15px;
+			font-size: modular-scale(0);
+		}
+	}
+}
+
+// SERVICES ==========================
+
+.services-testimonial {
+	blockquote {
+		margin: 0;
+		font-style: italic;
+		font-size: modular-scale(1, 1.5rem);
+		line-height: modular-scale(1, 1.6rem);
+		font-weight: 400;
+		font-family: $p-font;
+		p {
+			font-style: italic;
+			font-size: modular-scale(1, 1.5rem);
+			line-height: modular-scale(1, 1.6rem);
+			font-weight: 400;
+			font-family: $p-font;
+			text-transform: none;
+		}
+		@include media($bp-small) {
+			font-size: modular-scale(1, 1.1rem);
+			line-height: modular-scale(1, 1.1rem);
+		}
+		&:before {
+		    content: '“';
+		    position: absolute;
+		    margin-left: -.4em;
+		    font-size: modular-scale(4, 1.6rem);
+		    font-family: $main-headings;
+		    color: rgba(0,0,0,0.2);
+		}
+
+		&:after {
+		    content: '”';
+		    font-family: $main-headings;
+		    color: rgba(0,0,0,0.2);
+		}
+	}
+	h4 {
+		margin: 0;
+		margin-top: 25px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+	h5 {
+		text-align: right;
+		margin: 0;
+	}
+	p.testimonial__caption {
+		font-family: $lite-headings;
+		padding-top: 5px;
+		padding-left: 100px;
+		text-align: right;
+		text-transform: uppercase;
+		font-size: modular-scale(0, 0.9rem);
+		line-height: modular-scale(0, 1rem);
+	}
+}
+
+#space-uptop {
+	padding-top: 15px;
+	margin-bottom: 0;
+}
+
+.services-cta {
+	p {
+		font-family: $lite-headings;
+		font-size: modular-scale(2, 1.3rem);
+		line-height: modular-scale(2, 1.3rem);
+		@include media($bp-small) {
+			font-size: modular-scale(1, 1.3rem);
+			line-height: modular-scale(1, 1.3rem);
+		}
+		@include media($mobile-landscape) {
+			font-size: modular-scale(1, 1.3rem);
+			line-height: modular-scale(1, 1.3rem);
+		}
+	}
+}
+
+.services-cta__btn {
+	font-family: $lite-headings;
+	text-transform: uppercase;
+	background-color: $black;
+	color: $white;
+	border: none;
+	font-weight: bold;
+	padding: 15px 30px;
+	height: 60px;
+	font-size: modular-scale(0, 1.1rem);
+	line-height: modular-scale(0, 1.1rem);
+	border: 1px solid $black;
+	// transition: all 0.2s;
+	// letter-spacing: 1px;
+	&:hover {
+		border: 2px solid $black;
+		color: $black;
+		background-color: $white;
+		// font-weight: 400;
+	}
+}
+
+// BLOG ==============================
+
+.blog-entry {
+	h1 {
+		margin: 50px auto 10px;
+		text-align: initial;
+	}
+	blockquote {
+		font-family: $title-font;
+		padding-left: 20px;
+		font-size: modular-scale(1);
+		line-height: modular-scale(2);
+		@include media($bp-small) {
+			padding-left: 0;
+			font-size: modular-scale(1, 1.3rem);
+			line-height: modular-scale(2, 1.3rem);
+		}
+	}
+	blockquote p {
+		font-size: modular-scale(1);
+		line-height: modular-scale(2);
+		@include media($bp-small) {
+			font-size: modular-scale(1, 1rem);
+			line-height: modular-scale(2, 1rem);
+		}
+		@include media($mobile-landscape) {
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+		}
+	    @include media($tablet-landscape) {
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+	    }
+	}
+}
+
+.blog-single-post {
+	a {
+		border-bottom: 1px solid transparent;
+		&:hover {
+			border-bottom: 1px solid $yellow;
+		}
+	}
+	.blog-single__title {
+		padding: 0;
+		border-bottom: 1px solid transparent;
+		margin-bottom: 5px;
+		&:hover {
+			border-bottom: 1px solid $yellow;
+		}
+	}
+	ul.post-categories {
+		padding: 0;
+	}
+}
+
+.blog-single__date {
+	font-family: $lite-headings;
+}
+
+.full-width.full-quote { 
+	overflow-x: hidden;
+	font-family: $p-font;
+	font-style: italic;
+	font-weight: 600;
+	font-size: modular-scale(2);
+	line-height: modular-scale(3);
+	text-align: center;
+	padding: 40px 0;
+	p {
+		color: $yellow;
+		font-family: $p-font;
+		font-style: italic;
+		font-weight: 600;
+		font-size: modular-scale(2);
+		line-height: modular-scale(3);
+		text-align: center;
+	}
+	@include media($bp-large) {
+		text-align:center;
+		margin-left: -10%;
+		margin-right: -10%;
+	}
+	@include media($bp-small) {
+		font-size: modular-scale(1);
+		line-height: modular-scale(2);
+	}
+}
+
+span.big-quotes {
+	font-size: modular-scale(3);
+	line-height: modular-scale(4);
+	text-align: center;
+}
+
+div.bigcopy {
+	font-size: modular-scale(0, 2.2rem);
+	line-height: modular-scale(1, 2.2rem);
+	// margin: 0 -5% 40px;
+	@include media($bp-small) {
+		font-size: modular-scale(0);
+		line-height: modular-scale(0);
+	}
+	p {
+		font-size: modular-scale(0, 2.2rem);
+		line-height: modular-scale(1, 2.2rem);
+		@include media($bp-small) {
+			font-size: modular-scale(0);
+			line-height: modular-scale(0);
+		}
+	}
+	ol,
+	ul {
+		font-size: modular-scale(0, 2.2rem);
+		line-height: modular-scale(1, 2.2rem);
+		@include media($bp-small) {
+			font-size: modular-scale(0);
+			line-height: modular-scale(0);
+		}
+	}
+}
+
+
+// PROJECTS ============================
+
+.projects__panel {
+	h2 {
+		color: $white;
+		font-size: modular-scale(3, 1.3rem);
+		line-height:modular-scale(3);
+		position: relative;
+		transition: all 0.5s;
+		@include media($bp-med) {
+			font-size: modular-scale(4, 1.3rem);
+			line-height: modular-scale(4);
+		}
+		@include media($bp-large) {
+			font-size: modular-scale(5, 1.3rem);
+			line-height: modular-scale(5);
+		}
+		@include media($bp-xlarge) {
+			font-size: modular-scale(6, 1.3rem);
+			line-height: modular-scale(6);
+		}
+	}
+}
+
+.projects__panel-wrap {
+	h2 {
+		position: absolute;
+		top: 30%;
+		left: 5%;
+		right: 5%;
+		text-align: center;
+		margin: 0 auto;
+		@include media($bp-small) {
+		    top: 40%;
+		}
+		@include media($bp-med) {
+		    font-size: modular-scale(3); 
+			line-height: modular-scale(3); 
+			top: 35%;
+		}
+		@include media($bp-large) {
+		    font-size: modular-scale(5); 
+			line-height: modular-scale(5); 
+		}
+	}
+}
+
+span.stats_label,
+span.bolded-text {
+	font-family: $bold-font;
+	font-weight: 800;
+}
+
+#left p {
+	line-height: modular-scale(0,1.2rem);
+	margin-bottom: 10px;
+	font-weight: 200;
+}
+
+.project__testimonial {
+	.testimonial__quotation {
+		@include media($bp-small) {
+			margin: 0 0 0 15px;
+		    font-size: modular-scale(1, 1.1rem); 
+		    line-height: modular-scale(1, 1.1rem); 
+		}
+	}
+	.testimonial__creds {
+		color: rgba(255,255,255,0.4);
+		@include media($bp-small) {
+			h4 {
+				margin-top: 20px;
+				font-size: modular-scale(1, 1rem); 
+				line-height: modular-scale(1, 1rem); 
+			}
+			h5 {
+				font-size: modular-scale(0, 1rem); 
+				line-height: modular-scale(0, 1rem);
+			}
+		}
+	}
+}
+
+// SINGLE PROJECT ============================
+
+// Project Testomonial
+
+.project__testimonial {
+	@include media($bp-small) {
+		font-size: modular-scale(2);
+	}
+	@include media($mobile-landscape) {
+		font-size: modular-scale(2);
+	}
+	blockquote {
+		color: $white;
+		&:before {
+		    content: '“';
+		    position: absolute;
+		    margin: 10px -0.5em;
+		    font-size: modular-scale(6, 1.8rem);
+		    color: rgba(255,255,255,0.3);
+		    @include media($bp-small) {
+		    	font-size: modular-scale(5);
+		    	margin: 10px -0.5em;
+		    }
+		}
+		&:after {
+		    content: '”';
+		    font-size: modular-scale(2, 1.3rem);
+		    color: rgba(255,255,255,0.3);
+		    @include media($bp-small) {
+		    	font-size: modular-scale(1);
+		    }
+		}
+	}
+}
+
+.project-nav__arrow {
+	p {
+		margin: 0;
+		font-family: $main-headings;
+	}
+}
+
+// CONTACT ===================================
+
+#info-window-content {
+	// background-color: $yellow;
+	h3 {
+		color: $black;
+		font-size: modular-scale(2, 1rem);
+		margin: 0;
+		@include media($bp-small) {
+			font-size: modular-scale(1, 1rem);
+			line-height: modular-scale(1, 1rem);
+		}
+	}
+	p {
+		font-family: $main-headings;
+		font-size: modular-scale(1, 1rem);
+		line-height: modular-scale(1, 1.3rem);
+		margin-bottom: 0;
+		@include media($bp-small) {
+			font-size: modular-scale(0, 1rem);
+			line-height: modular-scale(0, 1.3rem);
+		}
+	}
+}
+
+.contact__single {
+	h4 {
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 15px;
+		font-size: modular-scale(0, 1.3rem);
+		line-height: modular-scale(1, 1.3rem);
+	}
+	button {
+		padding: 10px 15px;
+		color: $yellow;
+		margin-top: 20px;
+		background-color: $black;
+		border: none;
+		&:hover {
+			background-color: $yellow;
+			color: $black;
+			border: none;
+		}
+	}
+}
+
+//  FOOTER ====================================
+
+.main-footer {
+	color: $white;
+	a {
+		color: $yellow;
+	}
+}
+
+.footer__third {
+	h3 {
+		font-family: $lite-headings;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 15px;
+		font-size: modular-scale(0, 1.2rem);
+		line-height: modular-scale(0, 1.2rem);
+		font-family: $lite-headings;
+	}
+}
+
+#mc-embedded-subscribe-form.footer-newsletter {
+	padding: 0;
+	font-size: modular-scale(0, 1rem);
+}
+
+.footer__blog {
+	a {
+		&:hover {
+			border-bottom: 1px solid $yellow;
+		}
+	}
+	.footer__blog__posts {
+		font-family: $lite-headings;
+		font-size: modular-scale(0, 1.2rem);
+		line-height: modular-scale(1, 1.2rem);
+	}
+}
+
+.footer__cta {
+	h4 {
+		font-family: $lite-headings;
+	}
+	button {
+		color: $black;
+		background-color: $yellow;
+		padding: 10px 15px;
+		font-family: $lite-headings;
+		font-size: modular-scale(0, 1rem);
+		border: 0;
+		margin: 20px 0;
+		&:hover {
+			background-color: $d-grey;
+		}
+	}
+}
+
+#hypenotic-creds {
+	font-size: modular-scale(0, 1rem);
+	line-height: modular-scale(0, 1rem);
+	font-family: $lite-headings;
+	color: $white;
+	a {
+		padding-bottom: 3px;
+		&:hover {
+			border-bottom: 1px solid $white;
+		}
+	}
+}
+
+#error-menu {
+	&:hover {
+		color: $white;
+		border-bottom: 1px solid $yellow;
+	}
+}
+
+
+

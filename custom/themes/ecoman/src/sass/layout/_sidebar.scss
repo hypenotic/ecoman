@@ -1,0 +1,28 @@
+aside {
+	@include media($bp-small) {
+		padding-top: 50px;
+		padding-bottom: 25px;
+		display: block;
+		border-right: none;
+		border-bottom: 4px solid rgba(0, 0, 0, 0.9);
+    }
+	@include media($bp-med) {
+		padding-top: 50px;
+		padding-bottom: 25px;
+		display: block;
+		border-right: none;
+		border-bottom: 4px solid rgba(0, 0, 0, 0.9);
+    }
+    @include media($bp-large) {
+		@include span-columns(2);
+		@include shift(0);
+		height: 100%;
+		margin-top: 50px;
+		padding-top: 5px;
+		padding-right: 30px;
+		text-align: right;
+		border-right: 4px solid rgba(0, 0, 0, 0.8);
+		border-bottom: none;
+    }
+}
+

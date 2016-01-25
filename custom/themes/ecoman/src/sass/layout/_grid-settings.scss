@@ -1,0 +1,38 @@
+@import "../../components/neat/app/assets/stylesheets/neat-helpers";
+
+// Neat Overrides
+$grid-columns: 5;
+
+$max-width: em(1100);
+
+// Major: Content centric breakpoints
+$mobile-ls: em(450);
+$tab-hmax: em(770);
+$tab-wmax: em(1030);
+$mob-lh: em(450);
+$mob-lw: em(650);
+
+// Portrait
+$bp-xxlarge: new-breakpoint(min-width 94em 12);
+$bp-xlarge: new-breakpoint(min-width 81em 12);
+$bp-large: new-breakpoint(min-width 50em 12);
+$bp-med: new-breakpoint(min-width 30em max-width 50em 12);
+$bp-small: new-breakpoint(max-width 30em 5);
+$bp-xsmall: new-breakpoint(max-width 23em 5);
+
+// Landscape
+$mobile-landscape: new-breakpoint(max-height $mobile-ls orientation landscape 2);
+$bmobile-landscape: new-breakpoint(max-height $mob-lh min-width $mob-lw orientation landscape 12);
+$tablet-landscape: new-breakpoint(max-height $tab-hmax max-width $tab-wmax orientation landscape 12);
+
+// NOTE: put mobile-landscape and xsmall below all others, or they'll be
+	// over written
+
+// Home Page 
+$home-one: new-breakpoint(min-width 1367px max-width 94em 12);
+
+// Visual Grid view
+$visual-grid: false;
+$visual-grid-color: #000;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;

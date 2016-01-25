@@ -1,0 +1,261 @@
+// PROJECTs Landing Page
+.projects__panel-container {
+	width: 100%;
+	// margin-top: 50px;
+	position: relative;
+	@include flexboxcenter;
+	@include flex-direction(column);	
+}
+
+.projects__panel-link {
+	width: 100%;
+	// transition: all 0.2s;
+	&:hover .projects__panel-wrap {
+		.color-overlay {
+			opacity: 0;		
+		}
+		.projects__panel-img { 
+			filter: grayscale(0.8);
+			background-blend-mode: normal;
+			filter: brightness(0.7);
+		}
+	}
+}
+
+.projects__panel-wrap {
+	h2 {
+		z-index: 35;
+	}
+	position: relative;
+	height: 300px;
+	@include media($bp-small) {
+	    height: 150px;
+	}
+	@include media($bp-med) {
+	    height: 200px;
+	}
+	@include media($bp-large) {
+	    height: 300px;
+	}
+	.color-overlay {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(252, 216, 56, 0.7);
+		filter: brightness(70%);
+		position: relative;
+		top: 0;
+		left: 0;
+		// transition: all 0.2s;
+		z-index: 30;
+	}
+	.projects__panel-img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	// transition: all 0.2s;
+	padding: 25px;
+	filter: brightness(80%);
+	filter: grayscale(80%);
+	background-blend-mode: hard-light;
+	@include flexboxcenter;
+	z-index: 29;
+	}
+}
+
+// =============== Single PROJECT Page
+
+.project__stats {
+
+}
+
+// Project Hero Video
+
+// Project Testomonial
+
+.project__testimonial {
+	background-color: rgba(0,0,0,0.9);
+	padding: 50px 10%;
+	margin: 0 0 50px;
+}
+
+.testimonial__creds {
+	text-align: right;
+	padding-right: 50px;
+	@include media($bp-small) {
+		padding-right: 20px;
+	}
+}
+
+// Project Videos
+
+.project__video {
+	background-color: rgba(0,0,0,1);
+	margin: 0 0 50px;
+	padding: 50px 30px;
+}
+
+.js-video {
+	width: 100%;
+	height: auto;
+	@include flexboxcenter;
+	iframe {
+		width: 100%;
+		min-height: 600px;
+		@include media($bp-small) {
+			min-height: 400px;
+		}
+		@include media($bp-med) {
+			min-height: 500px;
+		}
+		@include media($mobile-landscape) {
+			min-height: 350px;
+		}
+		@include media($bp-large) {
+			min-height: 600px;
+		}
+		@include media($bp-xlarge) {
+			min-height: 700px;
+		}
+		@include media($bp-xxlarge) {
+			min-height: 750px;
+		}
+	}
+}
+
+.bigvid {
+	position: relative;
+	width: 120%;
+	height: 450px;
+	margin: 25px -10%;
+	-webkit-overflow-scrolling: touch;
+	@include media($bp-small) {
+		height: 300px;
+		margin: 25px -10%;
+	}
+	@include media($bp-med) {
+		height: 400px;
+	}
+	@include media($bp-large) {
+		height: 500px;
+	}
+	@include media($bp-xlarge) {
+		height: 500px;
+	}
+	iframe {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+}
+
+//  Arrow Buttons
+
+.project-nav {
+	margin-bottom: 50px;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	a {
+		&:hover {
+			.project-nav__arrow {
+				color: $black;
+				background-color: $yellow;
+			}
+		}
+	}
+}
+
+.project-nav__arrow {
+	position: relative;
+	width: 150px;
+	height: 50px;
+	// margin-left: 40px;
+	color: $black;
+	background-color: transparent;
+	text-align:center;
+	// line-height:40px;
+	border: 2px solid $black;
+	@include flexboxcenter;
+	@include media($bp-med) {
+		width: 200px;
+		height: 80px;
+	}
+	@include media($bp-large) {
+		width: 400px;
+		height: 100px;
+	}
+}
+
+.project-nav__arrow--prev {
+	margin: 0 10px 0 0;
+	@include media($bp-small) {
+		margin-right: 0px;
+	}
+	@include media($bp-small) {
+		margin-bottom: 10px;
+	}
+	@include media($bp-med) {
+		margin-bottom: 0;
+	}
+	// &:before {
+	// 	content:"";
+	// 	position: absolute;
+	// 	right: 100%;
+	// 	top:0px;
+	// 	width:0px;
+	// 	height:0px;
+	// 	border-top:25px solid transparent;
+	// 	border-right:40px solid $black; // how far out the point goes
+	// 	border-bottom:25px solid transparent;
+	// 	@include media($bp-med) {
+	// 		border-top:40px solid transparent;
+	// 		border-right:60px solid $black; // how far out the point goes
+	// 		border-bottom:40px solid transparent;
+	// 	}
+	// 	@include media($bp-large) {
+	// 		border-top:50px solid transparent;
+	// 		border-right:70px solid $black; // how far out the point goes
+	// 		border-bottom:50px solid transparent;
+	// 	}
+	// }
+}
+
+.project-nav__arrow--next {
+	margin: 0 0 0 10px;
+	@include media($bp-small) {
+		margin-left: 0px;
+	}
+	// &:after {
+	// 	content:"";
+	// 	position: absolute;
+	// 	left: 100%;
+	// 	top:0px;
+	// 	width:0px;
+	// 	height:0px;
+	// 	border-top:25px solid transparent;
+	// 	border-left:40px solid $black;
+	// 	border-bottom:25px solid transparent;
+	// 	@include media($bp-med) {
+	// 		border-top:40px solid transparent;
+	// 		border-left:60px solid $black; // how far out the point goes
+	// 		border-bottom:40px solid transparent;
+	// 	}
+	// 	@include media($bp-large) {
+	// 		border-top:50px solid transparent;
+	// 		border-left:70px solid $black; // how far out the point goes
+	// 		border-bottom:50px solid transparent;
+	// 	}
+	// }
+}
+
+
+
+
