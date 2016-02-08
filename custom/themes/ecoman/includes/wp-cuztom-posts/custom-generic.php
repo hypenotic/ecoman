@@ -29,15 +29,15 @@ $pages->add_meta_box(
         ),
         array(
             'name'          => 'heading',
-            'label'         => 'Banner Text',
-            'description'   => 'Enter text',
-            'type'          => 'wysiwyg',
+            'label'         => 'Main Heading',
+            'description'   => '',
+            'type'          => 'text',
             
         ),
         array(
             'name'          => 'subheading',
-            'label'         => 'Banner Subheading',
-            'description'   => 'Enter text',
+            'label'         => 'Subheading',
+            'description'   => '',
             'type'          => 'text'  
         )
     )

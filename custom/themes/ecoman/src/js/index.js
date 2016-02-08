@@ -151,16 +151,6 @@ $(function() {
      mobile: false
   }).init();
 
-  var iframe = $('#vimeo_player')[0],
-      player = $f(iframe),
-      status = $('.status');
-
-  // When the player is ready MUTE
-  player.addEvent('ready', function() {
-      player.api('setVolume', 0);
-      player.api('seekTo',8);
-  });
-
   $('.fadeInDown h1').widowFix({
     letterLimit: 5
   });

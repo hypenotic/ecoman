@@ -6,6 +6,7 @@
 	 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<title><?php bloginfo('name'); ?></title>
 	<!-- FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,300,600,700,700italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
 	<!-- Google Analytics -->
 	
 	<?php wp_head(); ?> 
@@ -13,8 +14,5 @@
 </head>
 
 
-<body class="cbp-spmenu-push" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">
-	
-		
-	
-	<main> 
+<body>	
+	<main>
