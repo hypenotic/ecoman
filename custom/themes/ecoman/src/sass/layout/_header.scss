@@ -4,6 +4,7 @@
 	background-color: $l-grey;
 	position: relative;
 	@include flexboxcenter;
+	@include flex-direction(column);
 	.header__text {
 		padding: 0 20%;
 	}
@@ -27,4 +28,34 @@
 		font-size: modular-scale(4);
 		line-height: modular-scale(4);
 	}
+}
+
+.main-header.inner-nav {
+	position: relative;
+}
+
+nav {
+	@include display(flex);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	p {
+		margin: 0;
+	}
+	#main-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			@include display(flex);
+			li {
+
+			}
+		}
+	}
+}
+
+.nav__right,
+.nav__left {
+	@include display(flex);
 }

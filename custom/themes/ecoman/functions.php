@@ -8,6 +8,8 @@ include('includes/wp-cuztom-posts/custom-service.php');
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');
+require_once('includes/functions/register-menu.php');
+require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/cuztom-posts.php');
 
 //Load shortcodes
