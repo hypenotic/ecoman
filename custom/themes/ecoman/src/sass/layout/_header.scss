@@ -58,3 +58,22 @@
 	}
 }
 
+.main-header.inner-nav.small-header {
+	.header__text {
+		padding: 0 17%;
+	}
+	.left-align-text {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.header-blurb {
+		p {
+			margin-bottom: 0;
+			margin-top: 0;
+			font-size: modular-scale(0, 1rem);
+			line-height: modular-scale(1);
+		}
+	}
+}
+
+

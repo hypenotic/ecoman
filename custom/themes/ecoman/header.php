@@ -61,6 +61,60 @@
 
 	<?php } ?>
 
+
+	<?php if ( is_page('about') || is_page('services') ) { 
+
+	// Hero Banner
+	$banner     = get_post_meta( $post->ID, '_banner_image', true );
+	$bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
+	$heading    = get_post_meta( $post->ID, '_banner_heading', true );
+	$subheading = get_post_meta( $post->ID, '_banner_subheading', true );
+
+	$blurb = get_post_meta( $post->ID, '_banner_blurb', true );
+
+	?>
+
+	<?php get_template_part( 'template-part-signup' ); ?>
+
+	<header class="main-header inner-nav small-header">
+		<div class="outer-container nav">
+			<nav>
+				<div class="nav__left">
+					<div></div>
+					<p>ECOMAN. 123.456.7890</p>
+				</div>
+				<div class="nav__right">
+					<?php get_search_form(); ?>
+					<?php 
+					    wp_nav_menu(array(
+					      'menu' => 'Main Menu',  
+					      'container_id' => 'main-menu',
+					      'walker' => new Main_Menu_Walker()
+					    )); 
+					?>
+				</div>
+			</nav>
+		</div>
+		<div class="header__text outer-container">
+			<?php if (is_page('services')) { ?>
+				<h1 class="left-align-text"><?php echo $heading; ?></h1>
+			<?php } else { ?>
+				<h1><?php echo $heading; ?></h1>
+			<?php } ?>
+	        <?php if ($subheading) { ?>
+				<h2><?php echo $subheading; ?></h2>
+	        <?php } ?>
+	        <?php if ($blurb) { ?>
+				<div class="header-blurb">
+					<?php echo $blurb; ?>
+				</div>
+	        <?php } ?>
+		</div>
+	</header>
+
+	<?php } ?>
+
+
 	<?php if (is_404()) { ?>
 
 	<?php get_template_part( 'template-part-signup' ); ?>

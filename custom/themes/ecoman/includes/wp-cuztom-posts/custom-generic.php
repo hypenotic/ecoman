@@ -39,6 +39,12 @@ $pages->add_meta_box(
             'label'         => 'Subheading',
             'description'   => '',
             'type'          => 'text'  
+        ),
+        array(
+            'name'          => 'blurb',
+            'label'         => 'Header Blurb',
+            'description'   => '',
+            'type'          => 'wysiwyg'  
         )
     )
 );
