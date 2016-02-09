@@ -14,12 +14,28 @@ body {
     }
 }
 
+.main-content-narrow {
+    @include media($bp-large) {
+		@include span-columns(6);
+    }
+}
+
+.no-top-margin {
+	margin-top: 0;
+}
+
 .front-page .main-content:first-child {
 	margin-top: 100px;
 }
 
 .column-container {
 
+}
+
+.column-3 {
+	.column-3__single {
+		
+	}
 }
 
 .column-4 {

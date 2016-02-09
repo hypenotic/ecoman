@@ -1,0 +1,21 @@
+.archive__single {
+	border-top: 1px solid $grey;
+	margin-bottom: 80px;
+	h3 {
+		font-size: modular-scale(1);
+		line-height: modular-scale(1);
+		margin-top: 10px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: $d-grey;
+	}
+}
+
+.read-more {
+	text-decoration: underline;
+}
+
+.pagination-links {
+	text-align: center;
+	margin-bottom: 80px;
+}

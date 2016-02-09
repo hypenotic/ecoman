@@ -16,38 +16,6 @@
   $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 ?>
 
-<?php get_template_part( 'template-part-signup' ); ?>
-
-<header class="main-header inner-nav">
-	<div class="outer-container nav">
-		<nav>
-			<div class="nav__left">
-				<div></div>
-				<p>ECOMAN. 123.456.7890</p>
-			</div>
-			<div class="nav__right">
-				<?php get_template_part( 'searchform' ); ?>
-				<?php 
-				    wp_nav_menu(array(
-				      'menu' => 'Main Menu',  
-				      'container_id' => 'main-menu',
-				      'walker' => new Main_Menu_Walker()
-				    )); 
-				?>
-			</div>
-		</nav>
-	</div>
-	<div class="header__text outer-container">
-		<h1><?php echo $heading; ?></h1>
-        <?php if ($subheading) { ?>
-			<h2><?php echo $subheading; ?></h2>
-        <?php } ?>
-	</div>
-	<div class="header__circle-icon">
-		
-	</div>
-</header>
-
 <div class="outer-container front-page">
 	<div class="main-content">
 		<?php the_content(); ?>

@@ -1,12 +1,12 @@
 .main-header {
 	width: 100%;
-	height: 70vh;
+	min-height: 70vh;
 	background-color: $l-grey;
 	position: relative;
 	@include flexboxcenter;
 	@include flex-direction(column);
 	.header__text {
-		padding: 3% 20%;
+		padding: 3% 20% 0;
 	}
 	.header__circle-icon {
 		width: 160px;
@@ -14,11 +14,8 @@
 		background-color: $white;
 		border-radius: 50%;
 		border: 1px solid #e3e3e3;
-		position: absolute;
+		position: relative;
 		bottom: -80px;
-		left: 44%;
-		right: 44%;
-		margin: 0 auto;
 	}
 	h1 {
 		color: $white;
@@ -27,6 +24,24 @@
 		letter-spacing: 5px;
 		font-size: modular-scale(4);
 		line-height: modular-scale(4);
+	}
+}
+
+.text-only-header {
+	margin-bottom: 80px;
+	h1 {
+		letter-spacing: 5px;
+		font-size: modular-scale(4);
+		line-height: modular-scale(4);
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+	h2 {
+		margin-top: 0;
+		font-weight: normal;
+	}
+	span.plain-serif {
+		font-family: serif;
 	}
 }
 

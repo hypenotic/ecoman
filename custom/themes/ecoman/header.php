@@ -16,3 +16,79 @@
 
 <body>	
 	<main>
+
+	<?php 
+
+	  // Hero Banner
+	  $banner     = get_post_meta( $post->ID, '_banner_image', true );
+	  $bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
+	  $heading    = get_post_meta( $post->ID, '_banner_heading', true );
+	  $subheading = get_post_meta( $post->ID, '_banner_subheading', true );
+
+	if (is_front_page()) { ?>
+
+	<?php get_template_part( 'template-part-signup' ); ?>
+
+	<header class="main-header inner-nav">
+		<div class="outer-container nav">
+			<nav>
+				<div class="nav__left">
+					<div></div>
+					<p>ECOMAN. 123.456.7890</p>
+				</div>
+				<div class="nav__right">
+					<?php get_search_form(); ?>
+					<?php 
+					    wp_nav_menu(array(
+					      'menu' => 'Main Menu',  
+					      'container_id' => 'main-menu',
+					      'walker' => new Main_Menu_Walker()
+					    )); 
+					?>
+				</div>
+			</nav>
+		</div>
+		<div class="header__text outer-container">
+			<h1><?php echo $heading; ?></h1>
+	        <?php if ($subheading) { ?>
+				<h2><?php echo $subheading; ?></h2>
+	        <?php } ?>
+		</div>
+		<div class="header__circle-icon">
+			
+		</div>
+	</header>
+
+	<?php } ?>
+
+	<?php if ( is_search() || is_archive() || is_page('Resources') ) { ?>
+
+	<?php get_template_part( 'template-part-signup' ); ?>
+
+	<header class="inner-nav">
+		<div class="outer-container nav">
+			<nav>
+				<div class="nav__left">
+					<a href="/">
+						<div></div>
+					</a>
+					<p>ECOMAN. 123.456.7890</p>
+				</div>
+				<div class="nav__right">
+					<?php get_search_form(); ?>
+					<?php 
+					    wp_nav_menu(array(
+					      'menu' => 'Main Menu',  
+					      'container_id' => 'main-menu',
+					      'walker' => new Main_Menu_Walker()
+					    )); 
+					?>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<?php } ?>
+
+
+

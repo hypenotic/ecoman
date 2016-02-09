@@ -27,6 +27,13 @@
 	}
 }
 
+.signup-form.signup--dark {
+	background-color: #e0ddd5;
+	#mce-EMAIL {
+		background-color: transparent;
+	}
+}
+
 #main-signup {
 	#mc-embedded-subscribe-form {
 		padding: 0;

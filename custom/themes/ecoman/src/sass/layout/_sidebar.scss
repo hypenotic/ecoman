@@ -1,0 +1,5 @@
+aside {
+    @include media($bp-large) {
+		@include span-columns(2);
+    }
+}
