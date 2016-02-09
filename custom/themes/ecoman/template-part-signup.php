@@ -1,4 +1,4 @@
-<?php if ( is_search() || is_archive() ) { ?>
+<?php if ( is_search() || is_archive() || is_home()  ) { ?>
 
 	<header class="signup-form signup--dark">
 
