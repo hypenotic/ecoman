@@ -1,0 +1,54 @@
+.main-header.inner-nav {
+	position: relative;
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(flex-start);
+}
+
+.outer-container.nav {
+	width: 100%;
+	padding: 15px 0; 
+}
+
+.outer-container nav {
+	width: 100%;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(space-between);
+	p {
+		margin: 0;
+	}
+	#main-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			@include display(flex);
+			li {
+				padding: 0 20px;
+				&:last-child {
+					padding-right: 0;
+				}
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+.nav__right,
+.nav__left {
+	@include display(flex);
+	@include align-items(center);
+}
+
+.nav__left {
+	div {
+		width: 70px;
+		height: 70px;
+		background-color: $grey;
+		border-radius: 50%;
+		margin-right: 30px;
+	}
+}

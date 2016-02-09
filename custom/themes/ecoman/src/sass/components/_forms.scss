@@ -42,6 +42,26 @@
 	}
 }
 
+// SEARCH
+.nav__right #searchform {
+	margin-right: 20px; 
+	input#s {
+		border: 0;
+		border-bottom: 1px dashed $grey;
+		background-color: transparent;
+	}
+	input#searchsubmit {
+		// padding-top: 30px;
+		width: 30px;
+		height: 30px;
+		background: url(../images/search.png);
+		opacity: 0.3;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border: 0;
+	}
+}
+
 // CONTACT
 .contact-form {
 	min-height: 500px;

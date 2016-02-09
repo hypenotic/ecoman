@@ -19,21 +19,24 @@
 <?php get_template_part( 'template-part-signup' ); ?>
 
 <header class="main-header inner-nav">
-	<nav>
-		<div class="nav__left">
-			<p>ECOMAN. 123.456.7890</p>
-		</div>
-		<div class="nav__right">
-			<?php get_template_part( 'searchform' ); ?>
-			<?php 
-			    wp_nav_menu(array(
-			      'menu' => 'Main Menu',  
-			      'container_id' => 'main-menu',
-			      'walker' => new Main_Menu_Walker()
-			    )); 
-			?>
-		</div>
-	</nav>
+	<div class="outer-container nav">
+		<nav>
+			<div class="nav__left">
+				<div></div>
+				<p>ECOMAN. 123.456.7890</p>
+			</div>
+			<div class="nav__right">
+				<?php get_template_part( 'searchform' ); ?>
+				<?php 
+				    wp_nav_menu(array(
+				      'menu' => 'Main Menu',  
+				      'container_id' => 'main-menu',
+				      'walker' => new Main_Menu_Walker()
+				    )); 
+				?>
+			</div>
+		</nav>
+	</div>
 	<div class="header__text outer-container">
 		<h1><?php echo $heading; ?></h1>
         <?php if ($subheading) { ?>
@@ -64,18 +67,19 @@
 			
 		</div>
 	</div>
+	
+	<div class="main-content">
 
+		<div class="front-page__testimonial">
+			<p><strong>WHAT CLIENTS SAY WHEN WE LEAVE THE ROOM:</strong></p>		
+		</div>
 
-</div>
-
-<div class="main-content">
-
-	<div class="front-page__testimonial">
-		<p><strong>WHAT CLIENTS SAY WHEN WE LEAVE THE ROOM:</strong></p>		
+		<?php get_template_part( 'template-part-contact-form' ); ?>
 	</div>
 
-	<?php get_template_part( 'template-part-contact-form' ); ?>
 </div>
+
+
 
 <?php endwhile; endif; ?>
 
