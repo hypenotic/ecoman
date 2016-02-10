@@ -30,7 +30,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav">
+	<header class="main-header inner-nav" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
