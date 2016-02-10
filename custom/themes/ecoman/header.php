@@ -80,7 +80,9 @@
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<div></div>
+					<a href="/">
+						<div></div>
+					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">

@@ -17,7 +17,8 @@
 		</div>
 	</div>
 	<div class="contact-form__right">
-	<h4>GET IN TOUCH</h4>
-	<p>DEAR: JONAS SPRING</p>
+		<h4>GET IN TOUCH</h4>
+		<p>DEAR: JONAS SPRING</p>
+		<?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form 1"]' ); ?>
 	</div>
 </div>
