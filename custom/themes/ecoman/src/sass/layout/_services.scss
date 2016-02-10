@@ -1,0 +1,144 @@
+// TABS
+
+/*  == tab heading */
+#responsive-tabs {
+	position: relative;
+	top: -58px;
+	background:transparent;
+	overflow:hidden;
+	margin-bottom: 80px;
+}
+.tabs.r-tabs ul { 
+	overflow:hidden; 
+	width: 70%;
+	li { 
+		float: left;
+		display: inline-block;
+		float: left;
+		text-align: center;
+		width: 25%;
+		padding:0;
+		span {
+			//border-bottom: 1px solid #fff;
+		}
+		a { 
+			padding: 20px 5%;
+			background: $l-grey;
+			color: $black;
+			box-sizing: border-box;
+			display:block; 
+			&:hover {
+				background: $d-grey;
+				color: #fff;
+            }
+		}
+		&.r-tabs-state-active { 
+			a {
+				background:$grey;
+				color: red;
+				&:hover {
+					background-color: none;
+				}
+			}
+			& h3 {
+				border-bottom: 1.5px solid blue;
+			}
+			
+		}
+	}
+	h2 {
+		padding:0 0 92px 0;
+	}
+}
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+
+.r-tabs .r-tabs-panel {
+    padding: 30px 15px 15px;
+	@include media($bp-large) {
+		padding: 60px 15px 15px;
+	}
+    display: none;
+	& section {
+		@include media($bp-large) {
+			@include span-columns(6 of 12);
+			@include omega(2n);
+			padding-bottom:1.5em;
+		}
+		ul {
+			display: block;
+			margin-bottom: 20px;
+			margin-left:20px;
+            font-size: em(30);
+			li {
+				text-align:left;
+				@include media($bp-large) {
+					display:block;
+					width:100%;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+	a { 
+		color: white;
+		background: $l-blue;
+		border-bottom:1px solid #fff;
+		box-sizing: border-box;
+		display:block;
+		padding: 20px 3%; 
+		&:hover {
+			background: blue;
+			color: #fff;
+		}
+	}
+}
+
+.r-tabs-tab.r-tabs-state-active {
+    display: block;
+}
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+    .tabs.r-tabs .r-tabs-nav {
+        display: none;
+    }
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
+		a {
+			position:relative;
+			span {
+				border-bottom:none;
+			    display: block;
+				width:80%;
+				&:after {
+					content:"";
+					width:20px;
+					height:20px;
+					// @include arrow(right, white, 10px);
+					position:absolute;
+					right:15px;
+					top:35%;
+				}
+			}
+		}
+		&.r-tabs-state-active {
+			& a span:after {
+				// @include arrow(bottom, white, 10px);
+				top:45%;
+			}	
+		}
+    }
+}
+
+.responsive-tabs__list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+}
