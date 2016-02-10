@@ -1,0 +1,27 @@
+// Full-Width Image
+.full-width.full-image { 
+  text-align:center;
+  margin-left:-100%;
+  margin-right:-100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // max-height: 50vh;
+  overflow: hidden;
+  height: 500px;
+  @include media($bp-small) {
+  	height: 300px;
+  	margin-left:-20%;
+  	margin-right:-20%;
+  }
+  img {
+  	width: 100%;
+  	height: auto;
+  	overflow: hidden;
+  	// margin: 25px 0;
+  	margin: 0 auto;
+  }
+}

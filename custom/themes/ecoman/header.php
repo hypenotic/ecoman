@@ -161,8 +161,10 @@
 
 	<?php } ?>
 
-
-	<?php if ( is_search() || is_archive() || is_home() || is_single() ) { ?>
+	
+	<?php // For search results, default archive and blog index
+		if ( is_search() || is_archive() || is_home() || is_single() ) 
+	{ ?>
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 

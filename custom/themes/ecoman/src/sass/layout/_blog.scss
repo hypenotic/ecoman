@@ -1,0 +1,25 @@
+.back-to-toc {
+	border-bottom: 1px solid $grey;
+	margin-bottom: 20px;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+h1.blog-title {
+	margin: 0;
+}
+
+.blog-meta {
+	@include display(flex);
+	p {
+		padding: 0 10px;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+.blog-entry {
+	margin-bottom: 50px;
+}
