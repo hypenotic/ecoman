@@ -2,11 +2,13 @@
 
 /*  == tab heading */
 #responsive-tabs {
-	position: relative;
-	top: -58px;
 	background:transparent;
 	overflow:hidden;
 	margin-bottom: 80px;
+	@include media($bp-med) {
+		position: relative;
+		top: -58px;
+    }
 }
 .tabs.r-tabs ul { 
 	overflow:hidden; 

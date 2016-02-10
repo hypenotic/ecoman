@@ -17,7 +17,6 @@
 
 <body>	
 	<main>
-
 	<?php if (is_front_page()) { 
 
 	// Hero Banner
@@ -34,7 +33,9 @@
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<div></div>
+					<a href="/">
+						<div></div>
+					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
@@ -60,6 +61,8 @@
 		</div>
 	</header>
 
+	<?php if(social_share()) { social_share();} ?>
+
 	<?php } ?>
 
 
@@ -74,6 +77,8 @@
 	$blurb = get_post_meta( $post->ID, '_banner_blurb', true );
 
 	?>
+
+
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
@@ -115,6 +120,8 @@
 		</div>
 	</header>
 
+	<?php if(social_share()) { social_share();} ?>
+
 	<?php } ?>
 
 
@@ -150,6 +157,8 @@
 		</button>
 	</header>
 
+	<?php if(social_share()) { social_share();} ?>
+
 	<?php } ?>
 
 
@@ -179,6 +188,8 @@
 			</nav>
 		</div>
 	</header>
+
+	<?php if(social_share()) { social_share();} ?>
 
 	<?php } ?>
 

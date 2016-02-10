@@ -4,3 +4,30 @@
 	border: 0;
 	color: $white;
 }
+
+// Side Social Share Buttons
+#side-social-share {
+	position: fixed;
+	right: 0;
+	top: 40%;
+	background: $white;
+	border: 1px solid red;
+	border-right: 0;
+	padding: 10px;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include flexboxcenter;
+		@include flex-direction(column);
+		li {
+			padding: 10px;
+			a {
+				color: red;
+				i {
+					font-size: modular-scale(1);
+				}
+			}
+		}
+	}
+}
