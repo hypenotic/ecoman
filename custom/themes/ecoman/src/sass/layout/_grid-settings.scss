@@ -9,7 +9,7 @@ $max-width: em(1200);
 
 // Portrait
 $bp-large: new-breakpoint(min-width 50em 12);
-$bp-med: new-breakpoint(min-width 30em);
+$bp-med: new-breakpoint(min-width 30em 12);
 $bp-small: new-breakpoint(max-width 30em 5);
 
 // Landscape
