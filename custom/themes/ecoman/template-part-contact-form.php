@@ -10,10 +10,7 @@
 			<?php dynamic_sidebar( 'contact-blurb' ); ?>
 		</div>
 		<div class="contact__social">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
+			<?php if(social_share()) { social_share();} ?>
 		</div>
 	</div>
 	<div class="contact-form__right">

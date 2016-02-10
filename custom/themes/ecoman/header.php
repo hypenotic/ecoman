@@ -7,6 +7,7 @@
 	<title><?php bloginfo('name'); ?></title>
 	<!-- FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,300,600,700,700italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- Google Analytics -->
 	
 	<?php wp_head(); ?> 

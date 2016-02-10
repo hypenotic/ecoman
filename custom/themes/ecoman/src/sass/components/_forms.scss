@@ -103,15 +103,22 @@
 
 .contact__social {
 	margin-top: 20px;
-	@include display(flex);
-	div {
-		margin: 0 5px;
-		width: 30px;
-		height: 30px;
-		background-color: $black;
-		border-radius: 50%;
-		&:first-child {
-			margin-left: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include display(flex);
+		li {
+			text-align: center;
+			width: 35px;
+			height: 35px;
+			background-color: black;
+			border-radius: 50%;
+			margin: 0 5px;
+			@include flexboxcenter;
+			&:first-child {
+				margin-left: 0;
+			}
 		}
 	}
 }
