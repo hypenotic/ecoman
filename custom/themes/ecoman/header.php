@@ -162,7 +162,7 @@
 	<?php } ?>
 
 
-	<?php if ( is_search() || is_archive() || is_home() ) { ?>
+	<?php if ( is_search() || is_archive() || is_home() || is_single() ) { ?>
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 

@@ -11,7 +11,7 @@ h1 {
 	line-height: modular-scale(1);
     @include media($bp-large) {
 		font-size: modular-scale(5);
-		line-height: modular-scale(6);
+		line-height: modular-scale(5);
     }
 }
 
