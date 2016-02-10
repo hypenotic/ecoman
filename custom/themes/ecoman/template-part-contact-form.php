@@ -10,7 +10,12 @@
 			<?php dynamic_sidebar( 'contact-blurb' ); ?>
 		</div>
 		<div class="contact__social">
-			<?php if(social_share()) { social_share();} ?>
+			<ul class="social-share">
+                	<li><a id="facebook" href="https://www.facebook.com/Ecomantoronto" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                	<li><a id="twitter" href="https://twitter.com/#!/ecomandotca" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                	<li><a id="mail" href="/" rel="nofollow" target="_blank"><i class="fa fa-envelope-o"></i></i></a></li>
+                	<li><a id="pinterest" href="/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
 		</div>
 	</div>
 	<div class="contact-form__right">
