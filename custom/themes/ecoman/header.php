@@ -39,7 +39,7 @@
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
-					<?php get_search_form(); ?>
+					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -92,7 +92,6 @@
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
-					<?php get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -100,12 +99,13 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
+					<div id="search-form-trigger"></div>
 				</div>
 			</nav>
 		</div>
 		<div class="header__text outer-container">
 			<?php if (is_page('services')) { ?>
-				<h1 class="left-align-text"><?php echo $heading; ?></h1>
+				<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
 			<?php } else { ?>
 				<h1><?php echo $heading; ?></h1>
 			<?php } ?>
@@ -137,7 +137,7 @@
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
-					<?php get_search_form(); ?>
+					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -178,7 +178,7 @@
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
-					<?php get_search_form(); ?>
+					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  

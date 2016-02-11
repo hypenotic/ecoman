@@ -8,12 +8,28 @@
 	
 	<?php get_template_part( 'template-part-services-tabs' ); ?>
 
-	<div class="main-content no-top-margin">
-
-		<?php get_template_part( 'template-part-contact-form' ); ?>
-	</div>	
-
 </div>
+
+<div class="services-testimonial">
+
+	<div class="outer-container">
+
+	</div>
+	
+</div>
+
+<div class="services-case-studies">
+	<div class="outer-container">
+		<div class="case-studies__left">
+			
+		</div>
+		<div class="case-studies__right">
+			
+		</div>
+	</div>
+</div>	
+
+<?php get_template_part( 'template-part-contact-form' ); ?>
 
 <?php endwhile; endif; ?>
 

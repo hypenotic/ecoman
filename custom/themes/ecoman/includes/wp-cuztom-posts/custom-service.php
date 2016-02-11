@@ -6,8 +6,8 @@ $args = array(
     'taxonomies' => array('category'),
     'show_in_rest' => true
     );
-$projects = register_cuztom_post_type('Service', $args);
-$projects->add_meta_box(
+$services = register_cuztom_post_type('Service', $args);
+$services->add_meta_box(
     'banner',
     'Hero Banner', 
     array(
@@ -42,18 +42,82 @@ $projects->add_meta_box(
     )
 );
 
-$projects->add_meta_box(
+$services->add_meta_box(
     'blurb',
     'Intro Blurb', 
     array(
         array(
-            'name'          => 'blurb',
-            'label'         => 'Hero Blurb',
+            'name'          => 'image',
+            'label'         => 'Image',
+            'description'   => 'Dimensions 500px x 500px',
+            'type'          => 'image',
+            ),
+        array(
+            'name'          => 'heading',
+            'label'         => 'Heading',
             'description'   => '',
-            'type'          => 'textarea',
+            'type'          => 'text',
+        ),
+        array(
+            'name'          => 'blurb',
+            'label'         => 'Content',
+            'description'   => '',
+            'type'          => 'wysiwyg',
         )
     )
 );
+
+$services->add_meta_box(
+    'pockets',
+    'Pockets',
+    array(
+        'bundle', 
+        array(
+            array(
+                'name'          => 'image',
+                'label'         => 'Image',
+                'description'   => 'Dimensions 500px x 500px',
+                'type'          => 'image',
+            ),
+            array(
+                'name'          => 'heading',
+                'label'         => 'Heading',
+                'description'   => '',
+                'type'          => 'text',
+            ),
+            array(
+                'name'          => 'text',
+                'label'         => 'Content',
+                'description'   => '',
+                'type'          => 'textarea',        
+            ),
+            array(
+                'name'          => 'url',
+                'label'         => 'Link',
+                'description'   => '',
+                'type'          => 'text',      
+            )
+        )
+    )
+);
+
+$services->add_meta_box(
+    'test',
+    'Testimonial <i>(Optional)</i>',
+    array(
+        array(
+        'name'          => 'select',
+        'label'         => 'Select a testimonial',
+        'description'   => '',
+        'type'          => 'post_select',
+        'args'          => array(
+            'post_type' => 'testimonial',
+            'show_option_none' => "Select a testimonial",
+            )
+        )
+    )
+);
+
 
 
 ?>

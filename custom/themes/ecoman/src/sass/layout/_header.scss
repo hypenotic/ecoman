@@ -5,6 +5,9 @@
 	position: relative;
 	@include flexboxcenter;
 	@include flex-direction(column);
+	@include media($bp-xlarge) {
+		min-height: 500px;
+    }
 	.header__text {
 		padding: 3% 20% 0;
 	}
@@ -21,9 +24,18 @@
 		color: $black;
 		text-align: center;
 		font-weight: 400;
+		font-style: italic;
 		letter-spacing: 5px;
 		font-size: modular-scale(4);
 		line-height: modular-scale(4);
+		// background-color: $white;
+	}
+	h2 {
+		font-style: italic;
+		font-size: modular-scale(2);
+		line-height: modular-scale(2);
+		font-weight: normal;
+		background-color: $white;
 	}
 }
 
@@ -60,7 +72,28 @@
 
 .main-header.inner-nav.small-header {
 	.header__text {
-		padding: 0 17%;
+		padding: 0 5%;
+		h1 {
+			color: $black;
+			font-weight: 400;
+			font-style: italic;
+			letter-spacing: 5px;
+			font-size: modular-scale(5);
+			line-height: modular-scale(5);
+			text-transform: uppercase;
+			span.white-highlight {
+				background-color: $white;
+			}
+		}
+		h2 {
+			font-style: italic;
+			font-size: modular-scale(2);
+			line-height: modular-scale(3);
+			font-weight: normal;
+			background-color: $white;
+			padding: 10px;
+		}
+
 	}
 	.left-align-text {
 		text-align: left;

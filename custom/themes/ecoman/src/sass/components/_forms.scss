@@ -1,5 +1,5 @@
 .signup-form {
-	background-color: $l-blue;
+	background-color: $copper;
 }
 
 .signup-form .outer-container .main-content {
@@ -77,81 +77,3 @@
 	}
 }
 
-// STATIC CONTACT FORM
-.contact-form {
-	width: 100%;
-	min-height: 500px;
-	border: 1px solid $black;
-	padding: 30px;
-	background: url('../images/postcard.jpg');
-	background-size: cover;
-	@include display(flex);
-	@include flex-direction(column);
-    @include media($bp-med) {
-		@include flex-direction(row);
-		padding: 50px;
-    }
-}
-
-.contact-form__left, 
-.contact-form__right {
-	padding: 0 30px 0 0;
-	@include display(flex);
-	@include flex-direction(column);
-	@include flex(0 0 100%);
-}
-
-.contact-form__left {
-    @include media($bp-med) {
-		@include flex(0 0 40%);
-		border-right: 1px solid $grey;
-    }
-}
-
-.contact__deats {
-	font-weight: bold;
-	p {
-		text-transform: uppercase;
-		margin: 0;
-	}
-}
-
-.contact__blurb {
-	margin-top: 20px;
-}
-
-.contact__social {
-	margin-top: 20px;
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-		@include display(flex);
-		li {
-			text-align: center;
-			width: 35px;
-			height: 35px;
-			background-color: $white;
-			border-radius: 50%;
-			margin: 0 5px;
-			border: 1px solid red;
-			@include flexboxcenter;
-			&:first-child {
-				margin-left: 0;
-			}
-			a {
-				color: red;
-			}
-		}
-	}
-}
-
-.contact-form__right {
-    @include media($bp-med) {
-		@include flex(0 0 60%);
-		padding: 0 0 0 30px;
-    }
-	h4 {
-		margin-bottom: 0;
-	}
-}

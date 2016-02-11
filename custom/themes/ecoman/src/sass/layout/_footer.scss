@@ -1,8 +1,14 @@
 footer {
+	background-color: $d-green;
 	width: 100%;
 	@include flexboxcenter;
 	p {
+		color: $green;
 		font-size: modular-scale(0, 0.8rem);
 		padding: 0 20px;
+		a {
+			color: $green;
+			text-decoration: underline;
+		}
 	}
 }

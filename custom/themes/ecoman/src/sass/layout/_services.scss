@@ -1,3 +1,43 @@
+.tabs-panel-intro {
+		@include flexalignstart;
+	.tabs-panel__left {
+		@include flex(0 0 30%);
+		img {
+			width: 200px;
+			height: auto;
+		}
+	}
+	.tabs-panel__right {
+		@include flex(0 0 80%);
+		@include display(flex);
+		@include flex-direction(column);
+		h3 {
+			text-transform: uppercase;
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+		}
+		div {
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+		}
+	}
+}
+
+.tabs-panel-pockets {
+	width: 100%;
+	@include flexalignstart;
+	div {
+		@include flex(0 0 25%);
+	}
+}
+
+.services-testimonial {
+	height: 500px;
+	width: 100%;
+	background-color: $l-blue;
+}
+
+
 // TABS
 
 /*  == tab heading */
@@ -5,14 +45,14 @@
 	background:transparent;
 	overflow:hidden;
 	margin-bottom: 80px;
-	@include media($bp-med) {
-		position: relative;
-		top: -58px;
-    }
+	// @include media($bp-med) {
+	// 	position: relative;
+	// 	top: -58px;
+ //    }
 }
 .tabs.r-tabs ul { 
 	overflow:hidden; 
-	width: 70%;
+	width: 100%;
 	li { 
 		float: left;
 		display: inline-block;
@@ -24,7 +64,7 @@
 			//border-bottom: 1px solid #fff;
 		}
 		a { 
-			padding: 20px 5%;
+			padding: 25px 5%;
 			background: $l-grey;
 			color: $black;
 			box-sizing: border-box;
@@ -36,7 +76,7 @@
 		}
 		&.r-tabs-state-active { 
 			a {
-				background:$grey;
+				background:$white;
 				color: red;
 				&:hover {
 					background-color: none;
@@ -143,4 +183,9 @@
 	list-style-type: none;
 	padding: 0;
 	margin: 0 auto;
+}
+
+// CASE STUDIES
+.services-case-studies {
+	min-height: 500px;
 }
