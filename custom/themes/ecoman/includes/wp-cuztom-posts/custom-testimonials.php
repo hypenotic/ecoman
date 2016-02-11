@@ -3,7 +3,7 @@ $args = array(
     'has_archive'       => true,
     'hierarchical'      => true,
     'show_in_nav_menus' => true,
-    'menu_icon'         => 'dashicons-admin-comments', //http://melchoyce.github.io/dashicons/
+    'menu_icon'         => 'dashicons-testimonial', //http://melchoyce.github.io/dashicons/
     'supports'          => array( 'title'),
     'show_in_rest' => true
     );
