@@ -47,6 +47,7 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
+					<div id="search-form-trigger"></div>
 				</div>
 			</nav>
 		</div>
@@ -103,7 +104,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="header__text outer-container">
+		<div class="header__text outer-container animated fadeIn">
 			<?php if (is_page('services')) { ?>
 				<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
 			<?php } else { ?>
@@ -186,6 +187,7 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
+					<div id="search-form-trigger"></div>
 				</div>
 			</nav>
 		</div>

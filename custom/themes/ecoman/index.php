@@ -40,9 +40,8 @@
 
 	        <p class="pagination-links"><?php echo paginate_links( $args ); ?></p>
 	</div>
-	<div class="main-content">
-		<?php get_template_part( 'template-part-contact-form' ); ?>
-	</div>
 </div>
+
+<?php get_template_part( 'template-part-contact-form' ); ?>
 
 <?php get_footer(); ?>

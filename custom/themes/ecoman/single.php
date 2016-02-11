@@ -41,9 +41,10 @@
     </div>
 
 	<?php endwhile; endif; ?>
-	<?php get_template_part( 'template-part-contact-form' ); ?>
 </div>
 	
 </div>
+
+<?php get_template_part( 'template-part-contact-form' ); ?>
 
 <?php get_footer(); ?>
