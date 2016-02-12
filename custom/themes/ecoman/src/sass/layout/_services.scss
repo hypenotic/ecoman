@@ -44,7 +44,7 @@
 #responsive-tabs {
 	background:transparent;
 	overflow:hidden;
-	margin-bottom: 80px;
+	// margin-bottom: 80px;
 	// @include media($bp-med) {
 	// 	position: relative;
 	// 	top: -58px;
@@ -187,5 +187,6 @@
 
 // CASE STUDIES
 .services-case-studies {
+	background: $l-grey;
 	min-height: 500px;
 }

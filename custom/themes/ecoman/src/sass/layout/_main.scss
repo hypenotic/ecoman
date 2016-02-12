@@ -28,6 +28,16 @@ body {
     }
 }
 
+.main-content-case-study {
+	@include media($bp-large) {
+    	margin: 50px 0 0;
+    	padding: 40px;
+		@include span-columns(7);
+		@include shift(1);
+		background-color: $white;
+    }
+}
+
 .no-top-margin {
 	margin-top: 0;
 }

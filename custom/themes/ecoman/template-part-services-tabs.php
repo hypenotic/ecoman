@@ -44,6 +44,9 @@
 
 			// Testimonial
             $test       = get_post_meta( $post->ID, '_test_select', true );
+
+            // Case Study
+            $cs       = get_post_meta( $post->ID, '_cs_bucket', true );
 	
 		?>
 	
@@ -95,10 +98,39 @@
 		<?php } ?> 
 
 		<div class="services-case-studies">
-			<div class="outer-container">
-				<h2><?php echo $hash ?></h2>
-			</div>
-		</div>	
+			<?php 
+			    $argsss = array(
+			        'post_type' => 'case_study',
+			        'tax_query' => array(
+		        		array(
+		        			'taxonomy' => 'service',
+		        			'field'    => 'term_id',
+		        			'terms'    => array( $cs )
+		        		)
+			        ),
+			    );
+			    $cases = new WP_Query( $argsss ); ?>
+
+			<?php if ( $cases->have_posts() ) : while ( $cases->have_posts() ) : $cases->the_post(); 
+			    
+			    // $banner     = get_post_meta( $post->ID, '_banner_image', true );
+			    // $bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
+			    // $heading    = get_post_meta( $post->ID, '_banner_heading', true );
+			    // $subheading = get_post_meta( $post->ID, '_banner_subheading', true );
+
+			?>  
+			    
+			    <div class="outer-container">
+			        <div class="main-content-case-study ">
+			            <h1><?php echo the_title(); ?></h1>
+			            <div><?php the_content(); ?></div>
+			        </div>
+			    </div>
+
+			<?php endwhile; endif; wp_reset_postdata();?>
+		</div>
+
+		
 
 	</div>
 
