@@ -118,6 +118,21 @@ $services->add_meta_box(
     )
 );
 
-
+$services->add_meta_box(
+    'cs',
+    'Case Studies <i>(Optional)</i>',
+    array(
+        array(
+        'name'          => 'select',
+        'label'         => 'Select a testimonial',
+        'description'   => '',
+        'type'          => 'post_select',
+        'args'          => array(
+            'post_type' => 'case_study',
+            'show_option_none' => "Select Case Studies",
+            )
+        )
+    )
+);
 
 ?>

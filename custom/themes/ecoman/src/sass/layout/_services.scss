@@ -8,7 +8,7 @@
 		}
 	}
 	.tabs-panel__right {
-		@include flex(0 0 80%);
+		@include flex(0 0 70%);
 		@include display(flex);
 		@include flex-direction(column);
 		h3 {
@@ -99,9 +99,9 @@
 }
 
 .r-tabs .r-tabs-panel {
-    padding: 30px 15px 15px;
+    // padding: 30px 15px 15px;
 	@include media($bp-large) {
-		padding: 60px 15px 15px;
+		// padding: 60px 15px 15px;
 	}
     display: none;
 	& section {

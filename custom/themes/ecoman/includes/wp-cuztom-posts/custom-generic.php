@@ -68,31 +68,17 @@ $pages->add_meta_box(
 );
 $pages->add_meta_box(
     'test',
-    'Testimonial', 
+    'Testimonial <i>(Optional)</i>',
     array(
         array(
-            'name'          => 'testimonial',
-            'label'         => 'Testimonial',
-            'description'   => '',
-            'type'          => 'wysiwyg',
-        ),
-        array(
-            'name'          => 'source',
-            'label'         => 'Source',
-            'description'   => '',
-            'type'          => 'text',
-        ),
-        array(
-            'name'          => 'title',
-            'label'         => 'Source Title',
-            'description'   => '',
-            'type'          => 'text',
-        ),
-        array(
-            'name'          => 'caption',
-            'label'         => 'Caption',
-            'description'   => '',
-            'type'          => 'text',
+        'name'          => 'select',
+        'label'         => 'Select a testimonial',
+        'description'   => '',
+        'type'          => 'post_select',
+        'args'          => array(
+            'post_type' => 'testimonial',
+            'show_option_none' => "Select a testimonial",
+            )
         )
     )
 );

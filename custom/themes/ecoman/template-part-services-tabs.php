@@ -41,6 +41,9 @@
 			$text = get_post_meta( $post->ID, '_blurb_blurb', true );
 
 			$pockets      = get_post_meta($post->ID,'_pockets',true);
+
+			// Testimonial
+            $test       = get_post_meta( $post->ID, '_test_select', true );
 	
 		?>
 	
@@ -48,7 +51,7 @@
 	<div id="<?php echo $hash ?>">
 
 
-		<div>
+		<div class="outer-container">
 			<div class="tabs-panel-intro">
 				<div class="tabs-panel__left">
 					<img src="<?php echo $imageurl[0]; ?>" alt="">
@@ -61,28 +64,41 @@
 		</div>
 
 		
-		<div class="tabs-panel-pockets">
-			<?php if($pockets) {
-			    foreach($pockets as $pocket) {
-			
-			    // Get custom meta values    
-			    // $singlelogo     = $logo['_logo'];
-			    // $logourl        = wp_get_attachment_image_src($singlelogo,'logos', true);
-			    $heading        = $pocket['_heading'];
-			    $text          = $pocket['_text'];
-			?>
-			
-			    <div class="logo-samples__single">
-			        <h4><?php echo $heading; ?></h4>
-			        <p><?php echo $text; ?></p>
-			    </div>
-			            
-			<?php
-			        }
-			    }
-			?> 
+		<div class="outer-container">
+			<div class="tabs-panel-pockets">
+				<?php if($pockets) {
+				    foreach($pockets as $pocket) {
+				
+				    // Get custom meta values    
+				    // $singlelogo     = $logo['_logo'];
+				    // $logourl        = wp_get_attachment_image_src($singlelogo,'logos', true);
+				    $heading        = $pocket['_heading'];
+				    $text          = $pocket['_text'];
+				?>
+				
+				    <div class="logo-samples__single">
+				        <h4><?php echo $heading; ?></h4>
+				        <p><?php echo $text; ?></p>
+				    </div>
+				            
+				<?php
+				        }
+				    }
+				?> 
+			</div>
 		</div>
 		
+		<?php if ($test) { ?>
+		<div class="services-testimonial">
+			<?php get_template_part( 'template-part-testimonial' ); ?> 
+		</div>
+		<?php } ?> 
+
+		<div class="services-case-studies">
+			<div class="outer-container">
+				<h2><?php echo $hash ?></h2>
+			</div>
+		</div>	
 
 	</div>
 
