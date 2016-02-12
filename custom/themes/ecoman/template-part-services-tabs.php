@@ -14,7 +14,7 @@
 			?>
 
 		    <li>
-		        <a href="#<?php echo $hash ?>">
+		        <a href="#<?php echo $hash; ?>">
 		        	<span><?php the_title(); ?></span>
 		        </a>
 		    </li>     
