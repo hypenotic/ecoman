@@ -185,8 +185,27 @@
 	margin: 0 auto;
 }
 
+// TESTIMONIALS
+.services-testimonial {
+	@include flexboxcenter;
+	.testimonial__quotation {
+		color: $white;
+		margin: 0;
+		font-size: modular-scale(2);
+		line-height: modular-scale(3);
+	}
+	p {
+		color: $white;
+	}
+}
+
 // CASE STUDIES
 .services-case-studies {
 	background: $l-grey;
 	min-height: 500px;
+	.main-content-case-study {
+		h1 {
+			margin: 0;
+		}
+	}
 }
