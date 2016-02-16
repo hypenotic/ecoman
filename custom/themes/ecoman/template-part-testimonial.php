@@ -25,12 +25,15 @@ $test_id = get_post_meta($post->ID,'_test_select',true); ?>
     
     <div class="outer-container">
         <div class="main-content">
+            <div class="testimonial-border__circle--top"></div>
+            <p class="uppercase">What clients say when we leave the room</p>
             <blockquote class="testimonial__quotation">
                 <?php echo $quotation; ?>
             </blockquote>
             <div class="testimonial__creds">
               <p><?php echo $src; ?>, <?php echo $srctitle; ?></p>
-            </div>  
+            </div> 
+            <div class="testimonial-border__circle--bottom"></div> 
         </div>
     </div>
 

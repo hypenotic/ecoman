@@ -55,13 +55,15 @@
 
 
 		<div class="outer-container">
-			<div class="tabs-panel-intro">
-				<div class="tabs-panel__left">
-					<img src="<?php echo $imageurl[0]; ?>" alt="">
-				</div>
-				<div class="tabs-panel__right">
-					<h3><?php echo $heading; ?></h3>
-					<div><?php echo $text; ?></div>
+			<div class="main-content">
+				<div class="tabs-panel-intro">
+					<div class="tabs-panel__left">
+						<img src="<?php echo $imageurl[0]; ?>" alt="">
+					</div>
+					<div class="tabs-panel__right">
+						<h3><?php echo $heading; ?></h3>
+						<div><?php echo $text; ?></div>
+					</div>
 				</div>
 			</div>
 		</div>

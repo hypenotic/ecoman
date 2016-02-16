@@ -55,7 +55,8 @@
 		margin-right: 30px;
 	}
 	p {
-		font-family: $title-font;
+		// font-family: $title-font;
+		font-weight: 500;
 		letter-spacing: 2px;
 	}
 	p.light-theme {
