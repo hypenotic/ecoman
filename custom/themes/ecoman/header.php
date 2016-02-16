@@ -44,7 +44,7 @@
 			<nav>
 				<div class="nav__left">
 					<a href="/">
-						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
@@ -101,9 +101,9 @@
 				<div class="nav__left">
 					<a href="/">
 						<?php if ($theme == 'value2') { ?>
-						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_white.png" alt="">
+						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
 						<?php } else { ?>
-						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 						<?php } ?>
 					</a>
 					<?php if ($theme == 'value2') { ?>
@@ -155,7 +155,7 @@
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
+					<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
@@ -195,7 +195,7 @@
 			<nav>
 				<div class="nav__left">
 					<a href="/">
-						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
