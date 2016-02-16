@@ -1,4 +1,46 @@
+.front-page__intro,
+.front-page__buckets {
+	position: relative;
+	padding-bottom: 60px;
+	.front-page__circle-icon {
+		width: 160px;
+		height: 160px;
+		background-color: $white;
+		border-radius: 50%;
+		border: 1px solid #e3e3e3;
+		position: relative;
+		top: -80px;
+		// margin-left: 3px;
+		margin: 0 auto;
+		z-index: 30;
+	}
+}
+
+.front-page__intro {
+	background-color: $l-grey;
+	padding-bottom: 60px;
+	@include flexboxcenter;
+	@include flex-direction(column);
+}
+
+.front-page__buckets {
+	background-color: $white;
+}
+
 .front-page__testimonial {
 	text-align: center;
 	margin: 50px 0 100px;
+}
+
+.outer-container.front-page {
+	.main-content {
+		z-index: 50;
+		margin-top: -80px;
+		position: relative;
+		// background-color: $l-grey;
+		p {
+			font-size: modular-scale(1);
+			line-height: modular-scale(2);
+		}
+	}
 }

@@ -67,9 +67,9 @@
 				<h2><?php echo $subheading; ?></h2>
 	        <?php } ?>
 		</div>
-		<div class="header__circle-icon">
+		<!-- <div class="header__circle-icon">
 			
-		</div>
+		</div> -->
 	</header>
 
 	<?php if(social_share()) { social_share();} ?>
@@ -86,6 +86,8 @@
 	$subheading = get_post_meta( $post->ID, '_banner_subheading', true );
 
 	$blurb = get_post_meta( $post->ID, '_banner_blurb', true );
+
+	$theme = get_post_meta( $post->ID, '_banner_theme', true );
 
 	?>
 
@@ -114,12 +116,13 @@
 				</div>
 			</nav>
 		</div>
+
+		<?php if ($theme == 'value2') { ?>
+		<div class="header__text outer-container animated fadeIn light-text">
+		<?php } else { ?>
 		<div class="header__text outer-container animated fadeIn">
-			<?php if (is_page('services')) { ?>
-				<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
-			<?php } else { ?>
-				<h1><?php echo $heading; ?></h1>
-			<?php } ?>
+		<?php } ?>
+			<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
 	        <?php if ($subheading) { ?>
 				<h2><?php echo $subheading; ?></h2>
 	        <?php } ?>

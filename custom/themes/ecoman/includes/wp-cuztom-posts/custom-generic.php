@@ -13,13 +13,24 @@ add_action( 'admin_menu' , 'remove_meta_boxes' );
 $pages = new Cuztom_Post_Type('page');
 $pages->add_meta_box(
     'banner',
-    'Featured banner', 
+    'Hero Banner', 
     array(
         array(
             'name'          => 'image',
             'label'         => 'Banner Image',
             'description'   => 'Dimensions 1200px x 800px',
             'type'          => 'image',
+        ),
+        array(
+            'name'          => 'theme',
+            'label'         => 'Dark or Light Text',
+            'description'   => '',
+            'type'          => 'select',
+            'options'       => array(
+                'value1'    => 'Dark',
+                'value2'    => 'Light'
+            ),
+            'default_value' => 'value1'
         ),
         array(
             'name'          => 'logo',
@@ -48,24 +59,7 @@ $pages->add_meta_box(
         )
     )
 );
-$pages->add_meta_box(
-    'badge',
-    'Hero Badge', 
-    array(
-        array(
-            'name'          => 'text',
-            'label'         => 'Badge Text',
-            'description'   => '',
-            'type'          => 'wysiwyg', 
-        ),
-        array(
-            'name'          => 'link',
-            'label'         => 'Badge Link',
-            'description'   => '',
-            'type'          => 'text', 
-        )
-    )
-);
+
 $pages->add_meta_box(
     'test',
     'Testimonial <i>(Optional)</i>',

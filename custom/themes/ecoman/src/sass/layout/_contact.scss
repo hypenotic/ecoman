@@ -11,10 +11,11 @@
 		height: 160px;
 		background-color: $d-blue;
 		border-radius: 50%;
-		// border: 1px solid #e3e3e3;
+		border: 1px solid #e3e3e3;
 		position: relative;
 		top: -80px;
 		margin-left: 3px;
+		z-index: -1;
 	}
 }
 
@@ -59,7 +60,7 @@
 .contact-form__left {
     @include media($bp-med) {
 		@include flex(0 0 40%);
-		border-right: 1px solid $grey;
+		// border-right: 1px solid $grey;
     }
 }
 

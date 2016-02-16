@@ -5,7 +5,7 @@
 	position: relative;
 	@include flexboxcenter;
 	@include flex-direction(column);
-	@include media($bp-xlarge) {
+	@include media($bp-large) {
 		min-height: 500px;
     }
 	.header__text {
@@ -110,6 +110,22 @@ span.white-highlight {
 			font-size: modular-scale(0, 1rem);
 			line-height: modular-scale(1);
 		}
+	}
+}
+
+.header__text.outer-container.animated.fadeIn.light-text {
+	padding: 0 5% 0 0;
+	margin: 0;
+	h1 {
+		color: $white;
+		text-align: left;
+	}
+	h2 {
+
+	}
+	span.white-highlight {
+		background-color: rgba(0,0,0,0.4);
+		padding: 0 15px;
 	}
 }
 

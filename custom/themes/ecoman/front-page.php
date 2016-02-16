@@ -16,35 +16,38 @@
   $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 ?>
 
-<div class="outer-container front-page">
-	<div class="main-content">
-		<?php the_content(); ?>
+<section class="front-page__intro">
+	<div class="front-page__circle-icon">
+		
 	</div>
-
-	<div class="column-4 column-container">
-		<div class="column-4__single">
-			
-		</div>
-		<div class="column-4__single">
-			
-		</div>
-		<div class="column-4__single">
-			
-		</div>
-		<div class="column-4__single">
-			
+	<div class="outer-container front-page">
+		<div class="main-content">
+			<?php the_content(); ?>
 		</div>
 	</div>
-	
-	<div class="main-content">
+</section>
 
-		<div class="front-page__testimonial">
-			<p><strong>WHAT CLIENTS SAY WHEN WE LEAVE THE ROOM:</strong></p>		
+<section class="front-page__buckets">
+	<div class="front-page__circle-icon">
+			
 		</div>
-
+	<div class="outer-container">
+		<div class="column-4 column-container">
+			<div class="column-4__single">
+				
+			</div>
+			<div class="column-4__single">
+				
+			</div>
+			<div class="column-4__single">
+				
+			</div>
+			<div class="column-4__single">
+				
+			</div>
+		</div>
 	</div>
-
-</div>
+</section>
 
 <?php endwhile; endif; ?>
 
