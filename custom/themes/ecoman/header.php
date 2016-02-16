@@ -44,7 +44,7 @@
 			<nav>
 				<div class="nav__left">
 					<a href="/">
-						<div></div>
+						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
@@ -100,9 +100,17 @@
 			<nav>
 				<div class="nav__left">
 					<a href="/">
-						<div></div>
+						<?php if ($theme == 'value2') { ?>
+						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_white.png" alt="">
+						<?php } else { ?>
+						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
+						<?php } ?>
 					</a>
+					<?php if ($theme == 'value2') { ?>
+					<p class="light-theme">ECOMAN. 123.456.7890</p>
+					<?php } else { ?>
 					<p>ECOMAN. 123.456.7890</p>
+					<?php } ?>
 				</div>
 				<div class="nav__right">
 					<?php 
@@ -147,7 +155,7 @@
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<div></div>
+					<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
@@ -187,7 +195,7 @@
 			<nav>
 				<div class="nav__left">
 					<a href="/">
-						<div></div>
+						<img src="/custom/themes/ecoman/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN. 123.456.7890</p>
 				</div>

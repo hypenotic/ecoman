@@ -10,8 +10,8 @@
 	position: fixed;
 	right: 0;
 	top: 40%;
-	background: $white;
-	border: 1px solid red;
+	background: $l-grey;
+	// border: 1px solid red;
 	border-right: 0;
 	padding: 10px;
 	ul {
@@ -23,7 +23,7 @@
 		li {
 			padding: 10px;
 			a {
-				color: red;
+				color: $copper;
 				i {
 					font-size: modular-scale(1);
 				}

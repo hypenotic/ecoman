@@ -48,13 +48,18 @@
 }
 
 .nav__left {
-	background-color: $white;
-	div {
+	// background-color: $white;
+	img {
 		width: 70px;
-		height: 70px;
-		background-color: $grey;
-		border-radius: 50%;
+		height: auto;
 		margin-right: 30px;
+	}
+	p {
+		font-family: $title-font;
+		letter-spacing: 2px;
+	}
+	p.light-theme {
+		color: $white;
 	}
 }
 
