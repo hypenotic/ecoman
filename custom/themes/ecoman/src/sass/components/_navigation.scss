@@ -25,12 +25,16 @@
 			list-style-type: none;
 			@include display(flex);
 			li {
-				padding: 15px 40px;
+				padding: 10px 30px;
 				&:last-child {
 					padding-right: 0;
 				}
 				a {
 					color: $white;
+					text-transform: lowercase;
+					font-size: modular-scale(1, 0.9rem);
+					font-weight: 300;
+					letter-spacing: 2px;
 				}
 			}
 		}

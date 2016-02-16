@@ -1,14 +1,15 @@
 // STATIC CONTACT FORM
 .full-screen-wrapper.contact {
 	width: 100%;
-	background-color: $green;
+	background-color: $d-blue;
 	position: relative;
+	color: $white;
 	@include flexboxcenter;
 	@include flex-direction(column);
 	.contact__circle-icon {
 		width: 160px;
 		height: 160px;
-		background-color: $green;
+		background-color: $d-blue;
 		border-radius: 50%;
 		// border: 1px solid #e3e3e3;
 		position: relative;
@@ -17,10 +18,24 @@
 	}
 }
 
+.contact-section {
+	margin-top: -100px;
+}
+
+.contact-intro {
+	text-align: center;
+	margin: 0 20%;
+	color: $white;
+	font-weight: 300;
+	p:first-child {
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+}
+
 .contact-form {
 	width: 100%;
 	min-height: 500px;
-	margin-top: -100px;
 	// border: 1px solid $black;
 	padding: 30px;
 	// background: url('../images/postcard.jpg');
@@ -49,15 +64,16 @@
 }
 
 .contact__deats {
-	font-weight: bold;
+	font-weight: 300;
 	p {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		margin: 0;
 	}
 }
 
 .contact__blurb {
 	margin-top: 20px;
+	font-weight: 300;
 }
 
 .contact__social {
@@ -71,7 +87,7 @@
 			text-align: center;
 			width: 35px;
 			height: 35px;
-			background-color: rgba(255,255,255,0.5);
+			background-color: rgba(255,255,255,1);
 			border-radius: 50%;
 			margin: 0 5px;
 			// border: 1px solid red;
@@ -80,7 +96,7 @@
 				margin-left: 0;
 			}
 			a {
-				color: red;
+				color: $copper;
 			}
 		}
 	}
@@ -131,4 +147,11 @@
 		background-color: rgba(255,255,255,0.5);
 		border: 0;
 	}	
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	float: right;
+	color: $copper;
+	border: 0;
+	background-color: $white;
 }

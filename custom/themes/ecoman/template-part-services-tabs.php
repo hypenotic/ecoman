@@ -97,6 +97,7 @@
 		</div>
 		<?php } ?> 
 
+		<?php if ($cs) { ?>
 		<div class="services-case-studies">
 			<?php 
 			    $argsss = array(
@@ -129,7 +130,7 @@
 
 			<?php endwhile; endif; wp_reset_postdata();?>
 		</div>
-
+		<?php } ?>
 		
 
 	</div>

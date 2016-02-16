@@ -10,7 +10,7 @@
 
 	<div class="outer-container">
 		<div class="main-content">
-			<p>Get garden advice in your inbox</p>
+			<p>Get garden advice in your inbox:</p>
 			<div id="main-signup">
 				<!-- Begin MailChimp Signup Form -->
 				<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">

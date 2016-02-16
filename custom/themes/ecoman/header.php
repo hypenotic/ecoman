@@ -6,6 +6,16 @@
 	 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<title><?php bloginfo('name'); ?></title>
 	<!-- FONTS -->
+	<script>
+	  (function(d) {
+	    var config = {
+	      kitId: 'tla7tqi',
+	      scriptTimeout: 3000,
+	      async: true
+	    },
+	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,300,600,700,700italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- Google Analytics -->
@@ -52,7 +62,7 @@
 			</nav>
 		</div>
 		<div class="header__text outer-container">
-			<h1><?php echo $heading; ?></h1>
+			<h1><span class="white-highlight"><?php echo $heading; ?></span></h1>
 	        <?php if ($subheading) { ?>
 				<h2><?php echo $subheading; ?></h2>
 	        <?php } ?>

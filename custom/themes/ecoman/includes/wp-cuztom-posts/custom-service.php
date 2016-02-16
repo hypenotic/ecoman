@@ -43,6 +43,19 @@ $services->add_meta_box(
 );
 
 $services->add_meta_box(
+    'icon',
+    'Tab Icon', 
+    array(
+        array(
+            'name'          => 'image',
+            'label'         => 'Tab Icon',
+            'description'   => 'Dimensions 150px x 150px',
+            'type'          => 'image',
+            )
+    )
+);
+
+$services->add_meta_box(
     'blurb',
     'Intro Blurb', 
     array(
