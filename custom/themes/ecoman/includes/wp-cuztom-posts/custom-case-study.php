@@ -6,9 +6,14 @@ $args = array(
     // 'taxonomies' => array('category'),
     'show_in_rest' => true
     );
+
 $cs = register_cuztom_post_type('Case Study', $args);
 
-$buckets = register_cuztom_taxonomy( 'Service', 'case_study' );
+$argss = array(
+    'show_in_rest' => true
+    );
+
+$buckets = register_cuztom_taxonomy( 'Service', 'case_study', $argss );
 
 $cs->add_meta_box(
     'banner',
@@ -31,6 +36,20 @@ $cs->add_meta_box(
             'label'         => 'Banner Subheading',
             'description'   => 'Enter text',
             'type'          => 'text'  
+        )
+    )
+);
+
+
+$cs->add_meta_box(
+    'before',
+    'Before Image', 
+    array(
+        array(
+            'name'          => 'image',
+            'label'         => 'Before Image',
+            'description'   => '',
+            'type'          => 'image',
         )
     )
 );

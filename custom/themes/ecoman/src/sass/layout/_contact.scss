@@ -2,6 +2,10 @@
 .full-screen-wrapper.contact {
 	width: 100%;
 	background-color: $d-blue;
+	background-image: url(../images/postcardlarge.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
 	position: relative;
 	color: $white;
 	@include flexboxcenter;
@@ -10,6 +14,7 @@
 		width: 160px;
 		height: 160px;
 		background-color: $d-blue;
+		background: url('../images/tab-three.jpg');
 		border-radius: 50%;
 		border: 1px solid #e3e3e3;
 		position: relative;

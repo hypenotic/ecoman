@@ -1,13 +1,14 @@
-<?php if ( is_search() || is_archive() || is_home()  ) { ?>
+<!-- <?php //if ( is_search() || is_archive() || is_home()  ) { ?>
 
 	<header class="signup-form signup--dark">
 
-<?php } else { ?>
+<?php // } else { ?>
 
 	<header class="signup-form">
 
-<?php } ?>
+<?php // } ?> -->
 
+	<header class="signup-form">
 	<div class="outer-container">
 		<div class="main-content">
 			<p>Get garden advice in your inbox:</p>

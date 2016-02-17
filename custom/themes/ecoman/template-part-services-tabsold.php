@@ -102,7 +102,7 @@
 		<?php } ?> 
 
 		<?php if ($cs) { ?>
-		<div class="services-case-studies" id="case-study-display" data-cases="<?php echo $cs; ?>">
+		<div class="services-case-studies" id="case-study-display" style="background-image: url(http://ecoman.dev/custom/uploads/2016/02/before.jpg);background-size:cover;">
 			<?php 
 			    $argsss = array(
 			        'post_type' => 'case_study',
@@ -116,7 +116,17 @@
 			    );
 			    $cases = new WP_Query( $argsss ); 
 			    $firstcase = $cases->posts[0];
-			?>
+
+			    print_r($firstcase); ?>
+
+			<?php if ( $cases->have_posts() ) : while ( $cases->have_posts() ) : $cases->the_post(); 
+			    
+			    // $banner     = get_post_meta( $post->ID, '_banner_image', true );
+			    // $bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
+			    // $heading    = get_post_meta( $post->ID, '_banner_heading', true );
+			    // $subheading = get_post_meta( $post->ID, '_banner_subheading', true );
+
+			?>  
 			    
 			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">
 			        <div class="main-content-case-study ">
@@ -131,6 +141,8 @@
 			        </div>
 			    </div>
 
+
+			<?php endwhile; endif; wp_reset_postdata();?>
 		</div>
 		<?php } ?>
 		

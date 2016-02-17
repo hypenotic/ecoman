@@ -16,38 +16,43 @@
   $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 ?>
 
-<section class="front-page__intro">
-	<div class="front-page__circle-icon">
-		
-	</div>
-	<div class="outer-container front-page">
-		<div class="main-content">
-			<?php the_content(); ?>
-		</div>
-	</div>
-</section>
-
-<section class="front-page__buckets">
-	<div class="front-page__circle-icon">
+<div class="tab-section-wrapper">
+	<div class="front-page__circle-icon tab-one">
 			
-		</div>
-	<div class="outer-container">
-		<div class="column-4 column-container">
-			<div class="column-4__single">
-				
-			</div>
-			<div class="column-4__single">
-				
-			</div>
-			<div class="column-4__single">
-				
-			</div>
-			<div class="column-4__single">
-				
-			</div>
-		</div>
 	</div>
-</section>
+	<section class="front-page__intro">
+		<div class="outer-container front-page">
+			<div class="main-content">
+				<?php the_content(); ?>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="tab-section-wrapper two">
+	<div class="front-page__circle-icon tab-two">
+				
+	</div>
+	<section class="front-page__buckets">
+		<div class="outer-container">
+			<h3>Services</h3>
+			<div class="column-4 column-container">
+				<div class="column-4__single">
+					
+				</div>
+				<div class="column-4__single">
+					
+				</div>
+				<div class="column-4__single">
+					
+				</div>
+				<div class="column-4__single">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
 <?php endwhile; endif; ?>
 

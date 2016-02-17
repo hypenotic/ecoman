@@ -1,5 +1,6 @@
 .tabs-panel-intro {
 		@include flexalignstart;
+		padding-top: 40px;
 	.tabs-panel__left {
 		@include flex(0 0 30%);
 		img {
@@ -63,7 +64,11 @@
 .tabs.r-tabs ul { 
 	overflow:hidden; 
 	width: 100%;
+	background: $grey;
 	li { 
+		&:first-child {
+			// margin-left: -50px;
+		}
 		float: left;
 		display: inline-block;
 		float: left;
@@ -271,9 +276,35 @@
 .services-case-studies {
 	background: $l-grey;
 	min-height: 500px;
-	.main-content-case-study {
-		h1 {
-			margin: 0;
+	padding-top: 50px;
+	.outer-container {
+		position: relative;
+		.main-content-case-study {
+			position: relative;
+			z-index: 3;
+			h1 {
+				margin: 0;
+			}
+		}
+		.previous-cs {
+			z-index: 2;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.7);
+		}
+		.next-cs {
+			z-index: 2;
+			position: absolute;
+			left: 710px;
+			top: 50%;
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.7);
 		}
 	}
 }

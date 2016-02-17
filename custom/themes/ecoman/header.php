@@ -39,7 +39,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;">
+	<header class="main-header inner-nav" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;background-attachment: fixed;">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
@@ -49,7 +49,6 @@
 					<p>ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
-					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -57,7 +56,8 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
-					<div id="search-form-trigger"></div>
+					<?php get_search_form(); ?>
+					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -95,7 +95,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav small-header" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;">
+	<header class="main-header inner-nav small-header" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;background-attachment: fixed;">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
@@ -151,7 +151,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav error-page" style="background:url('/custom/themes/ecoman/dist/images/default_banner.jpg');background-size:cover;">
+	<header class="main-header inner-nav error-page" style="background:url('/custom/themes/ecoman/dist/images/default_banner.jpg');background-size:cover;background-attachment: fixed;">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
