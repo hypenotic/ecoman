@@ -92,6 +92,12 @@
 		}
 		li.current_page_item.page_item {
 			background-color: $d-grey;
+			&:hover {
+				background: $l-blue;
+				a {
+					color: $black;
+				}
+			}
 		}
 	}
 }
