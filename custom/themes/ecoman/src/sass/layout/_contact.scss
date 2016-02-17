@@ -206,11 +206,10 @@
 .message-container,
 .to-container {
 	position: relative;
-	@include display(flex);
-	@include align-items(flex-start);
-	@include justify-content(flex-start);
-	@include flex-direction(column);
 	@include media($bp-med) {
+		@include display(flex);
+		@include align-items(flex-start);
+		@include justify-content(flex-start);
 		@include flex-direction(row);
 	}
 	> p {
