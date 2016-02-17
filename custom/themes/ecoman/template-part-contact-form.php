@@ -6,7 +6,7 @@
 		<div class="contact-section">
 			<div class="contact-intro">
 				<p>We love hearing from you</p>
-				<p>Whether it’s testimonials, ways we can improve, or about working together, or just a how-do-ya-do, please reach out!</p>
+				<?php dynamic_sidebar( 'contact-blurb' ); ?>
 			</div>
 			<div class="contact-form">
 				<div class="contact-form__left">
@@ -17,7 +17,6 @@
 						M6H 1S3</p>
 					</div>
 					<div class="contact__blurb">
-						<?php //dynamic_sidebar( 'contact-blurb' ); ?>
 						<p>jonas@ecoman.ca<br/>
 						416.556.5516</p>
 					</div>
@@ -31,10 +30,13 @@
 					</div>
 				</div>
 				<div class="contact-form__right">
-					<p>DEAR: JONAS SPRING</p>
+					
 					<?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form 1"]' ); ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+
