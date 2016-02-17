@@ -67,7 +67,7 @@
 
 // SEARCH
 .nav__right #searchform {
-	margin-left: 30px;
+	margin-left: 10px;
 	padding-right: 30px; 
 	input#s {
 		border: 0;
@@ -75,6 +75,7 @@
 		background-color: transparent;
 		color: white;
 		height: 21px;
+		max-width: 100px;
 	}
 	input#searchsubmit {
 		// padding-top: 30px;

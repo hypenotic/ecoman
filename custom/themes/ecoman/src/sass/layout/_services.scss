@@ -33,7 +33,7 @@
 	@include align-items(flex-start);
 	@include justify-content(space-between);
 	div {
-		@include flex(0 0 23%);
+		@include flex(0 0 20%);
 		// margin: 0 0.5%;
 	}
 	h4 {
@@ -67,7 +67,7 @@
 	background: $grey;
 	li { 
 		&:first-child {
-			// margin-left: -50px;
+			margin-left: -50px;
 		}
 		float: left;
 		display: inline-block;
@@ -79,17 +79,32 @@
 			//border-bottom: 1px solid #fff;
 		}
 		a { 
-			padding: 30px 5%;
+			padding: 20px 5%;
 			background: $grey;
 			color: $white;
 			letter-spacing: 1px;
 			box-sizing: border-box;
-			display:block; 
+			@include flexboxcenter; 
 			&:hover {
 				background: $d-grey;
 				color: #fff;
             }
+            .tab-icon {
+            	width: 50px;
+            	height: 50px;
+            	display: inline-block;
+            	background-size:contain;
+            	background-color: $grey;
+        	    background-blend-mode: multiply;
+        	    background-repeat: no-repeat;
+        	    background-position: center center;
+            }
 		}
+		&:hover {
+    		.tab-icon {
+        	background-color: $d-grey;
+        	}
+    	}
 		&.r-tabs-state-active { 
 			a {
 				background:$white;
@@ -97,6 +112,16 @@
 				&:hover {
 					background-color: none;
 				}
+				.tab-icon {
+            	width: 50px;
+            	height: 50px;
+            	display: inline-block;
+            	background-size:contain;
+            	background-color: $white;
+        	    background-blend-mode: multiply;
+        	    background-repeat: no-repeat;
+        	    background-position: center center;
+            	}	
 			}
 			& h3 {
 				border-bottom: 1.5px solid blue;
@@ -108,6 +133,7 @@
 		padding:0 0 92px 0;
 	}
 }
+
 .r-tabs .r-tabs-tab {
     display: inline-block;
     margin: 0;

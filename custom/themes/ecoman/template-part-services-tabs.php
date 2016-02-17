@@ -11,11 +11,16 @@
 					$prehash = preg_replace("/[^a-zA-Z]/", "", $title);
 					$lowercase = strtolower($prehash);
 					$hash = $lowercase;
+
+					$icon     = get_post_meta( $post->ID, '_icon_image', true );
+					$iconurl  = wp_get_attachment_image_src( $icon,'icon', true );
 		
 				?>
 		
 			    <li>
 			        <a href="#<?php echo $hash; ?>">
+			        	<div class="tab-icon" style="background-image:url(<?php echo $iconurl[0]; ?>);">
+			        	</div>
 			        	<span><?php the_title(); ?></span>
 			        </a>
 			    </li>     

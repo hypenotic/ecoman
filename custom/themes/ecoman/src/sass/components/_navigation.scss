@@ -27,7 +27,7 @@
 			li {
 				padding: 10px 30px;
 				&:last-child {
-					padding-right: 0;
+					// padding-right: 0;
 				}
 				a {
 					color: $white;
@@ -76,5 +76,22 @@
 		background-repeat: no-repeat;
 		border: 0;
 		margin: 0 50px;
+	}
+}
+
+// WALKER MENU
+#main-menu {
+	ul#menu-main-menu {
+		li {
+			&:hover {
+				background: $l-blue;
+				a {
+					color: $black;
+				}
+			}
+		}
+		li.current_page_item.page_item {
+			background-color: $d-grey;
+		}
 	}
 }

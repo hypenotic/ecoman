@@ -120,7 +120,8 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
-					<div id="search-form-trigger"></div>
+					<?php get_search_form(); ?>
+					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -167,6 +168,8 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
+					<?php get_search_form(); ?>
+					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -208,7 +211,8 @@
 					      'walker' => new Main_Menu_Walker()
 					    )); 
 					?>
-					<div id="search-form-trigger"></div>
+					<?php get_search_form(); ?>
+					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
