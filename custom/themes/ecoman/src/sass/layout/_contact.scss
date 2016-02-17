@@ -11,21 +11,21 @@
 	@include flexboxcenter;
 	@include flex-direction(column);
 	.contact__circle-icon {
-		width: 160px;
-		height: 160px;
+		width: 116px;
+		height: 116px;
 		background-color: $d-blue;
 		background: url('../images/tab-three.jpg');
 		border-radius: 50%;
 		border: 1px solid #e3e3e3;
 		position: relative;
-		top: -80px;
+		top: -58px;
 		margin-left: 3px;
 		z-index: -1;
 	}
 }
 
 .contact-section {
-	margin-top: -100px;
+	margin-top: -50px;
 }
 
 .contact-intro {

@@ -6,7 +6,7 @@
 }
 
 .tab-section-wrapper.two {
-	margin-top: -160px;
+	margin-top: -116px;
 	z-index: 1;
 }
 
@@ -15,17 +15,18 @@
 	position: relative;
 	// padding-bottom: 60px;
 	z-index: 30;
-	top: -160px;
+	top: -116px;
 }
 
 .front-page__circle-icon {
-	width: 160px;
-	height: 160px;
+	width: 116px;
+	height: 116px;
 	background-color: $white;
 	border-radius: 50%;
-	border: 1px solid #e3e3e3;
+	// border: 1px solid #e3e3e3;
+	// box-shadow: 0px -1px 20px rgba(0,0,0,0.5);
 	position: relative;
-	top: -80px;
+	top: -58px;
 	// margin-left: 3px;
 	margin: 0 auto;
 	z-index: 29;
@@ -44,6 +45,7 @@
 .front-page__intro {
 	background-color: $l-grey;
 	padding-bottom: 60px;
+	// box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 	@include flexboxcenter;
 	@include flex-direction(column);
 }
