@@ -48,7 +48,7 @@
 
 .contact-form {
 	width: 100%;
-	// min-height: 500px;
+	min-height: 500px;
 	// border: 1px solid $black;
 	padding: 30px;
 	// background: url('../images/postcard.jpg');
@@ -64,9 +64,12 @@
 .contact-form__left, 
 .contact-form__right {
 	padding: 0 30px 0 0;
-	@include display(flex);
-	@include flex-direction(column);
-	@include flex(1 0 100%);
+	display: block;
+    @include media($bp-med) {
+		@include display(flex);
+		@include flex-direction(column);
+		@include flex(0 0 100%);
+    }
 }
 
 .contact-form__left {
