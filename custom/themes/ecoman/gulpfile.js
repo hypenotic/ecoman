@@ -16,9 +16,10 @@ var outputDir = 'dist';
 
 var scriptList = [
   'src/js/classie.js',
-  'src/js/modernizr.custom.js',
+  'src/js/modernizr.js',
   'src/js/wow.min.js',
   'src/js/jQueryTab.js',
+  'src/js/equal-height.js',
   'src/js/isotope.pkgd.min.js',
   'src/js/isotope_feeds.js',
   'src/js/index.js'

@@ -17,10 +17,6 @@ get_header(); ?>
 	
 ?>
 
-<div class="down-arrow">
-    <a id="down-link" href="#content" class="target"><i class="fa fa-chevron-down"></i></a>
-</div>
-
 <section role="main" id="isotope-container">
 	<div class="post-container">
 		<div class="filters button-group js-radio-button-group">
