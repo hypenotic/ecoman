@@ -30,7 +30,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	<div class="about__services-cta__photo" style="background-image:url(<?php echo $feat_image; ?>);">
 		
 	</div>
-	<div class="about__services-cta__text wow fadeInRight">
+	<div class="about__services-cta__text wow fadeInRight" data-wow-delay="0.5s">
 		<h3>What We Do</h3>
 		<?php the_excerpt (); ?>
 		<a href="<?php echo $ctalink; ?>"><button>
@@ -39,14 +39,14 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	</div>
 </section>
 
-<div class="tab-section-wrapper two">
+<div class="tab-section-wrapper two about">
 	<div class="front-page__circle-icon tab-one">
 				
 	</div>
 	<section class="front-page__buckets about">
 		<div class="outer-container">
 			<h3>Meet Your Team</h3>
-			<div class="column-4 column-container">
+			<div class="column-4 column-container wow fadeInUp">
 				<div class="column-4__single">
 					
 				</div>

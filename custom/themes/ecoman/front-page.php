@@ -36,7 +36,7 @@
 	<section class="front-page__buckets">
 		<div class="outer-container">
 			<h3>Services</h3>
-			<div class="column-4 column-container">
+			<div class="column-4 column-container wow fadeInUp">
 				<div class="column-4__single">
 					
 				</div>

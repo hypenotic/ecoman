@@ -23,3 +23,170 @@ h1.blog-title {
 .blog-entry {
 	margin-bottom: 50px;
 }
+
+#isotope-container {
+    .filters {
+		border-bottom: 1px solid #cbcbcb;
+		margin-top: 50px;
+		overflow: hidden;
+		label {
+			color: #ae7d54;
+			display: inline-block;
+            font-size:em(14px);
+			font-weight:normal;
+			padding-right: 15px;
+		}
+        a {
+			border-bottom:none;
+            font-size:em(14px);
+			@include media($bp-large) {
+				margin-top: 20px;
+			}
+            outline: none;
+			padding-right: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+            &:hover {
+                font-weight:600;
+            }
+            &.is-checked {
+                font-weight:600;
+            }
+        }
+    }
+    .isotope {
+        padding-top: 30px;
+    }
+}
+
+$facebook-post-bg:#DFE5F3;
+$blog-post-bg:#FBEBE0;
+$instagram-post-bg:#EBF3F8;
+@mixin feed-ribbon() {
+	background:url(dist/images/feed-ribbons.png) no-repeat;
+	content:"";
+	height:36px;
+	position:absolute;
+	left: 20px;
+	top: 20px;
+	width: 36px;
+}
+section[role=main] {
+    @include outer-container;
+    @include pad(0 2em 0 2em);
+    @include media($bp-large) {
+        @include pad(2em 5em);
+    }
+    article {
+    	margin-top: 1.5em;
+        @include media($bp-large) {
+           @include span-columns(4);
+           padding-left: 3em;
+           border-left: 1px solid #E0E0E0;
+        }
+    }
+}
+
+.post-container {
+	@include span-columns(5);
+	@include media($bp-large) {
+		@include span-columns(10);
+		@include shift(1);
+    }
+}
+
+.post-item {
+	&:hover {
+		.facebook {
+			background:$facebook-post-bg;
+		}
+		.blog {
+			background:$blog-post-bg;
+		}
+		.instagram {
+			background:$instagram-post-bg;
+		}
+	}
+    @include row;
+    @include omega;
+	@include span-columns(5);
+	margin-bottom:30px;
+	@include media($bp-large) {
+		@include span-columns(3.90);
+		float:left;
+	}
+	.categories {
+		position: absolute;
+		bottom: 10px;
+		small {
+			color: $green;
+			font-weight:bold;
+		}
+	}	
+	small {
+		color:$black;
+	}	
+	.post {
+		border:1px solid #cbcbcb;
+		position:relative;
+		.post-title {
+			padding: 20px 20px 0;
+		}
+		@include media($bp-large) {
+			.post-image {
+				background-position: center center;
+				background-repeat:no-repeat; 
+				background-size: cover; 
+				float:left;	
+				height: 250px; 
+				overflow: hidden;
+				margin-bottom:10px;
+				width: 100%;
+				img {
+					border-radius: 10%;
+				}
+			}
+			.post-content {
+				flaot:left;
+				margin-left:170px;
+				margin-bottom: 55px;
+				h4 {
+					margin-bottom:0.5em;	
+				}
+				a {
+					color:$black;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.post-footer {
+		padding: 20px 20px 23px 70px;
+		border:1px solid #cbcbcb;
+		border-top:none;
+		position:relative;
+		small {
+			color:#97989a;
+		}
+		&.facebook {
+			background:$facebook-post-bg;
+			&:before {
+				@include feed-ribbon();
+			}
+		}
+		&.instagram {
+			background:$instagram-post-bg;
+			&:before {
+				@include feed-ribbon();
+				background-position:-37px 0;
+			}
+		}
+		&.blog {
+			background:$blog-post-bg;
+			&:before {
+				@include feed-ribbon();
+				background-position:-73px 0;
+			}
+		}
+	}	
+}

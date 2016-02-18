@@ -19,6 +19,8 @@ var scriptList = [
   'src/js/modernizr.custom.js',
   'src/js/wow.min.js',
   'src/js/jQueryTab.js',
+  'src/js/isotope.pkgd.min.js',
+  'src/js/isotope_feeds.js',
   'src/js/index.js'
 ];
 

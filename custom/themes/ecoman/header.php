@@ -188,7 +188,7 @@
 
 	
 	<?php // For search results, default archive and blog index
-		if ( is_search() || is_archive() || is_home() || is_single() ) 
+		if ( is_search() || is_archive() || is_home() || is_single() || is_page('resources') ) 
 	{ ?>
 
 	<?php get_template_part( 'template-part-signup' ); ?>

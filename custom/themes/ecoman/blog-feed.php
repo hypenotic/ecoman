@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Blog Feed
+Template Name: Blog Feed   
 */
 get_header(); ?>
 <!-- Get custom meta values -->
@@ -16,19 +16,6 @@ get_header(); ?>
 	}
 	
 ?>
-<section role="slider" style="background-image: url(<?php echo $image; ?>);">
-    <header>
-        <hgroup>
-            <h6 class="headline"> 
-                <?php if ($bannerHeadline) { ?>
-                    <?php echo $bannerHeadline; ?>
-                <?php } else { ?>
-                    <p><?php echo the_title(); ?></p>
-                <?php  } ?> 
-            </h6>
-        </hgroup>
-    </header>
-</section>
 
 <div class="down-arrow">
     <a id="down-link" href="#content" class="target"><i class="fa fa-chevron-down"></i></a>
@@ -65,7 +52,7 @@ get_header(); ?>
 		<div class="isotope">
 		<!-- loop starts -->
 			<?php 
-				$feeds = array( array('label'=>'twitter','link'=>'https://twitter.com/PfOrganicFarms','filter'=>'social'));
+				$feeds = array( array('label'=>'twitter','link'=>'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=ecomandotca','filter'=>'social'));
 				$results = json_cached_results($feeds);
 				show_feed_results($results);
 			?>
