@@ -63,7 +63,7 @@ body {
 	@include align-items(center);
 	@include justify-content(center);
 	.column-4__single {
-		border: 1px solid grey;
+		// border: 1px solid grey;
 		height: 350px;
 		margin: 0 1%;
 		@include flex(0 0 23.5%);

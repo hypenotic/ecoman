@@ -46,25 +46,12 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	<section class="front-page__buckets about">
 		<div class="outer-container">
 			<h3>Meet Your Team</h3>
-			<div class="column-4 column-container wow fadeInUp">
-				<div class="column-4__single">
-					
-				</div>
-				<div class="column-4__single">
-					
-				</div>
-				<div class="column-4__single">
-					
-				</div>
-				<div class="column-4__single">
-					
-				</div>
-			</div>
+
+			<?php get_template_part( 'template-part-about-team' ); ?>
+
 		</div>
 	</section>
 </div>
-
-<?php //get_template_part( 'template-part-contact-form' ); ?>
 
 <?php endwhile; endif; ?>
 
