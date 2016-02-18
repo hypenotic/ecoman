@@ -8,6 +8,10 @@ jQuery(document).ready(function($){
 		scrollToAccordion: true,
 		duration: 300
 	});	
+
+    new WOW({
+       mobile: false
+    }).init();
 });
 
 // ====================== LIGHTBOX APPLICATION

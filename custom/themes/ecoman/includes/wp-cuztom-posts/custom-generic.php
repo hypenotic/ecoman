@@ -6,7 +6,7 @@ function remove_meta_boxes() {
     remove_meta_box('trackbacksdiv', 'page', 'normal'); //Trackbacks metabox
     remove_meta_box('authordiv', 'page', 'normal'); //Author metabox
     remove_meta_box('slugdiv', 'page', 'normal'); //Slug metabox
-    remove_meta_box('postexcerpt', 'page', 'normal'); //Excerpt metabox
+    // remove_meta_box('postexcerpt', 'page', 'normal'); //Excerpt metabox
     remove_meta_box('postimagediv', 'page', 'side'); //Featured image metabox
 }
 add_action( 'admin_menu' , 'remove_meta_boxes' );
@@ -78,7 +78,7 @@ $pages->add_meta_box(
 );
 $pages->add_meta_box(
     'cta',
-    'Bottom Call to Action Panel', 
+    'Call to Action', 
     array(
         array(
             'name'          => 'heading',

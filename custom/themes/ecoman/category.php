@@ -4,7 +4,7 @@
 <div class="outer-container">
     <div class="main-content">
             <header class="text-only-header">
-                <h1>Archive:</h1>
+                <h1>Category:</h1>
                 <h2 id="fade-in-item" class="animated fadeInDown">
                     <span class="plain-serif">“</span><?php single_cat_title( '', true ); ?><span class="plain-serif">”</span>
                 </h2>

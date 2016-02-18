@@ -1,7 +1,7 @@
-<div class="full-screen-wrapper contact">
-	<div class="contact__circle-icon">
+<div class="contact__circle-icon">
 			
-	</div>
+</div>
+<div class="full-screen-wrapper contact">
 	<div class="outer-container">
 		<div class="contact-section">
 			<div class="contact-intro">

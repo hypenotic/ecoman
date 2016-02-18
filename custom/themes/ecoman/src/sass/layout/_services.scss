@@ -55,6 +55,7 @@
 #responsive-tabs {
 	background:transparent;
 	overflow:hidden;
+	z-index: 5;
 	// margin-bottom: 80px;
 	// @include media($bp-med) {
 	// 	position: relative;

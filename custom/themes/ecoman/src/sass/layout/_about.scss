@@ -1,9 +1,39 @@
+section.front-page__intro.about {
+	padding: 0;
+}
+
 section.about__services-cta {
-	min-height: 500px;
+	margin-top: -116px;
+	height: 650px;
+	@include flexboxcenter;
+}
+
+.about__services-cta__photo {
+	@include flex(0 0 50%);
+	height: 100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	// background-attachment: fixed;
+}
+
+.about__services-cta__text {
+	@include flex(0 0 50%);
+	padding: 70px 100px;
+	height: 100%;
+	h3 {
+		margin: 0;
+		font-family: $p-font;
+		font-size: modular-scale(0);
+	}
+	> p {
+		padding-right: 10%;
+	}
 }
 
 
 .tab-section-wrapper.two {
+	background-color: $m-blue;
 	.front-page__buckets.about {
 		background-color: $m-blue;
 		.outer-container {

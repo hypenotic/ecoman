@@ -6,6 +6,7 @@ include('includes/wp-cuztom-posts/custom-generic-post.php');
 include('includes/wp-cuztom-posts/custom-service.php');
 include('includes/wp-cuztom-posts/custom-case-study.php');
 include('includes/wp-cuztom-posts/custom-testimonials.php');
+include('includes/wp-cuztom-posts/custom-team.php');
 
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
@@ -28,6 +29,14 @@ require_once('includes/shortcodes/vid-picture.php');
 
 
 add_theme_support( 'post-thumbnails' ); 
+
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 // Read More
 
