@@ -3,37 +3,34 @@ section.front-page__intro.about {
 }
 
 section.about__services-cta {
-	margin-top: -116px;
 	height: 650px;
+	// 
+	margin-top: -116px;
+	// 
 	@include flexboxcenter;
 }
 
 .about__services-cta__photo {
-	@include flex(0 0 50%);
 	height: 100%;
+	// 
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	// background-attachment: fixed;
+	// 
+	@include flex(0 0 50%);
 }
 
 .about__services-cta__text {
-	@include flex(0 0 50%);
-	padding: 70px 100px;
 	height: 100%;
-	h3 {
-		margin: 0;
-		font-family: $p-font;
-		font-size: modular-scale(0);
-	}
-	> p {
-		padding-right: 10%;
-	}
+	// 
+	padding: 70px 100px;
+	// 
+	@include flex(0 0 50%);
 }
 
 
 .tab-section-wrapper.two.about {
-	color: $white;
 	background-color: $m-blue;
 	section.front-page__buckets.about {
 		background-color: $m-blue;
@@ -44,22 +41,15 @@ section.about__services-cta {
 }
 
 .column-4.column-container.about {
-	@include justify-content(space-between);
 	padding: 0 50px;
+	// 
+	@include justify-content(space-between);
 }
 
 .column-4__single.team-members__single {
 	margin-top: 30px;
+	// 
 	@include flex(0 0 21%);
-	h4 {
-		font-weight: normal;
-		font-size: modular-scale(1);
-		line-height: modular-scale(1);
-		margin: 0;
-	}
-	div {
-		font-weight: 300;
-	}
 }
 
 

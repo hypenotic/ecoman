@@ -1,14 +1,18 @@
 body {
 	font-family: $p-font;
+	color: rgba(0,0,0,0.8);
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $main-headings;
+	margin: 0;
+	font-weight: normal;
 }
 
 h1 {
-	font-size: modular-scale(0);
-	line-height: modular-scale(1);
+	font-size: modular-scale(2);
+	line-height: modular-scale(2);
+	font-weight: 500;
     @include media($bp-large) {
 		font-size: modular-scale(5);
 		line-height: modular-scale(5);
@@ -16,8 +20,8 @@ h1 {
 }
 
 h2 {
-	font-size: modular-scale(0);
-	line-height: modular-scale(1);
+	font-size: modular-scale(2);
+	line-height: modular-scale(3);
 	@include media($bp-large) {
 		font-size: modular-scale(4);
 		line-height: modular-scale(5);
@@ -25,8 +29,8 @@ h2 {
 }
 
 h3 {
-	font-size: modular-scale(0);
-	line-height: modular-scale(1);
+	font-size: modular-scale(1);
+	line-height: modular-scale(0);
 	@include media($bp-large) {
 		font-size: modular-scale(3);
 		line-height: modular-scale(4);
@@ -67,7 +71,7 @@ p {
 
 a {
 	text-decoration: none;
-	color: $grey;
+	color: $copper;
 	&:hover {
 
 	}
@@ -78,3 +82,594 @@ ul, ol {
 
 	}
 }
+
+.light-text {
+	color: $white;
+}
+
+.light-theme {
+	h1 {
+		color: $white;
+		text-align: left;
+	}
+}
+
+span.white-highlight {
+	background-color: $white;
+}
+
+span.black-highlight {
+	background-color: rgba(0,0,0,0.4);
+}
+
+span.plain-serif {
+	font-family: serif;
+}
+
+.main-content-narrow {
+    h2 {
+    	font-weight: normal;
+    	margin-top: 0;
+    }
+}
+
+
+// SIGNUP FORM
+.signup-form .outer-container .main-content {
+	p {
+		letter-spacing: 2px;
+		line-height: modular-scale(0);
+		margin: 0;
+		margin-right: 30px;
+		// text-transform: uppercase;
+		font-weight: 300;
+		color: $white;
+	}
+	#mce-EMAIL {
+		text-align: center;
+		&::placeholder { 
+			color: rgba(255,255,255,0.7);
+			font-style: normal;
+			font-weight: 300;
+			// font-family: $title-font;
+		}
+	}
+	#mc-embedded-subscribe {
+		font-family: $p-font;
+		font-weight: 300;
+		color: $copper;
+	}
+}
+
+#main-signup {
+	input.email {
+		font-style: italic;
+	}
+}
+
+// NAVIGATION
+
+.outer-container nav {
+	p {
+		margin: 0;
+	}
+	#main-menu ul li a {
+		color: $white;
+		text-transform: lowercase;
+		font-size: modular-scale(1, 0.9rem);
+		font-weight: 300;
+		letter-spacing: 2px;
+	}
+}
+
+
+// NAVIGATION --- SEARCH FORM
+.nav__right #searchform {
+	input#s {
+		color: white;
+	}
+}
+
+.nav__left {
+	p {
+		// font-family: $title-font;
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+	p.light-theme {
+		color: $white;
+	}
+}
+
+#main-menu {
+	ul#menu-main-menu {
+		li,
+		li.current_page_item.page_item {
+			&:hover {
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+// HEADER
+
+.main-header {
+	h1, h2 {
+		font-style: italic;
+	}
+	h1 {
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		margin-top: 50px;
+	}
+	h2 {
+		font-size: modular-scale(0);
+		line-height: modular-scale(0, 1.5rem);
+		margin-top: -20px;
+		@include media($bp-large) {
+			font-size: modular-scale(3);
+			line-height: modular-scale(3, 1.5rem);
+	    }
+	}
+}
+
+.text-only-header {
+	h1 {
+		letter-spacing: 5px;
+		margin-bottom: 0;
+	}
+	h2 {
+		margin-top: 0;
+	}
+}
+
+.main-header.inner-nav.error-page {
+	h2 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+		text-align: center;
+	}
+}
+
+.main-header.inner-nav.small-header {
+	.left-align-text {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.header-blurb {
+		p {
+			margin-bottom: 0;
+			margin-top: 0;
+			font-size: modular-scale(0, 1rem);
+			line-height: modular-scale(1);
+		}
+	}
+}
+
+// HOME
+
+.front-page__buckets {
+	.outer-container {
+		h3 {
+			font-family: $p-font;
+			font-size: modular-scale(1);
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.front-page__testimonial {
+	margin: 50px 0 100px;
+}
+
+.outer-container.front-page {
+	.main-content {
+		p {
+			font-size: modular-scale(1);
+			line-height: modular-scale(2);
+		}
+	}
+}
+
+
+// ABOUT
+.about__services-cta__text {
+	h3 {
+		margin: 0;
+		font-family: $p-font;
+		font-size: modular-scale(0);
+	}
+	> p {
+		padding-right: 10%;
+	}
+}
+
+.tab-section-wrapper.two.about {
+	color: $white;	
+}
+
+.column-4__single.team-members__single {
+	h4 {
+		font-weight: normal;
+		font-size: modular-scale(1);
+		line-height: modular-scale(1);
+		margin: 0;
+	}
+	div {
+		font-weight: 300;
+	}
+}
+
+// SERVICE
+
+.tabs-panel-intro {
+	.tabs-panel__right {
+		h3 {
+			text-transform: uppercase;
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+			font-weight: 400;
+			letter-spacing: 2px;
+		}
+		div {
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+		}
+	}
+}
+
+.tabs-panel-pockets {
+	h4 {
+		font-weight: 300;
+		font-size: modular-scale(0);
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+		font-size: modular-scale(0, 1.1rem);
+		line-height: modular-scale(1, 1.1rem);
+		letter-spacing: 1px;
+	}
+}
+
+// SERVICES –-- TABS
+
+/*  == tab heading */
+.tabs.r-tabs ul { 
+	li { 
+		text-align: center;
+		a { 
+			color: $white;
+			letter-spacing: 1px;
+			&:hover {
+				color: #fff;
+            }
+		}
+		&.r-tabs-state-active { 
+			a {
+				color: $black;	
+			}
+			& h3 {
+				border-bottom: 1.5px solid blue;
+			}
+		}
+	}
+	h2 {
+		padding:0 0 92px 0;
+	}
+}
+
+.r-tabs .r-tabs-panel {
+	& section {
+		ul {
+            font-size: em(30);
+			li {
+				text-align:left;
+				@include media($bp-large) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.r-tabs .r-tabs-accordion-title {
+	a { 
+		color: white;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+// SERVICES –-- TESTIMONIALS
+.services-testimonial {
+	.testimonial__quotation {
+		color: $white;
+		margin: 0;
+		font-size: modular-scale(2);
+		line-height: modular-scale(3);
+	}
+	p {
+		color: $white;
+	}
+}
+
+.services-testimonial {
+	p.uppercase {
+		text-transform: uppercase;
+		color: rgba(255,255,255,0.8);
+	}
+	blockquote {
+		font-weight: bold;
+		&:before {
+		    content: '“';
+		    position: absolute;
+		    margin-left: -0.5em;
+		    margin-top: -10px;
+		    // font-size: modular-scale(0, 1.6rem);
+		}
+		&:after {
+		    content: '”';
+		    margin-left: -0.2em;
+		    top: -15px;
+		    position: relative;
+		    font-size: modular-scale(0, 1.2rem);
+		}
+	}
+}
+
+.testimonial__creds {
+	p {
+		font-size: modular-scale(0, 1rem);
+		text-transform: uppercase;
+		color: rgba(255,255,255,0.8);
+	}
+}
+
+// SERVICES –-- CASE STUDIES
+.services-case-studies {
+	.outer-container {
+		.main-content-case-study {
+			h1 {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// RESOURCES
+.blog-meta {
+	p {
+		padding: 0 10px;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+// RESOURCES --- ISOTOPE FILTERING SYSTEM
+#isotope-container {
+    .filters {
+		label {
+			color: #ae7d54;
+			display: inline-block;
+            font-size:em(14px);
+			font-weight:normal;
+			padding-right: 15px;
+		}
+        a {
+			border-bottom:none;
+            font-size:em(14px);
+			@include media($bp-large) {
+				margin-top: 20px;
+			}
+            outline: none;
+			padding-right: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+            &:hover {
+                font-weight:600;
+            }
+            &.is-checked {
+                font-weight:600;
+            }
+        }
+    }
+}
+
+.post-item {
+	.categories {
+		small {
+			color: $green;
+			font-weight:bold;
+		}
+	}	
+	small {
+		color:$black;
+	}	
+	.post {
+		@include media($bp-large) {
+			.post-content {
+				h4 {
+					margin-bottom:0.5em;	
+				}
+				a {
+					color:$black;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.post-footer {
+		small {
+			color:#97989a;
+		}
+	}	
+}
+
+// ARCHIVES
+.archive__single {
+	h3 {
+		font-size: modular-scale(1);
+		line-height: modular-scale(1);
+		margin-top: 10px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: $d-grey;
+	}
+}
+
+.read-more {
+	text-decoration: underline;
+}
+
+.pagination-links {
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+// CONTACT FORM
+.full-screen-wrapper.contact {
+	color: $white;
+}
+
+.contact-intro {
+	text-align: center;
+	color: $white;
+	font-weight: 300;
+	h3 {
+		text-transform: uppercase;
+		// font-family: $p-font;
+		font-weight: 400;
+		margin: 0;
+	}
+	p {
+		margin-top: 0;
+		padding: 0 15%;
+	}
+}
+
+.contact__deats {
+	font-weight: 300;
+	p {
+		margin: 0;
+	}
+}
+
+.contact__blurb {
+	font-weight: 300;
+}
+
+.contact__social {
+	ul {
+		li {
+			text-align: center;
+			a {
+				color: $copper;
+			}
+		}
+	}
+}
+
+.wpcf7-form {
+	p {
+		margin-top: 0;
+		font-weight: 300;
+	}
+}
+
+.wpcf7-form-control-wrap.your-name,
+.wpcf7-form-control-wrap.your-email,
+.wpcf7-form-control-wrap.your-message {
+	.wpcf7-text,
+	.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email,
+	.wpcf7-form-control.wpcf7-textarea {
+		&::placeholder { 
+			color: rgba(255,255,255,0.4);
+			font-style: normal;
+			font-weight: 300;
+		}
+	}
+	.wpcf7-form-control.wpcf7-textarea {
+		font-size: modular-scale(0);
+	}	
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	color: $copper;
+	text-transform: uppercase;
+}
+
+.name-email-container,
+.message-container,
+.to-container {
+	> div {
+		margin-top: 8px;
+		font-size: modular-scale(0);
+		font-family: $title-font;
+		font-weight: 300;
+	}
+}
+
+.to-container {
+	> p {
+		display: inline-block;
+	}
+	> div {
+		margin: 0;
+		font-weight: 300;
+		display: inline-block;
+	}
+}
+
+.name-email-wrap {
+	p {
+		margin-bottom: 0;
+		&:first-child {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+// FOOTER
+footer {
+	p {
+		font-family: $title-font;
+		font-style: italic;
+		font-weight: 300;
+		letter-spacing: 1px;
+		color: $white;
+		font-size: modular-scale(0, 1rem);
+		padding: 0 20px;
+		background-color: rgba(0,0,0,0.5);
+		&:first-child {
+			margin-right: 100px;
+		}
+		a {
+			color: $green;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

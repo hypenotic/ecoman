@@ -127,11 +127,11 @@
 		</div>
 
 		<?php if ($theme == 'value2') { ?>
-		<div class="header__text outer-container animated fadeIn light-text">
+		<div class="header__text outer-container animated fadeIn light-theme">
 		<?php } else { ?>
 		<div class="header__text outer-container animated fadeIn">
 		<?php } ?>
-			<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
+			<h1 class="left-align-text"><span class="black-highlight"><?php echo $heading; ?></span></h1>
 	        <?php if ($subheading) { ?>
 				<h2><?php echo $subheading; ?></h2>
 	        <?php } ?>

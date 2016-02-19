@@ -1,10 +1,12 @@
 .main-header {
 	width: 100%;
-	// height: 500px;
-	background-color: $l-grey;
 	position: relative;
+	// 
+	background-color: $l-grey;
+	// 
 	@include flexboxcenter;
 	@include flex-direction(column);
+	// 
 	@include media($bp-large) {
 		min-height: 500px;
     }
@@ -14,120 +16,37 @@
 	.header__circle-icon {
 		width: 160px;
 		height: 160px;
-		background-color: $white;
-		border-radius: 50%;
-		border: 1px solid #e3e3e3;
+		// 
 		position: relative;
 		bottom: -80px;
+		// 		
+		background-color: $white;
+		// 	
+		border: 1px solid #e3e3e3;
+		border-radius: 50%;
 		margin-left: 3px;
 	}
-	h1 {
-		color: $black;
-		// text-align: center;
-		font-weight: 400;
-		font-style: italic;
-		letter-spacing: 5px;
-		font-size: modular-scale(5);
-		line-height: modular-scale(5);
-		// background-color: $white;
-		text-transform: uppercase;
-		font-weight: 500;
-	}
-	h2 {
-		font-style: italic;
-		font-size: modular-scale(2);
-		line-height: modular-scale(2);
-		font-weight: normal;
-		background-color: $white;
-	}
-}
-
-span.white-highlight {
-	background-color: $white;
 }
 
 .text-only-header {
 	margin-bottom: 80px;
-	h1 {
-		letter-spacing: 5px;
-		font-size: modular-scale(4);
-		line-height: modular-scale(4);
-		margin-bottom: 0;
-		font-weight: normal;
-	}
-	h2 {
-		margin-top: 0;
-		font-weight: normal;
-	}
-	span.plain-serif {
-		font-family: serif;
-	}
 }
 
 .main-header.inner-nav.error-page {
 	min-height: 80vh;
+	// 
 	margin-bottom: 100px;
-	h2 {
-		font-weight: normal;
-		margin-bottom: 0;
-	}
-	p {
-		margin-top: 0;
-		text-align: center;
-	}
 }
 
 .main-header.inner-nav.small-header {
 	.header__text {
 		padding: 0 5%;
-		h1 {
-			color: $black;
-			font-weight: 400;
-			font-style: italic;
-			letter-spacing: 5px;
-			font-size: modular-scale(5);
-			line-height: modular-scale(5);
-			text-transform: uppercase;
-		}
-		h2 {
-			font-style: italic;
-			font-size: modular-scale(3);
-			line-height: modular-scale(3);
-			font-weight: normal;
-			background-color: $white;
-			padding: 10px;
-			margin-top: -20px;
-		}
-
-	}
-	.left-align-text {
-		text-align: left;
-		margin-bottom: 20px;
-	}
-	.header-blurb {
-		p {
-			margin-bottom: 0;
-			margin-top: 0;
-			font-size: modular-scale(0, 1rem);
-			line-height: modular-scale(1);
-		}
 	}
 }
 
 .header__text.outer-container.animated.fadeIn.light-text {
 	padding: 0 5% 0 0;
 	margin: 0;
-	h1 {
-		color: $white;
-		text-align: left;
-	}
-	h2 {
-
-	}
-	span.white-highlight {
-		background-color: rgba(0,0,0,0.4);
-		padding: 0 15px;
-	}
 }
 
 

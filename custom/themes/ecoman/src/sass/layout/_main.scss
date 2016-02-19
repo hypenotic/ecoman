@@ -1,5 +1,4 @@
 body {
-	color: rgba(0,0,0,0.7);
 	overflow-x: hidden;
 }
 
@@ -23,19 +22,16 @@ body {
     @include media($bp-large) {
 		@include span-columns(6);
     }
-    h2 {
-    	font-weight: normal;
-    	margin-top: 0;
-    }
 }
 
 .main-content-case-study {
 	@include media($bp-large) {
-    	margin: 50px 0 0;
-    	padding: 50px;
+		background-color: $white;
+		// 
+		padding: 50px;
+		margin: 50px 0 0;
 		@include span-columns(7);
 		@include shift(1);
-		background-color: $white;
     }
 }
 
@@ -47,23 +43,13 @@ body {
 	margin-top: 100px;
 }
 
-.column-container {
-
-}
-
-.column-3 {
-	.column-3__single {
-		
-	}
-}
-
 .column-4 {
 	width: 100%;
+	// 
 	@include display(flex);
 	@include align-items(center);
 	@include justify-content(center);
 	.column-4__single {
-		// border: 1px solid grey;
 		height: 350px;
 		margin: 0 1%;
 		@include flex(0 0 23.5%);
