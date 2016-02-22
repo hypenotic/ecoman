@@ -71,6 +71,7 @@
 #main-menu {
 	ul#menu-main-menu {
 		li {
+			margin-top: 0;
 			&:hover {
 				background: $l-blue;
 			}

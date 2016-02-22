@@ -3,7 +3,7 @@ section.front-page__intro.about {
 }
 
 section.about__services-cta {
-	height: 650px;
+	height: 570px;
 	// 
 	margin-top: -116px;
 	// 
@@ -32,6 +32,7 @@ section.about__services-cta {
 
 .tab-section-wrapper.two.about {
 	background-color: $m-blue;
+	padding-bottom: 110px;
 	section.front-page__buckets.about {
 		background-color: $m-blue;
 		.outer-container {
@@ -50,6 +51,20 @@ section.about__services-cta {
 	margin-top: 30px;
 	// 
 	@include flex(0 0 21%);
+}
+
+.team-members__img {
+	width: 120px;
+	height: 120px;
+	// 
+	background-size:contain;
+	background-color: $m-blue;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.6;
+    //
+    margin: 20px auto 0;
 }
 
 

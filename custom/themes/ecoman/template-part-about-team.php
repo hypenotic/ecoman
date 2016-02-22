@@ -14,7 +14,8 @@
 		    <div class="column-4__single team-members__single">
 		    	<h4><?php the_title(); ?></h4>
 		    	<?php if ($icon) { ?>
-		    	<img src="<?php echo $iconurl; ?>" alt="<?php the_title(); ?>">	
+		    	<div class="team-members__img" style="background-image:url(<?php echo $iconurl[0]; ?>);">
+		    	</div>
 		    	<?php } else { } ?>
 		        <div><?php the_content(); ?></div>    
 		    </div>     

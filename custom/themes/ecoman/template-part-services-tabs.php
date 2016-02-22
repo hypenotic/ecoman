@@ -68,7 +68,7 @@
 						<img src="<?php echo $imageurl[0]; ?>" alt="">
 					</div>
 					<div class="tabs-panel__right">
-						<h3><?php echo $heading; ?></h3>
+						<h2><?php echo $heading; ?></h2>
 						<div><?php echo $text; ?></div>
 					</div>
 				</div>
@@ -78,25 +78,40 @@
 		
 		<div class="outer-container">
 			<div class="tabs-panel-pockets">
-				<?php if($pockets) {
-				    foreach($pockets as $pocket) {
-				
-				    // Get custom meta values    
-				    // $singlelogo     = $logo['_logo'];
-				    // $logourl        = wp_get_attachment_image_src($singlelogo,'logos', true);
-				    $heading        = $pocket['_heading'];
-				    $text          = $pocket['_text'];
-				?>
-				
-				    <div class="logo-samples__single">
-				        <h4><?php echo $heading; ?></h4>
-				        <p><?php echo $text; ?></p>
-				    </div>
-				            
+
 				<?php
-				        }
-				    }
-				?> 
+				    $theid = get_the_ID();
+				?>
+
+					<?php if ( $theid == 1666 ) { ?>
+						<div class="consulting-pocket__single">
+							<?php the_content(); ?>
+						</div>
+					<?php }  else  { ?>
+
+						<?php if($pockets) {
+						    foreach($pockets as $pocket) {
+						
+						    // Get custom meta values    
+						    // $singlelogo     = $logo['_logo'];
+						    // $logourl        = wp_get_attachment_image_src($singlelogo,'logos', true);
+						    $heading        = $pocket['_heading'];
+						    $text          = $pocket['_text'];
+
+						?>
+
+						<div class="service-pocket__single">
+						    <h4><?php echo $heading; ?></h4>
+						    <p><?php echo $text; ?></p>
+						</div>
+
+						<?php
+						        }
+						    }
+						?>
+						       
+					<?php } ?>
+				     
 			</div>
 		</div>
 		
@@ -120,7 +135,7 @@
 			        ),
 			    );
 			    $cases = new WP_Query( $argsss ); 
-			    $firstcase = $cases->posts[0];
+			    // $firstcase = $cases->posts[0];
 			?>
 			    
 			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">

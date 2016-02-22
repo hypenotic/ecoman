@@ -79,7 +79,10 @@ a {
 
 ul, ol {
 	li {
-
+		font-size: modular-scale(0);
+		line-height: modular-scale(1);
+		margin-top: 15px;
+		font-weight: 300;
 	}
 }
 
@@ -297,6 +300,7 @@ span.plain-serif {
 }
 
 .front-page__buckets.about {
+	padding-top: 50px;
 	h3 {
 		font-weight: bold;
 	}
@@ -308,6 +312,7 @@ span.plain-serif {
 		font-size: modular-scale(1);
 		line-height: modular-scale(1);
 		margin: 0;
+		text-align: center;
 	}
 	div {
 		font-weight: 300;
@@ -318,16 +323,14 @@ span.plain-serif {
 
 .tabs-panel-intro {
 	.tabs-panel__right {
-		h3 {
-			text-transform: uppercase;
-			font-size: modular-scale(0);
-			line-height: modular-scale(1);
-			font-weight: 400;
-			letter-spacing: 2px;
+		h2 {
+			font-size: modular-scale(4, 0.8rem);
+			line-height: modular-scale(5, 0.8rem);
 		}
 		div {
 			font-size: modular-scale(0);
 			line-height: modular-scale(1);
+			font-weight: 300;
 		}
 	}
 }
@@ -336,25 +339,29 @@ span.plain-serif {
 	h4 {
 		font-weight: 300;
 		font-size: modular-scale(0);
-		margin-bottom: 0;
+		line-height: modular-scale(0);
+		margin-bottom: 20px;
 	}
 	p {
 		margin-top: 0;
 		font-size: modular-scale(0, 1.1rem);
 		line-height: modular-scale(1, 1.1rem);
 		letter-spacing: 1px;
+		font-weight: 300;
 	}
 }
 
 // SERVICES –-- TABS
 
 /*  == tab heading */
-.tabs.r-tabs ul { 
+.tabs.r-tabs > ul { 
 	li { 
 		text-align: center;
 		a { 
 			color: $white;
 			letter-spacing: 1px;
+			font-size: modular-scale(0, 1rem);
+			line-height: modular-scale(1);
 			&:hover {
 				color: #fff;
             }
@@ -574,15 +581,8 @@ span.plain-serif {
 	font-weight: 300;
 }
 
-.contact__social {
-	ul {
-		li {
-			text-align: center;
-			a {
-				color: $copper;
-			}
-		}
-	}
+.contact__social ul li {
+	text-align: center;
 }
 
 .wpcf7-form {

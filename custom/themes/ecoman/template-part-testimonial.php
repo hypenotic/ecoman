@@ -31,7 +31,11 @@ $test_id = get_post_meta($post->ID,'_test_select',true); ?>
                 <?php echo $quotation; ?>
             </blockquote>
             <div class="testimonial__creds">
-              <p><?php echo $src; ?>, <?php echo $srctitle; ?></p>
+                <p><?php echo $src; ?>
+                <?php if ( $srctitle) { ?>
+                    ,
+                <?php } ?>    
+                <?php echo $srctitle; ?></p>
             </div> 
             <div class="testimonial-border__circle--bottom"></div> 
         </div>

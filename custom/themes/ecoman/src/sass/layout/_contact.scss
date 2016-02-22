@@ -153,6 +153,10 @@
 	border: 0;
 	margin-top: 20px;
 	// 
+	&:hover {
+		background-color: $copper;
+		color: $white;
+	}
 	@include media($bp-med) {
 		float: right;
 	}
@@ -193,5 +197,5 @@
 }
 
 #contact-name {
-	padding-left: 60px;
+	// padding-left: 60px;
 }
