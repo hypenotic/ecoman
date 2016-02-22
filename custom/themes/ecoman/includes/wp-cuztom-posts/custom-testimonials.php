@@ -4,7 +4,7 @@ $args = array(
     'hierarchical'      => true,
     'show_in_nav_menus' => true,
     'menu_icon'         => 'dashicons-testimonial', //http://melchoyce.github.io/dashicons/
-    'supports'          => array( 'title'),
+    'supports'  => array( 'title', 'editor', 'page-attributes' ),
     'taxonomies' => array('service'),
     'show_in_rest' => true
     );
