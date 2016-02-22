@@ -1,6 +1,6 @@
 .back-to-toc {
 	border-bottom: 1px solid $grey;
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 	p {
 		margin-bottom: 0;
 	}
@@ -16,6 +16,13 @@ h1.blog-title {
 
 .blog-entry {
 	margin-bottom: 50px;
+	p {
+		font-weight: 300;
+	}
+}
+
+.prev-next-link {
+	width: 100%;
 }
 
 // ISOTOPE FILTERING SYSTEM

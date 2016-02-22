@@ -12,12 +12,14 @@
 		<p><?php the_author_posts_link(); ?></p>
 		<p><?php the_time('l, F jS, Y') ?></p>
 	</div>
+</div>
 
-	<div class="blog-entry">
-		<?php the_content(); ?>
-	</div>
-
-	<div class="prev-next-link">
+<div class="main-content-narrow blog">
+    <div class="blog-entry">
+        <?php the_content(); ?>
+    </div>
+    
+        <div class="prev-next-link">
     
         <?php
         $prev_post = get_previous_post();
@@ -39,9 +41,9 @@
         <?php endif; ?>
         
     </div>
+</div>
 
 	<?php endwhile; endif; ?>
-</div>
 	
 </div>
 

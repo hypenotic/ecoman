@@ -24,6 +24,13 @@ body {
     }
 }
 
+.main-content-narrow.blog {
+    @include media($bp-large) {
+		@include span-columns(6);
+		@include shift(3);
+    }
+}
+
 .main-content-case-study {
 	@include media($bp-large) {
 		background-color: $white;

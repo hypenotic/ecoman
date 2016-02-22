@@ -1,21 +1,21 @@
 // Full-Width Image
 .full-width.full-image { 
   text-align:center;
-  margin-left:-100%;
-  margin-right:-100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-left:-20%;
+  margin-right:-20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   // max-height: 50vh;
   overflow: hidden;
-  height: 500px;
-  @include media($bp-small) {
-  	height: 300px;
-  	margin-left:-20%;
-  	margin-right:-20%;
+  height: 300px;
+  @include media($bp-large) {
+  	height: 400px;
+  	margin-left:-70%;
+  	margin-right:-70%;
   }
   img {
   	width: 100%;

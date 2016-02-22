@@ -460,6 +460,14 @@ span.plain-serif {
 }
 
 // RESOURCES
+
+h1.blog-title {
+	font-style: italic;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+
 .blog-meta {
 	p {
 		padding: 0 10px;
