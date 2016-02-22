@@ -23,10 +23,11 @@
 	// 
 	@include display(flex);
 	@include align-items(flex-start);
-	@include justify-content(space-between);
+	@include justify-content(center);
 	@include flex-wrap(wrap);
 	div {
-		@include flex(0 0 20%);
+		@include flex(0 0 30%);
+		padding: 0 40px;
 	}
 }
 
@@ -202,7 +203,7 @@
 }
 
 .services-testimonial {
-	height: 550px;
+	min-height: 550px;
 	width: 100%;
 	// 
 	background-color: $m-blue;
