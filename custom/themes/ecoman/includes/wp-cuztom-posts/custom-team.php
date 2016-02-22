@@ -44,11 +44,11 @@ $team->add_meta_box(
 
 $team->add_meta_box(
     'icon',
-    'Tab Icon', 
+    'Profile Image', 
     array(
         array(
             'name'          => 'image',
-            'label'         => 'Tab Icon',
+            'label'         => 'Profile Image',
             'description'   => 'Dimensions 150px x 150px',
             'type'          => 'image',
             )

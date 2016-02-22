@@ -285,6 +285,7 @@ span.plain-serif {
 		margin: 0;
 		font-family: $p-font;
 		font-size: modular-scale(0);
+		font-weight: bold;
 	}
 	> p {
 		padding-right: 10%;
@@ -293,6 +294,12 @@ span.plain-serif {
 
 .tab-section-wrapper.two.about {
 	color: $white;	
+}
+
+.front-page__buckets.about {
+	h3 {
+		font-weight: bold;
+	}
 }
 
 .column-4__single.team-members__single {

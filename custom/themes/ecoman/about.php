@@ -33,7 +33,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	<div class="about__services-cta__text wow fadeInRight" data-wow-delay="0.5s">
 		<h3>What We Do</h3>
 		<?php the_excerpt (); ?>
-		<a href="<?php echo $ctalink; ?>"><button>
+		<a href="<?php echo $ctalink; ?>"><button class="grey-btn large-btn">
 				<?php echo $ctabtn; ?>
 			</button></a>
 	</div>

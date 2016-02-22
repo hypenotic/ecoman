@@ -1,3 +1,22 @@
+button {
+	border: 0;
+
+}
+
+.large-btn {
+	padding: 20px 50px;
+	font-size: modular-scale(0);
+	margin-top: 15px;
+}
+
+.grey-btn {
+	background-color: $l-grey;
+	&:hover {
+		background-color: $copper;
+		color: $white;
+	}
+}
+
 .error-page__btn {
 	background-color: $black;
 	padding: 15px 60px;
