@@ -131,9 +131,17 @@
 		<?php } else { ?>
 		<div class="header__text outer-container animated fadeIn">
 		<?php } ?>
+			<?php if ($theme == 'value2') { ?>
 			<h1 class="left-align-text"><span class="black-highlight"><?php echo $heading; ?></span></h1>
+			<?php } else { ?>
+			<h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
+			<?php } ?>
 	        <?php if ($subheading) { ?>
-				<h2><?php echo $subheading; ?></h2>
+				<?php if ($theme == 'value2') { ?>
+				<h2><span class="black-highlight"><?php echo $subheading; ?></span></h2>
+				<?php } else { ?>
+				<h2><span class="white-highlight"><?php echo $subheading; ?></span></h2>
+				<?php } ?>
 	        <?php } ?>
 	        <?php if ($blurb) { ?>
 				<div class="header-blurb">
