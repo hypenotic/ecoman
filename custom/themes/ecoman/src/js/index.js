@@ -80,6 +80,18 @@ mainApp.grabType = function(){
     // print PROJECT info
     mainApp.printProjectInfo = function(thepost, $thetype) {
 
+        if ( thepost[0].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
+
+            var $beforeimg = thepost[0].cuztom_post_meta.beforeimg;
+
+        } else {
+
+            var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
+
+        }
+
+        
+
         // STATIC INTRO
         var $staticintro = $('<p>', {
             class: 'project__static-intro',
@@ -96,14 +108,28 @@ mainApp.grabType = function(){
         var $postcontent = thepost[0].content.rendered;
 
         if ( $thetype == 'design') {
+
+            $('#design-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
+
             $('#design-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+
         } else if ( $thetype == 'maintenance' ) {
+
+            $('#maintenance-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
+
             $('#maintenance-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
 
+
         } else if ( $thetype == 'consulting' ) {
+
+            $('#consulting-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
+
             $('#consulting-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
 
         } else {
+
+            $('#artinstallations-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
+
             $('#artinstallations-case.services-case-studies .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
 
         }
