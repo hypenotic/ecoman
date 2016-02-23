@@ -14,7 +14,11 @@ jQuery(document).ready(function($){
     }).init();
 });
 
-// ====================== Case Study App
+// ====================== ABOUT CASE STUDIES APP
+
+
+
+// ====================== SERVICES CASE STUDY APP
 
 var mainApp = { };
 
