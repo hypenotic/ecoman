@@ -14,171 +14,109 @@ jQuery(document).ready(function($){
     }).init();
 });
 
-// ====================== LIGHTBOX APPLICATION
+// ====================== Case Study App
 
 var mainApp = { };
 
 // FIND OUT WHAT PAGE WE'RE ON - WHERE ARE WE?!?
 mainApp.grabType = function(){
-    var $cases       = $('.services-case-studies').data('cases');
-    // var $archive    = $('body').data('archive');
-
-    // var $postid = $('body').data('theid');
-
-    if ( $cases !== null ) {
-
-        // use the API to grab PROJECT info
-        mainApp.grabProjectInfo = function($cases){
-          $.ajax( {
-              url: 'http://ecoman.dev/wp-json/wp/v2/posts?filter[post_type]=case_study&filter[taxonomy]=service', 
-              success: function ( res ) {
-                console.log(res);
-                mainApp.printProjectInfo(res);
-              },
-              cache: false
-            } );
-        };
-
-        // print PROJECT info
-        mainApp.printProjectInfo = function(thepost) {
-            var $bannerimage = 'url(' + thepost.cuztom_post_meta.bannerimg + ')';
-            // HERO BANNER
-            $('.default-hero').css("background-image", $bannerimage);
-            $('.default-hero h1').html(thepost.cuztom_post_meta.heading);
-            $('.default-hero h2').html(thepost.cuztom_post_meta.subheading);
-
-            // HERO BLURB
-            if ( thepost.cuztom_post_meta.blurb !== '') {
-                var $blurbbox = $('<section>', {
-                    class: 'project__hero-blurb',
-                    html: '<p>' + thepost.cuztom_post_meta.blurb + '</p>'
-                });
-            } else {
-                var $blurbbox = '';
-            }
-
-            // STATS
-            var $client     = $('<p>').html('<span class="stats_label">Client</span>: ' + thepost.cuztom_post_meta.client); 
-            var $sqft       = $('<p>').html('<span class="stats_label">SF</span>: ' + thepost.cuztom_post_meta.sqft); 
-            var $budget     = $('<p>').html('<span class="stats_label">Budget</span>: ' + thepost.cuztom_post_meta.budget); 
-            var $duration   = $('<p>').html('<span class="stats_label">Duration</span>: ' + thepost.cuztom_post_meta.duration); 
-            var $loc        = $('<p>').html('<span class="stats_label">Location</span>: ' + thepost.cuztom_post_meta.location); 
-
-            var $statsbox = $('<section>', {
-                class: 'project__stats'
-            }).append($client, $sqft, $budget, $duration, $loc);
-
-            // VIDEO
-            if (thepost.cuztom_post_meta.video !== '') {
-                var $vidbox = $('<section>', {
-                    class: 'project__video'
-                });
-
-                mainApp.getVideo(thepost.cuztom_post_meta.video);
-            } else {
-                var $vidbox = '';
-            }
-            
-            // DIMENSION
-            var $dimensionbox = $('<section>', {
-                class: 'project__dimension',
-                html: '<p>' + thepost.content.rendered + '</p>'
-            });
-
-            // TESTIMONIAL
-
-            if (thepost.cuztom_post_meta.testimonial !== '') {
-                var $quotebox = $('<section>', {
-                    class: 'project__testimonial'
-                });
-
-                mainApp.getTestimonial(thepost.cuztom_post_meta.testimonial);
-            }
-
-            // GALLERY
-
-            $('.main-content').append($blurbbox, $statsbox, $vidbox, $dimensionbox, $quotebox);
-
-        };
-
-        // get VIDEO info
-        mainApp.getVideo = function($vidID){
-          $.ajax( {
-              url: '/wp-json/wp/v2/video/' + $vidID, 
-              success: function ( res ) {
-                console.log(res);
-                mainApp.printVideoInfo(res);
-              },
-              cache: false
-            } );
-        };
-
-        mainApp.printVideoInfo = function(vid) {
-
-            // VIDEO
-            var $vidlink = '<iframe src="https://player.vimeo.com/video/' + vid.cuztom_post_meta.vimeo + '" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 
 
-            $('.project__video').append($vidlink);
-        };
+    var $designcases       = $('#design-case.services-case-studies').data('cases');
+    var $maintcases       = $('#maintenance-case.services-case-studies').data('cases');
+    var $consultcases       = $('#consulting-case.services-case-studies').data('cases');
+    var $aicases       = $('#artinstallations-case.services-case-studies').data('cases');
 
-        // get TESTIMONIAL info
-        mainApp.getTestimonial = function($testID){
-          $.ajax( {
-              url: '/wp-json/wp/v2/testimonial/' + $testID, 
-              success: function ( res ) {
-                console.log(res);
-                mainApp.printTestimonialInfo(res);
-              },
-              cache: false
-            } );
-        };
+    console.log($designcases);
 
-        mainApp.printTestimonialInfo = function(quote) {
+    // use the API to grab PROJECT info
+    mainApp.grabDesign = function($type){
+      $.ajax( {
+          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          success: function ( res ) {
+            console.log(res);
+            mainApp.printProjectInfo(res, $type);
+          },
+          cache: false
+        } );
+    };
 
-            // // Testimonial
-            var $quotation = $('<p>').html(quote.cuztom_post_meta.quote);
+    // use the API to grab PROJECT info
+    mainApp.grabMain = function($type){
+      $.ajax( {
+          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          success: function ( res ) {
+            console.log(res);
+            mainApp.printProjectInfo(res, $type);
+          },
+          cache: false
+        } );
+    };
 
-            // var $quotebox = $('<section>', {
-            //     class: 'project__testimonial'
-            // }).append($quotation);
+    // use the API to grab PROJECT info
+    mainApp.grabConsult = function($type){
+      $.ajax( {
+          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          success: function ( res ) {
+            console.log(res);
+            mainApp.printProjectInfo(res, $type);
+          },
+          cache: false
+        } );
+    };
 
-            $('.project__testimonial').append($quotation);
-        };
+    // use the API to grab PROJECT info
+    mainApp.grabAI = function($type){
+      $.ajax( {
+          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          success: function ( res ) {
+            console.log(res);
+            mainApp.printProjectInfo(res, $type);
+          },
+          cache: false
+        } );
+    };
 
-        // initialize events - GOOOOOOOOOO!!!!
-        mainApp.grabProjectInfo($cases);
+    // print PROJECT info
+    mainApp.printProjectInfo = function(thepost, $thetype) {
 
-    } else if ( $type == 'project' && $archive !== false ) {
-        console.log('Project ARCHIVEEEEEE');
+        // STATIC INTRO
+        var $staticintro = $('<p>', {
+            class: 'project__static-intro',
+            html: 'A project we loved working on:'
+        });
 
-        // use the API to grab PROJECT info
-        mainApp.grabProjectArchive = function(){
-          $.ajax( {
-              url: '/wp-json/wp/v2/project/', 
-              success: function ( res ) {
-                console.log(res);
+        // POST TITLE
+        var $posttitle = $('<h1>', {
+            class: 'project__dimension',
+            html: thepost[0].title.rendered
+        });
+        
+        // POST CONTENT
+        var $postcontent = thepost[0].content.rendered;
 
-                mainApp.projectArchiveSingle(res);
-              },
-              cache: false
-            } );
-        };
+        if ( $thetype == 'design') {
+            $('#design-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+        } else if ( $thetype == 'maintenance' ) {
+            $('#maintenance-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
 
-        mainApp.projectArchiveSingle = function(res) {
-            $.each(res, function(i, item) {
-                console.log('Data for ' + (i +1) + ' is coming a back!');
-                console.log(item);
-            });
-        };
+        } else if ( $thetype == 'consulting' ) {
+            $('#consulting-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
 
+        } else {
+            $('#artinstallations-case.services-case-studies .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
 
-        mainApp.grabProjectArchive();
-    }
+        }
+
+    };
+
+    // initialize events - GOOOOOOOOOO!!!!
+    mainApp.grabDesign($designcases);
+    mainApp.grabMain($maintcases);
+    mainApp.grabConsult($consultcases);
+    mainApp.grabAI($aicases);
+
 };
-
-
-
 
 window.onload = function() {
     console.log( "ready!" );

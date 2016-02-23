@@ -121,38 +121,21 @@
 		</div>
 		<?php } ?> 
 
-		<?php if ($cs) { ?>
-		<div class="services-case-studies" id="case-study-display" data-cases="<?php echo $cs; ?>">
-			<?php 
-			    $argsss = array(
-			        'post_type' => 'case_study',
-			        'tax_query' => array(
-		        		array(
-		        			'taxonomy' => 'service',
-		        			'field'    => 'term_id',
-		        			'terms'    => array( $cs )
-		        		)
-			        ),
-			    );
-			    $cases = new WP_Query( $argsss ); 
-			    // $firstcase = $cases->posts[0];
-			?>
+		<div class="services-case-studies" id="<?php echo $hash; ?>-case" data-cases="<?php echo $hash; ?>">
 			    
 			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">
-			        <div class="main-content-case-study ">
-			            <h1><?php echo the_title(); ?></h1>
-			            <div><?php the_content(); ?></div>
+			        <div class="main-content-case-study">
+			            
 			        </div>
-			        <div class="previous-cs">
+			        <div class="previous-cs" id="<?php echo $hash; ?>-prev"  >
 			        	
 			        </div>
-			        <div class="next-cs">
+			        <div class="next-cs" id="<?php echo $hash; ?>-next">
 			        	
 			        </div>
 			    </div>
 
 		</div>
-		<?php } ?>
 		
 
 	</div>
