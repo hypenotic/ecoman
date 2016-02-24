@@ -4,7 +4,7 @@ body {
 
 span.text-disappear {
     @include media($bp-small) {
-    	color: transparent;
+    	color: rgba(0,0,0,0);
     }
 }
 
