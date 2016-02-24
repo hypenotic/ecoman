@@ -26,7 +26,9 @@
 
 
 <body>	
-	<main>
+
+	<main class="page">
+
 	<?php if (is_front_page()) { 
 
 	// Hero Banner

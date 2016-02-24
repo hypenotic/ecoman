@@ -102,3 +102,112 @@
 		}
 	}
 }
+
+/*
+
+  JV jQuery Mobile Menu
+  Author: Julius van der Vaart (http://juliusvaart.com)
+  Version: 2
+
+*/
+
+
+// Structure
+
+.page {
+  width: 100%;
+  min-height: 100%;
+  // background: #fff;
+  overflow: auto;
+  z-index: 1;
+  position: relative;
+}
+
+
+// Styles for menu
+.mobile-nav {
+  ul {
+    margin: 0 0 25px;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  display: block;
+  width: 240px;
+  height: 100%;
+  color: $black;
+  background-color: #34bc9d;
+  z-index: -100;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu .mobile-menu-inner {
+  width: 200px;
+  padding: 20px 20px 60px;
+  #main-menu {
+  	ul {
+  		li {
+			a {
+
+			}
+  		}
+  	}
+  }
+}
+
+// Styles for hamburger
+.hamburger {
+  position: fixed;
+  top: 0;
+  float: right;
+  margin: 10px;
+  padding: 10px 10px 9px;
+  cursor: pointer;
+  z-index: 999;
+  display: block;
+	@include media($bp-med) {
+		display: none;
+	}
+  .hamburger-inner {
+    position: relative;
+    height: 21px;
+    width: 30px;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .bar {
+    width: 30px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    &.bar2,
+    &.bar3 {
+      top: 9px;
+    }
+    &.bar4 {
+      top: 18px;
+    }
+  }
+  &.open {
+    .bar1,
+    .bar4 {
+      display: none;
+    }
+    .bar2,
+    .bar3 {
+      height: 3px;
+    }
+  }
+}
+
