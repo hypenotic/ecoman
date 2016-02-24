@@ -9,10 +9,13 @@ jQuery(document).ready(function($){
 		duration: 300
 	});	
 
-    new WOW({
-       mobile: false
-    }).init();
+  new WOW({
+     mobile: false
+  }).init();
+
 });
+
+
 
 // ====================== ABOUT CASE STUDIES APP
 
@@ -25,6 +28,18 @@ var mainApp = { };
 // FIND OUT WHAT PAGE WE'RE ON - WHERE ARE WE?!?
 mainApp.grabType = function(){
 
+  var currenturl = window.location.href; 
+  console.log(currenturl);
+
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/ecoman';
+
+  }
 
     var $designcases       = $('#design-case.services-case-studies').data('cases');
     var $maintcases       = $('#maintenance-case.services-case-studies').data('cases');
@@ -36,7 +51,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabDesign = function($type){
       $.ajax( {
-          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -48,7 +63,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabMain = function($type){
       $.ajax( {
-          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -60,7 +75,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabConsult = function($type){
       $.ajax( {
-          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -72,7 +87,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabAI = function($type){
       $.ajax( {
-          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
