@@ -38,9 +38,11 @@ span.text-disappear {
 }
 
 .main-content-case-study {
+	background-color: $white;
+	// 
+	padding: 20px;
+	margin: 0 20px;
 	@include media($bp-large) {
-		background-color: $white;
-		// 
 		padding: 50px;
 		margin: 50px 0 0;
 		@include span-columns(7);

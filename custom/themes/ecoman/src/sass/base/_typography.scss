@@ -513,8 +513,12 @@ span.plain-serif {
 			}
 			h1 {
 				margin: 0;
-				font-size: modular-scale(3);
-				line-height: modular-scale(3);
+				font-size: modular-scale(2);
+				line-height: modular-scale(2);
+				@include media($bp-med) {
+					font-size: modular-scale(3);
+					line-height: modular-scale(3);
+			    }
 			}
 			h6 {
 				font-size: modular-scale(0, 0.9rem);
@@ -524,11 +528,21 @@ span.plain-serif {
 				padding-left: 30px;
 				text-transform: uppercase;
 			}
+			p {
+				font-weight: 300;
+				@include media($bp-small) {
+					font-size: modular-scale(0, 1.2rem);
+					line-height: modular-scale(1, 1.2rem);
+			    }
+			}
 			blockquote {
 				border-left: 1px solid $grey;
 				position: relative;
 				margin-top: 50px;
 				margin-bottom: 50px;
+				@include media($bp-small) {
+					margin: 40px 15px;
+			    }
 				&:before {
 					color: $grey;
 				    content: '•';
@@ -557,6 +571,11 @@ span.plain-serif {
 					color: $grey;
 					margin: 0;
 					padding-left: 30px;
+					@include media($bp-small) {
+						padding-left: 15px;
+						font-size: modular-scale(1);
+						line-height: modular-scale(2);
+				    }
 				}
 			}
 		}

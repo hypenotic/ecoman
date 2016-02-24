@@ -282,6 +282,11 @@
 			position: relative;
 			// 
 			z-index: 3;
+			img {
+				position: relative;
+				width: 100%;
+				height: auto;
+			}
 		}
 		.previous-cs,
 		.next-cs {
