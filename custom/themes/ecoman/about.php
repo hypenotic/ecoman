@@ -18,7 +18,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 			
 	</div>
 	<section class="front-page__intro about">
-		<div class="outer-container front-page">
+		<div class="outer-container">
 			<div class="main-content">
 				<?php the_content(); ?>
 			</div>

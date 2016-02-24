@@ -77,6 +77,7 @@
 	<?php } ?>
 
 
+
 	<?php if ( is_page('about') || is_page('services') ) { 
 
 	// Hero Banner
@@ -160,12 +161,12 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav error-page" style="background:url('/custom/themes/ecoman/dist/images/default_banner.jpg');background-size:cover;background-attachment: fixed;">
+	<header class="main-header inner-nav error-page" style="background:url('/custom/themes/ecoman/dist/images/404.jpg');background-size:cover;background-attachment: fixed;" alt="404 image - picture of leaves">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
-					<p>ECOMAN. 123.456.7890</p>
+					<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
+					<p class="light-theme">ECOMAN. 123.456.7890</p>
 				</div>
 				<div class="nav__right">
 					<?php //get_search_form(); ?>
@@ -182,12 +183,12 @@
 			</nav>
 		</div>
 		<div class="header__text outer-container">
-			<h2>404 Clever Title Sorry</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim voluptates optio iure ipsum quidem, repellat. Saepe sequi est fugit aliquam.</p>
+			<h2>Looks like the gnomes have been up to something...</h2>
+			<p>The page you've requested is not available. Try a search? <a href="#contact">Contact</a> us?</p>
+			<a href="/"><button class="error-page__btn copper-btn">
+					Back to the homepage, please!
+				</button></a>
 		</div>
-		<button class="error-page__btn">
-			CTA!
-		</button>
 	</header>
 
 	<?php if(social_share()) { social_share();} ?>

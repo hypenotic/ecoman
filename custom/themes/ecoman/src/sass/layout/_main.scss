@@ -53,13 +53,17 @@ body {
 .column-4 {
 	width: 100%;
 	// 
-	@include display(flex);
-	@include align-items(center);
-	@include justify-content(center);
+	@include media($bp-med) {
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(center);
+    }
 	.column-4__single {
-		height: 350px;
-		margin: 0 1%;
-		@include flex(0 0 23.5%);
+		@include media($bp-med) {
+			height: 350px;
+			margin: 0 1%;
+			@include flex(0 0 23.5%);
+	    }
 		&:first-child {
 			margin-left: 0;
 		}

@@ -65,8 +65,12 @@ h6 {
 }
 
 p {
-	font-size: modular-scale(0);
-	line-height: modular-scale(1, 1.5rem);
+	font-size: modular-scale(0, 1.3rem);
+	line-height: modular-scale(1, 1.3rem);
+	@include media($bp-med) {
+		font-size: modular-scale(0);
+		line-height: modular-scale(1, 1.5rem);
+    }
 }
 
 a {
@@ -230,12 +234,30 @@ span.plain-serif {
 }
 
 .main-header.inner-nav.error-page {
-	h2 {
-		margin-bottom: 0;
-	}
-	p {
-		margin-top: 0;
-		text-align: center;
+	.header__text {
+		margin-top: 5%;
+		p {
+			margin-top: 30px;
+		}
+		h2, p {
+			color: $white;
+		}
+		h2 {
+			margin-bottom: 0;
+			font-size: modular-scale(5);
+			line-height: modular-scale(5);
+		}
+		a {
+			color: $white;
+			border-bottom: 1px solid $white;
+			&:hover {
+				border-bottom: 1px solid $copper;
+			}
+		}
+		.error-page__btn {
+			font-size: modular-scale(0);
+			line-height: modular-scale(0);
+		}
 	}
 }
 

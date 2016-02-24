@@ -33,12 +33,14 @@
 }
 
 .main-header.inner-nav.error-page {
-	min-height: 80vh;
-	// 
-	margin-bottom: 100px;
+	height: 100vh;
 }
 
 .main-header.inner-nav.small-header {
+	min-height: 400px;
+	@include media($bp-large) {
+		min-height: 500px;
+    }
 	.header__text {
 		padding: 0 5%;
 	}

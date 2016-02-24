@@ -24,7 +24,7 @@ $test_id = get_post_meta($post->ID,'_test_select',true); ?>
     $srctitle       = get_post_meta( $post->ID, '_single_title', true ); ?>  
     
     <div class="outer-container">
-        <div class="main-content wow fadeInUp">
+        <div class="main-content wow fadeInLeft">
             <div class="testimonial-border__circle--top"></div>
             <p class="uppercase">What clients say when we leave the room</p>
             <blockquote class="testimonial__quotation">

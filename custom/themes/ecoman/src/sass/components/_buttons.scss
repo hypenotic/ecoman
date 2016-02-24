@@ -10,9 +10,12 @@ button {
 }
 
 .large-btn {
-	padding: 20px 50px;
+	padding: 10px 30px;
 	font-size: modular-scale(0);
 	margin-top: 15px;
+	@include media($bp-med) {
+		padding: 20px 50px;
+    }
 }
 
 .grey-btn {
@@ -35,11 +38,23 @@ button {
 	}
 }
 
-.error-page__btn {
-	background-color: $black;
-	padding: 15px 60px;
-	border: 0;
+.copper-btn {
+	background-color: $copper;
 	color: $white;
+	&:hover {
+		background-color: $white;
+		color: $copper;
+		cursor: pointer;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.error-page__btn {
+	padding: 20px 60px;
+	border: 0;
+	margin-top: 10px;
 }
 
 // Side Social Share Buttons
