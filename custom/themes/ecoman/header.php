@@ -46,9 +46,9 @@
 					<a href="/">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
-					<p>ECOMAN. 123.456.7890</p>
+					<p>ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
-				<div class="nav__right">
+				<div class="nav__right desktop">
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -108,12 +108,12 @@
 						<?php } ?>
 					</a>
 					<?php if ($theme == 'value2') { ?>
-					<p class="light-theme">ECOMAN. 123.456.7890</p>
+					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 					<?php } else { ?>
-					<p>ECOMAN. 123.456.7890</p>
+					<p>ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 					<?php } ?>
 				</div>
-				<div class="nav__right">
+				<div class="nav__right desktop">
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -166,9 +166,9 @@
 			<nav>
 				<div class="nav__left">
 					<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
-					<p class="light-theme">ECOMAN. 123.456.7890</p>
+					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
-				<div class="nav__right">
+				<div class="nav__right desktop">
 					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
@@ -209,9 +209,9 @@
 					<a href="/">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
-					<p>ECOMAN. 123.456.7890</p>
+					<p>ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
-				<div class="nav__right">
+				<div class="nav__right desktop">
 					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(

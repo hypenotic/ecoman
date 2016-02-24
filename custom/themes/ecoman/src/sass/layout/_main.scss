@@ -2,6 +2,12 @@ body {
 	overflow-x: hidden;
 }
 
+span.text-disappear {
+    @include media($bp-small) {
+    	color: transparent;
+    }
+}
+
 .outer-container {
 	@include outer-container;
 }

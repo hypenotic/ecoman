@@ -1,12 +1,20 @@
 .tabs-panel-intro {
 		padding-top: 40px;
 		// 
-		@include flexalignstart;
+	    @include media($bp-med) {
+			@include flexalignstart;
+	    }
 	.tabs-panel__left {
 		@include flex(0 0 30%);
+	    @include media($bp-small) {
+			text-align: center;
+	    }
 		img {
-			width: 200px;
+			width: 100px;
 			height: auto;
+		    @include media($bp-med) {
+				width: 200px;
+		    }
 		}
 	}
 	.tabs-panel__right {
@@ -19,15 +27,21 @@
 .tabs-panel-pockets {
 	width: 100%;
 	// 
-	padding: 20px 60px 50px;
+	padding: 50px 0px 50px;
 	// 
-	@include display(flex);
-	@include align-items(flex-start);
-	@include justify-content(center);
-	@include flex-wrap(wrap);
+    @include media($bp-med) {
+    	padding: 20px 60px 50px;
+		@include display(flex);
+		@include align-items(flex-start);
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+    }
 	div.service-pocket__single {
-		@include flex(0 0 26%);
-		padding: 0 30px 50px;
+		padding: 0 30px 20px;
+	    @include media($bp-med) {
+	    	@include flex(0 0 26%);
+	    	padding: 0 30px 50px;
+	    }
 	}
 	div.consulting-pocket__single {
 		@include flex(0 0 100%);
@@ -221,11 +235,17 @@
 	width: 100%;
 	// 
 	background-color: $m-blue;
+	@include media($bp-small) {
+		padding: 30px;
+    }
 	.main-content {
 		position: relative;
 		// 
-		padding-left: 50px;
 		border-left: 1px solid $white;
+		padding-left: 30px;
+		@include media($bp-med) {
+			padding-left: 50px;
+	    }
 		.testimonial-border__circle--top,
 		.testimonial-border__circle--bottom {
 			width: 10px;

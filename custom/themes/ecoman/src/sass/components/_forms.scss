@@ -1,5 +1,8 @@
 .signup-form {
 	background-color: $copper;
+	@include media($bp-small) {
+		display: none;
+    }
 }
 
 .signup-form .outer-container .main-content {
@@ -10,6 +13,9 @@
 	@include display(flex);
 	@include align-items(flex-end);
 	@include justify-content(center);
+	@include media($bp-small) {
+		display: block;
+    }
 	#mce-EMAIL {
 		background-color: transparent;
 		// 

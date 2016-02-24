@@ -5,4 +5,9 @@ footer {
 	background: url(../images/footerfabric.jpg);
 	// 
 	@include flexboxcenter;
+	@include media($bp-small) {
+		padding-bottom: 90px;
+		padding-top: 30px;
+		display: block;
+    }
 }

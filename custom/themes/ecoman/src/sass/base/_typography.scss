@@ -10,8 +10,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: modular-scale(2);
-	line-height: modular-scale(2);
+	font-size: modular-scale(2, 1.1rem);
+	line-height: modular-scale(3, 1.1rem);
 	font-weight: 500;
     @include media($bp-large) {
 		font-size: modular-scale(5);
@@ -346,13 +346,24 @@ span.plain-serif {
 .tabs-panel-intro {
 	.tabs-panel__right {
 		h2 {
-			font-size: modular-scale(4, 0.8rem);
-			line-height: modular-scale(5, 0.8rem);
+			font-size: modular-scale(1);
+			line-height: modular-scale(1);
+			text-align: center;
+			margin: 20px 0;
+		    @include media($bp-med) {
+				font-size: modular-scale(4, 0.8rem);
+				line-height: modular-scale(5, 0.8rem);
+				text-align: left;
+				margin: 0;
+		    }
 		}
 		div {
 			font-size: modular-scale(0);
 			line-height: modular-scale(1);
 			font-weight: 300;
+			@include media($bp-small) {
+				padding: 0 30px;
+		    }
 		}
 	}
 }
@@ -363,6 +374,9 @@ span.plain-serif {
 		font-size: modular-scale(0);
 		line-height: modular-scale(0);
 		margin-bottom: 20px;
+		@include media($bp-small) {
+			margin-bottom: 8px;
+	    }
 	}
 	p {
 		margin-top: 0;
@@ -432,6 +446,10 @@ span.plain-serif {
 		margin: 0;
 		font-size: modular-scale(2);
 		line-height: modular-scale(3);
+		@include media($bp-small) {
+			font-size: modular-scale(1);
+			line-height: modular-scale(1, 1.4rem);
+	    }
 	}
 	p {
 		color: $white;
@@ -442,6 +460,11 @@ span.plain-serif {
 	p.uppercase {
 		text-transform: uppercase;
 		color: rgba(255,255,255,0.8);
+		@include media($bp-small) {
+			font-size: modular-scale(0, 0.8rem);
+			line-height: modular-scale(1, 0.8rem);
+			margin-bottom: 30px;
+	    }
 	}
 	blockquote {
 		font-weight: bold;
@@ -458,6 +481,10 @@ span.plain-serif {
 		    top: -15px;
 		    position: relative;
 		    font-size: modular-scale(0, 1.2rem);
+	    	@include media($bp-small) {
+	    		top: -10px;
+				margin-left: -0.2em;
+	        }
 		}
 	}
 }
@@ -467,6 +494,10 @@ span.plain-serif {
 		font-size: modular-scale(0, 1rem);
 		text-transform: uppercase;
 		color: rgba(255,255,255,0.8);
+		@include media($bp-small) {
+			font-size: modular-scale(0, 0.8rem);
+			line-height: modular-scale(0, 0.8rem);
+	    }
 	}
 }
 
@@ -737,8 +768,16 @@ footer {
 		font-size: modular-scale(0, 1rem);
 		padding: 0 20px;
 		background-color: rgba(0,0,0,0.5);
+		@include media($bp-small) {
+			margin: 0;
+			background-color: rgba(0,0,0,0.0);
+			text-align: center;
+	    }
 		&:first-child {
-			margin-right: 100px;
+			margin-right: 20px;
+			@include media($bp-med) {
+				margin-right: 100px;
+		    }
 		}
 		a {
 			color: $green;
