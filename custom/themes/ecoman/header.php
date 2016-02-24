@@ -27,7 +27,7 @@
 
 <body>	
 
-	<main class="page">
+	<main>
 
 	<?php if (is_front_page()) { 
 
@@ -73,8 +73,6 @@
 			
 		</div> -->
 	</header>
-
-	<?php if(social_share()) { social_share();} ?>
 
 	<?php } ?>
 
@@ -154,8 +152,6 @@
 		</div>
 	</header>
 
-	<?php if(social_share()) { social_share();} ?>
-
 	<?php } ?>
 
 
@@ -193,8 +189,6 @@
 		</div>
 	</header>
 
-	<?php if(social_share()) { social_share();} ?>
-
 	<?php } ?>
 
 	
@@ -229,8 +223,13 @@
 		</div>
 	</header>
 
+	<?php // For search results, default archive and blog index
+		if ( is_single() ) 
+	{ ?>
 	<?php if(social_share()) { social_share();} ?>
 
+	<?php } ?>
+	
 	<?php } ?>
 
 
