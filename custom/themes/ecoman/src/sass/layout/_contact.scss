@@ -37,6 +37,9 @@
 
 .contact-intro {
 	margin: 0 15% 30px;
+	@include media($bp-small) {
+		margin: 0 20px;
+    }
 }
 
 .contact-form {
