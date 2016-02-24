@@ -14,6 +14,9 @@
   $ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
   $ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
   $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
+
+	// Testimonial
+  $test       = get_post_meta( $post->ID, '_test_select', true );
 ?>
 
 <div class="tab-section-wrapper">
@@ -53,6 +56,12 @@
 		</div>
 	</section>
 </div>
+
+<?php if ($test) { ?>
+<div class="services-testimonial">
+	<?php get_template_part( 'template-part-testimonial' ); ?> 
+</div>
+<?php } ?> 
 
 <?php endwhile; endif; ?>
 

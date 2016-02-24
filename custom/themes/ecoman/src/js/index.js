@@ -165,5 +165,10 @@ mainApp.grabType = function(){
 
 window.onload = function() {
     console.log( "ready!" );
-    mainApp.grabType();
+    
+    if ( $( '.services-case-studies' ).length ) {
+     
+      mainApp.grabType();
+     
+    }
 };

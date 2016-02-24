@@ -46,6 +46,9 @@
 	padding-bottom: 60px;
 	@include flexboxcenter;
 	@include flex-direction(column);
+	@include media($bp-small) {
+		padding: 30px 30px 60px;
+    }
 }
 
 .front-page__buckets {

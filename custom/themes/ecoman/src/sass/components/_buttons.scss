@@ -64,11 +64,12 @@ button {
 	width: 100%;
 	z-index: 900;
 	position: fixed;
-	background: $l-grey;
+	background: $copper;
 	// border: 1px solid red;
 	border-right: 0;
 	padding: 5px;
 	@include media($bp-med) {
+		background: $l-grey;
 		right: 0;
 		top: 40%;
 		bottom: auto;
@@ -91,7 +92,10 @@ button {
 				padding: 10px;
 			}
 			a {
-				color: $copper;
+				color: $white;
+				@include media($bp-med) {
+					color: $copper;
+				}
 				i {
 					font-size: modular-scale(1);
 				}
