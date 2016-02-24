@@ -294,12 +294,12 @@ span.plain-serif {
 	margin: 50px 0 100px;
 }
 
-.outer-container.front-page {
-	.main-content {
-		p {
-			// font-size: modular-scale(1);
-			// line-height: modular-scale(2);
-		}
+.front-page__intro {
+	p {
+		@include media($bp-med) {
+			font-size: modular-scale(1);
+			line-height: modular-scale(2);
+	    }
 	}
 }
 

@@ -43,12 +43,27 @@
 
 .front-page__intro {
 	background-color: $l-grey;
-	padding-bottom: 60px;
+	padding-bottom: 100px;
 	@include flexboxcenter;
 	@include flex-direction(column);
 	@include media($bp-small) {
 		padding: 30px 30px 60px;
     }
+    button.copper-btn.large-btn {
+    	@include media($bp-med) {
+    		padding: 15px 140px;
+        }
+    }
+}
+
+.home-page-cta {
+	position: relative;
+	margin-top: 40px;
+	img {
+		position: absolute;
+		top: -26px;
+		right: 15px;
+	}
 }
 
 .front-page__buckets {
@@ -75,5 +90,6 @@
 		position: relative;
 		// 
 		z-index: 50;
+		margin-bottom: 0;
 	}
 }

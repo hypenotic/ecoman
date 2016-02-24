@@ -4,19 +4,19 @@
 
 <?php // Get custom meta values 
 
-  // Hero Banner
-  $banner     = get_post_meta( $post->ID, '_banner_image', true );
-  $bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
-  $heading    = get_post_meta( $post->ID, '_banner_heading', true );
-  $subheading = get_post_meta( $post->ID, '_banner_subheading', true );
+	// Hero Banner
+	$banner     = get_post_meta( $post->ID, '_banner_image', true );
+	$bannerurl  = wp_get_attachment_image_src( $banner,'banner', true );
+	$heading    = get_post_meta( $post->ID, '_banner_heading', true );
+	$subheading = get_post_meta( $post->ID, '_banner_subheading', true );
 
-  // CTA
-  $ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
-  $ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
-  $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
+	// CTA
+	$ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
+	$ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
+	$ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 
 	// Testimonial
-  $test       = get_post_meta( $post->ID, '_test_select', true );
+	$test       = get_post_meta( $post->ID, '_test_select', true );
 ?>
 
 <div class="tab-section-wrapper">
@@ -29,6 +29,14 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
+		<?php if ($ctalink) { ?>
+			<a href="<?php echo $ctalink; ?>" class="home-page-cta">
+				<button class="copper-btn large-btn">
+					<?php echo $ctabtn; ?>
+				</button>
+				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/hanging-cat.png" alt="">
+			</a>
+		<?php } ?>
 	</section>
 </div>
 
