@@ -36,7 +36,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabDesign = function($type){
       $.ajax( {
-          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -48,7 +48,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabMain = function($type){
       $.ajax( {
-          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -60,7 +60,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabConsult = function($type){
       $.ajax( {
-          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
@@ -72,7 +72,7 @@ mainApp.grabType = function(){
     // use the API to grab PROJECT info
     mainApp.grabAI = function($type){
       $.ajax( {
-          url: 'http://ecoman.dev/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
+          url: '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
             console.log(res);
             mainApp.printProjectInfo(res, $type);
