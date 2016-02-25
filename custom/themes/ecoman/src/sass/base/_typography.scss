@@ -286,6 +286,15 @@ span.plain-serif {
 			margin: 0;
 			text-align: center;
 			text-transform: uppercase;
+			font-weight: bold;
+		}
+		h4 {
+			font-size: modular-scale(0);
+			line-height: modular-scale(1);
+			@include media($bp-large) {
+				font-size: modular-scale(1);
+				line-height: modular-scale(1);
+		    }
 		}
 	}
 }

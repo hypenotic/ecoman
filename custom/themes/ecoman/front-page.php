@@ -49,18 +49,34 @@
 		<div class="outer-container">
 			<h3>Services</h3>
 			<div class="column-4 column-container wow fadeInUp">
-				<div class="column-4__single">
+				<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC' ) );
 					
-				</div>
-				<div class="column-4__single">
+					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 					
-				</div>
-				<div class="column-4__single">
+						<?php 
+
+							$pockets      = get_post_meta($post->ID,'_pockets',true);
 					
-				</div>
-				<div class="column-4__single">
-					
-				</div>
+						?>
+						
+						<div class="column-4__single">
+							<h4><?php the_title(); ?></h4>
+							<ul>
+							<?php if($pockets) {
+								    foreach($pockets as $pocket) {
+							    $heading        = $pocket['_heading'];
+							?>
+								
+									<li><?php echo $heading; ?></li>
+								
+							<?php
+							        }
+							    }
+							?>
+							</ul>
+						</div>
+
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
 	</section>

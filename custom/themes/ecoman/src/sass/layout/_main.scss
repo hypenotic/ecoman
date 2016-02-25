@@ -67,12 +67,12 @@ span.text-disappear {
 	// 
 	@include media($bp-med) {
 		@include display(flex);
-		@include align-items(center);
+		@include align-items(flex-start);
 		@include justify-content(center);
     }
 	.column-4__single {
 		@include media($bp-med) {
-			height: 350px;
+			// height: 350px;
 			margin: 0 1%;
 			@include flex(0 0 23.5%);
 	    }

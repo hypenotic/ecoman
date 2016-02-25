@@ -93,9 +93,6 @@
 							<?php if($pockets) {
 							    foreach($pockets as $pocket) {
 							
-							    // Get custom meta values    
-							    // $singlelogo     = $logo['_logo'];
-							    // $logourl        = wp_get_attachment_image_src($singlelogo,'logos', true);
 							    $heading        = $pocket['_heading'];
 							    $text          = $pocket['_text'];
 			
