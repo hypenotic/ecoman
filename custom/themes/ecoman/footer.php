@@ -4,7 +4,18 @@
 	</footer>
 	</main>
 
+	<div class="mobile-nav">
+	  <?php 
+	      wp_nav_menu(array(
+	        'menu' => 'Main Menu',  
+	        'container_id' => 'main-menu',
+	        'walker' => new Main_Menu_Walker()
+	      )); 
+	  ?>
+	</div>
+
 	<?php wp_footer(); ?>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 </body>
 </html>
 

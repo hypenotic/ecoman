@@ -27,7 +27,7 @@
 
 <body>	
 
-	<main>
+	<main class="page">
 
 	<?php if (is_front_page()) { 
 
@@ -59,7 +59,6 @@
 					    )); 
 					?>
 					<?php get_search_form(); ?>
-					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -69,9 +68,6 @@
 				<h2><?php echo $subheading; ?></h2>
 	        <?php } ?>
 		</div>
-		<!-- <div class="header__circle-icon">
-			
-		</div> -->
 	</header>
 
 	<?php } ?>
@@ -122,7 +118,6 @@
 					    )); 
 					?>
 					<?php get_search_form(); ?>
-					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -167,7 +162,6 @@
 					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
 				<div class="nav__right desktop">
-					<?php //get_search_form(); ?>
 					<?php 
 					    wp_nav_menu(array(
 					      'menu' => 'Main Menu',  
@@ -176,7 +170,6 @@
 					    )); 
 					?>
 					<?php get_search_form(); ?>
-					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
@@ -217,7 +210,6 @@
 					    )); 
 					?>
 					<?php get_search_form(); ?>
-					<!-- <div id="search-form-trigger"></div> -->
 				</div>
 			</nav>
 		</div>
