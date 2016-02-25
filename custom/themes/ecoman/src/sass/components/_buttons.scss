@@ -51,6 +51,12 @@ button {
 	}
 }
 
+.copper-btn.white-hover {
+	&:hover {
+		background-color: $white;
+	}
+}
+
 .error-page__btn {
 	padding: 20px 60px;
 	border: 0;

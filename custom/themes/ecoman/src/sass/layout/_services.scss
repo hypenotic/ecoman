@@ -1,3 +1,7 @@
+div.grey-background {
+	background-color: $ll-grey;
+}
+
 .tabs-panel-intro {
 		padding-top: 40px;
 		// 
@@ -113,13 +117,14 @@
         	}
     	}
 		&.r-tabs-state-active { 
+			background: $ll-grey;
 			a {
-				background:$white;
+				background:$ll-grey;
 				&:hover {
 					background-color: none;
 				}
 				.tab-icon {
-            	background-color: $white;
+            	background-color: $ll-grey;
             	}	
 			}
 		}

@@ -1,6 +1,7 @@
 body {
-	// overflow-x: hidden;
+	overflow-x: hidden;
 }
+
 
 span.text-disappear {
     @include media($bp-small) {

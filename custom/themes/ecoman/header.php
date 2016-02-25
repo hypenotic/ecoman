@@ -41,7 +41,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;background-attachment: fixed;">
+	<header class="main-header inner-nav" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
@@ -92,7 +92,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav small-header" style="background:url(<?php echo $bannerurl[0]; ?>);background-size:cover;background-attachment: fixed;">
+	<header class="main-header inner-nav small-header" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
@@ -154,11 +154,11 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav error-page" style="background:url('/custom/themes/ecoman/dist/images/404.jpg');background-size:cover;background-attachment: fixed;" alt="404 image - picture of leaves">
+	<header class="main-header inner-nav error-page" style="background-image:url('/custom/themes/ecoman/dist/images/404.jpg');" alt="404 image - picture of leaves">
 		<div class="outer-container nav">
 			<nav>
 				<div class="nav__left">
-					<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
+					<a href="/"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
 					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
 				<div class="nav__right desktop">

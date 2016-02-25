@@ -33,6 +33,11 @@
 	margin-bottom: 80px;
 }
 
+.main-header.inner-nav {
+	background-size:cover;
+	background-attachment: fixed;
+}
+
 .main-header.inner-nav.error-page {
 	height: 100vh;
 }

@@ -32,7 +32,7 @@
 		</div>
 		<?php if ($ctalink) { ?>
 			<a href="<?php echo $ctalink; ?>" class="home-page-cta">
-				<button class="copper-btn large-btn">
+				<button class="copper-btn large-btn white-hover">
 					<?php echo $ctabtn; ?>
 				</button>
 				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/hanging-cat.png" alt="">

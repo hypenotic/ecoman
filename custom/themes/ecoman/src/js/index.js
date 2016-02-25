@@ -215,7 +215,7 @@ jQuery(document).ready(function($){
     mainContent: $('.page'),
     theMenu: $('.mobile-nav'),
     slideSpeed: 0.3,
-    menuWidth: 240,
+    menuWidth: 270,
     position: 'right',
     menuPadding: '20px 20px 60px'
   });
@@ -307,16 +307,10 @@ mainApp.grabType = function(){
     mainApp.printProjectInfo = function(thepost, $thetype) {
 
         if ( thepost[0].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
-
             var $beforeimg = thepost[0].cuztom_post_meta.beforeimg;
-
         } else {
-
             var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
-
         }
-
-        
 
         // STATIC INTRO
         var $staticintro = $('<p>', {
@@ -333,33 +327,19 @@ mainApp.grabType = function(){
         // POST CONTENT
         var $postcontent = thepost[0].content.rendered;
 
-        if ( $thetype == 'design') {
-
-            $('#design-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
-
-            $('#design-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
-
+        if ( $thetype == 'design')  {
+          var $typecontainer = '#design-case';
         } else if ( $thetype == 'maintenance' ) {
-
-            $('#maintenance-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
-
-            $('#maintenance-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
-
-
+          var $typecontainer = '#maintenance-case';
         } else if ( $thetype == 'consulting' ) {
-
-            $('#consulting-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
-
-            $('#consulting-case.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
-
+          var $typecontainer = '#consulting-case';
         } else {
-
-            $('#artinstallations-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover",});
-
-            $('#artinstallations-case.services-case-studies .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
-
+          var $typecontainer = '#artinstallations-case';
         }
 
+        $($typecontainer).css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
+
+        $( $typecontainer + '.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
     };
 
     // initialize events - GOOOOOOOOOO!!!!
