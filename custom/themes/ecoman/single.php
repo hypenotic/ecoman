@@ -1,8 +1,11 @@
 <?php get_header(); ?>	
 
 <div class="outer-container">
-<div class="main-content">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="main-content single">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+
+        $pullquote    = get_post_meta( $post->ID, '_pullquote_quote', true );
+    ?>
 
 	<div class="back-to-toc">
 		<p><a href="/resources">← TABLE OF CONTENTS</a></p>
@@ -14,7 +17,15 @@
 	</div>
 </div>
 
+
 <div class="main-content-narrow blog">
+    <?php if ($pullquote) { ?>
+    <div class="single-blog-pullquote">
+        <?php get_template_part( 'template-part-social' ); ?>
+        <blockquote><?php echo $pullquote; ?></blockquote>
+    </div>
+    <?php } ?>
+
     <div class="blog-entry">
         <?php the_content(); ?>
     </div>

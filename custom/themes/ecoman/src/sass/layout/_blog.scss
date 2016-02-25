@@ -10,9 +10,59 @@ h1.blog-title {
 	margin: 0;
 }
 
+.main-content.single {
+	margin-bottom: 0;
+}
+
 .blog-meta {
 	@include display(flex);
 }
+
+.single-blog-pullquote {
+	margin: 0 -80px;
+	@include flexboxcenter;
+	blockquote {
+		margin: 50px 50px 30px;
+		font-size: modular-scale(2);
+		line-height: modular-scale(3);
+		color: $grey;
+		font-family: $title-font;
+		font-weight: 300;
+		font-style: italic;
+	}
+}
+
+#post-social-share {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include display(flex);
+		@include align-items(flex-start);
+		@include justify-content(space-between);
+		@include media($bp-med) {
+			@include flex-direction(column);
+		}
+		li {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $l-grey;
+			@include flexboxcenter;
+			&:hover {
+				background-color: $copper;
+				a {
+					color: $l-grey;
+				}
+			}
+			a {
+				color: $copper;
+			}
+		}
+	}
+}
+
+
 
 .blog-entry {
 	margin-bottom: 50px;

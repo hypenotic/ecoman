@@ -3,12 +3,12 @@ $posts = new Cuztom_Post_Type('post');
 
 $posts->add_meta_box(
     'pullquote',
-    'Main Pullquote', 
+    'Tweetable Pullquote', 
     array(
         array(
             'name'          => 'quote',
             'label'         => 'Intro/Top Pullquote',
-            'description'   => 'Appears at the top of the blog post.',
+            'description'   => 'Appears at the top of the blog post. Keep it around 100 characters if you want the whole thing to show up in the tweet.',
             'type'          => 'textarea',
         )
     )
