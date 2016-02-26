@@ -63,10 +63,16 @@ section.about__services-cta {
 }
 
 .column-4__single.team-members__single {
-	margin-top: 70px;
+	margin-top: 40px;
+	&:first-child {
+		margin-top: 0;
+	}
 	// 
 	@include media($bp-med) {
 		margin-top: 30px;
+		&:first-child {
+			margin-top: 30px;
+		}
 		@include flex(0 0 21%);
     }
 }

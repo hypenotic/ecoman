@@ -211,11 +211,14 @@ jQuery(document).ready(function($){
      mobile: false
   }).init();
 
+
+  var windowwidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
   $.jvmobilemenu({
     mainContent: $('.page'),
     theMenu: $('.mobile-nav'),
     slideSpeed: 0.3,
-    menuWidth: 270,
+    menuWidth: windowwidth,
     position: 'right',
     menuPadding: '20px 20px 60px'
   });
