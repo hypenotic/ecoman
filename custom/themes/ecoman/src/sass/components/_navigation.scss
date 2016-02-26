@@ -207,8 +207,12 @@ nav.mobile-navigation {
 	@include media($bp-med) {
 		display: none;
     }
-	.nav__left {
-		
+	img {
+		width: 50px;
+		height: auto;
+		// 
+		margin-top: 0px;
+		margin-right: 10px;
 	}
 }
 
