@@ -33,9 +33,11 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	<div class="about__services-cta__text wow fadeInRight">
 		<h3>What We Do</h3>
 		<?php the_excerpt (); ?>
-		<a href="<?php echo $ctalink; ?>"><button class="copper-btn large-btn">
+		<a href="<?php echo $ctalink; ?>">
+			<button class="copper-btn large-btn">
 				<?php echo $ctabtn; ?>
-			</button></a>
+			</button>
+		</a>
 	</div>
 </section>
 
@@ -51,6 +53,22 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 
 		</div>
 	</section>
+</div>
+
+<div class="about-case-studies" id="about-case" data-cases="about">
+	    
+	    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">
+	        <div class="main-content-case-study">
+	            
+	        </div>
+	        <div class="previous-cs" id="<?php echo $hash; ?>-prev"  >
+	        	
+	        </div>
+	        <div class="next-cs" id="<?php echo $hash; ?>-next">
+	        	
+	        </div>
+	    </div>
+
 </div>
 
 <?php endwhile; endif; ?>

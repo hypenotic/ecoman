@@ -21,11 +21,11 @@ section.about__services-cta {
 	// 
 	background-size:cover;
 	background-repeat: no-repeat;
-	background-position: center center;
 	// background-attachment: fixed;
 	// 
 	@include media($bp-med) {
 		height: 100%;
+		background-position: center center;
 		@include flex(0 0 50%);
     }
 }

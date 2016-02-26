@@ -34,8 +34,11 @@
 }
 
 .main-header.inner-nav {
-	background-size:cover;
+	background-size: auto 500px;
 	background-attachment: fixed;
+	@include media($bp-med) {
+		background-size:cover;
+    }
 }
 
 .main-header.inner-nav.error-page {
@@ -44,8 +47,11 @@
 
 .main-header.inner-nav.small-header {
 	min-height: 400px;
-	@include media($bp-large) {
+	background-size: auto 500px;
+	background-attachment: fixed;
+	@include media($bp-med) {
 		min-height: 500px;
+		background-size:cover;
     }
 	.header__text {
 		padding: 0 5%;
