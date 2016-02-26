@@ -192,7 +192,9 @@ body {
 
 
 nav.desktop {
-	display: none;
+	@include media($bp-small) {
+		display: none;
+    }
 }
 
 nav.mobile-navigation {
@@ -202,6 +204,9 @@ nav.mobile-navigation {
 	width: 100%;
 	z-index: 99999999999999;
 	background-color: $white;
+	@include media($bp-med) {
+		display: none;
+    }
 	.nav__left {
 		
 	}
