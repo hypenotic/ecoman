@@ -17,6 +17,14 @@ get_header(); ?>
 	
 ?>
 
+<div class="outer-container">
+<div class="main-content blog-index">
+	<h1 class="blog-title"><?php the_title(); ?></h1>
+	<div class="back-to-toc">
+		<p><a href="/resources">← TABLE OF CONTENTS</a></p>
+	</div>
+</div>
+
 <section role="main" id="isotope-container">
 	<div class="post-container">
 		<div class="filters button-group js-radio-button-group">

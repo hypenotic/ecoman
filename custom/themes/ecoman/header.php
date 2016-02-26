@@ -38,6 +38,15 @@
 
 	<main class="page">
 
+	<nav class="mobile-navigation">
+		<div class="nav__left">
+			<a href="/">
+				<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
+			</a>
+			<p>ECOMAN</p>
+		</div>
+	</nav>
+
 	<?php if (is_front_page()) { 
 
 	// Hero Banner
@@ -52,8 +61,8 @@
 
 	<header class="main-header inner-nav" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
 		<div class="outer-container nav">
-			<nav>
-				<div class="nav__left">
+			<nav class="desktop">
+				<div class="nav__left desktop">
 					<a href="/">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
@@ -99,19 +108,10 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<nav class="mobile-navigation">
-		<div class="nav__left">
-			<a href="/">
-				<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
-			</a>
-			<p>ECOMAN</p>
-		</div>
-	</nav>
-
 	<header class="main-header inner-nav small-header" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
 		<div class="outer-container nav">
 			<nav class="desktop">
-				<div class="nav__left">
+				<div class="nav__left desktop">
 					<a href="/">
 						<?php if ($theme == 'value2') { ?>
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
@@ -172,8 +172,8 @@
 
 	<header class="main-header inner-nav error-page" style="background-image:url('/custom/themes/ecoman/dist/images/404.jpg');" alt="404 image - picture of leaves">
 		<div class="outer-container nav">
-			<nav>
-				<div class="nav__left">
+			<nav class="desktop">
+				<div class="nav__left desktop">
 					<a href="/"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
 					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
@@ -209,8 +209,8 @@
 
 	<header class="inner-nav">
 		<div class="outer-container nav">
-			<nav>
-				<div class="nav__left">
+			<nav class="desktop">
+				<div class="nav__left desktop">
 					<a href="/">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>

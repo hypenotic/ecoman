@@ -214,11 +214,17 @@ jQuery(document).ready(function($){
 
   var windowwidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
+  if (windowwidth > 480){
+    var windoww = 250;
+  } else {
+    var windoww = windowwidth;
+  }
+
   $.jvmobilemenu({
     mainContent: $('.page'),
     theMenu: $('.mobile-nav'),
     slideSpeed: 0.3,
-    menuWidth: windowwidth,
+    menuWidth: windoww,
     position: 'right',
     menuPadding: '20px 20px 60px'
   });

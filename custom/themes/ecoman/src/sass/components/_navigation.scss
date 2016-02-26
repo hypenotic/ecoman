@@ -43,7 +43,7 @@
 .nav__left {
 	// background-color: $white;
 	padding-left: 20px;
-	@include media($bp-med) {
+	@include media($bp-large) {
 		padding: 0;
 		@include display(flex);
 		@include align-items(center);
@@ -77,9 +77,10 @@
 	}
 }
 
-.nav__right.desktop {
+.nav__right.desktop,
+.nav__left.desktop {
 	display: none;
-	@include media($bp-med) {
+	@include media($bp-large) {
 		@include display(flex);
 		@include align-items(center);
     }
@@ -153,7 +154,7 @@ body {
   cursor: pointer;
   z-index: 999;
   display: block;
-  	@include media($bp-med) {
+  	@include media($bp-large) {
   		display: none;
       }
   .hamburger-inner {
@@ -192,9 +193,9 @@ body {
 
 
 nav.desktop {
-	@include media($bp-small) {
-		display: none;
-    }
+	// @include media($bp-med) {
+	// 	display: none;
+ //    }
 }
 
 nav.mobile-navigation {
@@ -204,7 +205,7 @@ nav.mobile-navigation {
 	width: 100%;
 	z-index: 99999999999999;
 	background-color: $white;
-	@include media($bp-med) {
+	@include media($bp-large) {
 		display: none;
     }
 	img {
