@@ -24,6 +24,7 @@ get_header(); ?>
 		<p><a href="/resources">← TABLE OF CONTENTS</a></p>
 	</div>
 </div>
+</div>
 
 <section role="main" id="isotope-container">
 	<div class="post-container">

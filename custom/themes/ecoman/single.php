@@ -35,25 +35,32 @@
         <?php
         $prev_post = get_previous_post();
         if (!empty( $prev_post )): ?>
-            <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
-            <div class="project-nav__arrow project-nav__arrow--prev">
-                <p>&lt; Previous</p>
-            </div>
-            </a>
-        <?php endif; ?>
-        <?php
-        $next_post = get_next_post();
-        if (!empty( $next_post )): ?>
-            <a href="<?php echo get_permalink( $next_post->ID ); ?>">
-            <div class="project-nav__arrow project-nav__arrow--next">
-                <p>Next &gt;</p>
+            <a class="project-nav__arrow" href="<?php echo get_permalink( $prev_post->ID ); ?>">
+            <div class="project-nav__arrow--prev">
+                <div class="top"></div>
+                <div class="bottom"></div>
             </div>
             </a>
         <?php endif; ?>
 
-        <?php //comments_template(); ?> 
-        
+        <div class="comments__text">
+            <p>Thanks for reading!</p>
+            <p>What'd ya think?</p>
+            <p><?php comments_number(); ?> </p>
+        </div>
+
+        <?php
+        $next_post = get_next_post();
+        if (!empty( $next_post )): ?>
+            <a class="project-nav__arrow" href="<?php echo get_permalink( $next_post->ID ); ?>">
+            <div class="project-nav__arrow--next">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            </a>
+        <?php endif; ?>        
     </div>
+    <?php comments_template(); ?> 
 </div>
 
 	<?php endwhile; endif; ?>

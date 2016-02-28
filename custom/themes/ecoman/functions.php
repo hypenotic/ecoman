@@ -39,6 +39,10 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
+
+// Comments
+
+
 // Read More
 
 /**

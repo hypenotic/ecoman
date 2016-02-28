@@ -80,6 +80,21 @@ h1.blog-title {
 
 .prev-next-link {
 	width: 100%;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	.comments__text {
+		background-color: $copper;
+		padding: 30px 60px;
+		text-align: center;
+		margin: 0 30px;
+		font-family: $title-font;
+		p {
+			margin: 0;
+			color: $white;
+			line-height: modular-scale(0);
+		}
+	}
 }
 
 // ISOTOPE FILTERING SYSTEM
