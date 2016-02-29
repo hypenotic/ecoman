@@ -235,23 +235,23 @@ jQuery(document).ready(function($){
 
 // ====================== ABOUT CASE STUDIES APP
 
-var currenturl = window.location.href; 
-console.log(currenturl);
-
-if ( (currenturl !== 'http://hypelabs.ca/ecoman/services/') || (currenturl !=='http://hypelabs.ca/ecoman/about/') ) {
-
-  var hype = '';
-
-} else {
-
-  var hype = '/ecoman';
-
-}
-
 var aboutApp = { };
 
 // FIND OUT WHAT PAGE WE'RE ON - WHERE ARE WE?!?
 aboutApp.grabType = function(){
+
+    var currenturl = window.location.href; 
+    console.log(currenturl);
+
+    if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+
+      var hype = '';
+
+    } else {
+
+      var hype = '/ecoman';
+
+    }
 
     var $aboutcases = $('#about-case.about-case-studies').data('cases');
 
@@ -452,7 +452,7 @@ mainApp.grabType = function(){
   var currenturl = window.location.href; 
   console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/' || 'http://hypelabs.ca/ecoman/about/'  ) {
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
 
     var hype = '';
 
