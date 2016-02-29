@@ -373,7 +373,7 @@ $('#about-next').click(function() {
   aboutApp.nextCase();
 });
 
-// NEXT CASE STUDY
+// PREV CASE STUDY
 
 aboutApp.prevCase = function() {
 
@@ -442,7 +442,7 @@ $('#about-prev').click(function() {
   aboutApp.prevCase();
 });
 
-// ====================== SERVICES CASE STUDY APP
+// ====================== SERVICES CASE STUDY APP =====================
 
 var mainApp = { };
 
@@ -520,6 +520,17 @@ mainApp.grabType = function(){
     // print PROJECT info
     mainApp.printProjectInfo = function(thepost, $thetype) {
 
+        var cslength = thepost.length;
+        console.log($thetype, cslength);
+
+        if (thepost.length == 1) {
+          var prev = $('#' + $thetype + '-case .outer-container .previous-cs');
+          var next = $('#' + $thetype + '-case .outer-container .next-cs');
+
+          prev.remove();
+          next.remove();
+        }
+
         if ( thepost[0].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
             var $beforeimg = thepost[0].cuztom_post_meta.beforeimg;
         } else {
@@ -563,6 +574,163 @@ mainApp.grabType = function(){
     mainApp.grabAI($aicases);
 
 };
+
+
+// PREV CASE STUDY
+
+var casesApp = { };
+
+casesApp.prevCase = function(hashtag) {
+
+  // use the API to grab PROJECT info
+  casesApp.grabCases = function($hash){
+    $.ajax( {
+        url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $hash, 
+        success: function ( res ) {
+          console.log('BOOM');
+          casesApp.printProjectInfo(res, $hash);
+        },
+        cache: false
+      } );
+  };
+
+  // print PROJECT info
+  casesApp.printProjectInfo = function(thepost, hash) {
+
+    var caseamount = thepost.length;
+    var casenum = $('#' + hash + '-next').data('casenum');
+
+    if (casenum == 0 ) {
+      var num = caseamount - 1;
+    } else {
+      var num = casenum - 1;
+    }
+
+    console.log(caseamount, num);
+    
+
+    if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
+        var $beforeimg = thepost[num].cuztom_post_meta.beforeimg;
+    } else {
+        var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
+    }
+
+    // STATIC INTRO
+    var $staticintro = $('<p>', {
+        class: 'project__static-intro',
+        html: 'A project we loved working on:'
+    });
+
+    // POST TITLE
+    var $posttitle = $('<h1>', {
+        id: 'case-title',
+        html: thepost[num].title.rendered
+    });
+    
+    // POST CONTENT
+    var $postcontent = thepost[num].content.rendered;
+
+    $('#' + hash + '-next').data('casenum', num);
+
+    $('#' + hash + '-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
+
+    $( '#' + hash + '-case .outer-container .main-content-case-study').append($posttitle, $postcontent);
+
+  };
+
+  casesApp.grabCases(hashtag);
+
+};
+
+$('.previous-cs').click(function() {
+  var parent = $(this).parent();
+  var hash = parent.data('hash');
+
+  console.log(parent, hash);
+
+  $(this).siblings('.main-content-case-study').empty();
+  casesApp.prevCase(hash);
+});
+
+
+// NEXT CASE STUDY
+
+var casesApp = { };
+
+casesApp.nextCase = function(hashtag) {
+
+  // use the API to grab PROJECT info
+  casesApp.grabCases = function($hash){
+    $.ajax( {
+        url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $hash, 
+        success: function ( res ) {
+          console.log('BOOM');
+          casesApp.printProjectInfo(res, $hash);
+        },
+        cache: false
+      } );
+  };
+
+  // print PROJECT info
+  casesApp.printProjectInfo = function(thepost, hash) {
+
+    var caseamount = thepost.length;
+    var casenum = $('#' + hash + '-next').data('casenum');
+
+    if (casenum == 0 ) {
+      var num = 1;
+    } else if ( casenum == (caseamount - 1)) {
+      var num = 0;
+    } else {
+      var num = casenum + 1;
+    }
+
+    console.log(caseamount, num);
+    
+
+    if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
+        var $beforeimg = thepost[num].cuztom_post_meta.beforeimg;
+    } else {
+        var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
+    }
+
+    // STATIC INTRO
+    var $staticintro = $('<p>', {
+        class: 'project__static-intro',
+        html: 'A project we loved working on:'
+    });
+
+    // POST TITLE
+    var $posttitle = $('<h1>', {
+        id: 'case-title',
+        html: thepost[num].title.rendered
+    });
+    
+    // POST CONTENT
+    var $postcontent = thepost[num].content.rendered;
+
+    $('#' + hash + '-next').data('casenum', num);
+
+    $('#' + hash + '-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
+
+    $( '#' + hash + '-case .outer-container .main-content-case-study').append($posttitle, $postcontent);
+
+  };
+
+  casesApp.grabCases(hashtag);
+
+};
+
+$('.next-cs').click(function() {
+  var parent = $(this).parent();
+  var hash = parent.data('hash');
+
+  console.log(parent, hash);
+
+  $(this).siblings('.main-content-case-study').empty();
+  casesApp.nextCase(hash);
+});
+
 
 window.onload = function() {
     console.log( "ready!" );
