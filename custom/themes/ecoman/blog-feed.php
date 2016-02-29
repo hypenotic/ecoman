@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="main-content blog-index">
 	<h1 class="blog-title"><?php the_title(); ?></h1>
 	<div class="back-to-toc">
-		<p><a href="/resources">← TABLE OF CONTENTS</a></p>
+		<p>TABLE OF CONTENTS</p>
 	</div>
 </div>
 </div>
