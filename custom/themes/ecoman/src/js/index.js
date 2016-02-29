@@ -236,17 +236,17 @@ jQuery(document).ready(function($){
 // ====================== ABOUT CASE STUDIES APP
 
 var currenturl = window.location.href; 
-  console.log(currenturl);
+console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/' || 'http://hypelabs.ca/ecoman/about/'  ) {
+if ( (currenturl !== 'http://hypelabs.ca/ecoman/services/') || (currenturl !=='http://hypelabs.ca/ecoman/about/') ) {
 
-    var hype = '';
+  var hype = '';
 
-  } else {
+} else {
 
-    var hype = '/ecoman';
+  var hype = '/ecoman';
 
-  }
+}
 
 var aboutApp = { };
 
