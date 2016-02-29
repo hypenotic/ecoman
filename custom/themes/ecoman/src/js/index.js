@@ -235,7 +235,141 @@ jQuery(document).ready(function($){
 
 // ====================== ABOUT CASE STUDIES APP
 
+var currenturl = window.location.href; 
+  console.log(currenturl);
 
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/ecoman';
+
+  }
+
+var aboutApp = { };
+
+// FIND OUT WHAT PAGE WE'RE ON - WHERE ARE WE?!?
+aboutApp.grabType = function(){
+
+    var $aboutcases = $('#about-case.about-case-studies').data('cases');
+
+    console.log($aboutcases);
+
+    // use the API to grab PROJECT info
+    aboutApp.grabCases = function($type){
+      $.ajax( {
+          url: hype + '/wp-json/wp/v2/case_study', 
+          success: function ( res ) {
+            console.log(res);
+            aboutApp.printProjectInfo(res, $type);
+          },
+          cache: false
+        } );
+    };
+
+    // print PROJECT info
+    aboutApp.printProjectInfo = function(thepost, $thetype) {
+
+        if ( thepost[0].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
+            var $beforeimg = thepost[0].cuztom_post_meta.beforeimg;
+        } else {
+            var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
+        }
+
+        // STATIC INTRO
+        var $staticintro = $('<p>', {
+            class: 'project__static-intro',
+            html: 'A project we loved working on:'
+        });
+
+        // POST TITLE
+        var $posttitle = $('<h1>', {
+            class: 'project__dimension',
+            html: thepost[0].title.rendered
+        });
+        
+        // POST CONTENT
+        var $postcontent = thepost[0].content.rendered;
+
+        $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
+
+        $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+    };
+
+    // initialize events - GOOOOOOOOOO!!!!
+    aboutApp.grabCases($aboutcases);
+};
+
+aboutApp.nextCase = function() {
+
+  // use the API to grab PROJECT info
+  aboutApp.grabCases = function(){
+    $.ajax( {
+        url: hype + '/wp-json/wp/v2/case_study', 
+        success: function ( res ) {
+          console.log('BOOM');
+          aboutApp.printProjectInfo(res);
+        },
+        cache: false
+      } );
+  };
+
+  // print PROJECT info
+  aboutApp.printProjectInfo = function(thepost) {
+
+    var caseamount = thepost.length;
+    var casenum = $('#about-next').data('casenum');
+
+    if (casenum == 0 ) {
+      var num = 1;
+    } else if ( casenum == (caseamount - 1)) {
+      var num = 0;
+    } else {
+      var num = casenum + 1;
+    }
+
+    console.log(num);
+    
+
+    if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
+        var $beforeimg = thepost[num].cuztom_post_meta.beforeimg;
+    } else {
+        var $beforeimg = '/custom/themes/ecoman/dist/images/before.jpg';
+    }
+
+    // STATIC INTRO
+    var $staticintro = $('<p>', {
+        class: 'project__static-intro',
+        html: 'A project we loved working on:'
+    });
+
+    // POST TITLE
+    var $posttitle = $('<h1>', {
+        id: 'case-title',
+        html: thepost[num].title.rendered
+    });
+    
+    // POST CONTENT
+    var $postcontent = thepost[num].content.rendered;
+
+    $('#about-next').data('casenum', num);
+
+    $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
+
+    $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+
+  };
+
+  aboutApp.grabCases();
+
+};
+
+$('#about-next').click(function() {
+  $('#about-cs-content').empty();
+  aboutApp.nextCase();
+});
 
 // ====================== SERVICES CASE STUDY APP
 
@@ -365,6 +499,12 @@ window.onload = function() {
     if ( $( '.services-case-studies' ).length ) {
      
       mainApp.grabType();
+     
+    }
+
+    if ( $( '.about-case-studies' ).length ) {
+     
+      aboutApp.grabType();
      
     }
 };

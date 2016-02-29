@@ -58,13 +58,13 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 <div class="about-case-studies" id="about-case" data-cases="about">
 	    
 	    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-archive="<?php if (is_archive( 'project' )) { echo 'true'; } else { echo 'false'; }?>">
-	        <div class="main-content-case-study">
+	        <div class="main-content-case-study" id="about-cs-content">
 	            
 	        </div>
-	        <div class="previous-cs" id="<?php echo $hash; ?>-prev"  >
+	        <div class="previous-cs" id="about-prev" data-casenum="0">
 	        	
 	        </div>
-	        <div class="next-cs" id="<?php echo $hash; ?>-next">
+	        <div class="next-cs" id="about-next" data-casenum="0">
 	        	
 	        </div>
 	    </div>
