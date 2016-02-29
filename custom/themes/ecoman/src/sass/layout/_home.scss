@@ -67,6 +67,8 @@
 }
 
 .front-page__buckets {
+	width: 80%;
+	// 
 	position: relative;
 	// 
 	background-color: $white;
@@ -74,6 +76,7 @@
 	// 
 	padding-top: 30px;
 	margin-bottom: -50px;
+	margin: 0 auto;
 	.outer-container {
 		position: relative;
 		// 
