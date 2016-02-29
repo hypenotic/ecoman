@@ -306,6 +306,19 @@ aboutApp.grabType = function(){
 
 aboutApp.nextCase = function() {
 
+  var currenturl = window.location.href; 
+  console.log(currenturl);
+
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/ecoman';
+
+  }
+
   // use the API to grab PROJECT info
   aboutApp.grabCases = function(){
     $.ajax( {
@@ -376,6 +389,19 @@ $('#about-next').click(function() {
 // PREV CASE STUDY
 
 aboutApp.prevCase = function() {
+
+  var currenturl = window.location.href; 
+  console.log(currenturl);
+
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/ecoman';
+
+  }
 
   // use the API to grab PROJECT info
   aboutApp.grabCases = function(){
