@@ -373,7 +373,7 @@ aboutApp.nextCase = function() {
 
     $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+    $( '#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($posttitle, $postcontent).fadeIn(500);
 
   };
 
@@ -382,6 +382,9 @@ aboutApp.nextCase = function() {
 };
 
 $('#about-next').click(function() {
+  $('html, body').animate({
+          scrollTop: $("#about-case").offset().top
+      }, 1000);
   $('#about-cs-content').empty();
   aboutApp.nextCase();
 });
@@ -455,7 +458,7 @@ aboutApp.prevCase = function() {
 
     $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+    $( '#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($posttitle, $postcontent).fadeIn(500);
 
   };
 
@@ -464,6 +467,9 @@ aboutApp.prevCase = function() {
 };
 
 $('#about-prev').click(function() {
+  $('html, body').animate({
+          scrollTop: $("#about-case").offset().top
+      }, 1000);
   $('#about-cs-content').empty();
   aboutApp.prevCase();
 });

@@ -62,10 +62,17 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	            
 	        </div>
 	        <div id="about-prev" data-casenum="0">
-	        	
+	        	<div class="arrow--prev">
+	        		<div class="top"></div>
+	        		<div class="bottom"></div>
+	        	</div>
 	        </div>
 	        <div id="about-next" data-casenum="0">
-	        	
+	        	<div class="arrow--next">
+	        		<div class="top"></div>
+	        		<div class="bottom"></div>
+	        	</div>
+
 	        </div>
 	    </div>
 
