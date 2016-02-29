@@ -129,6 +129,81 @@ button {
 	}
 }
 
+
+// CASE STUDY PREV/NEXT
+
+.previous-cs,
+.next-cs {
+	width: 160px;
+	height: 160px;
+	// 
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	// 
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 50%;
+	z-index: 2;
+	// 
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(208, 84, 2, 0.6);
+		.arrow--prev,
+		.arrow--next {
+			border-top: 1px solid $white;
+			border-left: 1px solid $white;
+		}
+		.top,
+		.bottom {
+			background-color: $white;
+		}
+	}
+}
+
+.arrow--prev,
+.arrow--next {
+	width: 50px;
+	height: 50px;
+	border-top: 1px solid $copper;
+	border-left: 1px solid $copper;
+	position:relative;
+}
+.top,
+.bottom {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: $copper;
+	position: absolute;
+}
+.arrow--prev {
+	transform: rotate(315deg);
+	margin-left: -30px;
+	.top {
+		right: 0;
+		top: -2px;
+	}
+	.bottom {
+		bottom: 0;
+		left: -2px;
+	}
+}
+.arrow--next {
+	transform: rotate(135deg);
+	margin-right: -30px;
+	.top {
+		right: 0;
+		top: -2px;
+	}
+	.bottom {
+		bottom: 0;
+		left: -2px;
+	}
+}
+
 // Side Social Share Buttons
 #side-social-share {
 	bottom: 0;

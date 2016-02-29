@@ -127,10 +127,16 @@
 			            
 			        </div>
 			        <div class="previous-cs" id="<?php echo $hash; ?>-prev" data-casenum="0">
-			        	
+			        	<div class="arrow--prev">
+			        		<div class="top"></div>
+			        		<div class="bottom"></div>
+			        	</div>
 			        </div>
 			        <div class="next-cs" id="<?php echo $hash; ?>-next" data-casenum="0">
-			        	
+			        	<div class="arrow--next">
+			        		<div class="top"></div>
+			        		<div class="bottom"></div>
+			        	</div>
 			        </div>
 			    </div>
 
