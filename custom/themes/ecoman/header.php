@@ -172,7 +172,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav error-page" style="background-image:url('/custom/themes/ecoman/dist/images/404.jpg');" alt="404 image - picture of leaves">
+	<header class="main-header inner-nav error-page" style="background-image:url('<?php echo get_template_directory_uri (); ?>/dist/images/404_image.jpg');" alt="404 image - picture of cows">
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
@@ -193,8 +193,8 @@
 			</nav>
 		</div>
 		<div class="header__text outer-container">
-			<h2>Looks like the gnomes have been up to something...</h2>
-			<p>The page you've requested is not available. Try a search? <a href="#contact">Contact</a> us?</p>
+			<h2><span class="black-highlight">Looks like the cows got out of the barn...</span></h2>
+			<p><span class="black-highlight">The page you've requested is not available. Try a search? <a href="#contact">Contact</a> us?</span></p>
 			<a href="/"><button class="error-page__btn copper-btn">
 					Back to the homepage, please!
 				</button></a>
