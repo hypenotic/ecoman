@@ -81,3 +81,64 @@
 	}
 }
 
+// CONTACT MODAL
+
+#menu-main-menu li.contact-modal-on {
+	background: $l-blue;
+}
+
+.desktop {
+	position: relative;
+	#contact-modal {
+		display: none;
+		z-index: 9999999999999999999;
+		width: 400px;
+		background-color: $l-blue;
+		position: absolute;
+		right: 164px;
+		top: 64px;
+		padding: 50px;
+		h3 {
+			font-size: modular-scale(1);
+			line-height: modular-scale(1);
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: modular-scale(0, 1.2rem);
+			line-height: modular-scale(1, 1.2rem);
+			font-weight: 300;
+			margin-bottom: 20px;	
+		}
+	}
+	.contact-form__left {
+		padding: 0;
+	}
+	.contact__deats {
+		@include display(flex);
+		@include align-items(flex-start);
+		@include justify-content(space-between);
+	}
+	.contact__social {
+		@include flexboxcenter;
+		margin-bottom: 20px;
+	}
+	.to-container {
+		display:flex;
+		p {
+			@include flex(0 0 auto);
+			padding-right: 20px;
+		}
+	}
+	.name-email-container,
+	.message-container {
+		position: relative;
+		// 
+		@include media($bp-med) {
+			@include display(flex);
+			@include align-items(flex-start);
+			@include justify-content(flex-start);
+			@include flex-direction(column);
+		}
+	}
+}
+

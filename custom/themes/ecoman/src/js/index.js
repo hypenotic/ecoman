@@ -732,6 +732,12 @@ $('.next-cs').click(function() {
 });
 
 
+$('#menu-main-menu li:last-child').click(function() {
+  $('#contact-modal').toggle("slow");
+  $('#menu-main-menu li:last-child').toggleClass('contact-modal-on');
+});
+
+
 window.onload = function() {
     console.log( "ready!" );
     

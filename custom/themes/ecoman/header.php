@@ -78,6 +78,7 @@
 					?>
 					<?php get_search_form(); ?>
 				</div>
+				<?php get_template_part( 'template-part-contact-modal' ); ?> 
 			</nav>
 		</div>
 		<div class="header__text outer-container">
