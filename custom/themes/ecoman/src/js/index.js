@@ -238,7 +238,7 @@ jQuery(document).ready(function($){
 var currenturl = window.location.href; 
   console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
+  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/' || 'http://hypelabs.ca/ecoman/about/'  ) {
 
     var hype = '';
 
