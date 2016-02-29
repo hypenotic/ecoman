@@ -61,10 +61,10 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	        <div class="main-content-case-study" id="about-cs-content">
 	            
 	        </div>
-	        <div class="previous-cs" id="about-prev" data-casenum="0">
+	        <div id="about-prev" data-casenum="0">
 	        	
 	        </div>
-	        <div class="next-cs" id="about-next" data-casenum="0">
+	        <div id="about-next" data-casenum="0">
 	        	
 	        </div>
 	    </div>
