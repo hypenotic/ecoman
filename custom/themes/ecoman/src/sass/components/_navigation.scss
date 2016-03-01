@@ -198,6 +198,7 @@ nav.desktop {
  //    }
 }
 
+
 nav.mobile-navigation {
 	position: fixed;
 	left: 0;
@@ -205,6 +206,7 @@ nav.mobile-navigation {
 	width: 100%;
 	z-index: 99999999999999;
 	background-color: $white;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
 	@include media($bp-large) {
 		display: none;
     }
@@ -214,6 +216,18 @@ nav.mobile-navigation {
 		// 
 		margin-top: 0px;
 		margin-right: 10px;
+	}
+}
+
+#short-menu {
+	padding-top: 70px;
+	padding-left: 0px;
+	ul {
+		li {
+			font-size: modular-scale(1);
+			line-height: modular-scale(1);
+			text-transform: uppercase;
+		}
 	}
 }
 
