@@ -246,7 +246,7 @@ function show_feed_results( $results = NULL ) {
 				$label=$result->label;
 				$filter=$result->filter;
 				$newDate=$result->date;			
-				$default_image=get_bloginfo('template_url')."/dist/images/bg-hero.png";				
+				$default_image=get_bloginfo('template_url')."/dist/images/default_banner.jpg";				
 				$output = '';
 				$classes = '';
 				if($label=='blog') {
