@@ -16,6 +16,7 @@ require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/social-share.php');
 require_once('includes/functions/cuztom-posts.php');
 require_once('includes/functions/add-social-aggregator.php');
+require_once('includes/functions/grabfirstimage.php');
 
 //Load shortcodes
 require_once('includes/shortcodes/full-width-image.php');
@@ -41,7 +42,6 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 
 // Comments
-
 
 // Read More
 

@@ -110,7 +110,7 @@ h1.blog-title {
 }
 
 section[role=main] {
-    @include outer-container;
+    // @include outer-container;
     @include pad(0 2em 0 2em);
     @include media($bp-large) {
         @include pad(2em 5em);
@@ -126,10 +126,10 @@ section[role=main] {
 }
 
 .post-container {
-	@include span-columns(5);
+	// @include span-columns(5);
 	@include media($bp-large) {
-		@include span-columns(10);
-		@include shift(1);
+		// @include span-columns(10);
+		// @include shift(1);
     }
 }
 

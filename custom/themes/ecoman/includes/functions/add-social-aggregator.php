@@ -206,8 +206,13 @@ function get_feed_results($feeds) {
 		$posts="";	
 		query_posts("post_type=post&showposts=-1");
 		if(have_posts()):while(have_posts()):the_post();
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); 
-			$posts[] = array('title'=>get_the_title(),'author'=>get_the_author(),'link'=>get_permalink(),'img'=>$image[0],'date'=>get_the_date(), 'label'=>'blog','filter'=>'blog','post_id'=>get_the_ID());
+			if ( has_post_thumbnail()) {
+				$img=wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); 
+				$image=$img[0];
+			} else if (catch_that_image() !== '') {
+				$image=catch_that_image();
+			}
+			$posts[] = array('title'=>get_the_title(),'author'=>get_the_author(),'link'=>get_permalink(),'img'=>$image,'date'=>get_the_date(), 'label'=>'blog','filter'=>'blog','post_id'=>get_the_ID());
 		endwhile;endif;
 		if($posts !='') {
 			if($results !='') {
@@ -262,12 +267,13 @@ function show_feed_results( $results = NULL ) {
 				<div class="post-item item transition <?php echo $label;?> <?php echo $filter;?> <?php echo $classes;?>" data-category="transition" id="<?php echo "item_".$id;?>">	
 				<div class="post">
 						<?php 
-								
-								if($feed_img==''){
-									$feed_img=$default_image;
-									$error_img=$default_image;
-								}
-							?>
+							
+							if($feed_img==''){
+								$feed_img=$default_image;
+								$error_img=$default_image;
+							}
+
+						?>
 	                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
 		                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
 	            	</div>		
@@ -288,17 +294,6 @@ function show_feed_results( $results = NULL ) {
 					<?php echo $output;?>
 					</div>
 				</div>
-					<div class="post-footer <?php echo $label;?>">
-						<small>
-							<?php 
-								if($label=='blog') {
-									echo $author."<br> Blog Post";
-								} else {
-									echo $author." <br>".ucfirst($label);
-								}
-							?>
-						</small>
-					</div>
 				</div>	
 				<?php
 			}
