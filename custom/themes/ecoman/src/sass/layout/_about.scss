@@ -95,8 +95,11 @@ section.about__services-cta {
 
 
 .about-case-studies {
-	margin-top: 50px;
+	margin-top: -80px;
 	padding-top: 50px;
+	@include media($bp-med) {
+		margin-top: 50px;
+    }
 	.outer-container {
 		position: relative;
 		.main-content-case-study {

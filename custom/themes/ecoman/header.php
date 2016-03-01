@@ -40,7 +40,7 @@
 
 	<nav class="mobile-navigation">
 		<div class="nav__left">
-			<a href="<?php echo site_url(); ?>">
+			<a href="<?php echo home_url(); ?>">
 				<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 			</a>
 			<p>ECOMAN</p>
