@@ -206,7 +206,7 @@ function get_feed_results($feeds) {
 		$posts="";	
 		query_posts("post_type=post&showposts=-1");
 		if(have_posts()):while(have_posts()):the_post();
-			if ( has_post_thumbnail()) {
+			if ( has_post_thumbnail() ) {
 				$img=wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); 
 				$image=$img[0];
 			} else if (catch_that_image() !== '') {

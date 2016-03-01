@@ -40,7 +40,7 @@
 
 	<nav class="mobile-navigation">
 		<div class="nav__left">
-			<a href="/">
+			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 			</a>
 			<p>ECOMAN</p>
@@ -63,7 +63,7 @@
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
-					<a href="/">
+					<a href="<?php echo home_url(); ?>">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
@@ -113,7 +113,7 @@
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
-					<a href="/">
+					<a href="<?php echo home_url(); ?>">
 						<?php if ($theme == 'value2') { ?>
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
 						<?php } else { ?>
@@ -176,7 +176,7 @@
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
-					<a href="/"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
+					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
 					<p class="light-theme">ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
 				</div>
 				<div class="nav__right desktop">
@@ -214,7 +214,7 @@
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
-					<a href="/">
+					<a href="<?php echo home_url(); ?>">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN<span class="text-disappear">. 123.456.7890</span></p>
