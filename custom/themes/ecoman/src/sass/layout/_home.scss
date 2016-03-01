@@ -83,6 +83,9 @@
 		background-color: $white;
 		// 
 		padding-top: 30px;
+		// 
+		@include flexboxcenter;
+		@include flex-direction(column);
 	}
 	.column-4 {
 		padding-top: 30px;
@@ -91,7 +94,7 @@
 		list-style-type: none;
 		padding: 0;
 		li {
-			color: $copper;
+			// color: $copper;
 		}
 		li + li {
 			margin-top: 4px;

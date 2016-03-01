@@ -3,6 +3,11 @@ button {
 
 }
 
+.large-btn.center-margin {
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
 .btn {
 	&:hover {
 		cursor: pointer;

@@ -56,11 +56,16 @@
 						<?php 
 
 							$pockets      = get_post_meta($post->ID,'_pockets',true);
-					
+
+							$title = get_the_title();
+							$prehash = preg_replace("/[^a-zA-Z]/", "", $title);
+							$lowercase = strtolower($prehash);
+							$hash = $lowercase;
+
 						?>
 						
 						<div class="column-4__single">
-							<h4><?php the_title(); ?></h4>
+							<a href="<?php echo home_url(); ?>/services/#<?php echo $hash; ?>"><h4><?php the_title(); ?></h4></a>
 							<ul>
 							<?php if($pockets) {
 								    foreach($pockets as $pocket) {
@@ -78,6 +83,11 @@
 
 				<?php endwhile; endif; ?>
 			</div>
+			<a href="<?php echo home_url(); ?>/services">
+			<button class="copper-btn large-btn center-margin">
+				Learn more about our services
+			</button>
+		</a>
 		</div>
 	</section>
 </div>
