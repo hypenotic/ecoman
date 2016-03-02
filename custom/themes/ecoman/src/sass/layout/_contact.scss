@@ -5,7 +5,6 @@
 	position: relative;
 	// 
 	background-color: $d-blue;
-	background-image: url(../images/footer_banner_exwide.jpg);
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center center;
@@ -17,6 +16,10 @@
 	// 
 	@include flexboxcenter;
 	@include flex-direction(column);
+	// 
+	@include media($bp-med) {
+		background-image: url(../images/footer_banner_exwide.jpg);
+    }
 }
 
 .contact__circle-icon {

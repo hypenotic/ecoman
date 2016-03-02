@@ -129,7 +129,7 @@
 						<?php } ?>
 					</a>
 					<?php if ($theme == 'value2') { ?>
-					<p class="light-theme">ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
+					<p class="light-theme">ECOMAN<span class="text-disappear">. <a href="tel:+4165565516"><span class="white-highlight padded-span">416.556.5516</span></a></span></p>
 					<?php } else { ?>
 					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 					<?php } ?>
