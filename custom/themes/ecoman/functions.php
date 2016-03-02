@@ -11,6 +11,7 @@ include('includes/wp-cuztom-posts/custom-team.php');
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');
+require_once('includes/functions/analyticstracking.php');
 require_once('includes/functions/register-menu.php');
 require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/social-share.php');
