@@ -74,7 +74,7 @@
 					<a href="<?php echo home_url(); ?>">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
-					<p>ECOMAN<span class="text-disappear">. 416.556.5516</span></p>
+					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
 				<div class="nav__right desktop">
 					<?php 
@@ -129,9 +129,9 @@
 						<?php } ?>
 					</a>
 					<?php if ($theme == 'value2') { ?>
-					<p class="light-theme">ECOMAN<span class="text-disappear">. 416.556.5516</span></p>
+					<p class="light-theme">ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 					<?php } else { ?>
-					<p>ECOMAN<span class="text-disappear">. 416.556.5516</span></p>
+					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 					<?php } ?>
 				</div>
 				<div class="nav__right desktop">
@@ -185,7 +185,7 @@
 			<nav class="desktop">
 				<div class="nav__left desktop">
 					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
-					<p class="light-theme">ECOMAN<span class="text-disappear">. 416.556.5516</span></p>
+					<p class="light-theme">ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
 				<div class="nav__right desktop">
 					<?php 
@@ -225,7 +225,7 @@
 					<a href="<?php echo home_url(); ?>">
 						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
-					<p>ECOMAN<span class="text-disappear">. 416.556.5516</span></p>
+					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
 				<div class="nav__right desktop">
 					<?php //get_search_form(); ?>

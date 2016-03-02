@@ -38,7 +38,7 @@ section.about__services-cta {
 	// 
 	@include media($bp-med) {
 		height: 100%;
-		padding: 70px 100px;
+		padding: 100px 100px 70px;
 		@include flex(0 0 50%);
     }
 }
@@ -97,6 +97,7 @@ section.about__services-cta {
 .about-case-studies {
 	margin-top: -80px;
 	padding-top: 50px;
+	min-height: 100vh;
 	@include media($bp-med) {
 		margin-top: 50px;
     }
@@ -104,6 +105,7 @@ section.about__services-cta {
 		position: relative;
 		.main-content-case-study {
 			position: relative;
+			min-height: 100vh;
 			// 
 			z-index: 3;
 			img {
