@@ -13,6 +13,9 @@
     }
 	.header__text {
 		padding: 0 8%;
+		@include media($bp-small) {
+			padding: 8% 8%;
+	    }
 	}
 	.header__circle-icon {
 		width: 160px;
@@ -55,6 +58,9 @@
     }
 	.header__text {
 		padding: 0 5%;
+		@include media($bp-small) {
+			padding: 5% 8%;
+	    }
 	}
 }
 

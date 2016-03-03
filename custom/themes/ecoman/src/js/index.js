@@ -784,4 +784,10 @@ window.onload = function() {
       aboutApp.grabType();
      
     }
+
+    $('#comments').hide();
+
+    $('#see-comments').click(function() {
+      $('#comments').toggle("slow");
+    });
 };
