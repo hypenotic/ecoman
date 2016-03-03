@@ -763,9 +763,9 @@ $('.next-cs').click(function() {
   casesApp.nextCase(hash);
 });
 
-
-$('#menu-main-menu li:last-child').click(function() {
-  $('#contact-modal').toggle("slow");
+$('#menu-main-menu li:last-child a').click(function(event) {
+  event.preventDefault();
+  $('#contact-modal').toggle("fast");
   $('#menu-main-menu li:last-child').toggleClass('contact-modal-on');
 });
 
