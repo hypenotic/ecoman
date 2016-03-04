@@ -73,7 +73,7 @@ function fetch_twitter_feed() {
 	$user_timeline = json_decode($user_timeline, true);
 
 	$result=$user_timeline;
-	print_r($user_timeline);
+	// print_r($user_timeline);
 	$results='';
 	$img='';
 	$date='';
