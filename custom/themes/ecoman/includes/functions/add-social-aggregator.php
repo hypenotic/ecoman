@@ -50,47 +50,49 @@ function fetch_facebook_feed() {
 	return array_multi_unique($results);
 }
 
-// function fetch_twitter_feed() {
-// 	// Set here your twitter application tokens
-// 	$settings = array(
-// 	    'oauth_access_token' => "19429453-5R55CddXy4h2zDmSnl2KAbXFNJlnI60hSLE7V3Aq7",
-// 	    'oauth_access_token_secret' => "7fAeztusVt0f8MfUT1fyFlYIloI9WL6UykXXH40gUxfct",
-// 	    'consumer_key' => "Gt6olcan9wdkVaR30CPBJUjOq",
-// 	    'consumer_secret' => "yJjH8iUEfwheZwA8kpNxmD3ugPAI2SvsgFwHXHb75V1Rlzbrd7"
-// 	);
+function fetch_twitter_feed() {
+	// Set here your twitter application tokens
+	$settings = array(
+	    'oauth_access_token' => "19429453-5R55CddXy4h2zDmSnl2KAbXFNJlnI60hSLE7V3Aq7",
+	    'oauth_access_token_secret' => "7fAeztusVt0f8MfUT1fyFlYIloI9WL6UykXXH40gUxfct",
+	    'consumer_key' => "Gt6olcan9wdkVaR30CPBJUjOq",
+	    'consumer_secret' => "yJjH8iUEfwheZwA8kpNxmD3ugPAI2SvsgFwHXHb75V1Rlzbrd7"
+	);
 
-// 	// Get timeline using TwitterAPIExchange
-// 	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-// 	$getfield = '?screen_name=ecomandotca';
-// 	$requestMethod = 'GET';
+	// Get timeline using TwitterAPIExchange
+	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+	$getfield = '?screen_name=ecomandotca';
+	$requestMethod = 'GET';
 
-// 	$twitter = new TwitterAPIExchange($settings);
-// 	$user_timeline = $twitter
-// 	  ->setGetfield($getfield)
-// 	  ->buildOauth($url, $requestMethod)
-// 	  ->performRequest();
+	$twitter = new TwitterAPIExchange($settings);
+	$user_timeline = $twitter
+	  ->setGetfield($getfield)
+	  ->buildOauth($url, $requestMethod)
+	  ->performRequest();
 
-// 	$user_timeline = json_decode($user_timeline, true);
+	$user_timeline = json_decode($user_timeline, true);
 
-// 	$result=$user_timeline;
-// 	// print_r($user_timeline);
-// 	$results='';
-// 	$img='';
-// 	$date='';
-// 	$total_feeds=count($result);	
-// 	if($total_feeds>0) {
-// 		for($i=0;$i<$total_feeds;$i++) {
-// 			$img = $result[$i]['user']['profile_background_image_url'];
-// 			$date = '';
-// 			$title = $result[$i]['text'];
-// 			$link = $result[$i]['user']['url'];
-// 			$author=$result[$i]['user']['name'];
-// 			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'instagram','filter'=>'social');
-// 		}
-// 	}
-// 	// print_r($results);
-// 	return $results;
-// }
+	$result=$user_timeline;
+	// print_r($user_timeline);
+	$results='';
+	$img='';
+	$date='';
+	$id='';
+	$total_feeds=count($result);	
+	if($total_feeds>0) {
+		for($i=0;$i<$total_feeds;$i++) {
+			$img = $result[$i]['user']['profile_background_image_url'];
+			$date = '2016';
+			$title = $result[$i]['text'];
+			$link = $result[$i]['user']['url'];
+			$author=$result[$i]['user']['name'];
+			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'twitter','filter'=>'social');
+		}
+	}
+	// print_r($results);
+	// return $results;
+	show_twit_results($results);
+}
 
 function fetch_instagram_feed($url) {
 	$ch = curl_init($url); 
@@ -234,17 +236,7 @@ function get_feed_results($feeds) {
 					$results=$instagram_feeds;	
 				}
 			}
-		}
-
-		// Twitter Feeds
-		// $twitter_feeds=fetch_twitter_feed();
-		// if($twitter_feeds !='') {
-		// 	if($results !='') {
-		// 		$results=array_merge($twitter_feeds,$results);
-		// 	}else {
-		// 		$results=$twitter_feeds;	
-		// 	}
-		// }	
+		}	
 
 		// Facebook Feeds
 		$fb_feeds=fetch_facebook_feed();
@@ -284,6 +276,72 @@ function get_feed_results($feeds) {
 			}
 		}
 		return $results;
+}
+
+function show_twit_results( $results = NULL ) {
+    if( !$results ) return false;
+	$total = count($results);
+		$i=0;
+			foreach( $results as $result) {
+				// $id=$result->row_id;
+				$link= $result['link'];
+				$title=$result['title'];
+				$author=$result['author'];
+				$feed_img=$result['img'];
+				$label=$result['label'];
+				$filter=$result['filter'];
+				$newDate=$result['date'];			
+				$default_image=get_bloginfo('template_url')."/dist/images/default_banner.jpg";				
+				$output = '';
+				$classes = '';
+				if($label=='blog') {
+					$post_id=$result->post_id;
+					if($post_id) {
+						$categories = get_the_category($post_id);
+						$separator = ', ';
+						if($categories){
+							foreach($categories as $category) {
+								$classes .= $category->category_nicename.' ';
+								$output .= '<small>'.$category->cat_name.'</small>'.$separator;
+							}
+							$output="<div class='categories'>".trim($output, $separator).'</div>';
+						}
+					}								
+				}
+				?>
+				<div class="post-item item transition <?php echo $label;?> <?php echo $filter;?> <?php echo $classes;?>" data-category="transition" id="<?php echo "item_".$id;?>">	
+				<div class="post">
+						<?php 
+							
+							if($feed_img==''){
+								$feed_img=$default_image;
+								$error_img=$default_image;
+							}
+
+						?>
+	                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
+		                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
+	            	</div>		
+                    <div class="post-title">
+                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
+                    <p class="title">
+                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
+						<?php 					
+							if (strlen($title) > 75) {
+								echo substr($title, 0, 75) . '...'; 
+							
+							} else {
+								echo $title;
+							}
+						?>
+                        </a>
+                    </p>
+					<?php echo $output;?>
+					</div>
+				</div>
+				</div>	
+				<?php
+			}
 }
 
 function show_feed_results( $results = NULL ) {
