@@ -50,47 +50,50 @@ function fetch_facebook_feed() {
 	return array_multi_unique($results);
 }
 
-// function fetch_twitter_feed() {
-// 	// Set here your twitter application tokens
-// 	$settings = array(
-// 	    'oauth_access_token' => "19429453-5R55CddXy4h2zDmSnl2KAbXFNJlnI60hSLE7V3Aq7",
-// 	    'oauth_access_token_secret' => "7fAeztusVt0f8MfUT1fyFlYIloI9WL6UykXXH40gUxfct",
-// 	    'consumer_key' => "Gt6olcan9wdkVaR30CPBJUjOq",
-// 	    'consumer_secret' => "yJjH8iUEfwheZwA8kpNxmD3ugPAI2SvsgFwHXHb75V1Rlzbrd7"
-// 	);
+function fetch_twitter_feed() {
+	// Set here your twitter application tokens
+	$settings = array(
+	    'oauth_access_token' => "19429453-5R55CddXy4h2zDmSnl2KAbXFNJlnI60hSLE7V3Aq7",
+	    'oauth_access_token_secret' => "7fAeztusVt0f8MfUT1fyFlYIloI9WL6UykXXH40gUxfct",
+	    'consumer_key' => "Gt6olcan9wdkVaR30CPBJUjOq",
+	    'consumer_secret' => "yJjH8iUEfwheZwA8kpNxmD3ugPAI2SvsgFwHXHb75V1Rlzbrd7"
+	);
 
-// 	// Get timeline using TwitterAPIExchange
-// 	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-// 	$getfield = '?screen_name=ecomandotca';
-// 	$requestMethod = 'GET';
+	// Get timeline using TwitterAPIExchange
+	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+	$getfield = '?screen_name=ecomandotca';
+	$requestMethod = 'GET';
 
-// 	$twitter = new TwitterAPIExchange($settings);
-// 	$user_timeline = $twitter
-// 	  ->setGetfield($getfield)
-// 	  ->buildOauth($url, $requestMethod)
-// 	  ->performRequest();
+	$twitter = new TwitterAPIExchange($settings);
+	$user_timeline = $twitter
+	  ->setGetfield($getfield)
+	  ->buildOauth($url, $requestMethod)
+	  ->performRequest();
 
-// 	$user_timeline = json_decode($user_timeline, true);
+	$user_timeline = json_decode($user_timeline, true);
 
-// 	$result=$user_timeline;
-// 	// print_r($user_timeline);
-// 	$results='';
-// 	$img='';
-// 	$date='';
-// 	$total_feeds=count($result);	
-// 	if($total_feeds>0) {
-// 		for($i=0;$i<$total_feeds;$i++) {
-// 			$img = $result[$i]['user']['profile_background_image_url'];
-// 			$date = '';
-// 			$title = $result[$i]['text'];
-// 			$link = $result[$i]['user']['url'];
-// 			$author=$result[$i]['user']['name'];
-// 			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'instagram','filter'=>'social');
-// 		}
-// 	}
-// 	// print_r($results);
-// 	return $results;
-// }
+	$feeds=$user_timeline;
+
+	// print_r($feeds);
+
+	$i = 0;
+	// print_r($feeds);
+	foreach($feeds as $result) {
+		// print_r($result);
+			$img = '';
+			$date = '';
+			$title = $result['text'];
+			$link = $result['user']['url'];
+			$author=$result['user']['name'];
+			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'instagram','filter'=>'social');
+			$i++; // add 1 to the counter
+		//  break out of the loop if counter has reached 10
+		if ($i == 10) {
+			break;
+		}
+	}
+	return array_multi_unique($results);
+}
 
 function fetch_instagram_feed($url) {
 	$ch = curl_init($url); 

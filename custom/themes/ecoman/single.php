@@ -18,7 +18,7 @@
     </div>
 
 
-    <div class="main-content-narrow blog">
+    <div class="main-content--narrow blog">
         <?php if ($pullquote) { ?>
         <div class="single-blog-pullquote">
             <?php get_template_part( 'template-part-social' ); ?>

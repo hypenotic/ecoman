@@ -28,13 +28,13 @@ span.text-disappear {
     }
 }
 
-.main-content-narrow {
+.main-content--narrow {
     @include media($bp-large) {
 		@include span-columns(6);
     }
 }
 
-.main-content-narrow.blog {
+.main-content--narrow.blog {
     @include media($bp-large) {
 		@include span-columns(6);
 		@include shift(3);

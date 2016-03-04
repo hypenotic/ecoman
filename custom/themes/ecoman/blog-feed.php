@@ -60,6 +60,10 @@ get_header(); ?>
 				$feeds = array( array('label'=>'twitter','link'=>'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=ecomandotca','filter'=>'social'));
 				$results = json_cached_results($feeds);
 				show_feed_results($results);
+
+				// $twitter_feeds=fetch_twitter_feed();
+
+				// show_feed_results($results);
 			?>
 			
 		<!-- loop ends -->

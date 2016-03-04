@@ -3,7 +3,7 @@
 
 <div class="outer-container blog-index">
 	<?php get_sidebar(); ?>
-	<div class="main-content-narrow">
+	<div class="main-content--narrow">
 		<h2><?php wp_title(''); ?></h2>
 		<?php if ( have_posts() ) : ?>
 

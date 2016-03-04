@@ -16,6 +16,7 @@ require_once('includes/functions/register-menu.php');
 require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/social-share.php');
 require_once('includes/functions/cuztom-posts.php');
+require_once('includes/functions/TwitterAPIExchange.php');
 require_once('includes/functions/add-social-aggregator.php');
 require_once('includes/functions/grabfirstimage.php');
 
