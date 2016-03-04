@@ -84,9 +84,9 @@ function fetch_twitter_feed() {
 			$img = $result[$i]['user']['profile_background_image_url'];
 			$date = date("d-m-Y H:i:s", strtotime($result[$i]['created_at']));
 			$title = $result[$i]['text'];
-			$link = $result[$i]['id_str'];
+			$fulllink = "https://twitter.com/ecomandotca/status/".$result[$i]['id_str'];
 			$author=$result[$i]['user']['name'];
-			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'twitter','filter'=>'social');
+			$results[]=array('title'=>$title,'author'=>$author,'link'=>$fulllink,'img'=>$img,'date'=>$date,'label'=>'twitter','filter'=>'social');
 		}
 	}
 	// print_r($results);
