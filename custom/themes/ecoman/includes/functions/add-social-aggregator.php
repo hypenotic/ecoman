@@ -73,7 +73,7 @@ function fetch_twitter_feed() {
 	$user_timeline = json_decode($user_timeline, true);
 
 	$result=$user_timeline;
-	// print_r($user_timeline);
+	print_r($user_timeline);
 	$results='';
 	$img='';
 	$date='';
@@ -82,16 +82,16 @@ function fetch_twitter_feed() {
 	if($total_feeds>0) {
 		for($i=0;$i<$total_feeds;$i++) {
 			$img = $result[$i]['user']['profile_background_image_url'];
-			$date = '2016';
+			$date = date("d-m-Y H:i:s", strtotime($result[$i]['created_at']));
 			$title = $result[$i]['text'];
-			$link = $result[$i]['user']['url'];
+			$link = $result[$i]['id_str'];
 			$author=$result[$i]['user']['name'];
 			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'twitter','filter'=>'social');
 		}
 	}
 	// print_r($results);
-	// return $results;
-	show_twit_results($results);
+	return $results;
+	// show_twit_results($results);
 }
 
 function fetch_instagram_feed($url) {
@@ -153,6 +153,77 @@ function getFeed($feed_url) {
 		}
 	}
 	return $results;
+}
+
+function get_main_results($results) {
+	$results='';
+	// Get Instagram Feeds
+	$instagram_tags = array('ecoman');
+	for($i=0;$i<count($instagram_tags);$i++) {
+		$instagram_url="";
+		$instagram_feeds="";
+		$client_id="84e0a91bb0ca49bc91b0b5d88eb1289c";
+		$instagram_url='https://api.instagram.com/v1/users/1642097123/media/recent/?scope=public_content&access_token=1642097123.7a586ed.b8c67803053443b889b46d4ae6e98f22';
+		$instagram_feeds=fetch_instagram_feed($instagram_url);			
+		if($instagram_feeds !='') {
+			if($results !='') {
+				$results=array_merge($instagram_feeds,$results);
+			}else {
+				$results=$instagram_feeds;	
+			}
+		}
+	}	
+
+	// Get TWITTER FEEDS
+	$twitter_feeds=fetch_twitter_feed();
+	if($twitter_feeds !='') {
+		if($results !='') {
+			$results=array_merge($twitter_feeds,$results);
+		}else {
+			$results=$twitter_feeds;	
+		}
+	}
+
+	// Facebook Feeds
+	$fb_feeds=fetch_facebook_feed();
+	if($fb_feeds !='') {
+		if($results !='') {
+			$results=array_merge($fb_feeds,$results);
+		}else {
+			$results=$fb_feeds;	
+		}
+	}	
+	// Blog Feeds
+	$posts="";	
+	query_posts("post_type=post&showposts=-1");
+	if(have_posts()):while(have_posts()):the_post();
+		if ( has_post_thumbnail() ) {
+			$img=wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); 
+			$image=$img[0];
+		} else if (catch_that_image() !== '') {
+			$image=catch_that_image();
+		}
+		$posts[] = array('title'=>get_the_title(),'author'=>get_the_author(),'link'=>get_permalink(),'img'=>$image,'date'=>get_the_date(), 'label'=>'blog','filter'=>'blog','post_id'=>get_the_ID());
+	endwhile;endif;
+	if($posts !='') {
+		if($results !='') {
+			$results=array_merge($posts,$results);
+		}else {
+			$results=$posts;	
+		}
+	}
+	if($results) {
+		usort($results, "sort_by_date");
+		for( $j=0;$j<count($results);$j++) {
+			$results[$j]['row_id'] = $j+1 ;
+			?>
+			
+			<?php
+		}
+	}
+	// print_r($results);
+	// return $results;
+	show_twit_results($results);
 }
 
 function get_feed_results($feeds) {
@@ -283,7 +354,7 @@ function show_twit_results( $results = NULL ) {
 	$total = count($results);
 		$i=0;
 			foreach( $results as $result) {
-				// $id=$result->row_id;
+				$id=$result['row_id'];
 				$link= $result['link'];
 				$title=$result['title'];
 				$author=$result['author'];
@@ -295,7 +366,7 @@ function show_twit_results( $results = NULL ) {
 				$output = '';
 				$classes = '';
 				if($label=='blog') {
-					$post_id=$result->post_id;
+					$post_id=$result['row_id'];
 					if($post_id) {
 						$categories = get_the_category($post_id);
 						$separator = ', ';
