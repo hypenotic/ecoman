@@ -193,6 +193,7 @@ function get_main_results($results) {
 			$results=$fb_feeds;	
 		}
 	}	
+
 	// Blog Feeds
 	$posts="";	
 	query_posts("post_type=post&showposts=-1");
@@ -413,7 +414,7 @@ function show_twit_results( $results = NULL ) {
 	                    <p class="title">
 	                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
 							<?php 					
-								if (strlen($title) > 75) {
+								if (strlen($title) > 75 && $label !== 'twitter') {
 									echo substr($title, 0, 75) . '...'; 
 								
 								} else {

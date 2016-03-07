@@ -179,7 +179,7 @@ section[role=main] {
 			> p:first-child {
 				margin-bottom: 0;
 				color: $white;
-				font-weight: 300;
+				font-weight: normal;
 				font-size: modular-scale(0,1rem);
 				line-height: modular-scale(0,1rem);
 				text-transform: uppercase;
@@ -209,11 +209,12 @@ section[role=main] {
 				margin-bottom: 55px;
 			}
 			p.title {
-				margin-top: 0;
+				margin-top: 10px;
 				a {
+					font-weight: 300;
 					color: $white;
-					font-size: modular-scale(0,1rem);
-					line-height: modular-scale(0,1rem);
+					font-size: modular-scale(0,1.2rem);
+					line-height: modular-scale(0,1.2rem);
 				}
 			}
 		}
@@ -264,10 +265,11 @@ section[role=main] {
 
 .post-item.twitter {
 	background-color: $l-blue;
+	// border-radius: 20px;
 	.post-title {
 		> p:first-child {
 			color: $copper;
-			font-weight: 300;
+			font-weight: normal;
 			font-size: modular-scale(0,1rem);
 			line-height: modular-scale(0,1rem);
 			text-transform: uppercase;
@@ -276,9 +278,10 @@ section[role=main] {
 		}
 		p.title a {
 			// padding: 10px;
+			font-weight: 300;
 			color: $white;
-			font-size: modular-scale(2);
-			line-height: modular-scale(2);
+			font-size: modular-scale(2, 1.1rem);
+			line-height: modular-scale(2, 1.1rem);
 			&:hover {
 				color: $copper;
 			}
