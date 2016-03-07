@@ -256,6 +256,39 @@ section[role=main] {
 .post-item.facebook {
 	// background-color:$facebook-post-bg;
 	background-color: $d-blue;
+	@include media($bp-large) {
+		.post-image {
+			width: 100px;
+			height: 100px;
+			// 
+			float:left;	
+			// 
+			background-position: center center;
+			background-repeat:no-repeat; 
+			background-size: cover; 
+			overflow: hidden;
+			// 
+			margin-bottom:10px;
+			img {
+				border-radius: 10%;
+			}
+		}
+		.post-title {
+			> p:first-child {
+				margin-top: 0;
+			}
+		}
+		p.title a {
+			// padding: 10px;
+			font-weight: 300;
+			color: $white;
+			font-size: modular-scale(2, 1.1rem);
+			line-height: modular-scale(2, 1.1rem);
+			&:hover {
+				color: $copper;
+			}
+		}
+	}
 }
 
 .post-item.blog {

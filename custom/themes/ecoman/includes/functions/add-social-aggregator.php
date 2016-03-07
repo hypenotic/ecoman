@@ -28,13 +28,22 @@ function fetch_facebook_feed() {
 	  'appId'  => '949341928475039',
 	  'secret' => '597f2f1a290f82ef65abbc2b2c325cf6',
 	));
-	$feeds=$facebook->api('199899653356651/feed?fields=picture,object_id,type,created_time,message,link,from,name');
+	$feeds=$facebook->api('199899653356651/feed?fields=picture,object_id,type,created_time,message,link,from,name,icon,images');
 	$i = 0;
 	// print_r($feeds);
 	foreach($feeds['data'] as $post) {
 		if($post['type']=='photo') {
 			$object_id = $post['object_id'];
 			$img ='https://graph.facebook.com/'.$object_id.'/picture?width=9999&height=9999';
+			$date = date("d-m-Y H:i:s", strtotime($post['created_time']));
+			$title = $post['message'];
+			$link = $post['link'];
+			$author=$post['from']['name'];
+			$results[]=array('title'=>$title,'author'=>$author,'link'=>$link,'img'=>$img,'date'=>$date,'label'=>'facebook','filter'=>'social');
+			$i++; // add 1 to the counter
+		} else {
+			$object_id = $post['object_id'];
+			$img =$post['picture'];
 			$date = date("d-m-Y H:i:s", strtotime($post['created_time']));
 			$title = $post['message'];
 			$link = $post['link'];
@@ -402,8 +411,12 @@ function show_twit_results( $results = NULL ) {
 								}
 
 							?>
-						<?php if ($label !== 'twitter') { ?>
-						<a href="<?php echo $link;?>" target="_blank">
+						<?php if ($label == 'facebook') { ?>
+						 
+		            	<?php }  else if ($label == 'twitter') { ?>
+
+		            	<?php } else { ?>
+		            	<a href="<?php echo $link;?>" target="_blank">
 			                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
 				                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
 			            	</div>
@@ -423,6 +436,13 @@ function show_twit_results( $results = NULL ) {
 							?>
 	                        </a>
 	                    </p>
+	                    <?php if ($label == 'facebook') { ?>
+							<a href="<?php echo $link;?>" target="_blank">
+			                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
+				                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
+			            	</div>
+		            		</a>
+		            	<?php } ?>
 						<?php echo $output;?>
 						</div>
 					</div>
