@@ -179,7 +179,7 @@ section[role=main] {
 			> p:first-child {
 				margin-bottom: 0;
 				color: $white;
-				font-weight: normal;
+				font-weight: bold;
 				font-size: modular-scale(0,1rem);
 				line-height: modular-scale(0,1rem);
 				text-transform: uppercase;
@@ -269,7 +269,7 @@ section[role=main] {
 	.post-title {
 		> p:first-child {
 			color: $copper;
-			font-weight: normal;
+			font-weight: bold;
 			font-size: modular-scale(0,1rem);
 			line-height: modular-scale(0,1rem);
 			text-transform: uppercase;
