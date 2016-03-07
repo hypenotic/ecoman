@@ -402,9 +402,11 @@ function show_twit_results( $results = NULL ) {
 
 							?>
 						<?php if ($label !== 'twitter') { ?>
-		                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
-			                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
-		            	</div>	
+						<a href="<?php echo $link;?>" target="_blank">
+			                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
+				                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
+			            	</div>
+		            	</a>
 		            	<?php } ?>	
 	                    <div class="post-title">
 	                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
