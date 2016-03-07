@@ -61,7 +61,7 @@ function fetch_twitter_feed() {
 
 	// Get timeline using TwitterAPIExchange
 	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-	$getfield = '?screen_name=ecomandotca';
+	$getfield = '?screen_name=ecomandotca&exclude_replies=true';
 	$requestMethod = 'GET';
 
 	$twitter = new TwitterAPIExchange($settings);
@@ -381,35 +381,48 @@ function show_twit_results( $results = NULL ) {
 				}
 				?>
 				<div class="post-item item transition <?php echo $label;?> <?php echo $filter;?> <?php echo $classes;?>" data-category="transition" id="<?php echo "item_".$id;?>">	
-				<div class="post">
-						<?php 
-							
-							if($feed_img==''){
-								$feed_img=$default_image;
-								$error_img=$default_image;
-							}
-
-						?>
-	                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
-		                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
-	            	</div>		
-                    <div class="post-title">
-                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
-                    <p class="title">
-                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
-						<?php 					
-							if (strlen($title) > 75) {
-								echo substr($title, 0, 75) . '...'; 
-							
-							} else {
-								echo $title;
-							}
-						?>
-                        </a>
-                    </p>
-					<?php echo $output;?>
+					<div class="post-icon">
+						<?php if ($label == 'twitter') { ?>
+							<i class="fa fa-twitter"></i>
+						<?php } else if ($label == 'instagram') { ?>
+							<i class="fa fa-instagram"></i>
+						<?php } else if ($label == 'facebook') { ?>
+							<i class="fa fa-facebook-official"></i>
+						<?php } else { ?>
+							<i class="fa fa-pencil"></i>
+						<?php } ?>
 					</div>
-				</div>
+					<div class="post">
+							<?php 
+								
+								if($feed_img==''){
+									$feed_img=$default_image;
+									$error_img=$default_image;
+								}
+
+							?>
+						<?php if ($label !== 'twitter') { ?>
+		                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
+			                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
+		            	</div>	
+		            	<?php } ?>	
+	                    <div class="post-title">
+	                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
+	                    <p class="title">
+	                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
+							<?php 					
+								if (strlen($title) > 75) {
+									echo substr($title, 0, 75) . '...'; 
+								
+								} else {
+									echo $title;
+								}
+							?>
+	                        </a>
+	                    </p>
+						<?php echo $output;?>
+						</div>
+					</div>
 				</div>	
 				<?php
 			}
@@ -447,35 +460,35 @@ function show_feed_results( $results = NULL ) {
 				}
 				?>
 				<div class="post-item item transition <?php echo $label;?> <?php echo $filter;?> <?php echo $classes;?>" data-category="transition" id="<?php echo "item_".$id;?>">	
-				<div class="post">
-						<?php 
-							
-							if($feed_img==''){
-								$feed_img=$default_image;
-								$error_img=$default_image;
-							}
+					<div class="post">
+							<?php 
+								
+								if($feed_img==''){
+									$feed_img=$default_image;
+									$error_img=$default_image;
+								}
 
-						?>
-	                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
-		                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
-	            	</div>		
-                    <div class="post-title">
-                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
-                    <p class="title">
-                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
-						<?php 					
-							if (strlen($title) > 75) {
-								echo substr($title, 0, 75) . '...'; 
-							
-							} else {
-								echo $title;
-							}
-						?>
-                        </a>
-                    </p>
-					<?php echo $output;?>
+							?>
+		                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
+			                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
+		            	</div>		
+	                    <div class="post-title">
+	                    	<p><?php echo date("M d, Y", strtotime($newDate));?></p>
+	                    <p class="title">
+	                    	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
+							<?php 					
+								if (strlen($title) > 75) {
+									echo substr($title, 0, 75) . '...'; 
+								
+								} else {
+									echo $title;
+								}
+							?>
+	                        </a>
+	                    </p>
+						<?php echo $output;?>
+						</div>
 					</div>
-				</div>
 				</div>	
 				<?php
 			}

@@ -134,6 +134,17 @@ section[role=main] {
 }
 
 .post-item {
+	position: relative;
+	.post-icon {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+		i {
+			color: $white;
+			font-size: modular-scale(0);
+			line-height: modular-scale(0);
+		}
+	}
 	&:hover {
 		.facebook {
 			background:$facebook-post-bg;
@@ -163,9 +174,16 @@ section[role=main] {
 		padding: 15px;
 		position:relative;
 		// 
-		border:1px solid #cbcbcb;
+		// border:1px solid #cbcbcb;
 		.post-title {
-			// padding: 20px 20px 0;
+			> p:first-child {
+				margin-bottom: 0;
+				color: $white;
+				font-weight: 300;
+				font-size: modular-scale(0,1rem);
+				line-height: modular-scale(0,1rem);
+				text-transform: uppercase;
+			}
 		}
 		@include media($bp-large) {
 			.post-image {
@@ -191,7 +209,9 @@ section[role=main] {
 				margin-bottom: 55px;
 			}
 			p.title {
+				margin-top: 0;
 				a {
+					color: $white;
 					font-size: modular-scale(0,1rem);
 					line-height: modular-scale(0,1rem);
 				}
@@ -226,6 +246,46 @@ section[role=main] {
 		}
 	}	
 }
+
+.post-item.instagram {
+	// background-color:$instagram-post-bg;
+	background-color: $m-blue;
+}
+
+.post-item.facebook {
+	// background-color:$facebook-post-bg;
+	background-color: $d-blue;
+}
+
+.post-item.blog {
+	// background-color:$blog-post-bg;
+	background-color: $copper;
+}
+
+.post-item.twitter {
+	background-color: $l-blue;
+	.post-title {
+		> p:first-child {
+			color: $copper;
+			font-weight: 300;
+			font-size: modular-scale(0,1rem);
+			line-height: modular-scale(0,1rem);
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+		p.title a {
+			// padding: 10px;
+			color: $white;
+			font-size: modular-scale(2);
+			line-height: modular-scale(2);
+			&:hover {
+				color: $copper;
+			}
+		}
+	}
+}
+
 
 // COMMENTS
 
