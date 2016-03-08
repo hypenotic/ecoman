@@ -393,13 +393,13 @@ function show_twit_results( $results = NULL ) {
 				<div class="post-item item transition <?php echo $label;?> <?php echo $filter;?> <?php echo $classes;?>" data-category="transition" id="<?php echo "item_".$id;?>">	
 					<div class="post-icon">
 						<?php if ($label == 'twitter') { ?>
-							<i class="fa fa-twitter"></i>
+							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-twitter"></i></a>
 						<?php } else if ($label == 'instagram') { ?>
-							<i class="fa fa-instagram"></i>
+							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-instagram"></i></a>
 						<?php } else if ($label == 'facebook') { ?>
-							<i class="fa fa-facebook-official"></i>
+							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
 						<?php } else { ?>
-							<i class="fa fa-pencil"></i>
+							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-pencil"></i></a>
 						<?php } ?>
 					</div>
 					<div class="post">

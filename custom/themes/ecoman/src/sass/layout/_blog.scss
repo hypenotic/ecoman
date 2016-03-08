@@ -144,6 +144,11 @@ section[role=main] {
 			font-size: modular-scale(0);
 			line-height: modular-scale(0);
 		}
+		z-index: 70;
+		transition: all 0.5s ease;
+		&:hover {
+			transform: rotate(20deg);
+		} 
 	}
 	&:hover {
 		.facebook {
@@ -173,6 +178,7 @@ section[role=main] {
 	.post {
 		padding: 15px;
 		position:relative;
+		z-index: 65;
 		// 
 		// border:1px solid #cbcbcb;
 		.post-title {
@@ -183,6 +189,15 @@ section[role=main] {
 				font-size: modular-scale(0,1rem);
 				line-height: modular-scale(0,1rem);
 				text-transform: uppercase;
+			}
+		}
+		p.title {
+			margin-top: 10px;
+			a {
+				font-weight: 300;
+				color: $white;
+				font-size: modular-scale(0,1.2rem);
+				line-height: modular-scale(0,1.2rem);
 			}
 		}
 		@include media($bp-large) {
@@ -207,15 +222,6 @@ section[role=main] {
 				// 
 				margin-left:170px;
 				margin-bottom: 55px;
-			}
-			p.title {
-				margin-top: 10px;
-				a {
-					font-weight: 300;
-					color: $white;
-					font-size: modular-scale(0,1.2rem);
-					line-height: modular-scale(0,1.2rem);
-				}
 			}
 		}
 	}
@@ -251,6 +257,22 @@ section[role=main] {
 .post-item.instagram {
 	// background-color:$instagram-post-bg;
 	background-color: $m-blue;
+	.post-image {
+		width: 100%;
+		height: 250px;
+		// 
+		float:left;	
+		// 
+		background-position: center center;
+		background-repeat:no-repeat; 
+		background-size: cover; 
+		overflow: hidden;
+		// 
+		margin-bottom:10px;
+		img {
+			border-radius: 10%;
+		}
+	}
 }
 
 .post-item.facebook {
