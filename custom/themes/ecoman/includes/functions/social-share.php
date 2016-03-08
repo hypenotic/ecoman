@@ -48,9 +48,9 @@ function social_share() {
 	// $mail_url='http://www.sharethis.com/share?url='.$post_link.'&title='.$post_title.'&summary='.$post_description.'&img='.$post_img;
 	?>
 	<ul class="social-share">
-    	<li><a id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
-    	<li><a id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
-    	<li><a id="pinterest" href="<?php echo $pintrest_url;?>" rel="nofollow" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+    	<li><a id="facebook" onclick="ga('send', 'social', 'Facebook', 'share', '<?php echo $fb_url;?>');" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    	<li><a id="twitter" onclick="ga('send', 'social', 'Twitter', 'share', '<?php echo $twitter_url;?>');" href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    	<li><a id="pinterest" onclick="ga('send', 'social', 'Pinterest', 'share', '<?php echo $pintrest_url;?>');" href="<?php echo $pintrest_url;?>" rel="nofollow" target="_blank"><i class="fa fa-pinterest"></i></a></li>
     </ul>
 </div>
 <?php } ?>

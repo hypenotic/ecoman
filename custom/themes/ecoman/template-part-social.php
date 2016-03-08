@@ -36,7 +36,7 @@
 	$fb_url = 'https://www.facebook.com/sharer.php?s=100&amp;p[title]='.$post_title.'&amp;p[summary]='.$post_description.'&amp;p[url]='.$post_link.'&amp;p[images][0]='.$post_img;
 	?>
 	<ul>
-		<li><a id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
-    	<li><a id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a onclick="ga('send', 'social', 'Twitter', 'share', '<?php echo $twitter_url;?>');" id="twitter"  href="<?php echo $twitter_url;?>" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    	<li><a onclick="ga('send', 'social', 'Facebook', 'share', '<?php echo $fb_url;?>');" id="facebook" href="<?php echo $fb_url;?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
     </ul>
 </div>
