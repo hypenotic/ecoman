@@ -13,6 +13,10 @@
 	@include media($bp-med) {
 		padding: 80px 0;
     }
+    @include media($bp-ls-small) {
+    	min-height: 480px;
+    	padding: 30px;
+    }
 	.main-content {
 		position: relative;
 		// 

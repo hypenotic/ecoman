@@ -490,6 +490,10 @@ span.plain-serif {
 			font-size: modular-scale(1);
 			line-height: modular-scale(1, 1.4rem);
 	    }
+	    @include media($bp-ls-small) {
+	    	font-size: modular-scale(1);
+			line-height: modular-scale(1, 1.4rem);
+	    }
 	}
 	p {
 		color: $white;
