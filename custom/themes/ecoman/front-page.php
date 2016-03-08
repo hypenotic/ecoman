@@ -35,7 +35,7 @@
 				<button class="copper-btn large-btn white-hover">
 					<?php echo $ctabtn; ?>
 				</button>
-				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/hanging-cat.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/hanging-kit.png" alt="">
 			</a>
 		<?php } ?>
 	</section>
