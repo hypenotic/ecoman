@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     
     $container.isotope({
         filter: '*',
-		layoutMode: 'fitRows',
+		layoutMode: 'packery',
         animationOptions: {
             duration: 750,
             easing: 'linear',
@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
 		$(this).addClass('is-checked');
         $container.isotope({ 
             filter: selector,
-			layoutMode: 'fitRows',
+			layoutMode: 'packery',
             animationOptions: {
                 duration: 750,
                 easing: 'linear',

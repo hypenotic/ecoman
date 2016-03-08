@@ -22,6 +22,7 @@ var scriptList = [
   'src/js/equal-height.js',
   'src/js/isotope.pkgd.min.js',
   'src/js/isotope_feeds.js',
+  'src/js/packery-mode.pkgd.min.js',
   'src/js/index.js'
 ];
 

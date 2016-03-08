@@ -254,6 +254,7 @@ section[role=main] {
 }
 
 .post-item.facebook {
+	padding: 20px;
 	// background-color:$facebook-post-bg;
 	background-color: $d-blue;
 	@include media($bp-large) {
@@ -282,8 +283,8 @@ section[role=main] {
 			// padding: 10px;
 			font-weight: 300;
 			color: $white;
-			font-size: modular-scale(2, 1.1rem);
-			line-height: modular-scale(2, 1.1rem);
+			font-size: modular-scale(2, 1rem);
+			line-height: modular-scale(2, 1rem);
 			&:hover {
 				color: $copper;
 			}
@@ -298,7 +299,7 @@ section[role=main] {
 
 .post-item.twitter {
 	background-color: $l-blue;
-	// border-radius: 20px;
+	padding: 20px;
 	.post-title {
 		> p:first-child {
 			color: $copper;
@@ -313,8 +314,8 @@ section[role=main] {
 			// padding: 10px;
 			font-weight: 300;
 			color: $white;
-			font-size: modular-scale(2, 1.1rem);
-			line-height: modular-scale(2, 1.1rem);
+			font-size: modular-scale(2, 1rem);
+			line-height: modular-scale(2, 1rem);
 			&:hover {
 				color: $copper;
 			}
