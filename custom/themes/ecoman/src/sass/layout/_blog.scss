@@ -2,21 +2,36 @@
 	border-bottom: 1px solid $grey;
 	margin-bottom: 60px;
 	position: relative;
+	@include media($bp-ls-small) {
+		margin: 30px;
+	}
 	p {
 		margin-bottom: 0;
 	}
 	img {
 		position: absolute;
 		right: 0;
-		top: -29px;
-		width: 160px;
+		top: -7px;
+		width: 90px;
 		height: auto;
+		@include media($bp-med) {
+			top: -29px;
+			width: 160px;
+		}
+		@include media($bp-ls-small) {
+			width: 100px;
+			top: -6px;
+		}
 	}
 
 }
 
-.blog-index {
+.main-content.blog-index {
 	margin-bottom: 0;
+	padding: 15px;
+	@include media($bp-med) {
+		padding: 0;
+	}
 	.back-to-toc {
 		margin-bottom: 30px;
 	}
@@ -24,6 +39,13 @@
 
 h1.blog-title {
 	margin: 0;
+	padding: 0 20px;
+	@include media($bp-med) {
+		padding: 0;
+	}
+	@include media($bp-ls-small) {
+		padding: 0 20px;
+	}
 }
 
 .main-content.single {
@@ -31,20 +53,46 @@ h1.blog-title {
 }
 
 .blog-meta {
-	@include display(flex);
+	padding: 0 15px;
+	@include media($bp-med) {
+		@include display(flex);
+		padding: 0;
+	}
+	@include media($bp-ls-small) {
+		padding: 0 15px;
+	}
 }
 
 .single-blog-pullquote {
-	margin: 0 -80px;
-	@include flexboxcenter;
+	@include display(flex);
+	@include flex-direction(column);
+	@include media($bp-med) {
+		margin: 0 -80px;
+		@include flex-direction(row);
+		@include align-items(center);
+		@include justify-content(center);
+	}
+	@include media($bp-ls-small) {
+		margin: 0;
+	}
 	blockquote {
-		margin: 50px 50px 30px;
+		padding: 15px;
+		margin: 0;
 		font-size: modular-scale(2);
 		line-height: modular-scale(3);
 		color: $grey;
 		font-family: $title-font;
 		font-weight: 300;
 		font-style: italic;
+		@include order(-1);
+		@include media($bp-med) {
+			margin: 50px 50px 30px;
+			padding: 0;
+			@include order(2);
+		}
+		@include media($bp-ls-small) {
+			margin: 20px;
+		}
 	}
 }
 
@@ -55,16 +103,20 @@ h1.blog-title {
 		list-style-type: none;
 		@include display(flex);
 		@include align-items(flex-start);
-		@include justify-content(space-between);
 		@include media($bp-med) {
 			@include flex-direction(column);
+			@include justify-content(space-between);
 		}
 		li {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
 			background-color: $l-grey;
+			margin-right: 15px;
 			@include flexboxcenter;
+			@include media($bp-med) {
+				margin: 0;
+			}
 			&:hover {
 				background-color: $copper;
 				a {
@@ -85,6 +137,14 @@ h1.blog-title {
 	p {
 		font-weight: 300;
 	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	iframe {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .prev-next-link {
@@ -94,10 +154,14 @@ h1.blog-title {
 	@include justify-content(center);
 	.comments__text {
 		background-color: $copper;
-		padding: 30px 60px;
+		padding: 15px;
 		text-align: center;
-		margin: 0 30px;
+		margin: 0 10px;
 		font-family: $title-font;
+		@include media($bp-med) {
+			padding: 30px 60px;
+			margin: 0 30px;
+		}
 		p {
 			margin: 0;
 			color: $white;

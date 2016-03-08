@@ -9,10 +9,11 @@
 
     	<div class="back-to-toc">
     		<p><a href="/resources">← TABLE OF CONTENTS</a></p>
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/froggy.png" alt="">
     	</div>
     	<h1 class="blog-title"><?php the_title(); ?></h1>
     	<div class="blog-meta">
-    		<p><?php the_author_posts_link(); ?></p>
+    		<p>By: <?php the_author_posts_link(); ?></p>
     		<p><?php the_time('l, F jS, Y') ?></p>
     	</div>
     </div>

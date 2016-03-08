@@ -14,7 +14,7 @@ $bp-med: new-breakpoint(min-width 30em 12);
 $bp-small: new-breakpoint(max-width 30em 5);
 
 // Landscape
-$bp-ls-small: new-breakpoint(max-height 30em 5);
+$bp-ls-small: new-breakpoint(max-height 30em 12);
 
 // Visual Grid view
 $visual-grid: false;

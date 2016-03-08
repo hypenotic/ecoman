@@ -77,14 +77,18 @@ button {
 // PREV/NEXT BUTTTONS
 
 .project-nav__arrow {
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	background-color: $ll-grey;
 	// border: 1px solid black;
 	@include display(flex);
 	@include align-items(center);
 	@include justify-content(center);	
+	@include media($bp-med) {
+		width: 80px;
+		height: 80px;
+	}
 	&:hover {
 		background-color: $copper;
 		.project-nav__arrow--prev,
@@ -99,11 +103,15 @@ button {
 	}
 	.project-nav__arrow--prev,
 	.project-nav__arrow--next {
-		width: 25px;
-		height: 25px;
+		width: 20px;
+		height: 20px;
 		border-top: 1px solid $copper;
 		border-left: 1px solid $copper;
 		position:relative;
+		@include media($bp-med) {
+			width: 25px;
+			height: 25px;
+		}
 	}
 	.top,
 	.bottom {
