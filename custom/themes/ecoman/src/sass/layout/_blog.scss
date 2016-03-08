@@ -115,7 +115,7 @@ h1.blog-title {
 			margin-right: 15px;
 			@include flexboxcenter;
 			@include media($bp-med) {
-				margin: 0;
+				margin: 5px 0;
 			}
 			&:hover {
 				background-color: $copper;
