@@ -30,6 +30,7 @@ require_once('includes/shortcodes/bigcopy.php');
 require_once('includes/shortcodes/bigvid.php');
 require_once('includes/shortcodes/tooltip.php');
 require_once('includes/shortcodes/vid-picture.php');
+require_once('includes/shortcodes/inline-tweet.php');
 
 
 add_theme_support( 'post-thumbnails' ); 

@@ -647,6 +647,14 @@ h1.blog-title {
 		}
 	}
 }
+
+span.inline-tweet {
+	border-bottom: 1px dashed $l-blue;
+	i {
+		color: $l-blue;
+	}
+}
+
 // RESOURCES --- ISOTOPE FILTERING SYSTEM
 #isotope-container {
     .filters {
