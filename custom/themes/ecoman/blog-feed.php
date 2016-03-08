@@ -22,6 +22,7 @@ get_header(); ?>
 	<h1 class="blog-title"><?php the_title(); ?></h1>
 	<div class="back-to-toc">
 		<p>TABLE OF CONTENTS</p>
+		<img src="<?php echo get_template_directory_uri(); ?>/dist/images/froggy.png" alt="">
 	</div>
 </div>
 </div>
@@ -32,13 +33,13 @@ get_header(); ?>
 			<div class="filters button-group js-radio-button-group">
 				<div class="secondary">
 					<label>Filter:</label>
-					<a href="?show=all"     id="show-all"     class="button is-checked" data-filter="*">All</a>
+					<a href="?show=all"     id="show-all"     class="button" data-filter="*">All</a>
+					<a href="?show=blog"    id="show-blog"    class="button" data-filter=".blog">Blog</a>
 					<a href="?show=facebook"  id="show-facebook"  class="button" data-filter=".facebook">Facebook</a>			
 					<a href="?show=instagram"  id="show-instagram"  class="button" data-filter=".instagram">Instagram</a>			
 					<a href="?show=twitter"  id="show-twitter"  class="button" data-filter=".twitter">Twitter</a>			
-					<a href="?show=blog"    id="show-blog"    class="button" data-filter=".blog">Blog</a>
 				</div>
-				<?php 				
+<!-- 				<?php 				
 					$args = array(
 						'orderby'                  => 'name',
 						'order'                    => 'ASC',
@@ -53,7 +54,7 @@ get_header(); ?>
 							<a href="?show=<?php echo $category->category_nicename;?>" id="show-<?php echo $category->category_nicename;?>" class="button" data-filter=".<?php echo $category->category_nicename;?>"><?php echo $category->name;?></a>
 							<?php } ?>
 						</div>
-				<?php } ?>
+				<?php } ?> -->
 			</div>
 			<div class="isotope">
 			<!-- loop starts -->

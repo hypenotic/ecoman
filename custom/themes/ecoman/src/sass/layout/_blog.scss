@@ -1,9 +1,18 @@
 .back-to-toc {
 	border-bottom: 1px solid $grey;
 	margin-bottom: 60px;
+	position: relative;
 	p {
 		margin-bottom: 0;
 	}
+	img {
+		position: absolute;
+		right: 0;
+		top: -29px;
+		width: 160px;
+		height: auto;
+	}
+
 }
 
 .blog-index {
@@ -100,13 +109,44 @@ h1.blog-title {
 // ISOTOPE FILTERING SYSTEM
 #isotope-container {
     .filters {
-		border-bottom: 1px solid #cbcbcb;
+		// border-bottom: 1px solid #cbcbcb;
 		// margin-top: 50px;
 		overflow: hidden;
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(center);
     }
     .isotope {
         padding-top: 30px;
     }
+}
+
+.secondary a {
+	padding: 10px 15px;
+	background-color: $l-grey;
+	min-width: 100px;
+	text-align: center;
+	color: $white;
+}
+
+#show-all {
+	background-color: $grey;
+}
+
+#show-facebook {
+	background-color: $d-blue;
+}
+
+#show-instagram {
+	background-color: $m-blue;
+}
+
+#show-twitter {
+	background-color: $l-blue;
+}
+
+#show-blog {
+	background-color: $copper;
 }
 
 section[role=main] {
@@ -198,6 +238,9 @@ section[role=main] {
 				color: $white;
 				font-size: modular-scale(0,1.2rem);
 				line-height: modular-scale(0,1.2rem);
+				&:hover {
+					color: $copper;
+				}
 			}
 		}
 		@include media($bp-large) {
@@ -317,6 +360,13 @@ section[role=main] {
 .post-item.blog {
 	// background-color:$blog-post-bg;
 	background-color: $copper;
+	p.title {
+		a {
+			&:hover {
+				color: $l-blue;
+			}
+		}
+	}
 }
 
 .post-item.twitter {
