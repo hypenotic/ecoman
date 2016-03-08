@@ -49,6 +49,9 @@
 	@include media($bp-small) {
 		padding: 30px 30px 60px;
     }
+    @include media($bp-ls-small) {
+    	padding: 30px 30px 60px;
+    }
     button.copper-btn.large-btn {
     	@include media($bp-med) {
     		padding: 15px 140px;
@@ -89,6 +92,19 @@
 	}
 	.column-4 {
 		padding-top: 30px;
+		@include media($bp-ls-small) {
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+		}
+	}
+	.column-4__single {
+		padding: 20px 0 0;
+		@include media($bp-ls-small) {
+			@include flex (0 0 40%);
+		}
+		@include media($bp-med) {
+			padding: 0;
+	    }
 	}
 	.column-4__single ul {
 		list-style-type: none;
@@ -104,6 +120,13 @@
 
 .front-page__testimonial {
 	margin: 0 100px;
+}
+
+.services-testimonial.front-page-test {
+	padding: 30px 30px 60px;
+	@include media($bp-med) {
+		padding: 30px;
+    }
 }
 
 .outer-container.front-page {

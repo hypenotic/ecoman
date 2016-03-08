@@ -93,7 +93,7 @@
 </div>
 
 <?php if ($test) { ?>
-<div class="services-testimonial">
+<div class="services-testimonial front-page-test">
 	<?php get_template_part( 'template-part-testimonial' ); ?> 
 </div>
 <?php } ?> 

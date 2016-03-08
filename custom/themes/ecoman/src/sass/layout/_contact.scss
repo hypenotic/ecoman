@@ -57,6 +57,10 @@
     @include media($bp-med) {
 		@include flex-direction(row);
     }
+    @include media($bp-ls-small) {
+		@include display(flex);
+		@include flex-direction(column);
+	}
 }
 
 .contact-form__left, 
@@ -76,6 +80,12 @@
     @include media($bp-med) {
 		@include flex(0 0 25%);
     }
+    @include media($bp-ls-small) {
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		padding: 0;
+		margin-bottom: 30px;
+	}
 }
 
 .contact__social {

@@ -320,6 +320,15 @@ span.plain-serif {
 	margin: 50px 0 100px;
 }
 
+.front-page-test {
+	blockquote.testimonial__quotation {
+		@include media($bp-ls-small) {
+			font-size: modular-scale(1);
+			line-height: modular-scale(1, 1.4rem);
+		}
+	}
+}
+
 .front-page__intro {
 	p {
 		@include media($bp-med) {
