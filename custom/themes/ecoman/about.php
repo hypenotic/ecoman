@@ -9,12 +9,20 @@ $ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
 $ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
 $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 
+// Buttons/Tabs
+$tabone     = get_post_meta( $post->ID, '_tabs_tabone', true );
+$taboneurl  = wp_get_attachment_image_src( $tabone,'tabs', true );
+$tabtwo     = get_post_meta( $post->ID, '_tabs_tabtwo', true );
+$tabtwourl  = wp_get_attachment_image_src( $tabtwo,'tabs', true );
+$tabthree     = get_post_meta( $post->ID, '_tabs_tabthree', true );
+$tabthreeurl  = wp_get_attachment_image_src( $tabthree,'tabs', true );
+
 ?>
 
 <?php get_header(); ?>	
 
 <div class="tab-section-wrapper">
-	<div class="front-page__circle-icon tab-two">
+	<div class="front-page__circle-icon tab-two" style="background-image:url(<?php echo $taboneurl[0]; ?>);">
 			
 	</div>
 	<section class="front-page__intro about">
@@ -42,7 +50,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 </section>
 
 <div class="tab-section-wrapper two about">
-	<div class="front-page__circle-icon tab-one">
+	<div class="front-page__circle-icon tab-one" style="background-image:url(<?php echo $tabtwourl[0]; ?>);">
 				
 	</div>
 	<section class="front-page__buckets about">
