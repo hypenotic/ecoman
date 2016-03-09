@@ -774,15 +774,11 @@ window.onload = function() {
     // console.log( "ready!" );
     
     if ( $( '.services-case-studies' ).length ) {
-     
       mainApp.grabType();
-     
     }
 
     if ( $( '.about-case-studies' ).length ) {
-     
       aboutApp.grabType();
-     
     }
 
     $('#comments').hide();
@@ -839,8 +835,13 @@ window.onload = function() {
         return false;
     }
 
-    if (detectIE() !== false) {
-      $('.full-screen-wrapper.contact').css({ "background-image": "none" });
+
+    function isitie() {
+      if (detectIE() !== false) {
+        console.log(detectIE());
+        $('.full-screen-wrapper.contact').css({ "background-image": "none" });
+      }
     }
+    isitie();
 
 };
