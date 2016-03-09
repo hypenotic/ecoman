@@ -14,4 +14,14 @@ register_sidebar(array(
   	'after_title' => ''
 ));
 
+// register_sidebar(array(
+//  	'name' => __( 'Contact Tab Icon' ),
+//  	'id' => 'contact-tab',
+//  	'description' => __( 'Link to contact icon image.' ),
+//   	'before_widget' => '',
+//   	'after_widget' => '',
+//   	'before_title' => '',
+//   	'after_title' => ''
+// ));
+
 ?>

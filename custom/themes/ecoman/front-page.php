@@ -21,6 +21,10 @@
 	// Buttons/Tabs
 	$tabone     = get_post_meta( $post->ID, '_tabs_tabone', true );
 	$taboneurl  = wp_get_attachment_image_src( $tabone,'tabs', true );
+	$tabtwo     = get_post_meta( $post->ID, '_tabs_tabtwo', true );
+	$tabtwourl  = wp_get_attachment_image_src( $tabtwo,'tabs', true );
+	$tabthree     = get_post_meta( $post->ID, '_tabs_tabthree', true );
+	$tabthreeurl  = wp_get_attachment_image_src( $tabthree,'tabs', true );
 ?>
 
 <div class="tab-section-wrapper">
@@ -45,7 +49,7 @@
 </div>
 
 <div class="tab-section-wrapper two">
-	<div class="front-page__circle-icon tab-two">
+	<div class="front-page__circle-icon tab-two" style="background-image:url(<?php echo $tabtwourl[0]; ?>);">
 				
 	</div>
 	<section class="front-page__buckets">
