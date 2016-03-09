@@ -22,10 +22,10 @@
 					</div>
 					<div class="contact__social">
 						<ul class="social-share">
-		                	<li class="white-btn"><a id="facebook" onclick="trackOutboundLink('https://www.facebook.com/Ecomantoronto'); return false;" href="https://www.facebook.com/Ecomantoronto" target="_blank"><i class="fa fa-facebook"></i></a></li>
-		                	<li class="white-btn"><a id="twitter" onclick="trackOutboundLink('https://twitter.com/#!/ecomandotca'); return false;" href="https://twitter.com/#!/ecomandotca" target="_blank"><i class="fa fa-twitter"></i></a></li>
-		                	<li class="white-btn"><a id="instagram" onclick="trackOutboundLink('https://www.instagram.com/ecoman_jonas/'); return false;" href="https://www.instagram.com/ecoman_jonas/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-		                	<li class="white-btn"><a id="mail" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca" rel="nofollow" target="_blank"><i class="fa fa-envelope-o"></i></i></a></li>
+		                	<li class="white-btn"><a id="facebook" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'https://www.facebook.com/Ecomantoronto');" href="https://www.facebook.com/Ecomantoronto"><i class="fa fa-facebook"></i></a></li>
+		                	<li class="white-btn"><a id="twitter" onclick="ga('send', 'event', 'outbound', 'click', 'https://twitter.com/#!/ecomandotca');" href="https://twitter.com/#!/ecomandotca" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		                	<li class="white-btn"><a id="instagram" onclick="ga('send', 'event', 'outbound', 'click', 'https://www.instagram.com/ecoman_jonas/');" href="https://www.instagram.com/ecoman_jonas/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		                	<li class="white-btn"><a id="mail" onclick="ga('send', 'event', 'outbound', 'click', 'mailto:jonas@ecoman.ca');" href="mailto:jonas@ecoman.ca" rel="nofollow" target="_blank"><i class="fa fa-envelope-o"></i></i></a></li>
 		                </ul>
 					</div>
 				</div>
@@ -37,6 +37,3 @@
 		</div>
 	</div>
 </div>
-
-
-
