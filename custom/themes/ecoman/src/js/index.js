@@ -241,7 +241,7 @@ var aboutApp = { };
 aboutApp.grabType = function(){
 
     var currenturl = window.location.href; 
-    console.log(currenturl);
+    // console.log(currenturl);
 
     if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
 
@@ -255,14 +255,14 @@ aboutApp.grabType = function(){
 
     var $aboutcases = $('#about-case.about-case-studies').data('cases');
 
-    console.log($aboutcases);
+    // console.log($aboutcases);
 
     // use the API to grab PROJECT info
     aboutApp.grabCases = function($type){
       $.ajax( {
           url: hype + '/wp-json/wp/v2/case_study', 
           success: function ( res ) {
-            console.log(res);
+            // console.log(res);
             aboutApp.printProjectInfo(res, $type);
           },
           cache: false
@@ -307,7 +307,7 @@ aboutApp.grabType = function(){
 aboutApp.nextCase = function() {
 
   var currenturl = window.location.href; 
-  console.log(currenturl);
+  // console.log(currenturl);
 
   if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
 
@@ -324,7 +324,7 @@ aboutApp.nextCase = function() {
     $.ajax( {
         url: hype + '/wp-json/wp/v2/case_study', 
         success: function ( res ) {
-          console.log('BOOM');
+          // console.log('BOOM');
           aboutApp.printProjectInfo(res);
         },
         cache: false
@@ -345,7 +345,7 @@ aboutApp.nextCase = function() {
       var num = casenum + 1;
     }
 
-    console.log(num);
+    // console.log(num);
     
 
     if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
@@ -394,7 +394,7 @@ $('#about-next').click(function() {
 aboutApp.prevCase = function() {
 
   var currenturl = window.location.href; 
-  console.log(currenturl);
+  // console.log(currenturl);
 
   if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
 
@@ -411,7 +411,7 @@ aboutApp.prevCase = function() {
     $.ajax( {
         url: hype + '/wp-json/wp/v2/case_study', 
         success: function ( res ) {
-          console.log('BOOM');
+          // console.log('BOOM');
           aboutApp.printProjectInfo(res);
         },
         cache: false
@@ -430,7 +430,7 @@ aboutApp.prevCase = function() {
       var num = casenum - 1;
     }
 
-    console.log(num);
+    // console.log(num);
     
 
     if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
@@ -482,7 +482,7 @@ var mainApp = { };
 mainApp.grabType = function(){
 
   var currenturl = window.location.href; 
-  console.log(currenturl);
+  // console.log(currenturl);
 
   if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
 
@@ -506,7 +506,7 @@ mainApp.grabType = function(){
       $.ajax( {
           url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
-            console.log(res);
+            // console.log(res);
             mainApp.printProjectInfo(res, $type);
           },
           cache: false
@@ -518,7 +518,7 @@ mainApp.grabType = function(){
       $.ajax( {
           url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
-            console.log(res);
+            // console.log(res);
             mainApp.printProjectInfo(res, $type);
           },
           cache: false
@@ -530,7 +530,7 @@ mainApp.grabType = function(){
       $.ajax( {
           url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
-            console.log(res);
+            // console.log(res);
             mainApp.printProjectInfo(res, $type);
           },
           cache: false
@@ -542,7 +542,7 @@ mainApp.grabType = function(){
       $.ajax( {
           url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $type, 
           success: function ( res ) {
-            console.log(res);
+            // console.log(res);
             mainApp.printProjectInfo(res, $type);
           },
           cache: false
@@ -553,7 +553,7 @@ mainApp.grabType = function(){
     mainApp.printProjectInfo = function(thepost, $thetype) {
 
         var cslength = thepost.length;
-        console.log($thetype, cslength);
+        // console.log($thetype, cslength);
 
         if (thepost.length == 1) {
           var prev = $('#' + $thetype + '-case .outer-container .previous-cs');
@@ -619,7 +619,7 @@ casesApp.prevCase = function(hashtag) {
     $.ajax( {
         url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $hash, 
         success: function ( res ) {
-          console.log('BOOM');
+          // console.log('BOOM');
           casesApp.printProjectInfo(res, $hash);
         },
         cache: false
@@ -638,7 +638,7 @@ casesApp.prevCase = function(hashtag) {
       var num = casenum - 1;
     }
 
-    console.log(caseamount, num);
+    // console.log(caseamount, num);
     
 
     if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
@@ -678,7 +678,7 @@ $('.previous-cs').click(function() {
   var parent = $(this).parent();
   var hash = parent.data('hash');
 
-  console.log(parent, hash);
+  // console.log(parent, hash);
 
   $(this).siblings('.main-content-case-study').empty();
   casesApp.prevCase(hash);
@@ -696,7 +696,7 @@ casesApp.nextCase = function(hashtag) {
     $.ajax( {
         url: hype + '/wp-json/wp/v2/case_study?filter[taxonomy]=service&filter[term]=' + $hash, 
         success: function ( res ) {
-          console.log('BOOM');
+          // console.log('BOOM');
           casesApp.printProjectInfo(res, $hash);
         },
         cache: false
@@ -717,7 +717,7 @@ casesApp.nextCase = function(hashtag) {
       var num = casenum + 1;
     }
 
-    console.log(caseamount, num);
+    // console.log(caseamount, num);
     
 
     if ( thepost[num].cuztom_post_meta.beforeimg !== 'http://ecoman.dev/wordpress/wp-includes/images/media/default.png' ) {
@@ -757,7 +757,7 @@ $('.next-cs').click(function() {
   var parent = $(this).parent();
   var hash = parent.data('hash');
 
-  console.log(parent, hash);
+  // console.log(parent, hash);
 
   $(this).siblings('.main-content-case-study').empty();
   casesApp.nextCase(hash);
@@ -771,7 +771,7 @@ $('#menu-main-menu li:last-child a').click(function(event) {
 
 
 window.onload = function() {
-    console.log( "ready!" );
+    // console.log( "ready!" );
     
     if ( $( '.services-case-studies' ).length ) {
      
@@ -789,5 +789,23 @@ window.onload = function() {
 
     $('#see-comments').click(function() {
       $('#comments').toggle("slow");
+    });
+
+    var cwidth = $('#about-cs-content').width();
+    // console.log(cwidth);
+
+    var newleft = cwidth + 120;
+    // console.log(newleft + ' new');
+
+    $('#about-next').css({ "left": newleft });
+
+    $( window ).resize(function() {
+      var cwidth = $('#about-cs-content').width();
+      // console.log(cwidth);
+
+      var newleft = cwidth + 120;
+      // console.log(newleft + ' new');
+
+      $('#about-next').css({ "left": newleft });
     });
 };
