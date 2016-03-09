@@ -104,11 +104,11 @@ $ = jQuery;
       // Disable scrolling plus fix menu-scrolling
       // From http://stackoverflow.com/a/14244680
       settings.theMenu.css({
-        'overflow-y': 'hidden',
-        '-webkit-overflow-scrolling': 'inherit',
-        'overflow-scrolling': 'inherit'
+        // 'overflow-y': 'hidden',
+        // '-webkit-overflow-scrolling': 'inherit',
+        // 'overflow-scrolling': 'inherit'
       });
-      $(document).off('touchmove');
+      // $(document).off('touchmove');
       $('body').css({overflow: 'inherit'});
     }
     
