@@ -2,7 +2,7 @@
 
 
 <div class="outer-container">
-	<div class="main-content">
+	<div class="main-content search-archive">
 		<header class="text-only-header">
 			<h1>Search Results:</h1>
 			<h2 id="fade-in-item" class="animated fadeInDown">
