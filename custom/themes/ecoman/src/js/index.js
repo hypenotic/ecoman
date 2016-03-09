@@ -295,7 +295,7 @@ aboutApp.grabType = function(){
 
         $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
 
-        $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+        $( '#about-case.about-case-studies .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
     };
 
     // initialize events - GOOOOOOOOOO!!!!
@@ -373,7 +373,7 @@ aboutApp.nextCase = function() {
 
     $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $('#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($posttitle, $postcontent).fadeIn(500);
+    $('#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($staticintro, $posttitle, $postcontent).fadeIn(500);
 
   };
 
@@ -458,7 +458,7 @@ aboutApp.prevCase = function() {
 
     $('#about-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $( '#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($posttitle, $postcontent).fadeIn(500);
+    $( '#about-case.about-case-studies .outer-container .main-content-case-study').hide().append($staticintro, $posttitle, $postcontent).fadeIn(500);
 
   };
 
@@ -596,7 +596,7 @@ mainApp.grabType = function(){
 
         $($typecontainer).css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center"});
 
-        $( $typecontainer + '.services-case-studies .outer-container .main-content-case-study').append($posttitle, $postcontent);
+        $( $typecontainer + '.services-case-studies .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
     };
 
     // initialize events - GOOOOOOOOOO!!!!
@@ -666,7 +666,7 @@ casesApp.prevCase = function(hashtag) {
 
     $('#' + hash + '-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $( '#' + hash + '-case .outer-container .main-content-case-study').append($posttitle, $postcontent);
+    $( '#' + hash + '-case .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
 
   };
 
@@ -745,7 +745,7 @@ casesApp.nextCase = function(hashtag) {
 
     $('#' + hash + '-case').css({"background-image":"url("+ $beforeimg + ")","background-size":"cover","background-position":"center center", "z-index":"90"});
 
-    $( '#' + hash + '-case .outer-container .main-content-case-study').append($posttitle, $postcontent);
+    $( '#' + hash + '-case .outer-container .main-content-case-study').append($staticintro, $posttitle, $postcontent);
 
   };
 
