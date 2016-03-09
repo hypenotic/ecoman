@@ -146,3 +146,45 @@
 	}
 }
 
+.comment-form-comment {
+	textarea {
+		width: 100%;
+	}
+}
+
+.form-allowed-tags {
+	font-size: modular-scale(0,1rem);
+	line-height: modular-scale(0,1rem);
+}
+
+.comment-form {
+	.form-submit input {
+		padding: 10px 20px;
+		font-size: modular-scale(0,1rem);
+		margin-top: 15px;
+		@include media($bp-med) {
+			padding: 10px 40px;
+			font-size: modular-scale(0);
+	    }
+	    @include media($bp-ls-small) {
+	    	padding: 10px 20px;
+	    	font-size: modular-scale(0,1rem);
+	    	margin-top: 15px;
+	    }
+	    border: 0;
+		background-color: $copper;
+		color: $white;
+		&:hover {
+			background-color: $l-grey;
+			color: $copper;
+			cursor: pointer;
+			a {
+				color: $white;
+			}
+		}
+	}	
+}
+
+
+
+

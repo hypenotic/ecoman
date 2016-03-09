@@ -14,10 +14,8 @@
 	$ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
 	$ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
 	$ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
-
-	// Testimonial
-	$test       = get_post_meta( $post->ID, '_test_select', true );
 	
+	$test_id = get_post_meta($post->ID,'_test_select',true);
 ?>
 
 <div class="tab-section-wrapper">
@@ -92,11 +90,42 @@
 	</section>
 </div>
 
-<?php if ($test) { ?>
+<?php if ($test_id) { ?>
 <div class="services-testimonial front-page-test">
-	<?php get_template_part( 'template-part-testimonial' ); ?> 
+	<?php  
+	    $args = array(
+	        'post_type' => 'testimonial',
+	        'post__in'  => array($test_id)
+	    );
+	    $tquote = new WP_Query( $args ); ?>
+
+	<?php if ( $tquote->have_posts() ) : while ( $tquote->have_posts() ) : $tquote->the_post(); 
+	    
+	    $quotation      = get_post_meta( $post->ID, '_single_quotation', true );
+	    $src            = get_post_meta( $post->ID, '_single_source', true );
+	    $srctitle       = get_post_meta( $post->ID, '_single_title', true ); ?>  
+	    
+	    <div class="outer-container">
+	        <div class="main-content wow fadeInLeft">
+	            <div class="testimonial-border__circle--top"></div>
+	            <p class="uppercase">What clients say when we leave the room</p>
+	            <blockquote class="testimonial__quotation">
+	                <?php echo $quotation; ?>
+	            </blockquote>
+	            <div class="testimonial__creds">
+	                <p><?php echo $src; ?>
+	                <?php if ( $srctitle) { ?>
+	                    ,
+	                <?php } ?>    
+	                <?php echo $srctitle; ?></p>
+	            </div> 
+	            <div class="testimonial-border__circle--bottom"></div> 
+	        </div>
+	    </div>
+
+	<?php endwhile; endif;?> 
 </div>
-<?php } ?> 
+<?php } ?>
 
 <?php endwhile; endif; ?>
 

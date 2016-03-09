@@ -2,27 +2,6 @@
 	return;
 } ?>
 	<div id="comments" class="comments-area">
-		<?php if ( have_comments() ) : ?>
-			<h3 class="comments-title">
-				<?php
-				printf( _nx( 'One comment on “%2$s”', '%1$s comments on “%2$s”', get_comments_number(), 'comments title'),
-					number_format_i18n( get_comments_number() ), get_the_title() );
-				?>
-			</h3>
-			<ul class="comment-list">
-				<?php 
-				wp_list_comments( array(
-					'short_ping'  => true,
-					'avatar_size' => 50,
-				) );
-				?>
-			</ul>
-		<?php endif; ?>
-		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-			<p class="no-comments">
-				<?php _e( 'Comments are closed.' ); ?>
-			</p>
-		<?php endif; ?>
 		<?php 
 
 			$fields =  array(
@@ -58,7 +37,7 @@
 			  'format'            => 'xhtml',
 
 			  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
-			    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+			    '</label><br/><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
 			    '</textarea></p>',
 
 			  'must_log_in' => '<p class="must-log-in">' .
@@ -86,4 +65,25 @@
 			);
 
 		comment_form($args); ?>
+		<?php if ( have_comments() ) : ?>
+			<h3 class="comments-title">
+				<?php
+				printf( _nx( 'One comment on “%2$s”', '%1$s comments on “%2$s”', get_comments_number(), 'comments title'),
+					number_format_i18n( get_comments_number() ), get_the_title() );
+				?>
+			</h3>
+			<ul class="comment-list">
+				<?php 
+				wp_list_comments( array(
+					'short_ping'  => true,
+					'avatar_size' => 50,
+				) );
+				?>
+			</ul>
+		<?php endif; ?>
+		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+			<p class="no-comments">
+				<?php _e( 'Comments are closed.' ); ?>
+			</p>
+		<?php endif; ?>
 	</div>

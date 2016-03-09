@@ -131,31 +131,31 @@ $services->add_meta_box(
     )
 );
 
-$services->add_meta_box(
-    'cs',
-    'Case Studies <i>(Optional)</i>',
-    array(
-        array(
-        'name'          => 'select',
-        'label'         => 'Select Case Studies',
-        'description'   => '',
-        'type'          => 'post_select',
-        'args'          => array(
-            'post_type' => 'case_study',
-            'show_option_none' => "Select Case Studies",
-            )
-        ),
-        array(
-        'name'          => 'bucket',
-        'label'         => 'Select a service category',
-        'description'   => '',
-        'type'          => 'term_select',
-        'args'          => array(
-            'taxonomy' => 'service',
-            'show_option_none' => "Service Category",
-            )
-        )
-    )
-);
+// $services->add_meta_box(
+//     'cs',
+//     'Case Studies <i>(Optional)</i>',
+//     array(
+//         array(
+//         'name'          => 'select',
+//         'label'         => 'Select Case Studies',
+//         'description'   => '',
+//         'type'          => 'post_select',
+//         'args'          => array(
+//             'post_type' => 'case_study',
+//             'show_option_none' => "Select Case Studies",
+//             )
+//         ),
+//         array(
+//         'name'          => 'bucket',
+//         'label'         => 'Select a service category',
+//         'description'   => '',
+//         'type'          => 'term_select',
+//         'args'          => array(
+//             'taxonomy' => 'service',
+//             'show_option_none' => "Service Category",
+//             )
+//         )
+//     )
+// );
 
 ?>
