@@ -135,24 +135,24 @@ $ = jQuery;
       
       // Disable scrolling on page except header
       // From http://stackoverflow.com/a/14244680
-      var setScrollable = '.mobile-menu',
-      bodySelect = $('body');
+      // var setScrollable = '.mobile-menu',
+      // bodySelect = $('body');
   
-      bodySelect.css({overflow: 'hidden'});
+      // bodySelect.css({overflow: 'hidden'});
   
-      $(document).on('touchmove',function(e){
-        e.preventDefault();
-      });
-      bodySelect.on('touchstart', setScrollable, function(e) {
-      if (e.currentTarget.scrollTop === 0) {
-        e.currentTarget.scrollTop = 1;
-      } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
-        e.currentTarget.scrollTop -= 1;
-      }
-      });
-      bodySelect.on('touchmove', setScrollable, function(e) {
-        e.stopPropagation();
-      });
+      // $(document).on('touchmove',function(e){
+      //   e.preventDefault();
+      // });
+      // bodySelect.on('touchstart', setScrollable, function(e) {
+      // if (e.currentTarget.scrollTop === 0) {
+      //   e.currentTarget.scrollTop = 1;
+      // } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+      //   e.currentTarget.scrollTop -= 1;
+      // }
+      // });
+      // bodySelect.on('touchmove', setScrollable, function(e) {
+      //   e.stopPropagation();
+      // });
       settings.theMenu.css({
         'overflow-y': 'scroll',
         'overflow-scrolling': 'touch',
@@ -182,9 +182,9 @@ $ = jQuery;
   
     // Close main-menu on click outside menu
     settings.mainContent.on('click', function() {
-      if (hamburger.hasClass('open')) {
-        menuClose();
-      }
+      // if (hamburger.hasClass('open')) {
+      //   menuClose();
+      // }
     });
   
   };
