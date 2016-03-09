@@ -217,6 +217,7 @@
 		<div class="header__text outer-container">
 			<h2><span class="black-highlight">Looks like the cows got out of the barn...</span></h2>
 			<p><span class="black-highlight">The page you've requested is not available. Try a search? <a href="#contact">Contact</a> us?</span></p>
+			<?php get_search_form(); ?>
 			<a href="/"><button class="error-page__btn copper-btn">
 					Back to the homepage, please!
 				</button></a>

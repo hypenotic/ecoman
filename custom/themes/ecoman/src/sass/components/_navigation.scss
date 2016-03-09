@@ -248,7 +248,8 @@ nav.mobile-navigation {
 	}
 }
 
-.mobile-menu-inner {
+.mobile-menu-inner,
+.error-page .header__text {
 	#searchform {
 		// padding-right: 30px; 
 		margin-bottom: 15px;
@@ -275,4 +276,6 @@ nav.mobile-navigation {
 		}
 	}
 }
+
+
 

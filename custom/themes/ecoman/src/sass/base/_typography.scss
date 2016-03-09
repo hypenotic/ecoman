@@ -261,8 +261,12 @@ span.plain-serif {
 		}
 		h2 {
 			margin-bottom: 0;
-			font-size: modular-scale(5);
-			line-height: modular-scale(5);
+			font-size: modular-scale(3);
+			line-height: modular-scale(3);
+			@include media($bp-med) {
+				font-size: modular-scale(5);
+				line-height: modular-scale(5);
+		    }
 		}
 		a {
 			color: $white;
