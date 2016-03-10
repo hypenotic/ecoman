@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# ==== TEAM
+
+    Barry Martin -- Copy
+    Jennifer Phelan -- Design
+    Emily Dela Cruz -- Code
+
+# ==== THANK YOUS
+
+    Jonas Spring -- ECOMAN!
+
+    The rest of the Hypenotic family:
+        Lionel Mann
+        Patrick Robinson
+
+        http://hypenotic.com
+
+
+# ==== TECHY STUFF
