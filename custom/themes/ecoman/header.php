@@ -54,7 +54,7 @@
 	<meta property="og:site_name" content="Ecoman" />
 	<meta property="og:title" content="" />
 	<meta property="og:description" content="" />
-	<meta property="og:image" content="" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" />
 	<!-- Twitter -->
 	
 	<?php wp_head(); ?> 
