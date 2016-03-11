@@ -50,11 +50,11 @@
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-	<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+	<meta property="og:url" content="" />
 	<meta property="og:site_name" content="Ecoman" />
-	<meta property="og:title" content="<?php echo get_the_title(); ?>" />
-	<meta property="og:description" content="<?php echo get_the_excerpt() ?> " />
-	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
 	<!-- Twitter -->
 	
 	<?php wp_head(); ?> 
