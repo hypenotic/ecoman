@@ -50,6 +50,12 @@
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+	<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+	<meta property="og:site_name" content="Ecoman" />
+	<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+	<meta property="og:description" content="<?php echo get_the_excerpt() ?> " />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" />
+	<!-- Twitter -->
 	
 	<?php wp_head(); ?> 
 	
@@ -63,7 +69,7 @@
 	<nav class="mobile-navigation">
 		<div class="nav__left">
 			<a href="<?php echo home_url(); ?>">
-				<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 			</a>
 			<p>ECOMAN</p>
 		</div>
@@ -86,7 +92,7 @@
 			<nav class="desktop">
 				<div class="nav__left desktop">
 					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
@@ -137,9 +143,9 @@
 				<div class="nav__left desktop">
 					<a href="<?php echo home_url(); ?>">
 						<?php if ($theme == 'value2') { ?>
-						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_white.png" alt="">
 						<?php } else { ?>
-						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 						<?php } ?>
 					</a>
 					<?php if ($theme == 'value2') { ?>
@@ -198,7 +204,7 @@
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
-					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
+					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_white.png" alt=""></a>
 					<p class="light-theme">ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
 				<div class="nav__right desktop">
@@ -238,7 +244,7 @@
 			<nav class="desktop">
 				<div class="nav__left desktop">
 					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri (); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" alt="">
 					</a>
 					<p>ECOMAN<span class="text-disappear">. <a href="tel:+4165565516">416.556.5516</a></span></p>
 				</div>
