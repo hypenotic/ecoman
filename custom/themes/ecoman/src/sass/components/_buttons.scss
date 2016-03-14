@@ -280,3 +280,33 @@ button {
 		display: inline-block;
 	}
 }
+
+.back-to-toc {
+	position: relative;
+	.back-toc-arrow {
+		width: 25px;
+		height: 25px;
+		border-top: 1px solid $copper;
+		border-left: 1px solid $copper;
+		position:absolute;
+		left: -20px;
+		top: 5px;
+		transform: rotate(315deg);
+		.top,
+		.bottom {
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $copper;
+			position: absolute;
+		}
+		.top {
+			right: 0;
+			top: -2px;
+		}
+		.bottom {
+			bottom: 0;
+			left: -2px;
+		}
+	}
+}
