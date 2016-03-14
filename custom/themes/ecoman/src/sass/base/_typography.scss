@@ -149,7 +149,8 @@ span.plain-serif {
 		}
 	}
 	#mc-embedded-subscribe {
-		font-family: $p-font;
+		font-family: $title-font;
+		font-style: italic;
 		font-weight: 300;
 		color: $copper;
 	}
