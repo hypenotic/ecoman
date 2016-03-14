@@ -236,6 +236,7 @@ span.plain-serif {
 	h1 {
 		letter-spacing: 5px;
 		margin-bottom: 0;
+		font-style: italic;
 	}
 	h2 {
 		margin-top: 0;
@@ -286,6 +287,17 @@ span.plain-serif {
 			font-size: modular-scale(0, 1rem);
 			line-height: modular-scale(1);
 		}
+	}
+}
+
+.search-archive .text-only-header {
+	h1 {
+		font-size: modular-scale(0);
+		line-height: modular-scale(1);
+		@include media($bp-large) {
+			font-size: modular-scale(5, 1.2rem);
+			line-height: modular-scale(5, 1.2rem);
+	    }
 	}
 }
 
@@ -747,6 +759,10 @@ span.inline-tweet {
 .pagination-links {
 	text-align: center;
 	margin-bottom: 80px;
+}
+
+.archive__single > div p {
+	font-weight: 300;
 }
 
 // CONTACT FORM

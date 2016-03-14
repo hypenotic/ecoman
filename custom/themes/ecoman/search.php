@@ -4,7 +4,7 @@
 <div class="outer-container">
 	<div class="main-content search-archive">
 		<header class="text-only-header">
-			<h1>Search Results:</h1>
+			<h1>SEARCH RESULTS:</h1>
 			<h2 id="fade-in-item" class="animated fadeInDown">
 			    <span class="plain-serif">“</span><?php echo get_search_query(); ?><span class="plain-serif">”</span>
 			</h2>
