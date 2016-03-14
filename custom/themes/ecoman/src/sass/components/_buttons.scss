@@ -8,6 +8,12 @@ button {
 	margin-top: 40px;
 }
 
+.copper-btn.large-btn.center-margin {
+	font-family: $title-font;
+	font-style: italic;
+	letter-spacing: 1px;
+}
+
 .btn {
 	&:hover {
 		cursor: pointer;
@@ -63,6 +69,9 @@ button {
 }
 
 .copper-btn.white-hover {
+	font-family: $title-font;
+	font-style: italic;
+	letter-spacing: 1px;
 	&:hover {
 		background-color: $white;
 	}
@@ -288,10 +297,18 @@ button {
 		height: 25px;
 		border-top: 1px solid $copper;
 		border-left: 1px solid $copper;
-		position:absolute;
+		position: absolute;
 		left: -20px;
 		top: 5px;
 		transform: rotate(315deg);
+		&:hover {
+			border-top: 1px solid $grey;
+			border-left: 1px solid $grey;
+			.top,
+			.bottom {
+				background-color: $grey;
+			}
+		}
 		.top,
 		.bottom {
 			width: 4px;

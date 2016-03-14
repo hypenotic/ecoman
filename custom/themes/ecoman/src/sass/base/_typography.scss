@@ -307,16 +307,18 @@ span.plain-serif {
 .front-page__buckets {
 	.outer-container {
 		h3 {
-			font-family: $p-font;
 			font-size: modular-scale(1);
-			margin: 0;
-			text-align: center;
+			line-height: modular-scale(2);
+			margin-bottom: 15px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			margin-top: 20px;
 			text-transform: uppercase;
-			font-weight: bold;
 		}
 		h4 {
 			font-size: modular-scale(0);
 			line-height: modular-scale(1);
+			font-style: italic;
 			@include media($bp-large) {
 				font-size: modular-scale(1);
 				line-height: modular-scale(1);
@@ -339,11 +341,29 @@ span.plain-serif {
 }
 
 .front-page__intro {
+	h2 {
+		font-size: modular-scale(1);
+		line-height: modular-scale(2);
+		margin-bottom: 15px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		margin-top: 20px;
+	}
 	p {
 		@include media($bp-med) {
 			font-size: modular-scale(1);
 			line-height: modular-scale(2);
 	    }
+	}
+}
+
+section.front-page__intro {
+	.outer-container.front-page {
+		.main-content {
+			p {
+				margin-top: 0;
+			}
+		}
 	}
 }
 
@@ -406,11 +426,13 @@ span.plain-serif {
 			line-height: modular-scale(1);
 			text-align: center;
 			margin: 20px 0;
+			text-transform: uppercase;
 		    @include media($bp-med) {
-				font-size: modular-scale(4, 0.8rem);
-				line-height: modular-scale(5, 0.8rem);
+				font-size: modular-scale(0);
+				line-height: modular-scale(0);
+				letter-spacing: 1px;
 				text-align: left;
-				margin: 0;
+				margin: 0 0 15px;
 		    }
 		}
 		div {
@@ -426,10 +448,12 @@ span.plain-serif {
 
 .tabs-panel-pockets {
 	h4 {
-		font-weight: 300;
+		font-weight: 400;
 		font-size: modular-scale(0);
 		line-height: modular-scale(0);
 		margin-bottom: 20px;
+		font-style: italic;
+		letter-spacing: 1px;
 		@include media($bp-small) {
 			margin-bottom: 8px;
 	    }
@@ -662,6 +686,11 @@ h1.blog-title {
 			padding-left: 0;
 		}
 	}
+}
+
+.table-of-contents {
+	font-family: $title-font;
+	letter-spacing: 1px;
 }
 
 span.inline-tweet {

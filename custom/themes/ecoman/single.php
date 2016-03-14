@@ -8,11 +8,11 @@
         ?>
 
     	<div class="back-to-toc">
-            <div class="back-toc-arrow">
+            <a href="/resources"><div class="back-toc-arrow">
                 <div class="top"></div>
                 <div class="bottom"></div>
-            </div>
-    		<p><a href="/resources"> TABLE OF CONTENTS</a></p>
+            </div></a>
+    		<p class="table-of-contents"><a href="/resources"> TABLE OF CONTENTS</a></p>
             <img src="<?php echo get_template_directory_uri(); ?>/dist/images/froggy.png" alt="">
     	</div>
     	<h1 class="blog-title"><?php the_title(); ?></h1>
