@@ -372,10 +372,11 @@ section.front-page__intro {
 .about__services-cta__text {
 	h3 {
 		margin: 0;
-		font-family: $p-font;
+		font-family: $title-font;
 		font-size: modular-scale(0);
 		line-height: modular-scale(0);
-		font-weight: bold;
+		// font-weight: bold;
+		font-style: italic;
 	}
 	> p {
 		padding-right: 10%;
@@ -389,7 +390,7 @@ section.front-page__intro {
 .front-page__buckets.about {
 	padding-top: 50px;
 	h3 {
-		font-weight: bold;
+		// font-weight: bold;
 	}
 }
 
