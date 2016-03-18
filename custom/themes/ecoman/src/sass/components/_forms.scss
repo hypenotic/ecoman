@@ -6,6 +6,10 @@
     @include media($bp-ls-small) {
     	display: none;
     }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .signup-form .outer-container .main-content {

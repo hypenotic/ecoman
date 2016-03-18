@@ -23,6 +23,7 @@ var scriptList = [
   'src/js/isotope.pkgd.min.js',
   'src/js/isotope_feeds.js',
   'src/js/packery-mode.pkgd.min.js',
+  'src/js/parallax.js',
   'src/js/index.js'
 ];
 

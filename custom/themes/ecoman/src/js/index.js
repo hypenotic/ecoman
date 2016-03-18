@@ -207,6 +207,8 @@ jQuery(document).ready(function($){
 		duration: 300
 	});	
 
+  
+
   new WOW({
      mobile: false
   }).init();

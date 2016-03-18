@@ -87,7 +87,7 @@
 
 	<?php get_template_part( 'template-part-signup' ); ?>
 
-	<header class="main-header inner-nav" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
+	<header class="main-header inner-nav" style="background-image:url(<?php echo $bannerurl[0]; ?>);" id="scrollheader">
 		<div class="outer-container nav">
 			<nav class="desktop">
 				<div class="nav__left desktop">
