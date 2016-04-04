@@ -143,7 +143,7 @@
 	.name-email-container,
 	.message-container {
 		position: relative;
-		// 
+		//
 		@include media($bp-med) {
 			@include display(flex);
 			@include align-items(flex-start);
@@ -151,7 +151,14 @@
 			@include flex-direction(column);
 		}
 	}
+	.name-email-container {
+		display:block;
+	}
+	.message-container {
+		display: block;
+	}
 }
+
 
 .comment-form-comment {
 	textarea {
