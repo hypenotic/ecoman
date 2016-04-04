@@ -12,7 +12,8 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;	
+	width: 100%;
+	z-index: 999999999999;	
 }
 
 .signup-form .outer-container .main-content {
@@ -102,7 +103,7 @@
 	position: relative;
 	#contact-modal {
 		display: none;
-		z-index: 9999999999999999999;
+		z-index: 9999999999999999999999999999;
 		width: 400px;
 		background-color: $l-blue;
 		position: absolute;

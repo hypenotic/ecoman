@@ -9,7 +9,8 @@
 	@include flex-direction(column);
 	// 
 	@include media($bp-large) {
-		min-height: 500px;
+		// min-height: 500px;
+		height: 100%;
     }
 	.header__text {
 		padding: 0 8%;

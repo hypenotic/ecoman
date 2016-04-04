@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<?php if (is_front_page()) { ?>
+		<meta name="description" content="Landscaping & Gardening. Ecoman helps you take a stewardship approach to your green space. 416.556.5516. Toronto." />
+	<?php } ?>
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<title><?php bloginfo('name'); ?></title>
 	<!-- FONTS -->
 	<script>
@@ -75,7 +78,7 @@
 		</div>
 	</nav>
 
-	<?php if (is_front_page()) { 
+	<?php if (is_404()) { 
 
 	// Hero Banner
 	$banner     = get_post_meta( $post->ID, '_banner_image', true );

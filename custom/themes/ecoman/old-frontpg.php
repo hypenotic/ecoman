@@ -27,8 +27,6 @@
 	$tabthreeurl  = wp_get_attachment_image_src( $tabthree,'tabs', true );
 ?>
 
-
-
 <div class="parallax">
     <div id="group1" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
@@ -103,9 +101,6 @@
     </div>
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        
-      </div>
-      <div class="parallax__layer parallax__layer--fore">
         <div class="tab-section-wrapper" id="thescroll">
         	<div class="front-page__circle-icon tab-one" style="background-image:url(<?php echo $taboneurl[0]; ?>);">
         			
@@ -127,67 +122,70 @@
         	</section>
         </div>
       </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
     </div>
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
         <div class="tab-section-wrapper two" id="thescroll2">
-        	
+        	<div class="front-page__circle-icon tab-two" style="background-image:url(<?php echo $tabtwourl[0]; ?>);">
+        				
+        	</div>
+        	<section class="front-page__buckets">
+        		<div class="outer-container">
+        			<h3>Services</h3>
+        			<div class="column-4 column-container wow fadeInUp">
+        				<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC' ) );
+        					
+        					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+        					
+        						<?php 
+
+        							$pockets      = get_post_meta($post->ID,'_pockets',true);
+
+        							$title = get_the_title();
+        							$prehash = preg_replace("/[^a-zA-Z]/", "", $title);
+        							$lowercase = strtolower($prehash);
+        							$hash = $lowercase;
+
+        						?>
+        						
+        						<div class="column-4__single">
+        							<a href="<?php echo home_url(); ?>/services/#<?php echo $hash; ?>"><h4><?php the_title(); ?></h4></a>
+        							<ul>
+        							<?php if($pockets) {
+        								    foreach($pockets as $pocket) {
+        							    $heading        = $pocket['_heading'];
+        							?>
+        								
+        									<li><?php echo $heading; ?></li>
+        								
+        							<?php
+        							        }
+        							    }
+        							?>
+        							</ul>
+        						</div>
+
+        				<?php endwhile; endif; ?>
+        			</div>
+        			<a href="<?php echo home_url(); ?>/services">
+        			<button class="copper-btn large-btn center-margin">
+        				Learn more about our services
+        			</button>
+        		</a>
+        		</div>
+        	</section>
         </div>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="front-page__circle-icon tab-two" style="background-image:url(<?php echo $tabtwourl[0]; ?>);">
-        			
-        </div>
-        <section class="front-page__buckets">
-        	<div class="outer-container">
-        		<h3>Services</h3>
-        		<div class="column-4 column-container">
-        			<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC' ) );
-        				
-        				if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-        				
-        					<?php 
-
-        						$pockets      = get_post_meta($post->ID,'_pockets',true);
-
-        						$title = get_the_title();
-        						$prehash = preg_replace("/[^a-zA-Z]/", "", $title);
-        						$lowercase = strtolower($prehash);
-        						$hash = $lowercase;
-
-        					?>
-        					
-        					<div class="column-4__single">
-        						<a href="<?php echo home_url(); ?>/services/#<?php echo $hash; ?>"><h4><?php the_title(); ?></h4></a>
-        						<ul>
-        						<?php if($pockets) {
-        							    foreach($pockets as $pocket) {
-        						    $heading        = $pocket['_heading'];
-        						?>
-        							
-        								<li><?php echo $heading; ?></li>
-        							
-        						<?php
-        						        }
-        						    }
-        						?>
-        						</ul>
-        					</div>
-
-        			<?php endwhile; endif; ?>
-        		</div>
-        		<a href="<?php echo home_url(); ?>/services">
-        		<button class="copper-btn large-btn center-margin">
-        			Learn more about our services
-        		</button>
-        	</a>
-        	</div>
-        </section>
+        <div class="title">Base Layer</div>
       </div>
     </div>
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <!-- <div class="title">Base Layer</div> -->
+        <div class="title">Base Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <?php if ($test_id) { ?>
@@ -206,7 +204,7 @@
         	    $srctitle       = get_post_meta( $post->ID, '_single_title', true ); ?>  
         	    
         	    <div class="outer-container">
-        	        <div class="main-content">
+        	        <div class="main-content wow fadeInLeft">
         	            <div class="testimonial-border__circle--top"></div>
         	            <p class="uppercase">What clients say when we leave the room</p>
         	            <blockquote class="testimonial__quotation">
@@ -229,9 +227,9 @@
 
         <?php endwhile; endif; ?>
       </div>
-      <!-- <div class="parallax__layer parallax__layer--deep">
+      <div class="parallax__layer parallax__layer--deep">
         <div class="title">Deep Background Layer</div>
-      </div> -->
+      </div>
     </div>
     <div id="group5" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
@@ -275,11 +273,26 @@
         	</div>
         </div>
       </div>
-<!--       <div class="parallax__layer parallax__layer--base">
+      <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
-      </div> -->
+      </div>
     </div>
-</div>
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+  </div>
+
+
 
 <?php get_footer(); ?>
 

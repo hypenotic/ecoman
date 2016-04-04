@@ -3,10 +3,10 @@ jQuery(document).ready(function($){
     var $container = $('#isotope-container .isotope');
     
     $container.isotope({
-        filter: '*',
+        filter: '.blog',
 		layoutMode: 'packery',
         animationOptions: {
-            duration: 750,
+            duration: 300,
             easing: 'linear',
             queue: false,
         }

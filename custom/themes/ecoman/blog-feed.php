@@ -33,11 +33,11 @@ get_header(); ?>
 			<div class="filters button-group js-radio-button-group">
 				<div class="secondary">
 					<label>Filter:</label>
-					<a href="?show=all"     id="show-all"     class="button" data-filter="*">All</a>
 					<a href="?show=blog"    id="show-blog"    class="button" data-filter=".blog">Blog</a>
 					<a href="?show=facebook"  id="show-facebook"  class="button" data-filter=".facebook">Facebook</a>			
 					<a href="?show=instagram"  id="show-instagram"  class="button" data-filter=".instagram">Instagram</a>			
-					<a href="?show=twitter"  id="show-twitter"  class="button" data-filter=".twitter">Twitter</a>			
+					<a href="?show=twitter"  id="show-twitter"  class="button" data-filter=".twitter">Twitter</a>
+					<a href="?show=all"     id="show-all"     class="button" data-filter="*">All</a>
 				</div>
 <!-- 				<?php 				
 					$args = array(

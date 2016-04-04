@@ -4,6 +4,8 @@ footer {
 	background-color: $d-green;
 	background: url(../images/footerfabric.jpg);
 	// 
+	// z-index: 9999999999999999;
+	// 
 	@include flexboxcenter;
 	@include media($bp-small) {
 		padding-bottom: 90px;
