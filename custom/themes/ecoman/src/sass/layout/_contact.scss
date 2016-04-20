@@ -228,6 +228,22 @@
 	font-size: modular-scale(0);
 }
 
+.quiz-container {
+	p {
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+}
+
+#contact-modal {
+	.quiz-container {
+		p {
+			margin-top: 20px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
 #contact-name {
 	// padding-left: 60px;
 }
