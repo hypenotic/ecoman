@@ -135,7 +135,8 @@
 
 .wpcf7-form-control-wrap.your-name,
 .wpcf7-form-control-wrap.your-email,
-.wpcf7-form-control-wrap.your-message {
+.wpcf7-form-control-wrap.your-message,
+.wpcf7-form-control-wrap.math-quiz {
 	width: 100%;
 	// 
 	position: relative;
@@ -163,6 +164,14 @@
 		border: 0;
 		padding: 15px;
 	}	
+	.wpcf7-form-control.wpcf7-quiz {
+		position: relative;
+		// 
+		background-color: rgba(255,255,255,0.3);
+		// 
+		border: 0;
+		padding: 10px;
+	}
 }
 
 .wpcf7-form-control.wpcf7-submit {
@@ -213,6 +222,10 @@
 	@include align-items(flex-start);
 	@include justify-content(center);
 	@include flex-direction(column);
+}
+
+.wpcf7-quiz-label {
+	font-size: modular-scale(0);
 }
 
 #contact-name {
