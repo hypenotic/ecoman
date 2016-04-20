@@ -245,13 +245,13 @@ aboutApp.grabType = function(){
     var currenturl = window.location.href; 
     // console.log(currenturl);
 
-    if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+    if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/about/'  ) {
 
       var hype = '';
 
     } else {
 
-      var hype = '/ecoman';
+      var hype = '/dev/ecoman';
 
     }
 
@@ -311,13 +311,13 @@ aboutApp.nextCase = function() {
   var currenturl = window.location.href; 
   // console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+  if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/about/'  ) {
 
     var hype = '';
 
   } else {
 
-    var hype = '/ecoman';
+    var hype = '/dev/ecoman';
 
   }
 
@@ -398,13 +398,13 @@ aboutApp.prevCase = function() {
   var currenturl = window.location.href; 
   // console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/about/'  ) {
+  if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/about/'  ) {
 
     var hype = '';
 
   } else {
 
-    var hype = '/ecoman';
+    var hype = '/dev/ecoman';
 
   }
 
@@ -486,13 +486,13 @@ mainApp.grabType = function(){
   var currenturl = window.location.href; 
   // console.log(currenturl);
 
-  if ( currenturl !== 'http://hypelabs.ca/ecoman/services/'  ) {
+  if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/services/'  ) {
 
     var hype = '';
 
   } else {
 
-    var hype = '/ecoman';
+    var hype = '/dev/ecoman';
 
   }
 
