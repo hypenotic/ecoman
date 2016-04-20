@@ -9,7 +9,8 @@
 	@include flex-direction(column);
 	// 
 	@include media($bp-large) {
-		// min-height: 500px;
+		// take this out if testing PARALLAX
+		min-height: 500px;
 		height: 100%;
     }
 	.header__text {

@@ -418,6 +418,12 @@ section.front-page__intro {
 	font-style: italic;
 }
 
+.front-page__intro.about {
+	h2 {
+		font-family: $title-font;
+	}
+}
+
 // SERVICE
 
 .tabs-panel-intro {

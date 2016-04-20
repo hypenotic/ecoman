@@ -78,7 +78,8 @@
 		</div>
 	</nav>
 
-	<?php if (is_404()) { 
+	<!-- Change this to something else if testing out parallax -->
+	<?php if (is_front_page()) { 
 
 	// Hero Banner
 	$banner     = get_post_meta( $post->ID, '_banner_image', true );

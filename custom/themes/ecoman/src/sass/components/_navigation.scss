@@ -6,16 +6,6 @@
 	@include justify-content(flex-start);
 }
 
-// Parallax
-.main-header.inner-nav {
-	position: relative;
-	// 
-	@include display(flex);
-	@include flex-direction(column);
-	@include justify-content(flex-start);
-	top: 60px;
-}
-
 .outer-container.nav {
 	width: 100%;
 	// 

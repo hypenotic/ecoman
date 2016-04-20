@@ -399,7 +399,7 @@ function show_twit_results( $results = NULL ) {
 						<?php } else if ($label == 'facebook') { ?>
 							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
 						<?php } else { ?>
-							<a href="<?php echo $link;?>" target="_blank"><i class="fa fa-pencil"></i></a>
+							<a href="<?php echo $link;?>"><i class="fa fa-pencil"></i></a>
 						<?php } ?>
 					</div>
 					<div class="post">
@@ -416,7 +416,7 @@ function show_twit_results( $results = NULL ) {
 		            	<?php }  else if ($label == 'twitter') { ?>
 
 		            	<?php } else { ?>
-		            	<a href="<?php echo $link;?>" target="_blank">
+		            	<a href="<?php echo $link;?>" <?php if($label!='blog') { ?> target="_blank" <?php } ?>>
 			                <div class="post-image" style="background-image:url(<?php echo $feed_img;?>);">
 				                <img class="post-img" src="<?php echo $feed_img;?>" style="display:none;">
 			            	</div>
