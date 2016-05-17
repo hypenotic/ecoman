@@ -22,7 +22,7 @@ get_header(); ?>
 	<h1 class="blog-title"><?php the_title(); ?></h1>
 	<div class="back-to-toc">
 		<p class="table-of-contents">TABLE OF CONTENTS</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/dist/images/froggy.png" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/dist/images/acorn.png" alt="">
 	</div>
 </div>
 </div>

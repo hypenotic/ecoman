@@ -28,7 +28,7 @@ function fetch_facebook_feed() {
 	  'appId'  => '949341928475039',
 	  'secret' => '597f2f1a290f82ef65abbc2b2c325cf6',
 	));
-	$feeds=$facebook->api('199899653356651/feed?fields=picture,object_id,type,created_time,message,link,from,name,icon,images');
+	$feeds=$facebook->api('199899653356651/feed?fields=picture,object_id,type,created_time,message,link,from,name,icon');
 	$i = 0;
 	// print_r($feeds);
 	foreach($feeds['data'] as $post) {

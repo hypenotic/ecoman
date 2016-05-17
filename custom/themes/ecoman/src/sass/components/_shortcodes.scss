@@ -29,3 +29,45 @@
   }
 }
 
+figure.sidebar-img-left {
+  margin: 0 auto;
+  p {
+    font-family: "Open Sans",serif;
+    font-size: modular-scale(0, 0.9rem);
+    line-height: modular-scale(2, 0.9rem);
+  }
+  img {
+    max-width: 300px;
+    max-height: 400px;
+  }
+  @include media($bp-large) {
+    // @include span-columns(3);
+    float: left;
+    // padding: 15px;
+    margin-left: -20%;
+    margin-right: 0;
+    
+  }
+}
+
+figure.sidebar-img-right {
+  margin: 0 auto;
+  p {
+    font-family: "Open Sans",serif;
+    font-size: modular-scale(0, 0.9rem);
+    line-height: modular-scale(2, 0.9rem);
+  }
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  @include media($bp-large) {
+    // @include span-columns(3);
+    float: right;
+    // padding: 15px;
+    margin-left: 0;
+    margin-right: -20%;
+    
+  }
+}
+

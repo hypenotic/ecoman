@@ -8,23 +8,40 @@
 	p {
 		margin-bottom: 0;
 	}
+	// img {
+	// 	position: absolute;
+	// 	right: 0;
+	// 	top: -7px;
+	// 	width: 90px;
+	// 	height: auto;
+	// 	opacity: 0.7;
+	// 	@include media($bp-med) {
+	// 		top: -29px;
+	// 		width: 160px;
+	// 	}
+	// 	@include media($bp-ls-small) {
+	// 		width: 100px;
+	// 		top: -6px;
+	// 	}
+	// }
 	img {
 		position: absolute;
 		right: 0;
-		top: -7px;
+		top: -27px;
 		width: 90px;
 		height: auto;
 		opacity: 0.7;
 		@include media($bp-med) {
-			top: -29px;
+			top: -63px;
+			right: -8px;
 			width: 160px;
 		}
 		@include media($bp-ls-small) {
 			width: 100px;
-			top: -6px;
+			top: -28px;
+			right: -5px;
 		}
 	}
-
 }
 
 .main-content.blog-index {
@@ -148,8 +165,7 @@ h1.blog-title {
 		height: auto;
 	}
 	iframe {
-		width: 100%;
-		height: auto;
+		max-width: 100%;
 	}
 }
 

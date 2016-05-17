@@ -84,7 +84,10 @@
 					    $theid = get_the_ID();
 					?>
 			
-						<?php if ( $theid == 1666 ) { ?>
+						<?php 
+
+						// 1666 = consulting
+						if ( $theid == 1667 ) { ?>
 							<div class="consulting-pocket__single">
 								<?php the_content(); ?>
 							</div>

@@ -616,6 +616,19 @@ var casesApp = { };
 
 casesApp.prevCase = function(hashtag) {
 
+  var currenturl = window.location.href; 
+  // console.log(currenturl);
+
+  if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/services/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/dev/ecoman';
+
+  }
+
   // use the API to grab PROJECT info
   casesApp.grabCases = function($hash){
     $.ajax( {
@@ -692,6 +705,19 @@ $('.previous-cs').click(function() {
 var casesApp = { };
 
 casesApp.nextCase = function(hashtag) {
+
+  var currenturl = window.location.href; 
+  // console.log(currenturl);
+
+  if ( currenturl !== 'http://hypelabs.ca/dev/ecoman/services/'  ) {
+
+    var hype = '';
+
+  } else {
+
+    var hype = '/dev/ecoman';
+
+  }
 
   // use the API to grab PROJECT info
   casesApp.grabCases = function($hash){

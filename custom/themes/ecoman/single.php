@@ -13,7 +13,7 @@
                 <div class="bottom"></div>
             </div></a>
     		<p class="table-of-contents"><a href="/resources"> TABLE OF CONTENTS</a></p>
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/froggy.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/acorn.png" alt="">
     	</div>
     	<h1 class="blog-title"><?php the_title(); ?></h1>
     	<div class="blog-meta">
