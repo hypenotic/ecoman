@@ -5,7 +5,7 @@
 */
 
 function my_styles() {
-	wp_register_style('flickity', 'https://npmcdn.com/flickity@1.1/dist/flickity.min.css');
+	wp_register_style('flickity', 'https://unpkg.com/flickity@1.1/dist/flickity.min.css');
  	wp_enqueue_style( 'flickity' );
  	wp_register_style('awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
  	wp_enqueue_style( 'awesome' );
