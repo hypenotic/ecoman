@@ -291,7 +291,7 @@ class wpdf_API_request {
 		//echo $request . "<br>";
 		
 		if ( function_exists('curl_init') ) {
-			$sslfile = WP_CONTENT_DIR . "custom/plugins/". plugin_basename( dirname(__FILE__) )."/cert/cacert.pem";
+			$sslfile = WP_CONTENT_DIR . "/plugins/". plugin_basename( dirname(__FILE__) )."/cert/cacert.pem";
 		
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; Konqueror/4.0; Microsoft Windows) KHTML/4.0.80 (like Gecko)");
