@@ -8,7 +8,7 @@
 
 <?php // } ?> -->
 
-<header class="signup-form">
+<header class="signup-form" id="fixed-signup">
 <div class="outer-container">
 	<div class="main-content">
 		<p>Get garden advice in your inbox:</p>

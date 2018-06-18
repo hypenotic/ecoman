@@ -835,6 +835,20 @@ span.inline-tweet {
 	font-weight: 300;
 	p {
 		margin: 0;
+		margin-bottom: 8px;
+	}
+	a {
+		color: $white;
+		border-bottom: 1px solid $white;
+	}
+	a i {
+		color: $copper;
+	}
+}
+
+#contact-modal .contact__email-phone {
+	p {
+		margin: 8px 0 !important;
 	}
 }
 

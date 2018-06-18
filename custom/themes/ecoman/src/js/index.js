@@ -872,4 +872,23 @@ window.onload = function() {
     }
     isitie();
 
+    function idleLogout() {
+      var t;
+      window.addEventListener('scroll', resetTimer, true); // improved; see comments
+  
+      function yourFunction() {
+          // your function for too long inactivity goes here
+          // e.g. window.location.href = 'logout.php';
+          console.log('IDLEEEEE');
+          $('#fixed-signup').addClass('open');
+      }
+  
+      function resetTimer() {
+          clearTimeout(t);
+          $('#fixed-signup').removeClass('open');
+          t = setTimeout(yourFunction, 5000);  // time is in milliseconds
+      }
+  }
+  idleLogout();
+
 };
