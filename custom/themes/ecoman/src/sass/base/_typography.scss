@@ -3,6 +3,30 @@ body {
 	color: rgba(0,0,0,0.8);
 }
 
+.-uppercase {
+	text-transform: uppercase;
+}
+
+.-lowercase {
+	text-transform: lowercase;
+}
+
+.-italic {
+	font-style: italic;
+}
+
+.-serif {
+	font-family: $serif-font;
+}
+
+.-sans-serif {
+	font-family: $sans-serif-font;
+}
+
+.-fc-accent {
+	color: $copper;
+} 
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $main-headings;
 	margin: 0;
@@ -29,21 +53,11 @@ h2 {
 }
 
 h3 {
-	font-size: modular-scale(1);
-	line-height: modular-scale(2);
-	@include media($bp-large) {
-		font-size: modular-scale(3);
-		line-height: modular-scale(4);
-    }
+	font-size: 28px;
 }
 
 h4 {
-	font-size: modular-scale(0);
-	line-height: modular-scale(1);
-	@include media($bp-large) {
-		font-size: modular-scale(2);
-		line-height: modular-scale(3);
-    }
+	font-size: 20px;
 }
 
 h5 {
@@ -85,7 +99,7 @@ ul, ol {
 	li {
 		font-size: modular-scale(0);
 		line-height: modular-scale(1);
-		margin-top: 15px;
+		// margin-top: 15px;
 		font-weight: 300;
 	}
 }
@@ -215,13 +229,6 @@ span.plain-serif {
 	h1, h2 {
 		font-style: italic;
 	}
-	h1 {
-		text-transform: uppercase;
-		margin-top: 50px;
-		@include media($bp-large) {
-			letter-spacing: 5px;
-	    }
-	}
 	h2 {
 		font-size: modular-scale(0);
 		line-height: modular-scale(0, 1.5rem);
@@ -303,30 +310,6 @@ span.plain-serif {
 }
 
 // HOME
-
-.front-page__buckets {
-	.outer-container {
-		h3 {
-			font-size: modular-scale(1);
-			line-height: modular-scale(2);
-			margin-bottom: 15px;
-			font-weight: 400;
-			letter-spacing: 1px;
-			margin-top: 20px;
-			text-transform: uppercase;
-		}
-		h4 {
-			font-size: modular-scale(0);
-			line-height: modular-scale(1);
-			font-style: italic;
-			@include media($bp-large) {
-				font-size: modular-scale(1);
-				line-height: modular-scale(1);
-		    }
-		}
-	}
-}
-
 .front-page__testimonial {
 	margin: 50px 0 100px;
 }
@@ -339,34 +322,6 @@ span.plain-serif {
 		}
 	}
 }
-
-.front-page__intro {
-	h2 {
-		font-size: modular-scale(1);
-		line-height: modular-scale(2);
-		margin-bottom: 15px;
-		font-weight: 400;
-		letter-spacing: 1px;
-		margin-top: 20px;
-	}
-	p {
-		@include media($bp-med) {
-			font-size: modular-scale(1);
-			line-height: modular-scale(2);
-	    }
-	}
-}
-
-section.front-page__intro {
-	.outer-container.front-page {
-		.main-content {
-			p {
-				margin-top: 0;
-			}
-		}
-	}
-}
-
 
 // ABOUT
 .about__services-cta__text {
@@ -533,6 +488,9 @@ section.front-page__intro {
 		margin: 0;
 		font-size: modular-scale(2);
 		line-height: modular-scale(3);
+		font-family: $title-font;
+		font-weight: 300;
+		font-style: italic;
 		@include media($bp-small) {
 			font-size: modular-scale(1);
 			line-height: modular-scale(1, 1.4rem);

@@ -1,6 +1,4 @@
 <?php get_header(); ?>	
-
-
 <div class="outer-container blog-index">
 	<?php get_sidebar(); ?>
 	<div class="main-content--narrow">

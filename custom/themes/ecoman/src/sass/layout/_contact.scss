@@ -4,7 +4,7 @@
 	// 
 	position: relative;
 	// 
-	background-color: $d-blue;
+	background-color: $copper;
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center center;
@@ -12,31 +12,14 @@
 	// 
 	padding-bottom: 80px;
 	padding-top: 60px;
-	margin-top: -116px;
+	// margin-top: -116px;
 	// 
 	@include flexboxcenter;
 	@include flex-direction(column);
 	// 
 	@include media($bp-med) {
-		background-image: url(../images/footer_banner_exwide.jpg);
+		// background-image: url(../images/footer_banner_exwide.jpg);
     }
-}
-
-.contact__circle-icon {
-	width: 116px;
-	height: 116px;
-	// 
-	position: relative;
-	top: -55px;
-	// 
-	background-color: $d-blue;
-	background: url('../images/tab-three.jpg');
-	background-size: cover;
-	z-index: 9;
-	// 
-	border-radius: 50%;
-	margin-left: 3px;
-	margin: 0 auto;
 }
 
 .contact-intro {
@@ -116,7 +99,7 @@
 .contact-form__right {
 	margin-top: 20px;
     @include media($bp-med) {
-		@include flex(0 0 75%);
+		@include flex(0 0 50%);
 		margin: 0;
     }
     @include media($bp-large) {
@@ -124,6 +107,16 @@
     }
 	h4 {
 		margin-bottom: 0;
+	}
+}
+
+.wpcf7-form {
+	background: white;
+	color: $copper;
+	padding: 2rem;
+	.form__heading {
+		border-bottom: 2px solid black;
+		background: white;
 	}
 }
 
@@ -247,4 +240,13 @@
 
 #contact-name {
 	// padding-left: 60px;
+}
+
+.contact__deats p,
+.contact__blurb p {
+	font-size: 16px;
+	line-height: 1.3;
+	a {
+		border-bottom: none !important;
+	}
 }

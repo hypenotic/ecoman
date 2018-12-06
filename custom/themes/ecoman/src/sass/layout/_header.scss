@@ -1,36 +1,22 @@
-.main-header {
-	width: 100%;
-	min-height: 300px;
-	position: relative;
-	// 
-	background-color: $l-grey;
-	// 
-	@include flexboxcenter;
-	@include flex-direction(column);
-	// 
-	@include media($bp-large) {
-		// take this out if testing PARALLAX
-		min-height: 500px;
-		height: 100%;
-    }
-	.header__text {
-		padding: 0 8%;
-		@include media($bp-small) {
-			padding: 8% 8%;
-	    }
-	}
-	.header__circle-icon {
-		width: 160px;
-		height: 160px;
-		// 
+.header {
+	min-height: 80vh;
+	background-color: lightgrey;
+	background-size: cover;
+	background-position: center center;
+}
+
+.main-header .header_text {
+	max-width: 75%;
+	>div {
+		background-color: rgba(255,255,255,0.9);
+		padding: 4rem;
 		position: relative;
-		bottom: -80px;
-		// 		
-		background-color: $white;
-		// 	
-		border: 1px solid #e3e3e3;
-		border-radius: 50%;
-		margin-left: 3px;
+		a {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+		}
 	}
 }
 

@@ -9,6 +9,9 @@ include('includes/wp-cuztom-posts/custom-testimonials.php');
 include('includes/wp-cuztom-posts/custom-team.php');
 include('includes/wp-cuztom-posts/custom-critters.php');
 
+// MetaBox
+include('includes/meta-box/mb-page.php');
+
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');

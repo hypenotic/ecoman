@@ -1,20 +1,14 @@
-<div class="contact__circle-icon">
-			
-</div>
-<div class="full-screen-wrapper contact">
+<div class="full-screen-wrapper contact" id="contact">
 	<div class="outer-container">
 		<div class="contact-section">
-			<div class="contact-intro">
-				<h3>We love hearing from you!</h3>
-				<?php dynamic_sidebar( 'contact-blurb' ); ?>
-			</div>
 			<div class="contact-form">
 				<div class="contact-form__left">
+					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats">
-						<p>Ecoman</p>
+						<p>Jonas Spring,Ecoman</p>
 						<p>44 Shanly Street,<br/>
 						Toronto, ON<br/>
-						M6H 1S3 <a onclick="trackOutboundLink('https://www.google.ca/maps/place/44+Shanly+St,+Toronto,+ON+M6H+1S3/@43.6637464,-79.4326931,17z/data=!4m2!3m1!1s0x882b34674ae9fbf9:0x25f8e5b90548ccfa'); return false;" href="https://www.google.ca/maps/place/44+Shanly+St,+Toronto,+ON+M6H+1S3/@43.6637464,-79.4326931,17z/data=!4m2!3m1!1s0x882b34674ae9fbf9:0x25f8e5b90548ccfa" target="_blank"><i class="fa fa-map-marker"></i></a></p>
+						M6H 1S3</p>
 					</div>
 					<div class="contact__blurb">
 						<p><a onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a><br/>
@@ -30,8 +24,8 @@
 					</div>
 				</div>
 				<div class="contact-form__right">
-					
-					<?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form 1"]' ); ?>
+					<p class="form__heading">Dear Ecoman:</p>
+					<?php echo do_shortcode('[contact-form-7 id="28" title="Contact form 1"]'); ?>
 				</div>
 			</div>
 		</div>
