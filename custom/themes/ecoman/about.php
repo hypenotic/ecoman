@@ -46,6 +46,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 					<img src="<?php echo $imageURL;?>" alt="<?php echo $imageAlt;?>">
 					<h4><?php the_title();?></h4>
 					<p><?php echo get_the_excerpt(); ?></p>
+					<a class="-serif -italic" href="<?php echo get_the_permalink($theID);?>">Learn more</a>
 				</div>
 
 		<?php endwhile; wp_reset_postdata(); endif; ?>
