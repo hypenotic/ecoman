@@ -11,11 +11,11 @@ $ctaLink        = get_post_meta( $post->ID, '_em_banner_link', true );
 $blurb          = get_post_meta( $post->ID, '_banner_blurb', true );
 $theme          = get_post_meta( $post->ID, '_banner_theme', true );
 
-if (is_front_page()) { ?>
-    <header class="header main-header -flex -flex-ia-c" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo $bannerurl ;} ?>);" id="scrollheader">
-        <div class="header_text -flex -flex-ai-c">
+if (is_front_page() || is_page('about') || is_page('services') ) { ?>
+    <header class="header -flex -flex-ia-c" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo $bannerurl ;} ?>);" id="scrollheader">
+        <div class="header_text -flex -flex-ai-c <?php if (!is_front_page()) { echo '-bg-blue-t'; } ?>">
             <div>
-                <h1 class="-m0 -uppercase -fc-accent"><?php echo $heading; ?></h1>
+                <h1 class="-m0 -uppercase -italic -fc-accent"><?php echo $heading; ?></h1>
                 <?php if ($subheading) { ?>
                     <p><?php echo $subheading; ?></p>
                 <?php } ?>
@@ -26,39 +26,6 @@ if (is_front_page()) { ?>
         </div>
     </header>
 <?php } ?>
-
-<?php if ( is_page('about') || is_page('services') ) { ?>
-
-    <?php get_template_part( 'template-part-signup' ); ?>
-
-    <header class="main-header inner-nav small-header" style="background-image:url(<?php echo $bannerurl[0]; ?>);">
-        <?php if ($theme == 'value2') { ?>
-        <div class="header__text outer-container animated fadeIn light-theme">
-        <?php } else { ?>
-        <div class="header__text outer-container animated fadeIn">
-        <?php } ?>
-            <?php if ($theme == 'value2') { ?>
-            <h1 class="left-align-text"><span class="black-highlight"><?php echo $heading; ?></span></h1>
-            <?php } else { ?>
-            <h1 class="left-align-text"><span class="white-highlight"><?php echo $heading; ?></span></h1>
-            <?php } ?>
-            <?php if ($subheading) { ?>
-                <?php if ($theme == 'value2') { ?>
-                <h2><span class="black-highlight"><?php echo $subheading; ?></span></h2>
-                <?php } else { ?>
-                <h2><span class="white-highlight"><?php echo $subheading; ?></span></h2>
-                <?php } ?>
-            <?php } ?>
-            <?php if ($blurb) { ?>
-                <div class="header-blurb">
-                    <?php echo $blurb; ?>
-                </div>
-            <?php } ?>
-        </div>
-    </header>
-
-<?php } ?>
-
 
 <?php if (is_404()) { ?>
 
