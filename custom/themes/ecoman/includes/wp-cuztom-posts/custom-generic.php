@@ -54,29 +54,4 @@ $pages->add_meta_box(
     )
 );
 
-$pages->add_meta_box(
-    'tabs',
-    'Tab Images', 
-    array(
-        array(
-            'name'          => 'tabone',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'tabtwo',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'tabthree',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        )
-    )
-);
-
 ?>

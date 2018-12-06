@@ -43,7 +43,7 @@ function em_register_default( $meta_boxes ) {
         'title'      => __( 'Intro', 'textdomain' ),
         'post_types' => array( 'page'),
         'include' => array(
-            'template'  => array( 'services.php','page-home.php' )
+            'template'  => array( 'services.php','page-home.php', 'about.php' )
         ),
         'fields' => array(
             array(
@@ -59,6 +59,21 @@ function em_register_default( $meta_boxes ) {
             array(
                 'id'   => $prefix . 'intro_image',
                 'name' => __( 'Intro Image', 'textdomain' ),
+                'type' => 'image_advanced',
+            )
+        ),
+    );
+    // About
+    $meta_boxes[] = array(
+        'title'      => __( 'Team', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'include' => array(
+            'template'  => array( 'about.php' )
+        ),
+        'fields' => array(
+            array(
+                'id'   => $prefix . 'team_image',
+                'name' => __( 'Team Image', 'textdomain' ),
                 'type' => 'image_advanced',
             )
         ),

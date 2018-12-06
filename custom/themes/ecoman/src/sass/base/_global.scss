@@ -12,6 +12,13 @@
         
     }
 }
+
+// Text color
+.-color-w,
+.-color-w p {
+    color: white;
+}
+
 // Display
 .-d-none {
     display: none;
@@ -111,6 +118,10 @@
 
 .-bg-accent {
     background-color: $copper;
+}
+
+.-bg-dgrey {
+    background-color: $d-grey;
 }
 
 .-bg-green {
