@@ -8,7 +8,7 @@
 		        // Start the loop.
 		        while ( have_posts() ) : the_post(); ?>
 
-		            <div class="blog_single">
+		            <div class="blog_single -pt2">
 		                <h3>
 		                    <a href="<?php the_permalink(); ?> ">
 		                    <?php the_title( ); ?>
@@ -17,11 +17,6 @@
 		                <div>
 		                    <?php the_excerpt(); ?>
 		                </div>
-		                <p class="read-more">
-		                	<a href="<?php the_permalink(); ?> ">
-		                    Read more
-		                    </a>
-		                </p>
 		            </div>
 		            
 		            <?php
