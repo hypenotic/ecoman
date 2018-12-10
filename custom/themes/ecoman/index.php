@@ -1,15 +1,14 @@
 <?php get_header(); ?>	
-<div class="outer-container blog-index">
+<div class="blog_wrapper">
+	<img src="<?php echo get_template_directory_uri(); ?>/src/images/froggy.png" alt="Black and white illustration of a frog." class="-pos-a">
 	<?php get_sidebar(); ?>
-	<div class="main-content--narrow">
-		<h2><?php wp_title(''); ?></h2>
+	<div class="blog_content">
 		<?php if ( have_posts() ) : ?>
-
 		        <?php
 		        // Start the loop.
 		        while ( have_posts() ) : the_post(); ?>
 
-		            <div class="archive__single">
+		            <div class="blog_single">
 		                <h3>
 		                    <a href="<?php the_permalink(); ?> ">
 		                    <?php the_title( ); ?>

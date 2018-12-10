@@ -19,7 +19,21 @@
 	// 
 	@include media($bp-med) {
 		// background-image: url(../images/footer_banner_exwide.jpg);
-    }
+	}
+	img {
+		width: auto;
+		height: 70px;
+		position: absolute;
+		top: -58px;
+		right: 0;
+		z-index: 20;
+	}
+}
+
+.contact-heading {
+	border-bottom: 2px solid $black;
+	font-size: 20px;
+	margin-bottom: 0.5rem;
 }
 
 .contact-intro {
@@ -174,13 +188,17 @@
 	border: 0;
 	margin-top: 20px;
 	font-family: $title-font;
+	display: block;
+	background: $copper;
+	color: $white;
+	width: 100%;
 	// 
 	&:hover {
 		background-color: $copper;
 		color: $white;
 	}
 	@include media($bp-med) {
-		float: right;
+		// float: right;
 	}
 }
 
