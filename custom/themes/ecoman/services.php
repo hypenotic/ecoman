@@ -9,10 +9,6 @@
 
 <?php get_template_part( 'template-part-contact-form' ); ?>
 
-<div id="services-cs">
-
-</div>
-
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

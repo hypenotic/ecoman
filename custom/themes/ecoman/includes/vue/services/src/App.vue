@@ -1,16 +1,16 @@
 <template>
-    <div class="services-case-studies" v-if="activeCS != null">
+    <div class="services-case-studies" v-if="cases != null">
         <div class="inner">
             <div class="inner_padding">
                 <div class="inner-content">
                     <div class="cs-nav -flex -flex-jc-sb">
-                        <div class="left-arrow cs-arrow -sans-serif -ls-3" v-if="cases[activeCS].previous != null">
+                        <div class="left-arrow cs-arrow -sans-serif -ls-3" v-if="activeCS.next != null" @click="changeActiveCS(activeCS.next.id)" @keypress.enter="changeActiveCS(activeCS.next.id)" tabindex="0">
                             <span>&lt; previous</span>
                         </div>
                         <div class="left-arrow cs-arrow -sans-serif -ls-3 inactive" v-else>
                             <span>&lt; previous</span>
                         </div>
-                        <div class="right-arrow cs-arrow -sans-serif -ls-3" v-if="cases[activeCS].next != null">
+                        <div class="right-arrow cs-arrow -sans-serif -ls-3" v-if="activeCS.previous != null" @click="changeActiveCS(activeCS.previous.id)" @keypress.enter="changeActiveCS(activeCS.previous.id)" tabindex="0">
                             <span>next &gt;</span>
                         </div>
                         <div class="right-arrow cs-arrow -sans-serif -ls-3 inactive" v-else>
@@ -18,12 +18,14 @@
                         </div>
                     </div>
     
-                    <h3 v-html="cases[activeCS].title.rendered"></h3>
+                    <h3 v-html="activeCS.title.rendered"></h3>
                     
-                    <div class="content" v-html="cases[activeCS].content.rendered"></div>
+                    <div class="content" v-html="activeCS.content.rendered"></div>
     
-                    <div class="cs-nav-dot">
-    
+                    <div class="cs-nav-dots">
+                        <ul>
+                            <li v-for="(c, index) in cases" :key="'dot-'+index" @click="changeActiveCS(c.id)" @keypress.enter="changeActiveCS(c.id)" tabindex="0" :class="{ active: checkActive(c.id) }"></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -42,7 +44,7 @@
         },
         computed:{
             activeCS() {
-                return this.$store.getters['getActiveCS']
+                return this.$store.getters['getActiveCS'][0]
             },
             cases() {
                 return this.$store.getters['getCases']

@@ -15,7 +15,10 @@ export default new Vuex.Store({
             return state.caseStudies
         },
         getActiveCS: state => {
-            return state.activeCS
+            var match = state.caseStudies.filter(obj => {
+                return obj.id === state.activeCS
+              })
+            return match;
         },
     },
     mutations:{
@@ -28,10 +31,12 @@ export default new Vuex.Store({
     },
     actions:{
         apiCaseStudies: ({commit}) => {
-            axios.get('http://ecoman.test/wp-json/wp/v2/case_study?_embed')
+            // axios.get('http://ecoman.test/wp-json/wp/v2/case_study?_embed')
+            axios.get('http://hypelabs.ca/ecoman/wp-json/wp/v2/case_study?_embed')
             .then(function (response) {
-                let idAsKeys = _.mapKeys(response.data, 'id');
-                commit('SET_CASE_STUDIES', idAsKeys);
+                // let idAsKeys = _.mapKeys(response.data, 'id');
+                // commit('SET_CASE_STUDIES', idAsKeys);
+                commit('SET_CASE_STUDIES', response.data);
                 commit('SET_ACTIVE_CS', response.data[0].id);
             })
             .catch(function (error) {

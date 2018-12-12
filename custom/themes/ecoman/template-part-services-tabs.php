@@ -123,29 +123,10 @@
 		</div>
 		<?php } ?> 
 
-		<div class="services-case-studies" id="<?php echo $hash; ?>-case" data-cases="<?php echo $hash; ?>">
-			    
-			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-hash="<?php echo $hash; ?>">
-			        <div class="main-content-case-study">
-			            
-			        </div>
-			        <div class="previous-cs" id="<?php echo $hash; ?>-prev" data-casenum="0">
-			        	<div class="arrow--prev">
-			        		<div class="top"></div>
-			        		<div class="bottom"></div>
-			        	</div>
-			        </div>
-			        <div class="next-cs" id="<?php echo $hash; ?>-next" data-casenum="0">
-			        	<div class="arrow--next">
-			        		<div class="top"></div>
-			        		<div class="bottom"></div>
-			        	</div>
-			        </div>
-			    </div>
+		<div id="services-cs">
 
 		</div>
 		
-
 	</div>
 
 	<?php endwhile; endif; ?>
