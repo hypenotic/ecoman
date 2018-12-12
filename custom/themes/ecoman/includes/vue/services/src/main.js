@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 var app = new Vue({
-    el: '#services-vue',
+    el: '#services-cs',
     //router,
     store,
     render: h => h(App)
