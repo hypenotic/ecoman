@@ -1,0 +1,16 @@
+.vue-tab-list {
+    li {
+        flex: 1 0 auto;
+        padding: 1rem;
+        span {
+            color: white;
+        }
+    }
+}
+
+li.active {
+    background: white;
+    span {
+        color: $black;
+    }
+}

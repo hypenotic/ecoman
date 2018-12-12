@@ -29,16 +29,11 @@ if (is_front_page() || is_page('about') || is_page('services') ) { ?>
 
 <?php if (is_404()) { ?>
 
-    <?php get_template_part( 'template-part-signup' ); ?>
-
-    <header class="main-header inner-nav error-page" style="background-image:url('<?php echo get_template_directory_uri (); ?>/dist/images/404_image.jpg');" alt="404 image - picture of cows">
-        <div class="header__text outer-container">
-            <h2><span class="black-highlight">Looks like the cows got out of the barn...</span></h2>
-            <p><span class="black-highlight">The page you've requested is not available. Try a search? <a href="#contact">Contact</a> us?</span></p>
-            <?php get_search_form(); ?>
-            <a href="/"><button class="error-page__btn copper-btn">
-                    Back to the homepage, please!
-                </button></a>
+    <header class="error-header -flex -flex-ia-c" style="background-image:url('<?php echo get_template_directory_uri (); ?>/dist/images/dustin-scarpitti-1019-unsplash-ecoman-404-compress.jpg');" alt="Forest floor with ferns growing amongst the base of a tree trunk.">
+        <div class="header_text -color-w -flex -flex-jc-c -flex-d-c -serif -p-large">
+           <p class="-text-large">Getting lost in nature is fun.<br/>
+           On the internet, less so.</p>
+           <span class="-sans-serif">Whoops! Looks like the page you're looking for isn't available at the moment.</span>
         </div>
     </header>
 

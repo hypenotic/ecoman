@@ -33,6 +33,10 @@
             a {
                 @extend .-d-b;
                 padding: 1rem 2rem;
+                &:hover {
+                    background: darken(rgb(235, 246, 232), 5);
+                    font-weight: 400;
+                }
                 
             }
         }

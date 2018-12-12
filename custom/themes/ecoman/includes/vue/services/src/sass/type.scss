@@ -1,0 +1,44 @@
+.-uppercase {
+	text-transform: uppercase;
+}
+
+.-lowercase {
+	text-transform: lowercase;
+}
+
+.-italic {
+	font-style: italic;
+}
+
+.-serif {
+	font-family: $serif-font;
+}
+
+.-sans-serif {
+	font-family: $sans-serif-font;
+}
+
+.-fc-accent {
+	color: $copper;
+} 
+
+.-text-white {
+    color: $white;
+}
+
+.-text-large {
+	font-size: 45px;
+	line-height: 1.3;
+}
+
+.-text-medium {
+	font-size: 28px;
+}
+
+.-text-small {
+	font-size: 14px;
+}
+
+.-td-none {
+    text-decoration: none;
+}

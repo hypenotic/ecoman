@@ -28,3 +28,10 @@
 		}
 	}
 }
+
+.error-header {
+	min-height: 80vh;
+	@include media($bp-xlarge) {
+		min-height: 70vh;
+	}
+}

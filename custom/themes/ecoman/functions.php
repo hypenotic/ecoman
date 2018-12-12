@@ -83,4 +83,89 @@ function remove_cssjs_ver( $src ) {
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 
+// Modify API Response
+
+// Service Pockets
+add_action( 'rest_api_init', 'register_buckets' );
+function register_buckets() {
+    register_rest_field( 'service',
+        '_pockets',
+        array(
+            'get_callback'    => 'get_buckets',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_buckets( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+// Service Testimonial
+add_action( 'rest_api_init', 'register_service_testimonials' );
+function register_service_testimonials() {
+    register_rest_field( 'service',
+        '_test_select',
+        array(
+            'get_callback'    => 'get_service_testimonials',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_service_testimonials( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+// Testimonials
+add_action( 'rest_api_init', 'register_test_quote' );
+function register_test_quote() {
+    register_rest_field( 'testimonial',
+        '_single_quotation',
+        array(
+            'get_callback'    => 'get_test_quote',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_test_quote( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+add_action( 'rest_api_init', 'register_test_src' );
+function register_test_src() {
+    register_rest_field( 'testimonial',
+        '_single_source',
+        array(
+            'get_callback'    => 'get_test_src',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_test_src( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+add_action( 'rest_api_init', 'register_test_srctitle' );
+function register_test_srctitle() {
+    register_rest_field( 'testimonial',
+        '_single_title',
+        array(
+            'get_callback'    => 'get_test_srctitle',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_test_srctitle( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
 ?>

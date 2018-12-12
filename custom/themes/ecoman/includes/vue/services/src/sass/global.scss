@@ -1,10 +1,14 @@
+body {
+    margin: 0;
+}
+
 // Container
 .container {
-    @include media($bp-large) {
+    @include media(">large") {
         max-width: 960px;
         margin: 0 auto;
     }
-    @include media($bp-xlarge) {
+    @include media(">xlarge") {
 		max-width: 1024px;
         margin: 0 auto;
     }
@@ -97,7 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     .-flex-half {
-        @include media($bp-large) {
+        @include media(">large") {
             width: 48%;
             img {
                 max-width: 100%;
@@ -106,12 +110,12 @@
         }
     }
     .-flex-third {
-        @include media($bp-large) {
+        @include media(">large") {
             width: 30%;
         }
     }
     .-flex-quarter {
-        @include media($bp-large) {
+        @include media(">large") {
             width: 23%;
         }
     }
@@ -165,6 +169,11 @@
     background-color: $green;
 }
 
-// Opacity
+// Hover
+.-hover-pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 

@@ -1,6 +1,6 @@
 <section id="responsive-tabs" class="tabs boxes grey-background">
 	<ul class="responsive-tabs__list">
-	<div class="">
+	<div class="outer-container">
 		<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC') );
 		
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -21,7 +21,7 @@
 			        <a href="#<?php echo $hash; ?>">
 			        	<div class="tab-icon" style="background-image:url(<?php echo $iconurl[0]; ?>);">
 			        	</div>
-			        	<span class="-ls-3"><?php the_title(); ?></span>
+			        	<span><?php the_title(); ?></span>
 			        </a>
 			    </li>     
 		
@@ -125,6 +125,23 @@
 
 		<div class="services-case-studies" id="<?php echo $hash; ?>-case" data-cases="<?php echo $hash; ?>">
 			    
+			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-hash="<?php echo $hash; ?>">
+			        <div class="main-content-case-study">
+			            
+			        </div>
+			        <div class="previous-cs" id="<?php echo $hash; ?>-prev" data-casenum="0">
+			        	<div class="arrow--prev">
+			        		<div class="top"></div>
+			        		<div class="bottom"></div>
+			        	</div>
+			        </div>
+			        <div class="next-cs" id="<?php echo $hash; ?>-next" data-casenum="0">
+			        	<div class="arrow--next">
+			        		<div class="top"></div>
+			        		<div class="bottom"></div>
+			        	</div>
+			        </div>
+			    </div>
 
 		</div>
 		
