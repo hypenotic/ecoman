@@ -114,12 +114,12 @@ div.grey-background {
             	height: 2rem;
             	// 
             	background-size:contain;
-            	background-color: $grey;
+            	// background-color: $grey;
         	    background-blend-mode: multiply;
         	    background-repeat: no-repeat;
         	    background-position: center center;
 				display: inline-block;
-				margin-right: 0.5rem;
+				margin-right: 1rem;
             }
 		}
 		&:hover {
@@ -267,5 +267,13 @@ div.grey-background {
 		.next-cs {
 			left: 710px;
 		}
+	}
+}
+
+// VUE
+.services-case-studies {
+	.inner-content img {
+		max-width: 100% !important;
+		height: auto !important;
 	}
 }

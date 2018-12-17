@@ -61,7 +61,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 			<img src="<?php echo $teamImageURL;?>" alt="<?php echo $teamImageAlt;?>">
 			</div>
 			<div class="-flex-half">
-				<h3 class="-uppercase -ls-3 -color-w">The Team</h3>
+				<h3 class="-uppercase -ls-3 -color-w" style="margin-bottom: 2rem;">The Team</h3>
 				<div class="-flex -flex-jc-sb">
 				<?php get_template_part( 'template-part-about-team' ); ?>
 				</div>

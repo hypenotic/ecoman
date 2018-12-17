@@ -13,7 +13,6 @@
                 <div class="bottom"></div>
             </div></a>
     		<p class="table-of-contents"><a href="/resources"> TABLE OF CONTENTS</a></p>
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/acorn.png" alt="">
     	</div>
     	<h1 class="blog-title"><?php the_title(); ?></h1>
     	<div class="blog-meta">
@@ -24,18 +23,18 @@
 
 
     <div class="main-content--narrow blog">
-        <?php if ($pullquote) { ?>
-        <div class="single-blog-pullquote">
-            <?php get_template_part( 'template-part-social' ); ?>
-            <blockquote><?php echo $pullquote; ?></blockquote>
-        </div>
-        <?php } ?>
+        <?php //if ($pullquote) { ?>
+        <!-- <div class="single-blog-pullquote">
+            <?php //get_template_part( 'template-part-social' ); ?>
+            <blockquote><?php //echo $pullquote; ?></blockquote>
+        </div> -->
+        <?php //} ?>
 
-        <div class="blog-entry">
+        <div class="blog-entry -serif">
             <?php the_content(); ?>
         </div>
         
-            <div class="prev-next-link">
+        <div class="prev-next-link -flex -flex-jc-sb" style="margin: 2rem 0;">
         
             <?php
             $prev_post = get_previous_post();
@@ -48,22 +47,22 @@
                 </a>
             <?php endif; ?>
 
-            <div class="comments__text">
+            <!-- <div class="comments__text">
                 <p>Thanks for reading!</p>
                 <p>What'd ya think?</p>
-                <p id="see-comments"><?php comments_number(); ?> </p>
-            </div>
+                <p id="see-comments"><?php //comments_number(); ?> </p>
+            </div> -->
 
-            <?php
-            $next_post = get_next_post();
-            if (!empty( $next_post )): ?>
-                <a class="project-nav__arrow" href="<?php echo get_permalink( $next_post->ID ); ?>">
-                <div class="project-nav__arrow--next">
-                    <div class="top"></div>
-                    <div class="bottom"></div>
-                </div>
-                </a>
-            <?php endif; ?>        
+                <?php
+                $next_post = get_next_post();
+                if (!empty( $next_post )): ?>
+                    <a class="project-nav__arrow" href="<?php echo get_permalink( $next_post->ID ); ?>">
+                    <div class="project-nav__arrow--next">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                    </a>
+                <?php endif; ?>   
         </div>
         <?php comments_template(); ?> 
     </div>

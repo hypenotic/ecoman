@@ -1,6 +1,6 @@
 <section id="responsive-tabs" class="tabs boxes grey-background">
 	<ul class="responsive-tabs__list">
-	<div class="outer-container">
+	<div class="tab-container">
 		<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC') );
 		
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -12,14 +12,21 @@
 					$lowercase = strtolower($prehash);
 					$hash = $lowercase;
 
-					$icon     = get_post_meta( $post->ID, '_icon_image', true );
-					$iconurl  = wp_get_attachment_image_src( $icon,'icon', true );
+					$iconWhite = get_post_meta($post->ID,'_em_service_icon_file',true);
+					$iconWhiteURL = wp_get_attachment_url( $iconWhite );
+					$iconWhiteAlt = get_post_meta( $iconWhite, '_wp_attachment_image_alt', true);
+
+					$iconBlack = get_post_meta($post->ID,'_em_service_icon_file_b',true);
+					$iconBlackURL = wp_get_attachment_url( $iconBlack );
+					$iconBlackAlt = get_post_meta( $iconBlack, '_wp_attachment_image_alt', true);
 		
 				?>
 		
 			    <li>
 			        <a href="#<?php echo $hash; ?>">
-			        	<div class="tab-icon" style="background-image:url(<?php echo $iconurl[0]; ?>);">
+			        	<div class="tab-icon">
+							<img class="white-icon" src="<?php echo $iconWhiteURL; ?>" alt="">
+							<!-- <img class="black-icon" src="<?php //echo $iconBlackURL; ?>" alt=""> -->
 			        	</div>
 			        	<span><?php the_title(); ?></span>
 			        </a>
@@ -122,16 +129,16 @@
 			<?php get_template_part( 'template-part-testimonial' ); ?> 
 		</div>
 		<?php } ?> 
-
-		<div id="services-cs">
-
-		</div>
 		
 	</div>
 
 	<?php endwhile; endif; ?>
 
 </section>
+
+<div id="services-cs">
+
+</div>
 
 	
 

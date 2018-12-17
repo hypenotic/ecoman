@@ -113,7 +113,8 @@
 .contact-form__right {
 	margin-top: 20px;
     @include media($bp-med) {
-		@include flex(0 0 50%);
+		@include flex(0 0 75%);
+		// width: 70%;
 		margin: 0;
     }
     @include media($bp-large) {

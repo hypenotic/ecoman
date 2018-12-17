@@ -6,7 +6,7 @@
 			$theID = get_the_ID();
 		?>			
 
-		<div class="-flex-half">
+		<div class="-flex-half team-single">
 			<h4><?php the_title(); ?></h4>
 			<div><?php the_content(); ?></div>    
 		</div>     

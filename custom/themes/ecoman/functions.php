@@ -7,10 +7,12 @@ include('includes/wp-cuztom-posts/custom-service.php');
 include('includes/wp-cuztom-posts/custom-case-study.php');
 include('includes/wp-cuztom-posts/custom-testimonials.php');
 include('includes/wp-cuztom-posts/custom-team.php');
-include('includes/wp-cuztom-posts/custom-critters.php');
+// include('includes/wp-cuztom-posts/custom-critters.php');
 
 // MetaBox
 include('includes/meta-box/mb-page.php');
+include('includes/meta-box/mb-services.php');
+include('includes/meta-box/mb-testimonials.php');
 
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
@@ -49,8 +51,13 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
+// Enable support for SVG files
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
-// Comments
 
 // Read More
 

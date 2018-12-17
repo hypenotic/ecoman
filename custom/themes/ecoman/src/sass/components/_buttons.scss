@@ -4,8 +4,11 @@ button {
 }
 
 .btn {
-	padding: 0.8rem 4rem;
+	padding: 0.8rem 1rem;
 	display: inline-block;
+	@include media($bp-large) {
+		padding: 0.8rem 4rem;
+	}
 	&.-bg-accent,
 	&.-bg-green {
 		color: white;

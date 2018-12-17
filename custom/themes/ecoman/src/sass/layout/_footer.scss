@@ -15,6 +15,15 @@ footer {
 }
 
 .contact {
+	.outer-container {
+		margin: 0 auto;
+		@include media($bp-med) {
+			width: 800px;
+		}
+		@include media($bp-xlarge) {
+			width: 1024px;
+		}
+	}
 	.contact__blurb a {
 		color: $white;
 		border-bottom: 1px solid $white;
