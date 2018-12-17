@@ -9,7 +9,7 @@ function my_styles() {
  	wp_enqueue_style( 'flickity' );
  	wp_register_style('awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
  	wp_enqueue_style( 'awesome' );
-	wp_register_style('style', get_template_directory_uri() . '/dist/css/style.css?v=181217-49whc93hc92j9');
+	wp_register_style('style', get_template_directory_uri() . '/dist/css/style.css?v=181217-549fj3939f9');
  	wp_enqueue_style( 'style' );
 }
 

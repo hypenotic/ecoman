@@ -107,7 +107,7 @@ div.grey-background {
 			// 
 			@include flexboxcenter; 
 			&:hover {
-				background: $d-grey;
+				background: lighten($green, 5);
             }
             .tab-icon {
             	width: 2rem;
@@ -124,7 +124,7 @@ div.grey-background {
 		}
 		&:hover {
     		.tab-icon {
-        	background-color: $d-grey;
+        	background-color: $green;
         	}
     	}
 		&.r-tabs-state-active { 

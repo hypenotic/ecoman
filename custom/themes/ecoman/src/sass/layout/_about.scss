@@ -1,14 +1,28 @@
 .about-refs {
+	h3 {
+		margin-bottom: 2rem;
+	}
 	img {
 		width: 100%;
 		height: 200px;
 		object-fit: cover;
 	}
+	p {
+		font-size: 1rem;
+		line-height: 1.3;
+	}
 }
 
 .about-team {
+	.team-single {
+		margin-bottom: 1rem;
+		@include media($bp-med) {
+			width: 45%;
+		}
+	}
 	.team-single p {
 		font-size: 1.1rem;
 		line-height: 1.3;
 	}
+	padding-bottom: 150px;
 }
