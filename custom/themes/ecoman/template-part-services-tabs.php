@@ -26,7 +26,7 @@
 			        <a href="#<?php echo $hash; ?>">
 			        	<div class="tab-icon">
 							<img class="white-icon" src="<?php echo $iconWhiteURL; ?>" alt="">
-							<!-- <img class="black-icon" src="<?php //echo $iconBlackURL; ?>" alt=""> -->
+							<img class="black-icon" src="<?php echo $iconBlackURL; ?>" alt="">
 			        	</div>
 			        	<span><?php the_title(); ?></span>
 			        </a>

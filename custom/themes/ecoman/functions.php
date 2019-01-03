@@ -13,6 +13,7 @@ include('includes/wp-cuztom-posts/custom-team.php');
 include('includes/meta-box/mb-page.php');
 include('includes/meta-box/mb-services.php');
 include('includes/meta-box/mb-testimonials.php');
+include('includes/meta-box/mb-case-study.php');
 
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');

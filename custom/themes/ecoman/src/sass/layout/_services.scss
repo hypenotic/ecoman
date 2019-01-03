@@ -197,8 +197,18 @@ div.grey-background {
 	}
 }
 
+.black-icon {
+	display: none;
+}
+
 .r-tabs-tab.r-tabs-state-active {
-    display: block;
+	display: block;
+	.white-icon {
+		display: none;
+	}
+	.black-icon {
+		display: block;
+	}
 }
 /* Accordion responsive breakpoint */
 @media only screen and (max-width: 768px) {
