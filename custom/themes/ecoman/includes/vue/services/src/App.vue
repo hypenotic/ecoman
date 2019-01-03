@@ -1,7 +1,7 @@
 <template>
     <div class="services-case-studies" v-if="cases != null">
         <div class="inner">
-            <div class="inner_padding">
+            <div class="inner_padding" :style="'background-image: url('+activeCS.meta_box._em_cs_bg_image+');background-size: cover;'">
                 <div class="inner-content">
                     <div class="cs-nav -flex -flex-jc-sb">
                         <div class="left-arrow cs-arrow -sans-serif -ls-3" v-if="activeCS.next != null" @click="changeActiveCS(activeCS.next.id)" @keypress.enter="changeActiveCS(activeCS.next.id)" tabindex="0">
