@@ -4,32 +4,28 @@ div.grey-background {
 
 .tabs-panel-intro {
 		padding-top: 40px;
+
 		// 
 	    @include media($bp-med) {
-			@include flexalignstart;
+			display: flex;
+			justify-content: space-between;
 	    }
 	    @include media($bp-ls-small) {
 	    	padding: 30px;
 	    }
 	.tabs-panel__left {
-		@include flex(0 0 30%);
+		@include flex(0 0 48%);
 	    @include media($bp-small) {
 			text-align: center;
 	    }
 		img {
-			border: 10px solid $l-grey;
-			width: 100px;
+			// border: 10px solid $l-grey;
+			width: 100%;
 			height: auto;
-		    @include media($bp-med) {
-				width: 200px;
-		    }
-		    @include media($bp-ls-small) {
-		    	width: 120px;
-		    }
 		}
 	}
 	.tabs-panel__right {
-		@include flex(0 0 70%);
+		@include flex(0 0 48%);
 		@include display(flex);
 		@include flex-direction(column);
 	}
