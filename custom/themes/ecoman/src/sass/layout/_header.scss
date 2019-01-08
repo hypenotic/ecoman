@@ -1,8 +1,15 @@
 .header {
-	min-height: 80vh;
+	min-height: 90vh;
 	background-color: lightgrey;
 	background-size: cover;
 	background-position: center center;
+	@include media($bp-small) {
+		padding-top: 80px;
+	}
+	@include media($bp-large) {
+		min-height: 80vh;
+		padding-top: 0px;
+	}
 }
 
 .header .header_text {
