@@ -26,7 +26,7 @@ $highlightLinkLabel = get_post_meta($post->ID,'_em_highlight_link_label',true);
 $highlightImageLink = get_post_meta($post->ID,'_em_highlight_image_link',true);
 
 $highlightImage = get_post_meta($post->ID,'_em_highlight_image',true);
-$highlightImageURL = wp_get_attachment_url( $teamImage );
+$highlightImageURL = wp_get_attachment_url( $highlightImage );
 $highlightImageAlt = get_post_meta( $teamImage, '_wp_attachment_image_alt', true);
 ?>
 
