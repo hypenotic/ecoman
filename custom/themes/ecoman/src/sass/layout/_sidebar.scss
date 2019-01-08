@@ -1,5 +1,8 @@
 aside {
-    padding-bottom: 4rem;
+    display: none;
+    @include media($bp-large) {
+		display: block;
+	}
     .sidebar_social {
         li {
             // width: 30px;

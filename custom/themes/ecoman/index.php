@@ -1,5 +1,5 @@
 <?php get_header(); ?>	
-<div class="blog_wrapper">
+<div class="blog_wrapper container">
 	<img src="<?php echo get_template_directory_uri(); ?>/src/images/froggy.png" alt="Black and white illustration of a frog." class="-pos-a">
 	<?php get_sidebar(); ?>
 	<div class="blog_content">
