@@ -24,5 +24,27 @@
 		font-size: 1.1rem;
 		line-height: 1.3;
 	}
-	padding-bottom: 150px;
+}
+
+.about-cs {
+	h4 {
+		padding-bottom: 10vw;
+	}
+}
+
+.about-highlight {
+	background-repeat: no-repeat;
+	background-size: 40vw auto;
+	background-position: bottom right;
+	.btn {
+		bottom: 0;
+		right: 0;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	span {
+		font-size: 0.9rem;
+	}
 }

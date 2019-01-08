@@ -13,6 +13,7 @@
 	padding: 30px;
 	@include media($bp-med) {
 		padding: 80px 0;
+		padding-bottom: 10vw;
     }
     @include media($bp-ls-small) {
     	min-height: 480px;

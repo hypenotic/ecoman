@@ -78,6 +78,45 @@ function em_register_default( $meta_boxes ) {
             )
         ),
     );
+    $meta_boxes[] = array(
+        'title'      => __( 'Highlight Section', 'textdomain' ),
+        'post_types' => array( 'page'),
+        'include' => array(
+            'template'  => array( 'about.php' )
+        ),
+        'fields' => array(
+            array(
+                'id'   => $prefix . 'highlight_heading',
+                'name' => __( 'Highlight Heading', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+                'id'   => $prefix . 'highlight_text',
+                'name' => __( 'Highlight Content', 'textdomain' ),
+                'type' => 'wysiwyg',
+             ),
+            array(
+                'id'   => $prefix . 'highlight_image',
+                'name' => __( 'Highlight Image', 'textdomain' ),
+                'type' => 'image_advanced',
+            ),
+            array(
+                'id'   => $prefix . 'highlight_caption',
+                'name' => __( 'Highlight Caption', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+                'id'   => $prefix . 'highlight_image_link',
+                'name' => __( 'Highlight Image Link', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+                'id'   => $prefix . 'highlight_link',
+                'name' => __( 'Highlight Link', 'textdomain' ),
+                'type' => 'text',
+            )
+        ),
+    );
     return $meta_boxes;
 }
 ?>

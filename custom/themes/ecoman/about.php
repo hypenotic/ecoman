@@ -16,6 +16,17 @@ $teamImageAlt = get_post_meta( $teamImage, '_wp_attachment_image_alt', true);
 $ctatitle 	= get_post_meta($post->ID,'_cta_heading',true);
 $ctabtn 		= get_post_meta($post->ID,'_cta_btext',true);
 $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
+
+// Highlight
+$highlightHeading = get_post_meta($post->ID,'_em_highlight_heading',true);
+$highlightContent = get_post_meta($post->ID,'_em_highlight_text',true);
+$highlightImageCap = get_post_meta($post->ID,'_em_highlight_caption',true);
+$highlightLink = get_post_meta($post->ID,'_em_highlight_link',true);
+$highlightImageLink = get_post_meta($post->ID,'_em_highlight_image_link',true);
+
+$highlightImage = get_post_meta($post->ID,'_em_highlight_image',true);
+$highlightImageURL = wp_get_attachment_url( $teamImage );
+$highlightImageAlt = get_post_meta( $teamImage, '_wp_attachment_image_alt', true);
 ?>
 
 <?php get_header(); ?>	
@@ -54,6 +65,34 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	</div>
 </section>
 
+<section class="about-cs -pt2">
+	<h4 class="-uppercase -ls-3 -ta-center">Every project starts with a nature reference</h4>
+	
+	<div id="services-cs">
+	
+	</div>
+</section>
+
+<section class="about-highlight -pos-r -ptb-default" style="background-image: url(<?php echo get_template_directory_uri(); ?>/src/images/accent_1.jpg);">
+    <div class="container">
+        <div class="container_inner -flex -flex-jc-sb">
+            <div class="-flex-half">
+				<?php  if ($highlightImageLink && $highlightImageLink != '')  { ?>
+				<a href="<?php echo $highlightImageLink;?>" target="_blank"><img src="<?php echo $highlightImageURL;?>" alt="<?php echo $highlightImageAlt;?>"></a>
+				<?php } else { ?>
+				<img src="<?php echo $highlightImageURL;?>" alt="<?php echo $highlightImageAlt;?>">
+				<?php } ?>
+				<span class="-uppercase"><?php echo $highlightImageCap;?></span>
+            </div>
+            <div class="-flex-half -flex -flex-jc-c -flex-d-c">
+				<h4><?php echo $highlightHeading;?></h4>
+				<div><?php echo $highlightContent;?></div>
+            </div>
+        </div>
+	</div>
+    <a href="<?php echo $highlightLink ?>" class="btn -bg-green -pos-a">Read up on our Alvar</a>
+</section>
+
 <section class="about-team -bg-dgrey -color-w -ptb-default">
 	<div class="container">
 		<div class="inner -flex -flex-jc-sb">
@@ -70,9 +109,7 @@ $ctalink 		= get_post_meta($post->ID,'_cta_blink',true);
 	</div>
 </section>
 
-<div id="services-cs">
 
-</div>
 
 <?php endwhile; endif; ?>
 
