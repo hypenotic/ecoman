@@ -25,7 +25,7 @@
     </div>
 </nav>
 
-<button id="nav-trigger" class="hamburger hamburger--collapse" type="button">
+<button id="nav-trigger" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
