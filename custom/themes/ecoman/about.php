@@ -22,6 +22,7 @@ $highlightHeading = get_post_meta($post->ID,'_em_highlight_heading',true);
 $highlightContent = get_post_meta($post->ID,'_em_highlight_text',true);
 $highlightImageCap = get_post_meta($post->ID,'_em_highlight_caption',true);
 $highlightLink = get_post_meta($post->ID,'_em_highlight_link',true);
+$highlightLinkLabel = get_post_meta($post->ID,'_em_highlight_link_label',true);
 $highlightImageLink = get_post_meta($post->ID,'_em_highlight_image_link',true);
 
 $highlightImage = get_post_meta($post->ID,'_em_highlight_image',true);
@@ -90,7 +91,7 @@ $highlightImageAlt = get_post_meta( $teamImage, '_wp_attachment_image_alt', true
             </div>
         </div>
 	</div>
-    <a href="<?php echo $highlightLink ?>" class="btn -bg-green -pos-a">Read up on our Alvar</a>
+    <a href="<?php echo $highlightLink ?>" class="btn -bg-green -pos-a"><?php echo $highlightLinkLabel ?></a>
 </section>
 
 <section class="about-team -bg-dgrey -color-w -ptb-default">

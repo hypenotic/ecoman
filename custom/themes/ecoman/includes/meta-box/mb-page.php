@@ -114,6 +114,11 @@ function em_register_default( $meta_boxes ) {
                 'id'   => $prefix . 'highlight_link',
                 'name' => __( 'Highlight Link', 'textdomain' ),
                 'type' => 'text',
+            ),
+            array(
+                'id'   => $prefix . 'highlight_link_label',
+                'name' => __( 'Highlight Button Label', 'textdomain' ),
+                'type' => 'text',
             )
         ),
     );
