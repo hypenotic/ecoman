@@ -10,15 +10,15 @@
 	</ul>
 	
 
-	<span class="-serif -italic -pt1 -d-b">Keywords</span>
+	<!-- <span class="-serif -italic -pt1 -d-b">Keywords</span>
 	<ul class="-lst-none -m0 -p0 -ptb1">
 	<?php
-	$terms = get_terms('post_tag',array('hide_empty'=>true));
-	foreach($terms as $t) {
-		echo "<li class='-flex -flex-jc-sb'><a href=\"".$t->name."\">".$t->name."</a><a href=\"".$t->name."\">$t->count</a></li>";
-	}
+	//$terms = get_terms('post_tag',array('hide_empty'=>true));
+	//foreach($terms as $t) {
+	//	echo "<li class='-flex -flex-jc-sb'><a href=\"".$t->name."\">".$t->name."</a><a href=\"".$t->name."\">$t->count</a></li>";
+	//}
 	?>
-	</ul>
+	</ul> -->
 
 	<span class="-serif -italic -pt1 -d-b">Social Feeds</span>
 	<ul class="-lst-none -m0 -p0 -ptb1 -flex sidebar_social">
