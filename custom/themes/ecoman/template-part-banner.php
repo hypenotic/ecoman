@@ -27,6 +27,22 @@ if (is_front_page() || is_page('about') || is_page('services') ) { ?>
     </header>
 <?php } ?>
 
+<?php if (is_page() && !is_page('resources') && !is_page('about') && !is_page('services') ) { ?>
+    <header class="header -flex -flex-ia-c" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo $bannerurl ;} ?>);" id="scrollheader">
+        <div class="header_text -flex -flex-ai-c <?php if (!is_front_page()) { echo '-bg-blue-t'; } ?>">
+            <div>
+                <h1 class="-m0 -uppercase -italic -fc-accent <?php if (is_page('about')) { echo '-small'; } ?>"><?php echo $heading; ?></h1>
+                <?php if ($subheading) { ?>
+                    <p><?php echo $subheading; ?></p>
+                <?php } ?>
+                <?php if ($cta && $cta != '') { ?>
+                    <a href="<?php echo $ctaLink;?>" class="btn -bg-accent"><?php echo $cta;?></a>
+                <?php } ?>
+            </div>
+        </div>
+    </header>
+<?php } ?>
+
 <?php if (is_404()) { ?>
 
     <header class="error-header -flex -flex-ia-c" style="background-image:url('<?php echo get_template_directory_uri (); ?>/dist/images/dustin-scarpitti-1019-unsplash-ecoman-404-compress.jpg');" alt="Forest floor with ferns growing amongst the base of a tree trunk.">
