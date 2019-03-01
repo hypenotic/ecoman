@@ -27,7 +27,7 @@ if (is_front_page() || is_page('about') || is_page('services') ) { ?>
     </header>
 <?php } ?>
 
-<?php if (is_page() && !is_page('resources') && !is_page('about') && !is_page('services') ) { ?>
+<?php if (is_page() && !is_front_page() && !is_page('resources') && !is_page('about') && !is_page('services') ) { ?>
     <header class="header -flex -flex-ia-c" style="background-image: url(<?php if ($thumbnail) { ?><?php echo $thumbnail[0]; ?><?php } else { echo $bannerurl ;} ?>);" id="scrollheader">
         <div class="header_text -flex -flex-ai-c <?php if (!is_front_page()) { echo '-bg-blue-t'; } ?>">
             <div>
