@@ -12,7 +12,7 @@
         <a class="-flex -flex-ai-c" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/images/ecoman_logo_icon_black.png" alt="Ecoman logo of a hand picking up a palnt from the ground.">
         </a>
-        <span class="-serif - uppercase -italic">ECOMAN<span class="text-disappear"> <a href="tel:+4165565516">416.556.5516</a></span></span>
+        <span class="-serif - uppercase -italic">ECOMAN<span class="text-disappear"> <a href="tel:+14165355565">416.535.5565</a></span></span>
     </div>
     <div class="nav_right -flex -flex-ai-c">
         <?php 

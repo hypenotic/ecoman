@@ -12,7 +12,7 @@
 					</div>
 					<div class="contact__blurb">
 						<p><a onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a><br/>
-						<a href="tel:4165565516">416.556.5516</a></p>
+						<a href="tel:+14165355565">416.535.5565</a></p>
 					</div>
 					<div class="contact__social">
 						<ul class="social-share">
