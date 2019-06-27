@@ -6,9 +6,9 @@
 					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats">
 						<p>Jonas Spring,Ecoman</p>
-						<p>44 Shanly Street,<br/>
+						<p>11 Watkinson Ave,<br/>
 						Toronto, ON<br/>
-						M6H 1S3</p>
+						M6P 2E6</p>
 					</div>
 					<div class="contact__blurb">
 						<p><a onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a><br/>
