@@ -7,7 +7,13 @@ include('includes/wp-cuztom-posts/custom-service.php');
 include('includes/wp-cuztom-posts/custom-case-study.php');
 include('includes/wp-cuztom-posts/custom-testimonials.php');
 include('includes/wp-cuztom-posts/custom-team.php');
-include('includes/wp-cuztom-posts/custom-critters.php');
+// include('includes/wp-cuztom-posts/custom-critters.php');
+
+// MetaBox
+include('includes/meta-box/mb-page.php');
+include('includes/meta-box/mb-services.php');
+include('includes/meta-box/mb-testimonials.php');
+include('includes/meta-box/mb-case-study.php');
 
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
@@ -46,8 +52,13 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
+// Enable support for SVG files
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
-// Comments
 
 // Read More
 
@@ -79,5 +90,18 @@ function remove_cssjs_ver( $src ) {
 }
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+// Add Next/Prev props to  API response
+// add_filter( 'rest_prepare_case_study', function( $response, $post, $request ) {
+// 	global $post;
+// 	// Get the so-called next post.
+// 	$next = get_adjacent_post( false, '', false );
+// 	// Get the so-called previous post.
+// 	$previous = get_adjacent_post( false, '', true );
+// 	// Format them a bit and only send id and slug (or null, if there is no next/previous post).
+// 	$response->data['next'] = ( is_a( $next, 'WP_Post') ) ? array( "id" => $next->ID, "slug" => $next->post_name ) : null;
+// 	$response->data['previous'] = ( is_a( $previous, 'WP_Post') ) ? array( "id" => $previous->ID, "slug" => $previous->post_name ) : null;
+// 	return $response;
+// }, 10, 3 );
 
 ?>

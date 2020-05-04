@@ -3,85 +3,32 @@ button {
 
 }
 
-.large-btn.center-margin {
-	margin: 0 auto;
-	margin-top: 40px;
-}
-
-.copper-btn.large-btn {
-	font-family: $title-font;
-	font-style: italic;
-	letter-spacing: 1px;
-}
-
 .btn {
-	&:hover {
-		cursor: pointer;
+	padding: 0.8rem 1rem;
+	display: inline-block;
+	@include media($bp-large) {
+		padding: 0.8rem 4rem;
 	}
-}
-
-.large-btn {
-	padding: 10px 20px;
-	font-size: modular-scale(0,1rem);
-	margin-top: 15px;
-	@include media($bp-med) {
-		padding: 20px 50px;
-		font-size: modular-scale(0);
-    }
-    @include media($bp-ls-small) {
-    	padding: 10px 20px;
-    	font-size: modular-scale(0,1rem);
-    	margin-top: 15px;
-    }
-}
-
-.grey-btn {
-	background-color: $l-grey;
-	&:hover {
-		background-color: $copper;
-		color: $white;
+	&.-bg-accent,
+	&.-bg-green {
+		color: white;
+		letter-spacing: 3px;
 	}
-}
-
-.white-btn {
-	background-color: $white;
-	&:hover {
-		background-color: $copper;
-		color: $white;
-		cursor: pointer;
-		a {
-			color: $white;
+	&.-bg-accent {
+		&:hover {
+			background-color: darken($copper, 5);
 		}
 	}
-}
-
-.copper-btn {
-	background-color: $copper;
-	color: $white;
-	&:hover {
-		background-color: $l-grey;
-		color: $copper;
-		cursor: pointer;
-		a {
-			color: $white;
+	&.-bg-green {
+		&:hover {
+			background-color: darken($green, 5);
 		}
 	}
-}
-
-.copper-btn.white-hover {
-	font-family: $title-font;
-	font-style: italic;
-	letter-spacing: 1px;
-	&:hover {
-		background-color: $white;
+	&.-circle {
+		border-radius: 50%;
 	}
 }
 
-.error-page__btn {
-	padding: 20px 60px;
-	border: 0;
-	margin-top: 10px;
-}
 
 // PREV/NEXT BUTTTONS
 

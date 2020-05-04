@@ -10,6 +10,10 @@
 	@include justify-content(center);
 }
 
+@mixin margin($values) {
+	margin: $values;
+}
+
 // ISOTOPE
 @mixin feed-ribbon() {
 	background:url(dist/images/feed-ribbons.png) no-repeat;

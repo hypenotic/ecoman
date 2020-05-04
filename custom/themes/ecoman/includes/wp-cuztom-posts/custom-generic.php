@@ -11,54 +11,6 @@ function remove_meta_boxes() {
 }
 add_action( 'admin_menu' , 'remove_meta_boxes' );
 $pages = new Cuztom_Post_Type('page');
-$pages->add_meta_box(
-    'banner',
-    'Hero Banner', 
-    array(
-        array(
-            'name'          => 'image',
-            'label'         => 'Banner Image',
-            'description'   => 'Dimensions 1200px x 800px',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'theme',
-            'label'         => 'Dark or Light Text',
-            'description'   => '',
-            'type'          => 'select',
-            'options'       => array(
-                'value1'    => 'Dark',
-                'value2'    => 'Light'
-            ),
-            'default_value' => 'value1'
-        ),
-        array(
-            'name'          => 'logo',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'heading',
-            'label'         => 'Main Heading',
-            'description'   => '',
-            'type'          => 'text',
-            
-        ),
-        array(
-            'name'          => 'subheading',
-            'label'         => 'Subheading',
-            'description'   => '',
-            'type'          => 'text'  
-        ),
-        array(
-            'name'          => 'blurb',
-            'label'         => 'Header Blurb',
-            'description'   => '',
-            'type'          => 'wysiwyg'  
-        )
-    )
-);
 
 $pages->add_meta_box(
     'test',
@@ -98,31 +50,6 @@ $pages->add_meta_box(
             'label'         => 'Button Text',
             'description'   => '',
             'type'          => 'text',
-        )
-    )
-);
-
-$pages->add_meta_box(
-    'tabs',
-    'Tab Images', 
-    array(
-        array(
-            'name'          => 'tabone',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'tabtwo',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
-        ),
-        array(
-            'name'          => 'tabthree',
-            'label'         => 'Logo/Icon',
-            'description'   => '',
-            'type'          => 'image',
         )
     )
 );

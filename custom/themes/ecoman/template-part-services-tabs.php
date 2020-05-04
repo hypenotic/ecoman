@@ -1,6 +1,6 @@
 <section id="responsive-tabs" class="tabs boxes grey-background">
 	<ul class="responsive-tabs__list">
-	<div class="outer-container">
+	<div class="tab-container">
 		<?php $query = new WP_Query( array( 'post_type' => 'service', 'order'   => 'ASC') );
 		
 			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -12,14 +12,21 @@
 					$lowercase = strtolower($prehash);
 					$hash = $lowercase;
 
-					$icon     = get_post_meta( $post->ID, '_icon_image', true );
-					$iconurl  = wp_get_attachment_image_src( $icon,'icon', true );
+					$iconWhite = get_post_meta($post->ID,'_em_service_icon_file',true);
+					$iconWhiteURL = wp_get_attachment_url( $iconWhite );
+					$iconWhiteAlt = get_post_meta( $iconWhite, '_wp_attachment_image_alt', true);
+
+					$iconBlack = get_post_meta($post->ID,'_em_service_icon_file_b',true);
+					$iconBlackURL = wp_get_attachment_url( $iconBlack );
+					$iconBlackAlt = get_post_meta( $iconBlack, '_wp_attachment_image_alt', true);
 		
 				?>
 		
 			    <li>
 			        <a href="#<?php echo $hash; ?>">
-			        	<div class="tab-icon" style="background-image:url(<?php echo $iconurl[0]; ?>);">
+			        	<div class="tab-icon">
+							<img class="white-icon" src="<?php echo $iconWhiteURL; ?>" alt="">
+							<img class="black-icon" src="<?php echo $iconBlackURL; ?>" alt="">
 			        	</div>
 			        	<span><?php the_title(); ?></span>
 			        </a>
@@ -122,35 +129,16 @@
 			<?php get_template_part( 'template-part-testimonial' ); ?> 
 		</div>
 		<?php } ?> 
-
-		<div class="services-case-studies" id="<?php echo $hash; ?>-case" data-cases="<?php echo $hash; ?>">
-			    
-			    <div class="outer-container" data-theid="<?php echo get_the_ID(); ?>" data-type="<?php echo get_post_type(); ?>" data-hash="<?php echo $hash; ?>">
-			        <div class="main-content-case-study">
-			            
-			        </div>
-			        <div class="previous-cs" id="<?php echo $hash; ?>-prev" data-casenum="0">
-			        	<div class="arrow--prev">
-			        		<div class="top"></div>
-			        		<div class="bottom"></div>
-			        	</div>
-			        </div>
-			        <div class="next-cs" id="<?php echo $hash; ?>-next" data-casenum="0">
-			        	<div class="arrow--next">
-			        		<div class="top"></div>
-			        		<div class="bottom"></div>
-			        	</div>
-			        </div>
-			    </div>
-
-		</div>
 		
-
 	</div>
 
 	<?php endwhile; endif; ?>
 
 </section>
+
+<div id="services-cs">
+
+</div>
 
 	
 

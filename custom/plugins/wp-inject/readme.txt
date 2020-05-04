@@ -1,8 +1,8 @@
 ﻿=== ImageInject ===
 Contributors: thoefter, wp-scoop
 Tags: insert, imageinject, wpinject, pictures, flickr, api, images, editor, photos, photo, image, inject, creative commons, creative, commons, gallery, media, thumbnail, seo, pixabay, caption, vector, graphics
-Tested up to: 4.7
-Stable tag: 1.15
+Tested up to: 5.3
+Stable tag: 1.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,9 @@ No further setup is required after installing ImageInject. You can start inserti
 Advanced users can head to the ImageInject settings page and fine tune the plugin. A lot of different options let you control most aspects of how ImageInject finds and inserts images into your posts. By editing the templates you can control exactly how the photos and automatic attribution will look on your blog!
 
 **Have a look at my [tutorial on how to install and use ImageInject](http://wpscoop.com/wp-inject/#docs "How to insert images with ImageInject") to get started with the plugin.** Besides explaining the basics the tutorial also contains details on all the available settings in ImageInject and how the plugin works together with WordPress SEO by Yoast. 
+
+= 2019 Update =
+After a long hiatus I finally found the time to update ImageInject. The latest version 1.17 fixes common issues with Flickr not working and ensures compatibility with the latest WordPress versions. The plugin **works with the Classic Editor plugin as well as with the new Gutenberg editor**, however for the time being the Gutenberg integration is relatively basic and uses the same old metabox. Once I get more comfortable with Gutenberg I will consider further improvements.
 
 = Supported Image Sources: =
 *  **Flickr** - Over 200 million creative commons images. Attribution is automatically added where required.
@@ -40,6 +43,13 @@ Advanced users can head to the ImageInject settings page and fine tune the plugi
 ImageInject has also been implemented into [CMS Commander](http://cmscommander.com/ "Manage WordPress faster!"), my service that allows you to manage any number of WordPress blogs from a single dashboard.
 
 == Changelog ==  
+
+= 1.17 =
+- Added: Support for Gutenberg
+- Fixed: Flickr integration working again
+
+= 1.16 =
+- Fixed: Security improvements
 
 = 1.15 =
 - Fixed: Security improvements

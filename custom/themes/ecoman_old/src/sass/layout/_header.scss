@@ -1,0 +1,81 @@
+.main-header {
+	width: 100%;
+	min-height: 300px;
+	position: relative;
+	// 
+	background-color: $l-grey;
+	// 
+	@include flexboxcenter;
+	@include flex-direction(column);
+	// 
+	@include media($bp-large) {
+		// take this out if testing PARALLAX
+		min-height: 500px;
+		height: 100%;
+    }
+	.header__text {
+		padding: 0 8%;
+		@include media($bp-small) {
+			padding: 8% 8%;
+	    }
+	}
+	.header__circle-icon {
+		width: 160px;
+		height: 160px;
+		// 
+		position: relative;
+		bottom: -80px;
+		// 		
+		background-color: $white;
+		// 	
+		border: 1px solid #e3e3e3;
+		border-radius: 50%;
+		margin-left: 3px;
+	}
+}
+
+.text-only-header {
+	margin-bottom: 80px;
+}
+
+.main-header.inner-nav {
+	background-size: auto 400px;
+	background-attachment: fixed;
+	@include media($bp-med) {
+		background-size:cover;
+    }
+}
+
+.main-header.inner-nav.error-page {
+	height: 100vh;
+	background-size: cover;
+	background-position: right bottom;
+	background-attachment: fixed;
+}
+
+.main-header.inner-nav.small-header {
+	min-height: 300px;
+	background-size: auto 400px;
+	background-attachment: fixed;
+	@include media($bp-med) {
+		min-height: 500px;
+		background-size:cover;
+    }
+    @include media($bp-ls-small) {
+    	min-height: 300px;
+    	background-size: auto 400px;
+    }
+	.header__text {
+		padding: 0 5%;
+		@include media($bp-small) {
+			padding: 5% 8%;
+	    }
+	}
+}
+
+.header__text.outer-container.animated.fadeIn.light-text {
+	padding: 0 5% 0 0;
+	margin: 0;
+}
+
+

@@ -1,19 +1,37 @@
-// Pull in gulp plugins and assign to variables
-var gulp          = require('gulp'),
-    uglify        = require('gulp-uglifyjs'),
-    plumber       = require('gulp-plumber'),
-    sass          = require('gulp-ruby-sass'),
-    imagemin      = require('gulp-imagemin'),
-    pngquant      = require('imagemin-pngquant'),
-    livereload    = require('gulp-livereload'),
-    notify        = require('gulp-notify'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    jshint        = require('gulp-jshint');
-    minifyCss     = require('gulp-minify-css');
+// Reference: https://markgoodyear.com/2014/01/getting-started-with-gulp/
+// Reference: https://scotch.io/tutorials/how-to-use-browsersync-for-faster-development
 
-// Create custom variables to make life easier
-var outputDir = 'dist';
+// Load plugins
+var gulp            = require('gulp'),
+    sass            = require('gulp-ruby-sass'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    cssnano         = require('gulp-cssnano'),
+    jshint          = require('gulp-jshint'),
+    uglify          = require('gulp-uglify'),
+    imagemin        = require('gulp-imagemin'),
+    rename          = require('gulp-rename'),
+    concat          = require('gulp-concat'),
+    cache           = require('gulp-cache'),
+    del             = require('del');
+    browsersync     = require('browser-sync').create();
 
+// Browsersync
+gulp.task('browser-sync', function() {
+    browsersync.init({
+        proxy: "ecoman.test"
+    });
+});
+
+// Styles
+gulp.task('sass', function() {
+  return sass('src/sass/style.scss', { style: 'compressed' })
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(cssnano())
+    .pipe(browsersync.reload({stream: true}));
+});
+
+// Scripts
 var scriptList = [
   'src/js/classie.js',
   'src/js/modernizr.js',
@@ -27,69 +45,48 @@ var scriptList = [
   'src/js/index.js'
 ];
 
-var fontIcons = [
-  'src/components/fontawesome/fonts/**.*', 
-  'src/components/monosocialiconsfont/MonoSocialIconsFont*.*'
-];
-
-var sassOptions = {
-  style: 'nested'
-};
-
-// Create image minification task
-gulp.task('imagemin', function () {
-    return gulp.src('src/images/*')
-      //.pipe(cache())
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest(outputDir + '/images'))
-        .pipe(notify("image task finished"));
-});
-
-// Create js scripts concat and minify task.
 gulp.task('js', function() {
   return gulp.src(scriptList)
-    // .pipe(jshint('.jshintrc'))
-      .pipe(jshint.reporter('default'))
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-      .pipe(uglify('app.min.js', {outSourceMap: true}))
-      .pipe(gulp.dest(outputDir + '/js'))
-      .pipe(livereload())
-      .pipe(notify("js task finished"));
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('app.js'))
+    //.pipe(gulp.dest('dist/js'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browsersync.reload({stream: true}));
 });
 
+/** Images
+* This will take any source images and run them through the imagemin plugin. We can go a 
+* little further and utilise caching to save re-compressing already compressed images each time this task runs
+*/
+gulp.task('images', function() {
+  return gulp.src(['src/images/*','src/images/**/*'])
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/images'))
+});
 
-// Create sass compile task
-gulp.task('sass', function() {
-    return sass('src/sass/style.scss', sassOptions) 
-    .on('error', function (err) { console.error('Error!', err.message); })
-    .pipe(autoprefixer('last 2 version', 'ie 9'))
-    .pipe(minifyCss())
-    .pipe(gulp.dest(outputDir + '/css'))
-    .pipe(livereload())
-    .pipe(notify("sass task finished"));
-}); 
+/** Clean
+* Before deploying, it’s a good idea to clean out the destination folders and rebuild the files—just in case 
+* any have been removed from the source and are left hanging out in the destination folder:
+*/
+gulp.task('clean', function() {
+    return del(['dist/js', 'dist/images']);
+});
 
-// Create fonticons compile task
-gulp.task('icons', function() { 
-    return gulp.src(fontIcons) 
-        .pipe(gulp.dest(outputDir + '/fonts')); 
+/** Default task
+* We can create a default task, run by using $ gulp, to run all three tasks we have created:
+*/
+gulp.task('default', ['clean'], function() {
+    gulp.start('sass', 'js', 'images');
 });
 
 // Create watch task
-gulp.task('watch', function() {
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/images/*', ['imagemin']);
-  livereload.listen();
-  gulp.watch('*.php').on('change', livereload.changed);
-  gulp.watch('*.html').on('change', livereload.changed);
+gulp.task('watch', ['browser-sync'], function () {
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/sass/materialize/**/*.scss', ['sass']);
+    gulp.watch('src/images/*', ['images']);
+    gulp.watch('src/js/**/*.js', ['js']);
+    gulp.watch("*.php").on('change', browsersync.reload);
 });
-
-// Create default task so you can gulp whenever you don't want to watch
-gulp.task('default', ['sass', 'js', 'imagemin', 'icons', 'watch']);
-
-

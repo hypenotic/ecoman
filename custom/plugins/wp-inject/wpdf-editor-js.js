@@ -49,25 +49,40 @@ function wpdf_parse_content(content, attribution, feat_end) {
 
 	//var win = window.dialogArguments || opener || parent || top;
 	//win.send_to_editor(content);
-
-	if(content != "") {
-		if(content == "FIMG") {content = "";}
-		if(jQuery("#content").is(":visible")) {
-			// HTML editor: always place at the end
-			document.getElementById('content').value += content;
-			document.getElementById('content').value += attribution;
-		} else {
-			if(wpdf_attr_location == "image" && feat_end != 1) { // determine attribution placement
-				content = content + attribution;
-				tinyMCE.execCommand('mceInsertContent',false,content);
+	
+	if(typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined') {
+		if(content != "") {
+			if(content == "FIMG") {content = "";}	
+		
+			var el = wp.element.createElement;
+			// var name = 'core/paragraph';
+			var name = 'core/freeform';
+			insertedBlock = wp.blocks.createBlock(name, {
+				content: content,
+			});
+			wp.data.dispatch('core/editor').insertBlocks(insertedBlock);	
+		}		
+	} else {
+		if(content != "") {
+			if(content == "FIMG") {content = "";}
+			if(jQuery("#content").is(":visible")) {
+				// HTML editor: always place at the end
+				document.getElementById('content').value += content;
+				document.getElementById('content').value += attribution;
 			} else {
-				tinyMCE.execCommand('mceInsertContent',false,content);
+				if(wpdf_attr_location == "image" && feat_end != 1) { // determine attribution placement
+					content = content + attribution;
+					tinyMCE.execCommand('mceInsertContent',false,content);
+				} else {
+					tinyMCE.execCommand('mceInsertContent',false,content);
 
-				var curcont = tinyMCE.activeEditor.getContent(); // tinymce.editors.content.getContent();
-				tinyMCE.execCommand('mceSetContent',false,curcont + attribution);
+					var curcont = tinyMCE.activeEditor.getContent(); // tinymce.editors.content.getContent();
+					tinyMCE.execCommand('mceSetContent',false,curcont + attribution);
+				}
 			}
-		}
+		}	
 	}
+
 }
 
 function wpdf_get_image_size_url(imgurl, imgsize) {

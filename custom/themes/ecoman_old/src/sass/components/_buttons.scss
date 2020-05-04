@@ -1,0 +1,329 @@
+button {
+	border: 0;
+
+}
+
+.large-btn.center-margin {
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.copper-btn.large-btn {
+	font-family: $title-font;
+	font-style: italic;
+	letter-spacing: 1px;
+}
+
+.btn {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.large-btn {
+	padding: 10px 20px;
+	font-size: modular-scale(0,1rem);
+	margin-top: 15px;
+	@include media($bp-med) {
+		padding: 20px 50px;
+		font-size: modular-scale(0);
+    }
+    @include media($bp-ls-small) {
+    	padding: 10px 20px;
+    	font-size: modular-scale(0,1rem);
+    	margin-top: 15px;
+    }
+}
+
+.grey-btn {
+	background-color: $l-grey;
+	&:hover {
+		background-color: $copper;
+		color: $white;
+	}
+}
+
+.white-btn {
+	background-color: $white;
+	&:hover {
+		background-color: $copper;
+		color: $white;
+		cursor: pointer;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.copper-btn {
+	background-color: $copper;
+	color: $white;
+	&:hover {
+		background-color: $l-grey;
+		color: $copper;
+		cursor: pointer;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.copper-btn.white-hover {
+	font-family: $title-font;
+	font-style: italic;
+	letter-spacing: 1px;
+	&:hover {
+		background-color: $white;
+	}
+}
+
+.error-page__btn {
+	padding: 20px 60px;
+	border: 0;
+	margin-top: 10px;
+}
+
+// PREV/NEXT BUTTTONS
+
+.project-nav__arrow {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: $ll-grey;
+	// border: 1px solid black;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);	
+	@include media($bp-med) {
+		width: 80px;
+		height: 80px;
+	}
+	&:hover {
+		background-color: $copper;
+		.project-nav__arrow--prev,
+		.project-nav__arrow--next {
+			border-top: 1px solid $white;
+			border-left: 1px solid $white;
+			.top,
+			.bottom {
+				background-color: $white;
+			}
+		}
+	}
+	.project-nav__arrow--prev,
+	.project-nav__arrow--next {
+		width: 20px;
+		height: 20px;
+		border-top: 1px solid $copper;
+		border-left: 1px solid $copper;
+		position:relative;
+		@include media($bp-med) {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.top,
+	.bottom {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: $copper;
+		position: absolute;
+	}
+	.project-nav__arrow--prev {
+		transform: rotate(315deg);
+		margin-left: 10px;
+		.top {
+			right: 0;
+			top: -2px;
+		}
+		.bottom {
+			bottom: 0;
+			left: -2px;
+		}
+	}
+	.project-nav__arrow--next {
+		transform: rotate(135deg);
+		margin-right: 10px;
+		.top {
+			right: 0;
+			top: -2px;
+		}
+		.bottom {
+			bottom: 0;
+			left: -2px;
+		}
+	}
+}
+
+
+// CASE STUDY PREV/NEXT
+
+.previous-cs,
+.next-cs,
+#about-prev,
+#about-next {
+	width: 160px;
+	height: 160px;
+	// 
+	position: absolute;
+	left: 20px;
+	top: 30%;
+	// 
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 50%;
+	z-index: 2;
+	// 
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(208, 84, 2, 0.6);
+		.arrow--prev,
+		.arrow--next {
+			border-top: 1px solid $white;
+			border-left: 1px solid $white;
+		}
+		.top,
+		.bottom {
+			background-color: $white;
+		}
+	}
+}
+
+.arrow--prev,
+.arrow--next {
+	width: 50px;
+	height: 50px;
+	border-top: 1px solid $copper;
+	border-left: 1px solid $copper;
+	position:relative;
+}
+.top,
+.bottom {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: $copper;
+	position: absolute;
+}
+.arrow--prev {
+	transform: rotate(315deg);
+	margin-left: -30px;
+	.top {
+		right: 0;
+		top: -2px;
+	}
+	.bottom {
+		bottom: 0;
+		left: -2px;
+	}
+}
+.arrow--next {
+	transform: rotate(135deg);
+	margin-right: -30px;
+	.top {
+		right: 0;
+		top: -2px;
+	}
+	.bottom {
+		bottom: 0;
+		left: -2px;
+	}
+}
+
+// Side Social Share Buttons
+#side-social-share {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 900;
+	position: fixed;
+	background: $copper;
+	// border: 1px solid red;
+	border-right: 0;
+	padding: 5px;
+	@include media($bp-med) {
+		background: $l-grey;
+		right: 0;
+		top: 40%;
+		bottom: auto;
+		left: auto;
+		padding: 10px;
+		width: 60px;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include flexboxcenter;
+		@include media($bp-med) {
+			@include flex-direction(column);
+		}
+		li {
+			padding: 10px 20px;
+			margin-top: 0;
+			@include media($bp-med) {
+				padding: 10px;
+			}
+			a {
+				color: $white;
+				@include media($bp-med) {
+					color: $copper;
+				}
+				i {
+					font-size: modular-scale(1);
+				}
+			}
+		}
+	}
+}
+
+// Mobile Menu Buttons
+
+.footer__social .social-share {
+	li {
+		margin-top: 0;
+		margin-right: 20px;
+		display: inline-block;
+	}
+}
+
+.back-to-toc {
+	position: relative;
+	.back-toc-arrow {
+		width: 25px;
+		height: 25px;
+		border-top: 1px solid $copper;
+		border-left: 1px solid $copper;
+		position: absolute;
+		left: -20px;
+		top: 5px;
+		transform: rotate(315deg);
+		&:hover {
+			border-top: 1px solid $grey;
+			border-left: 1px solid $grey;
+			.top,
+			.bottom {
+				background-color: $grey;
+			}
+		}
+		.top,
+		.bottom {
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $copper;
+			position: absolute;
+		}
+		.top {
+			right: 0;
+			top: -2px;
+		}
+		.bottom {
+			bottom: 0;
+			left: -2px;
+		}
+	}
+}

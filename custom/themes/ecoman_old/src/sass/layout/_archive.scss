@@ -1,0 +1,11 @@
+.archive__single {
+	border-top: 1px solid $grey;
+	margin-bottom: 80px;
+}
+
+
+.main-content.search-archive {
+	@include media($bp-small) {
+		padding: 30px;	
+	}
+}

@@ -2,7 +2,7 @@
 /**
  Plugin Name: ImageInject
  Plugin URI: http://wpscoop.com/wp-inject/
- Version: 1.15
+ Version: 1.17
  Description: Insert photos into your posts or set a featured image in less than a minute! ImageInject allows you to search the huge Flickr image database for creative commons photos directly from within your WordPress editor. Find great photos related to any topic and inject them into your post. Previously known as WP Inject.
  Author: Thomas Hoefter
  Author URI: http://wpscoop.com/
@@ -129,6 +129,8 @@ function wpdf_settings_page() {
 	}
 	
 	if($_POST["save_options"]) {
+		check_admin_referer( 'imageinject_save_options' );
+		
 		foreach($options as $module => $moduledata) {
 
 			if($optionsarray[$module]["enabled"] != 2) {
@@ -165,7 +167,7 @@ function wpdf_settings_page() {
 		}			
 	}	
 	
-	if(!empty($_POST) && empty($_POST["save_options"])) {
+	/*if(!empty($_POST) && empty($_POST["save_options"])) {
 		// VERIFICATION FUNCTION
 		foreach($options as $module => $moduledata) {
 			if($_POST[$module."_verify"]) {
@@ -181,7 +183,7 @@ function wpdf_settings_page() {
 				}
 			}
 		}	
-	}
+	}*/
 ?>
 
 <div class="wrap">
@@ -225,7 +227,10 @@ function wpdf_settings_page() {
 		</div>
 	</div>	
 	
-	<form method="post" name="wpdf_options">	
+	<form method="post" name="wpdf_options">
+
+	<?php wp_nonce_field( "imageinject_save_options", '_wpnonce', false ) ?>
+	
 	<div style="width:71%;">
 
 	<p class="submit"><input class="button-primary" type="submit" name="save_options" value="<?php _e("Save All Settings","wpinject") ?>" /></p>		
@@ -247,7 +252,7 @@ function wpdf_settings_page() {
 			<tbody>				
 		
 				<?php foreach($moduledata["options"] as $option => $data) {
-					if($option != "title" && $option != "unique" && $option != "error" && $option != "unique_direct" && $option != "title_direct") {
+					if($option != "flickr_appid" && $option != "title" && $option != "unique" && $option != "error" && $option != "unique_direct" && $option != "title_direct") {
 					
 						if(!empty($optionsarray[$module]["options"][$option]["value"])) {
 							$value = $optionsarray[$module]["options"][$option]["value"];
@@ -374,9 +379,9 @@ function wpdf_editor_metabox_content($post) {
 			if($moduledata["enabled"] != 2 && $module != "general" && $module != "advanced") {
 				if(!empty($moduledata["options"]["appid"]["value"]) || $module == "pixabay") {$moduleactive = 1;}
 
-				if(empty($moduledata["options"]["appid"]["value"]) && $module != "pixabay") {
+				/*if(empty($moduledata["options"]["appid"]["value"]) && $module != "pixabay") {
 					$modulecontent .= '<label for="module-'.$module.'"><input type="checkbox" id="module-'.$module.'" name="modules[]" value="'.$module.'" disabled> <a href="options-general.php?page=wpdf-options" title="Clcik to go the the settings page and activate this module.">'.$moduledata["name"].'</a></label><br/>';
-				} elseif($moduledata["enabled"] == 1) {
+				} else*/ if($moduledata["enabled"] == 1) {
 					$modulecontent .= '<label for="module-'.$module.'"><input type="checkbox" id="module-'.$module.'" name="modules[]" value="'.$module.'" checked> '.$moduledata["name"].'</label><br/>';
 				} else {
 					$modulecontent .= '<label for="module-'.$module.'"><input type="checkbox" id="module-'.$module.'" name="modules[]" value="'.$module.'"> '.$moduledata["name"].'</label><br/>';
@@ -435,8 +440,8 @@ function wpdf_editor_metabox_content($post) {
 			<a href="#" title="<?php _e("Remove all selected images","wpinject") ?>" id="wpdf_remove_selected"><?php _e("Remove","wpinject") ?></a>	
 
 			<div style="float: right;">
-				<label for="wpdf_size_sq"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_sq" value="square" checked>SQ</label>
-				<label for="wpdf_size_s"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_s" value="small">S</label>
+				<label for="wpdf_size_sq"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_sq" value="square">SQ</label>
+				<label for="wpdf_size_s"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_s" value="small" checked>S</label>
 				<label for="wpdf_size_m"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_m" value="medium">M</label>
 				<label for="wpdf_size_l"><input type="radio" class="wpdf_size_mult" name="wpdf_size" id="wpdf_size_l" value="large">L</label>
 			</div>	

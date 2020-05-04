@@ -2,7 +2,7 @@
 $source_infos = array(
 	"sources" => array(			
 		"flickr" => array(
-			"request" => 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={appid}&text={keyword}&sort={sort}&content_type=&license={license}&extras=date_taken%2C+license%2C+owner_name%2C+url_sq%2C+url_t%2C+url_s%2C+url_m%2C+url_l%2C+url_o%2C+url_q%2C+description&per_page={num}&page={start}',	
+			"request" => 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=251f306e19c56bb3c8a2a9b2bd7a076a&text={keyword}&sort={sort}&content_type=&license={license}&extras=date_taken%2C+license%2C+owner_name%2C+url_sq%2C+url_t%2C+url_s%2C+url_m%2C+url_l%2C+url_o%2C+url_q%2C+description&per_page={num}&page={start}',	
 			//"request" => 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={appid}&text={keyword}&sort={sort}&content_type={cont}&license={license}&extras=date_taken%2C+owner_name%2C+icon_server%2C+geo%2C+tags%2C+machine_tags%2C+media%2C+path_alias%2C+url_q%2C+url_n%2C+url_c%2C+url_z%2C+url_sq%2C+url_t%2C+url_s%2C+url_m%2C+url_l%2C+url_o%2C+description&per_page={num}&page={start}',
 			"limits" => array("request" => 500, "total" => 4000),		
 			"title" => "title",		
@@ -80,7 +80,7 @@ $modulearray = array(
 		"enabled" => 1,
 		"name" => "Flickr",
 		"options" => array(
-			"appid" => array("value" => "251f306e19c56bb3c8a2a9b2bd7a076a", "display" => "none", "name" => "API Key", "type" => "text", "verified" => 0, "signup" => ''),			
+			//"appid" => array("value" => "251f306e19c56bb3c8a2a9b2bd7a076a", "display" => "none", "name" => "API Key", "type" => "text", "verified" => 0, "signup" => ''),			
 			"license" => array("value" => "4,5,6,7", "name" => "License", "type" => "select", "values" => array("1,2,3,4,5,6,7" => "Non-Commercial Use Only, Attribution Required", "4,5,6,7" => "Commercial Use Allowed, Attribution Required", "7" => "Commercial Use Allowed, No Attribution Required", "0,1,2,3,4,5,6,7" => "All Licenses (not recommended)")),					
 			"sort" => array("value" => "relevance", "name" => "Order Images By", "type" => "select", "values" => array("relevance" => "Relevance", "date-posted-asc" => "Date posted, ascending", "date-posted-desc" => "Date posted, descending","date-taken-asc" => "Date taken, ascending", "date-taken-desc" => "Date taken, descending", "interestingness-desc" => "Interestingness, descending", "interestingness-asc" => "Interestingness, ascending")),					
 		),	

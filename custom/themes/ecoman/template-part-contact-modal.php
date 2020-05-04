@@ -8,7 +8,7 @@
 					M6H 1S3 <a href="https://www.google.ca/maps/place/44+Shanly+St,+Toronto,+ON+M6H+1S3/@43.6637464,-79.4326931,17z/data=!4m2!3m1!1s0x882b34674ae9fbf9:0x25f8e5b90548ccfa" target="_blank"><i class="fa fa-map-marker"></i></a></p>
 					<div class="contact__email-phone">
 						<p><a href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a></p>
-						<p><a href="tel:4165565516">416.556.5516</a></p>
+						<p><a href="tel:4165355565">416.535.5565</a></p>
 					</div>
 				</div>
 				<div class="contact__social">

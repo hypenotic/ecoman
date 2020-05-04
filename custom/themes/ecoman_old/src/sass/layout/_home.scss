@@ -1,0 +1,167 @@
+.tab-section-wrapper {
+	position: relative;
+	// 
+	z-index: 1;
+}
+
+.tab-section-wrapper.two {
+	margin-top: -116px;
+	z-index: 1;
+}
+
+.front-page__intro,
+.front-page__buckets {
+	position: relative;
+	top: -116px;
+	// 
+	z-index: 30;
+}
+
+.front-page__circle-icon {
+	width: 116px;
+	height: 116px;
+	//
+	position: relative;
+	top: -55px;
+	 // 
+	background-color: $white;
+	border-radius: 50%;
+	// border: 3px solid $grey;
+	box-shadow: 0px -3px 10px rgba(0,0,0,0.2);
+	z-index: 36;
+	// 
+	margin: 0 auto;
+}
+
+.tab-one {
+	// background: url(../images/tab-one.jpg);
+	background-size: cover;
+}
+
+.tab-two {
+	// background: url(../images/tab-two.jpg);
+	background-size: cover;
+}
+
+
+
+.front-page__intro {
+	background-color: $l-grey;
+	padding: 0 40px;
+	padding-bottom: 100px;
+	@include flexboxcenter;
+	@include flex-direction(column);
+	@include media($bp-small) {
+		padding: 30px 30px 60px;
+    }
+    @include media($bp-ls-small) {
+    	padding: 30px 30px 60px;
+    }
+    button.copper-btn.large-btn {
+    	@include media($bp-med) {
+    		padding: 15px 140px;
+        }
+    }
+}
+
+.home-page-cta {
+	position: relative;
+	margin-top: 60px;
+	@include media($bp-small) {
+		margin-top: 40px;
+	}
+	// img {
+	// 	position: absolute;
+	// 	top: -24px;
+	// 	right: 15px;
+	// 	width: 80px;
+	// 	height: auto;
+	// 	@include media($bp-small) {
+	// 		display: none;
+	// 	}
+	// }
+
+	img {
+		position: absolute;
+		top: -60px;
+		right: 10px;
+		width: 100px;
+		height: auto;
+		@include media($bp-small) {
+			display: none;
+		}
+	}
+}
+
+.front-page__buckets {
+	width: 80%;
+	// 
+	position: relative;
+	// 
+	background-color: $white;
+	z-index: 35;
+	// 
+	padding-top: 30px;
+	margin-bottom: -50px;
+	margin: 0 auto;
+	.outer-container {
+		position: relative;
+		// 
+		background-color: $white;
+		// 
+		padding-top: 30px;
+		// 
+		@include flexboxcenter;
+		@include flex-direction(column);
+	}
+	.column-4 {
+		padding-top: 30px;
+		@include media($bp-ls-small) {
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+		}
+	}
+	.column-4__single {
+		padding: 20px 0 0;
+		@include media($bp-ls-small) {
+			@include flex (0 0 40%);
+		}
+		@include media($bp-med) {
+			padding: 0;
+	    }
+	}
+	.column-4__single ul {
+		list-style-type: none;
+		padding: 0;
+		li {
+			// color: $copper;
+		}
+		li + li {
+			margin-top: 4px;
+		}
+	}
+}
+
+.front-page__testimonial {
+	margin: 0 100px;
+}
+
+.services-testimonial.front-page-test {
+	padding: 30px 30px 60px;
+	@include media($bp-med) {
+		padding: 30px;
+    }
+}
+
+.outer-container.front-page {
+	margin-top: -80px;
+	.main-content {
+		position: relative;
+		// 
+		z-index: 50;
+		margin-bottom: 0;
+	}
+}
+
+
+

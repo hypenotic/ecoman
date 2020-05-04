@@ -4,32 +4,28 @@ div.grey-background {
 
 .tabs-panel-intro {
 		padding-top: 40px;
+
 		// 
 	    @include media($bp-med) {
-			@include flexalignstart;
+			display: flex;
+			justify-content: space-between;
 	    }
 	    @include media($bp-ls-small) {
 	    	padding: 30px;
 	    }
 	.tabs-panel__left {
-		@include flex(0 0 30%);
+		@include flex(0 0 48%);
 	    @include media($bp-small) {
 			text-align: center;
 	    }
 		img {
-			border: 10px solid $l-grey;
-			width: 100px;
+			// border: 10px solid $l-grey;
+			width: 100%;
 			height: auto;
-		    @include media($bp-med) {
-				width: 200px;
-		    }
-		    @include media($bp-ls-small) {
-		    	width: 120px;
-		    }
 		}
 	}
 	.tabs-panel__right {
-		@include flex(0 0 70%);
+		@include flex(0 0 48%);
 		@include display(flex);
 		@include flex-direction(column);
 	}
@@ -84,7 +80,7 @@ div.grey-background {
 .tabs.r-tabs > ul { 
 	width: 100%;
 	// 
-	background: $grey;
+	background: $green;
 	overflow:hidden; 
 	li { 
 		&:first-child {
@@ -100,30 +96,31 @@ div.grey-background {
 			//border-bottom: 1px solid #fff;
 		}
 		a { 
-			background: $grey;
+			background: $green;
 			box-sizing: border-box;
 			// 
-			padding: 20px 5%;
+			padding: 0.5rem 5%;
 			// 
 			@include flexboxcenter; 
 			&:hover {
-				background: $d-grey;
+				background: lighten($green, 5);
             }
             .tab-icon {
-            	width: 50px;
-            	height: 50px;
+            	width: 2rem;
+            	height: 2rem;
             	// 
             	background-size:contain;
-            	background-color: $grey;
+            	// background-color: $grey;
         	    background-blend-mode: multiply;
         	    background-repeat: no-repeat;
         	    background-position: center center;
-        	    display: inline-block;
+				display: inline-block;
+				margin-right: 1rem;
             }
 		}
 		&:hover {
     		.tab-icon {
-        	background-color: $d-grey;
+        	background-color: $green;
         	}
     	}
 		&.r-tabs-state-active { 
@@ -196,8 +193,18 @@ div.grey-background {
 	}
 }
 
+.black-icon {
+	display: none;
+}
+
 .r-tabs-tab.r-tabs-state-active {
-    display: block;
+	display: block;
+	.white-icon {
+		display: none;
+	}
+	.black-icon {
+		display: block;
+	}
 }
 /* Accordion responsive breakpoint */
 @media only screen and (max-width: 768px) {
@@ -246,7 +253,8 @@ div.grey-background {
 .services-case-studies {
 	min-height: 500px;
 	// 
-	background: $l-grey;
+	background: rgb(119, 192, 95);
+	// background-image: url('http://ecoman.ca/custom/uploads/2018/04/7864646450_681f9f39bf_b_geranium-robertianum.jpg');
 	background-size: cover;
 	background-position: center center;
 	// 
@@ -267,4 +275,17 @@ div.grey-background {
 			left: 710px;
 		}
 	}
+}
+
+// VUE
+.services-case-studies {
+	.inner-content img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+}
+
+.services-case-studies .inner {
+	background-color: #f7fff5;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%2377c05f' fill-opacity='0.4'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

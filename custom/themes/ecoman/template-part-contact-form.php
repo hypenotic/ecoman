@@ -1,24 +1,18 @@
-<div class="contact__circle-icon">
-			
-</div>
-<div class="full-screen-wrapper contact">
+<div class="full-screen-wrapper contact" id="contact">
 	<div class="outer-container">
 		<div class="contact-section">
-			<div class="contact-intro">
-				<h3>We love hearing from you!</h3>
-				<?php dynamic_sidebar( 'contact-blurb' ); ?>
-			</div>
 			<div class="contact-form">
 				<div class="contact-form__left">
+					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats">
-						<p>Ecoman</p>
-						<p>44 Shanly Street,<br/>
+						<p>Jonas Spring,Ecoman</p>
+						<p><a href="https://goo.gl/maps/X7qbM7n4wDAuujEE9" target="_blank>">11 Watkinson Ave,<br/>
 						Toronto, ON<br/>
-						M6H 1S3 <a onclick="trackOutboundLink('https://www.google.ca/maps/place/44+Shanly+St,+Toronto,+ON+M6H+1S3/@43.6637464,-79.4326931,17z/data=!4m2!3m1!1s0x882b34674ae9fbf9:0x25f8e5b90548ccfa'); return false;" href="https://www.google.ca/maps/place/44+Shanly+St,+Toronto,+ON+M6H+1S3/@43.6637464,-79.4326931,17z/data=!4m2!3m1!1s0x882b34674ae9fbf9:0x25f8e5b90548ccfa" target="_blank"><i class="fa fa-map-marker"></i></a></p>
+						M6P 2E6</a></p>
 					</div>
 					<div class="contact__blurb">
 						<p><a onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a><br/>
-						<a href="tel:4165565516">416.556.5516</a></p>
+						<a href="tel:+14165355565">416.535.5565</a></p>
 					</div>
 					<div class="contact__social">
 						<ul class="social-share">
@@ -29,9 +23,9 @@
 		                </ul>
 					</div>
 				</div>
-				<div class="contact-form__right">
-					
-					<?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form 1"]' ); ?>
+				<div class="contact-form__right -pos-r">
+					<img src="<?php echo get_template_directory_uri(); ?>/src/images/froggy.png" alt="Black and white illustration of a frog.">
+					<?php echo do_shortcode('[contact-form-7 id="28" title="Contact form 1"]'); ?>
 				</div>
 			</div>
 		</div>
