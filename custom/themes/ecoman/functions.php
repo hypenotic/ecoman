@@ -1,12 +1,12 @@
 <?php
-//include('includes/wp-cuztom-helper/cuztom.php');
+include('includes/wp-cuztom-helper/cuztom.php');
 //Include post custom posts type. Dependent on /wp-cuztom-helper classes.
-//include('includes/wp-cuztom-posts/custom-generic.php');
-//include('includes/wp-cuztom-posts/custom-generic-post.php');
-//include('includes/wp-cuztom-posts/custom-service.php');
-//include('includes/wp-cuztom-posts/custom-case-study.php');
-//include('includes/wp-cuztom-posts/custom-testimonials.php');
-//include('includes/wp-cuztom-posts/custom-team.php');
+include('includes/wp-cuztom-posts/custom-generic.php');
+include('includes/wp-cuztom-posts/custom-generic-post.php');
+include('includes/wp-cuztom-posts/custom-service.php');
+include('includes/wp-cuztom-posts/custom-case-study.php');
+include('includes/wp-cuztom-posts/custom-testimonials.php');
+include('includes/wp-cuztom-posts/custom-team.php');
 
 
 // include('includes/wp-cuztom-posts/custom-critters.php');
