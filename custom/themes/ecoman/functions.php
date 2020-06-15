@@ -1,13 +1,13 @@
 <?php
-include('includes/wp-cuztom-helper/cuztom.php');
+//include('includes/wp-cuztom-helper/cuztom.php');
 //Include post custom posts type. Dependent on /wp-cuztom-helper classes.
-include('includes/wp-cuztom-posts/custom-generic.php');
-include('includes/wp-cuztom-posts/custom-generic-post.php');
-include('includes/wp-cuztom-posts/custom-service.php');
-include('includes/wp-cuztom-posts/custom-case-study.php');
-include('includes/wp-cuztom-posts/custom-testimonials.php');
-include('includes/wp-cuztom-posts/custom-team.php');
-include('includes/wp-cuztom-posts/custom-critters.php');
+//include('includes/wp-cuztom-posts/custom-generic.php');
+//include('includes/wp-cuztom-posts/custom-generic-post.php');
+//include('includes/wp-cuztom-posts/custom-service.php');
+//include('includes/wp-cuztom-posts/custom-case-study.php');
+//include('includes/wp-cuztom-posts/custom-testimonials.php');
+//include('includes/wp-cuztom-posts/custom-team.php');
+//include('includes/wp-cuztom-posts/custom-critters.php');
 
 // MetaBox
 include('includes/meta-box/mb-page.php');
@@ -22,7 +22,7 @@ require_once('includes/functions/analyticstracking.php');
 require_once('includes/functions/register-menu.php');
 require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/social-share.php');
-require_once('includes/functions/cuztom-posts.php');
+//require_once('includes/functions/cuztom-posts.php');
 require_once('includes/functions/TwitterAPIExchange.php');
 require_once('includes/functions/add-social-aggregator.php');
 require_once('includes/functions/grabfirstimage.php');
