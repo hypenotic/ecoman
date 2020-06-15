@@ -11,7 +11,7 @@
 	<?php } else if (is_page_template( 'about.php' )) { ?>
 		<script src="<?php echo get_template_directory_uri();?>/src/vue/seekers/dist/build-190303.js"></script>
 	<?php } else {}?>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 </body>
 </html>
 
