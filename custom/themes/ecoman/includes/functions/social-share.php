@@ -25,17 +25,18 @@ function social_share() {
 	?>
 	<?php } ?>
 
-	<?php if ( has_post_thumbnail() ) { 
+	<?php //if ( has_post_thumbnail() ) { 
 
-		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		//$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		
 
-		$post_img=$url;	
+		//$post_img=$url;	
 	?>
-	<?php } else { 
+	<?php //} else { 
 
 		$post_img=get_bloginfo('template_url').'/dist/images/ecoman_logo_icon_black.png';	
 	?>
-	<?php } ?>
+	<?php //} ?>
 
 	<?php 
 
