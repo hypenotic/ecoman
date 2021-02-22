@@ -11,7 +11,7 @@ function my_scripts() {
 	// wp_enqueue_script( 'tween' );
 	// wp_register_script('ham', get_template_directory_uri() . '/src/js/hamburger.min.js', array('jquery'), '', true);
 	// wp_enqueue_script( 'stellar' );
-	wp_register_script('app', get_template_directory_uri() . '/dist/js/app.min.js?v=190108-49jowjk39j', array('jquery'), '', true);
+	wp_register_script('app', get_template_directory_uri() . '/dist/js/app.min.js', array('jquery'), '', true);
 	wp_enqueue_script( 'app' );
 	
 }

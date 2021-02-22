@@ -18,11 +18,9 @@ include('includes/meta-box/mb-case-study.php');
 //Load custom functions
 require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');
-require_once('includes/functions/analyticstracking.php');
 require_once('includes/functions/register-menu.php');
 require_once('includes/functions/register-sidebar.php');
 require_once('includes/functions/social-share.php');
-//require_once('includes/functions/cuztom-posts.php');
 require_once('includes/functions/TwitterAPIExchange.php');
 require_once('includes/functions/add-social-aggregator.php');
 require_once('includes/functions/grabfirstimage.php');
@@ -73,15 +71,6 @@ function wpdocs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
-// Async/Defer Scripts
-/*function to add async to all scripts*/
-function js_async_attr($tag){
-
-# Add async to all remaining scripts
-return str_replace( ' src', ' defer src', $tag );
-}
-add_filter( 'script_loader_tag', 'js_async_attr', 10 );
-
 /*** Remove Query String from Static Resources ***/
 function remove_cssjs_ver( $src ) {
  if( strpos( $src, '?ver=' ) )
@@ -90,18 +79,5 @@ function remove_cssjs_ver( $src ) {
 }
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
-
-// Add Next/Prev props to  API response
-// add_filter( 'rest_prepare_case_study', function( $response, $post, $request ) {
-// 	global $post;
-// 	// Get the so-called next post.
-// 	$next = get_adjacent_post( false, '', false );
-// 	// Get the so-called previous post.
-// 	$previous = get_adjacent_post( false, '', true );
-// 	// Format them a bit and only send id and slug (or null, if there is no next/previous post).
-// 	$response->data['next'] = ( is_a( $next, 'WP_Post') ) ? array( "id" => $next->ID, "slug" => $next->post_name ) : null;
-// 	$response->data['previous'] = ( is_a( $previous, 'WP_Post') ) ? array( "id" => $previous->ID, "slug" => $previous->post_name ) : null;
-// 	return $response;
-// }, 10, 3 );
 
 ?>
