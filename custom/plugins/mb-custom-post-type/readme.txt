@@ -1,34 +1,29 @@
-=== MB Custom Post Type ===
-Contributors: metabox, rilwis, duc88b, fitwp, truongwp
+=== MB Custom Post Types & Custom Taxonomies ===
+Contributors: elightup, metabox, rilwis, duc88b, truongwp
 Donate link: https://metabox.io/pricing/
-Tags: cms, custom, custom post types, custom post type, cpt, post, post types, post type, types
-Requires at least: 4.3
-Tested up to: 5.4
-Stable tag: 1.9.4
+Tags: custom post types, custom taxonomies, meta box, content types, cpt, post type, taxonomy, cms, post, post types, types, taxonomies, tax
+Requires at least: 5.0
+Tested up to: 5.6
+Requires PHP: 5.6
+Stable tag: 2.0.8
 License: GPLv2 or later
 
-Create and manage custom post types and custom taxonomies with an easy-to-use interface in WordPress.
+Create and manage custom post types and custom taxonomies with an easy-to-use UI in WordPress.
 
 == Description ==
 
-**MB Custom Post Type** helps you to create and manage custom post types and custom taxonomies easily in WordPress by providing an easy-to-use interface in the admin area.
+**MB Custom Post Types & Custom Taxonomies** helps you to register and edit custom post types and custom taxonomies easily in WordPress by providing an easy-to-use UI in the admin area.
 
 The plugin allows you to handle all post type's arguments and taxonomy's arguments such as menu labels, admin bar label, exclude from search, disable archive page, etc. just in minutes. You don't need to write custom PHP code to register custom post types anymore (using function `register_post_type()` and `register_taxonomy()`).
 
-Using **MB Custom Post Type**, you will be able to craft the WordPress admin and turn it into a professional Content Management Systems.
-
-**Note:** Since version 1.1.0 MB Custom Post Type has integrated [MB Custom Taxonomy](https://wordpress.org/plugins/mb-custom-taxonomy/) to create and manage custom taxonomies with similar interface.
-
-**Video demo**:
-
-https://www.youtube.com/watch?v=9c4w5zdeTJI
+Using **MB Custom Post Types & Custom Taxonomies**, you will be able to craft the WordPress content types and turn it into a professional CMS (Content Management Systems).
 
 ### Features
 
 * Supports all arguments for creating custom post types (like `register_post_type()`)
 * Supports all arguments for creating custom taxonomies (like `register_taxonomy()`)
 * Supports **live editing mode**, which auto fill in all necessary labels for you!
-* **Export to PHP Code** (since 1.4)
+* **Export to PHP Code**
 * Clean code
 * Registered custom post types can be exported/imported using default WordPress functionality (no more plugins!)
 
@@ -37,7 +32,7 @@ https://www.youtube.com/watch?v=9c4w5zdeTJI
 - [Project Page](https://metabox.io/plugins/custom-post-type/)
 - [Github Repo](https://github.com/rilwis/mb-custom-post-type/)
 
-This plugin is a free extension of [Meta Box](https://metabox.io) plugin, which is a powerful, professional solution to create custom meta boxes and custom fields for WordPress websites. Using **MB Custom Post Type** in combination with [other extensions](https://metabox.io/plugins/) will help you manage any content types in WordPress easily and make your website more professional.
+This plugin is a free extension of [Meta Box](https://metabox.io) plugin, which is a powerful, professional solution to create custom meta boxes and custom fields for WordPress. Using **MB Custom Post Types & Custom Taxonomies** in combination with [other Meta Box extensions](https://metabox.io/plugins/) will help you manage any content types in WordPress easily and make your website more professional.
 
 == Installation ==
 
@@ -47,9 +42,9 @@ You need to install [Meta Box](https://metabox.io) plugin first
 - Click **Install Now** button to install the plugin
 - After installing, click **Activate Plugin** to activate the plugin
 
-Install **MB Custom Post Type** extension
+Install **MB Custom Post Types & Custom Taxonomies** extension
 
-- Go to **Plugins | Add New** and search for **MB Custom Post Type**
+- Go to **Plugins | Add New** and search for **MB Custom Post Types & Custom Taxonomies**
 - Click **Install Now** button to install the plugin
 - After installing, click **Activate Plugin** to activate the plugin
 
@@ -57,9 +52,48 @@ Install **MB Custom Post Type** extension
 
 == Screenshots ==
 1. All registered custom post types
-2. Edit custom post type
+1. Edit custom post type - General tab
+1. Edit custom post type - Labels tab
+1. Edit custom post type - Advanced tab
+1. Edit custom post type - Supports tab
+1. Edit custom post type - Taxonomies tab
 
 == Changelog ==
+= 2.0.8 - 2020-01-25 =
+- Increase priority to register post type to make the submenu Post types & Taxonomies appear first in the main Meta Box menu
+
+= 2.0.7 - 2020-12-11 =
+- Fix missing options for show_in_menu and menu_position
+- Fix label reverts to English
+- Fix icon styling in WordPress 5.6
+- Make JS text translatable after bundling with Webpack
+
+= 2.0.6 - 2020-11-05 =
+- Fix menu icon not showing
+- Improve the code using React context properly
+
+= 2.0.5 - 2020-11-04 =
+- Fix supports tab not rendering
+
+= 2.0.4 - 2020-11-02 =
+- Fix [object Object] when register a custom taxonomy.
+
+= 2.0.3 - 2020-10-07 =
+- Fix migrating data
+
+= 2.0.2 - 2020-10-05 =
+- Fix encoding characters. For users who already upgraded, please add `?mbcpt-force=1` to your website URL to fix the problem.
+- Fix empty page when clicking Taxonomies/Get PHP Code tab
+
+= 2.0.1 - 2020-10-01 =
+- Fix menu position not working
+
+= 2.0.0 - 2020-09-30 =
+- Rewrite the UI with React.
+- Update PHP code to use Composer.
+
+= 1.9.5 - 2020-07-28 =
+- Use WordPress's built-in clipboard script
 
 = 1.9.3 - 2020-04-16 =
 - Fix notice: Undefined index `meta_box_cb`
