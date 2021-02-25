@@ -89,7 +89,7 @@ gulp.task("clean", function () {
 gulp.task(
   "default",
   gulp.series("clean", function () {
-    gulp.start("sass", "js", "images");
+    gulp.series("sass", "js", "images");
   })
 );
 
