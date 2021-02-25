@@ -12,6 +12,11 @@ Template Name: Store
 
 <h1><?php the_title();?></h1>
 
+<?php /*echo do_shortcode('[ecwid_product id="301417470" display="addtobag" 
+version="2" show_border="0" show_price_on_button="1" center_align="1"]'); */?>
+
+<?php the_content();?>
+
 <div>
 
 </div>
