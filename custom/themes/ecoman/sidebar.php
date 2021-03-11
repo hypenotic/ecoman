@@ -3,22 +3,12 @@
 	<ul class="-lst-none -m0 -p0 -ptb1">
 	<?php
 	$categories = get_categories('exclude=1&title_li=');
-	foreach ($categories as $cat) {
-		echo "<li class='-flex -flex-jc-sb'><a href=\"".$cat->category_nicename."\">".$cat->cat_name."</a><a href=\"".$cat->category_nicename."\">$cat->category_count</a></li>";
-	}
+	foreach ($categories as $cat) { ?>
+		<li class='-flex -flex-jc-sb'>
+		<a href="/category/<?php echo $cat->category_nicename; ?>"><?php echo $cat->cat_name;?></a><?php echo $cat->category_count ?></li>
+	<?php }
 	?>
 	</ul>
-	
-
-	<!-- <span class="-serif -italic -pt1 -d-b">Keywords</span>
-	<ul class="-lst-none -m0 -p0 -ptb1">
-	<?php
-	//$terms = get_terms('post_tag',array('hide_empty'=>true));
-	//foreach($terms as $t) {
-	//	echo "<li class='-flex -flex-jc-sb'><a href=\"".$t->name."\">".$t->name."</a><a href=\"".$t->name."\">$t->count</a></li>";
-	//}
-	?>
-	</ul> -->
 
 	<span class="-serif -italic -pt1 -d-b">Social Feeds</span>
 	<ul class="-lst-none -m0 -p0 -ptb1 -flex sidebar_social">
