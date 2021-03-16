@@ -25,7 +25,7 @@
 				</div>
 				<div class="contact-form__right -pos-r">
 					<img src="<?php echo get_template_directory_uri(); ?>/src/images/froggy.png" alt="Black and white illustration of a frog.">
-					<?php echo do_shortcode('[contact-form-7 id="28" title="Contact form 1"]'); ?>
+					<?php echo do_shortcode('[contact-form-7 id="2495" title="Contact form 1"]'); ?>
 				</div>
 			</div>
 		</div>
