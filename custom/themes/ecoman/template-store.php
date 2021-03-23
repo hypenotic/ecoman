@@ -65,7 +65,7 @@ Template Name: Store
 <section style="background-color: #EDF6E9; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 75px 200px;  text-align: center">
     <img style="margin-bottom: 30px;" src="<?php echo get_bloginfo('template_url').'/dist/images/icon_phone.svg';?>" alt="">
     <h3 style="text-transform: uppercase;">CUSTOM ORDERS</h3>
-    <p>Consult an expert to curate a coterie customized to suite your balcony or terrace. We’ll factor in colours, smells, and maintenance requirements for an outdoor living space that gives back year after year.</p> <p>Call or text for a consultation and quote today!</p>
+    <p>Consult an expert to curate a coterie customized to suite your balcony or terrace. We’ll factor in colours, smells, and maintenance requirements for an outdoor living space that gives back year after year.</p> <p>Call or text for a consultation today!</p>
     <h3 style="text-transform: uppercase;  color: #C25B24;">(416) 535-5565</h3>
 </section>
 
