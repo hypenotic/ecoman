@@ -48,7 +48,7 @@ Template Name: Store
         <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 100px; padding: 70px 0;">
             <div>
                 <img style="object-fit: cover; max-width: 100%; height: 300px" src="<?php echo get_bloginfo('template_url').'/dist/images/store_plants.jpg';?>" alt="">
-                <h3 style="text-transform: uppercase; margin-top: 40px;">Curated Plants<br><span style="color: #C25B24; font-style:italic"> $50</span></h3>
+                <h3 style="text-transform: uppercase; margin-top: 40px;">Curated Plants<br><span style="color: #C25B24; font-style:italic"> $75</span></h3>
                 <p>A dozen locally-grown, hardy, low-maintenance plants excited to thrive on your balcony or terrace. (Be sure to grab a bag of Ecoman mineral soil mix).</p>
                 <?php echo do_shortcode('[ecwid_product id="301419297" display="price addtobag"  version="2" show_border="0" show_price_on_button="1" center_align="0"]'); ?>
             </div>
