@@ -31,9 +31,9 @@
 					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats" style="padding-top: 27px;">
 						<p>Jonas Spring,Ecoman</p>
-						<p><a href="https://goo.gl/maps/X7qbM7n4wDAuujEE9" target="_blank>">11 Watkinson Ave,<br/>
+						<p><a href="https://goo.gl/maps/X7qbM7n4wDAuujEE9" target="_blank>">240 Sterling Rd,<br/>
 						Toronto, ON<br/>
-						M6P 2E6</a></p>
+						M6R 2B9</a></p>
 					</div>
 					<div class="contact__blurb" style="padding-top: 10px;">
 						<p><a onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" onclick="trackOutboundLink('mailto:jonas@ecoman.ca'); return false;" href="mailto:jonas@ecoman.ca">jonas@ecoman.ca</a><br/>

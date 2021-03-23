@@ -81,7 +81,7 @@ Template Name: Store
                     <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_watering.svg';?>" alt="">
                     <div>
                         <h3 style="text-transform: uppercase; color: white">Watering</h3>
-                        <p>2 cups of water/week, especially if you don’t get rain on your balcony. </p>
+                        <p>4 cups (1 litre) of water/week, especially if you don’t get rain on your balcony. </p>
                     </div>
                 </div>
                 <div style="display:grid; grid-template-rows: 60px 1fr">
