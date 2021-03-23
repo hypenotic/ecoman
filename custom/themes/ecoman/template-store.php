@@ -16,7 +16,7 @@ Template Name: Store
             <img style="object-fit: contain; max-width: 100%;" src="<?php echo get_bloginfo('template_url').'/dist/images/store_jungle.jpg';?>" alt="">
             <div>
                 <h3 style="text-transform: uppercase">Green toronto’s concrete + glass jungle one balcony at a time</h3>
-                <p>Years of research and testing the plants happiest growing on cliffs and in climates like Ontario’s informed a selection that thrives on balconies and terraces.</p>
+                <p>Years of research and testing to figure out which plants love to grow on local cliffs and <a href="https://en.wikipedia.org/wiki/Alvar" target="_blank">alvars</a> are the basis for our curated selections that thrive on balconies and terraces.</p>
                 <p>They’re low maintenance, resilient, perennials (come back year after year) and come as either pre-assembled “arrangements” or in their components.</p>
                 <p>Green your space + grow our green urban network now.</p> 
             </div>
