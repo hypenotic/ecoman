@@ -6,7 +6,7 @@ Template Name: Store
 
 <?php get_header('store'); ?>
 
-<header style="position: relative; max-width: 100%; height: 450px; background: url(<?php echo get_bloginfo('template_url').'/dist/images/bg_banner_store1.jpg'?>) no-repeat; background-size: cover;">
+<header style="position: relative; max-width: 100%; height: 450px; background: url(<?php echo get_bloginfo('template_url').'/dist/images/bg_banner_store1.jpg'?>) no-repeat; background-size: cover; background-position: 60% 60%;">
     <h1 style="position: absolute; bottom: -140px; display: inline-block; background: rgba(255, 255, 255, 0.9); padding: 50px 100px 40px 100px; color: #C25B24; text-transform: uppercase; font-style: italic;">Instant <br>greenification</h1>
 </header>
 
@@ -34,7 +34,7 @@ Template Name: Store
     <div>
         <h3 style="text-align:center; text-transform: uppercase; margin-top: 75px;"">Balcony + Terrace arrangements<br><span style="color: #C25B24; font-style:italic"> $150</span></h3>
         <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 100px; padding: 70px 0;">
-            <img style="object-fit: contain; max-width: 100%;" src="<?php echo get_bloginfo('template_url').'/dist/images/store_terrace.jpg';?>" alt="">
+            <img style="object-fit: contain; max-width: 500px;" src="<?php echo get_bloginfo('template_url').'/dist/images/store_terrace.png';?>" alt="">
             <div>
                 <h4>INCLUDES</h4>
                 <p>12 locally-grown, hardy, low-maintenance perennial plants in Ecoman custom-formulated mineral soil in a 100% recycled textile planter (12” deep 18” in diameter). Plant selection based on supply, season.</p>
@@ -70,7 +70,7 @@ Template Name: Store
 </section>
 
 <section style="background: rgba(138, 138, 128, 0.9);">
-    <header style="position: relative; max-width: 100%; height: 450px; background:url(<?php echo get_bloginfo('template_url').'/dist/images/bg_banner_store2.jpg'?>) no-repeat; background-size: cover;">
+    <header style="position: relative; max-width: 100%; height: 450px; background:url(<?php echo get_bloginfo('template_url').'/dist/images/bg_banner_store2.jpg'?>) no-repeat; background-size: cover; background-position: 60% 60%;">
         <h1 style="position: absolute; bottom: -140px; display: inline-block; background: rgba(138, 138, 128, 0.9); padding: 50px 100px 40px 100px; color: white; text-transform: uppercase; font-style: italic;">Specifications <br>/care & feeding</h1>
     </header>
 
