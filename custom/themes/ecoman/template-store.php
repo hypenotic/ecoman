@@ -26,7 +26,7 @@ Template Name: Store
 
 <section style="background-color: #EDF6E9; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 75px 200px;  text-align: center">
     <img style="margin-bottom: 30px;" src="<?php echo get_bloginfo('template_url').'/dist/images/icon_truck.svg';?>" alt="">
-    <h3 style="text-transform: uppercase;">GTA DELIVERY <br><span style="color: #C25B24; font-style:italic">$25</span></h3>
+    <h3 style="text-transform: uppercase;">GTA DELIVERY <br><span style="color: #C25B24; font-style:italic">$55</span></h3>
     <p>Delivery to your lobby.<br> Pre-orders will ship after May 20th, 2021</p>
 </section>
 
