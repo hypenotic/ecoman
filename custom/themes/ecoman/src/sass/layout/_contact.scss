@@ -1,271 +1,286 @@
 // STATIC CONTACT FORM
 .full-screen-wrapper.contact {
-	width: 100%;
-	// 
-	position: relative;
-	// 
-	background-color: $copper;
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-position: center center;
-	z-index: 10;
-	// 
-	padding-bottom: 80px;
-	padding-top: 60px;
-	// margin-top: -116px;
-	// 
-	@include flexboxcenter;
-	@include flex-direction(column);
-	// 
-	@include media($bp-med) {
-		// background-image: url(../images/footer_banner_exwide.jpg);
-	}
-	img {
-		width: auto;
-		height: 70px;
-		position: absolute;
-		top: -58px;
-		right: 0;
-		z-index: 20;
-	}
+  width: 100%;
+  //
+  position: relative;
+  //
+  background-color: $copper;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+  //
+  padding-bottom: 80px;
+  padding-top: 60px;
+  // margin-top: -116px;
+  //
+  @include flexboxcenter;
+  @include flex-direction(column);
+  //
+  @include media($bp-med) {
+    // background-image: url(../images/footer_banner_exwide.jpg);
+  }
+  img {
+    width: auto;
+    height: 70px;
+    position: absolute;
+    top: -58px;
+    right: 0;
+    z-index: 20;
+  }
 }
 
 .contact-heading {
-	border-bottom: 2px solid $black;
-	font-size: 20px;
-	margin-bottom: 0.5rem;
+  border-bottom: 2px solid $black;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
 }
 
 .contact-intro {
-	margin: 0 15% 30px;
-	@include media($bp-small) {
-		margin: 0 20px;
-    }
+  margin: 0 15% 30px;
+  @include media($bp-small) {
+    margin: 0 20px;
+  }
 }
 
 .contact-form {
-	width: 100%;
-	min-height: 500px;
-	// 
-	padding: 30px;
-	// 
-	@include display(flex);
-	@include flex-direction(column);
-	// 
-    @include media($bp-med) {
-		@include flex-direction(row);
-    }
-    @include media($bp-ls-small) {
-		@include display(flex);
-		@include flex-direction(column);
-	}
+  width: 100%;
+  min-height: 500px;
+  //
+  padding: 30px;
+  //
+  @include display(flex);
+  @include flex-direction(column);
+  //
+  @include media($bp-med) {
+    @include flex-direction(row);
+  }
+  @include media($bp-ls-small) {
+    @include display(flex);
+    @include flex-direction(column);
+  }
 }
 
-.contact-form__left, 
+.contact-form__left,
 .contact-form__right {
-	display: block;
-	// 
-	padding: 0 30px 0 0;
-	// 
-    @include media($bp-med) {
-		@include display(flex);
-		@include flex-direction(column);
-		@include flex(0 0 100%);
-    }
+  display: block;
+  //
+  padding: 0 30px 0 0;
+  //
+  @include media($bp-med) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include flex(0 0 100%);
+  }
 }
 
 .contact-form__left {
-    @include media($bp-med) {
-		@include flex(0 0 25%);
-    }
-    @include media($bp-ls-small) {
-		@include flex-direction(row);
-		@include justify-content(space-between);
-		padding: 0;
-		margin-bottom: 30px;
-	}
+  @include media($bp-med) {
+    @include flex(0 0 25%);
+  }
+  @include media($bp-ls-small) {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    padding: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .contact__social {
-	ul {
-		list-style-type: none;
-		// 
-		margin: 0;
-		padding: 0;
-		@include display(flex);
-		li {
-			width: 35px;
-			height: 35px;
-			// 
-			background-color: rgba(255,255,255,1);
-			// 
-			border-radius: 50%;
-			margin: 0 5px;
-			//
-			@include flexboxcenter;
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-	}
+  ul {
+    list-style-type: none;
+    //
+    margin: 0;
+    padding: 0;
+    @include display(flex);
+    li {
+      width: 35px;
+      height: 35px;
+      //
+      background-color: rgba(255, 255, 255, 1);
+      //
+      border-radius: 50%;
+      margin: 0 5px;
+      //
+      @include flexboxcenter;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .contact-form__right {
-	margin-top: 20px;
-    @include media($bp-med) {
-		@include flex(0 0 75%);
-		// width: 70%;
-		margin: 0;
-    }
-    @include media($bp-large) {
-		padding: 0 0 0 30px;
-    }
-	h4 {
-		margin-bottom: 0;
-	}
+  margin-top: 20px;
+  @include media($bp-med) {
+    @include flex(0 0 75%);
+    // width: 70%;
+    margin: 0;
+  }
+  @include media($bp-large) {
+    padding: 0 0 0 30px;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
 }
 
 .wpcf7-form {
-	background: white;
-	color: $copper;
-	padding: 2rem;
-	.form__heading {
-		border-bottom: 2px solid black;
-		background: white;
-	}
+  background: white;
+  color: $copper;
+  padding: 2rem;
+  .form__heading {
+    border-bottom: 2px solid black;
+    background: white;
+  }
 }
 
 #wpcf7-f28-p185-o1 {
-	max-width: 400px;
-	// 
-	position: relative;
+  max-width: 400px;
+  //
+  position: relative;
 }
 
 .wpcf7-form-control-wrap.your-name,
 .wpcf7-form-control-wrap.your-email,
 .wpcf7-form-control-wrap.your-message,
 .wpcf7-form-control-wrap.math-quiz {
-	width: 100%;
-	// 
-	position: relative;
-	.wpcf7-text {
-		width: 100%;
-		// 
-		background: transparent;
-		// 
-		border: 0;
-		border-bottom: 2px solid rgba(0,0,0,0.05);
-	}
-	.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
-		border: 0;
-		border-bottom: 2px solid rgba(0,0,0,0.05);
-		background: transparent;
-	}
-	.wpcf7-form-control.wpcf7-textarea {
-		width: 100%;
-		max-height: 150px;
-		// 
-		position: relative;
-		// 
-		background-color: rgba(255,255,255,0.3);
-		// 
-		border: 0;
-		padding: 15px;
-	}	
-	.wpcf7-form-control.wpcf7-quiz {
-		position: relative;
-		// 
-		background-color: rgba(255,255,255,0.3);
-		// 
-		border: 0;
-		padding: 10px;
-	}
+  width: 100%;
+  //
+  position: relative;
+  .wpcf7-text {
+    width: 100%;
+    //
+    background: transparent;
+    //
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  .wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    background: transparent;
+  }
+  .wpcf7-form-control.wpcf7-textarea {
+    width: 100%;
+    max-height: 150px;
+    //
+    position: relative;
+    //
+    background-color: rgba(255, 255, 255, 0.3);
+    //
+    border: 0;
+    padding: 15px;
+  }
+  .wpcf7-form-control.wpcf7-quiz {
+    position: relative;
+    //
+    background-color: rgba(255, 255, 255, 0.3);
+    //
+    border: 0;
+    padding: 10px;
+  }
 }
 
 .wpcf7-form-control.wpcf7-submit {
-	background-color: $white;
-	// 
-	padding: 10px 50px;
-	border: 0;
-	margin-top: 20px;
-	font-family: $title-font;
-	display: block;
-	background: $copper;
-	color: $white;
-	width: 100%;
-	// 
-	&:hover {
-		background-color: $copper;
-		color: $white;
-	}
-	@include media($bp-med) {
-		// float: right;
-	}
+  background-color: $white;
+  //
+  padding: 10px 50px;
+  border: 0;
+  margin-top: 20px;
+  font-family: $title-font;
+  display: block;
+  background: $copper;
+  color: $white;
+  width: 100%;
+  //
+  &:hover {
+    background-color: $copper;
+    color: $white;
+  }
+  @include media($bp-med) {
+    // float: right;
+  }
 }
 
 .name-email-container,
 .message-container,
 .to-container {
-	position: relative;
-	// 
-	@include media($bp-med) {
-		@include display(flex);
-		@include align-items(flex-start);
-		@include justify-content(flex-start);
-		@include flex-direction(row);
-	}
-	> p {
-		@include flex (0 0 15%);
-	}
-	> div {
-		@include flex (0 0 85%);
-	}
+  position: relative;
+  //
+  @include media($bp-med) {
+    @include display(flex);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    @include flex-direction(row);
+  }
+  > p {
+    @include flex(0 0 15%);
+  }
+  > div {
+    @include flex(0 0 85%);
+  }
 }
 
 .message-container {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .name-email-wrap {
-	background-color: rgba(255,255,255,0.3);
-	// 
-	padding: 15px;
-	// 
-	@include display(flex);
-	@include align-items(flex-start);
-	@include justify-content(center);
-	@include flex-direction(column);
+  background-color: rgba(255, 255, 255, 0.3);
+  //
+  padding: 15px;
+  //
+  @include display(flex);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include flex-direction(column);
 }
 
 .wpcf7-quiz-label {
-	font-size: modular-scale(0);
+  font-size: modular-scale(0);
 }
 
 .quiz-container {
-	p {
-		margin-top: 20px;
-		margin-bottom: 5px;
-	}
+  p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
 }
 
 #contact-modal {
-	.quiz-container {
-		p {
-			margin-top: 20px;
-			margin-bottom: 5px;
-		}
-	}
+  .quiz-container {
+    p {
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 #contact-name {
-	// padding-left: 60px;
+  // padding-left: 60px;
 }
 
 .contact__deats p,
 .contact__blurb p {
-	font-size: 16px;
-	line-height: 1.3;
-	a {
-		border-bottom: none !important;
-	}
+  font-size: 16px;
+  line-height: 1.3;
+  a {
+    border-bottom: none !important;
+  }
+}
+
+.contact-temp-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .contact-temp-layout {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 0;
+  }
 }

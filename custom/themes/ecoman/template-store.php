@@ -115,5 +115,5 @@ Template Name: Store
 </section>
 </div>
 
-<?php //get_template_part( 'template-part-contact-form' ); ?>
+<?php get_template_part( 'template-part-contact-form' ); ?>
 <?php get_footer(); ?>

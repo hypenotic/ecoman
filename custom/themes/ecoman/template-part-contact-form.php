@@ -27,7 +27,7 @@
 				</div>
 				-->
 
-				<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; grid-gap: 50px;">
+				<div class="contact-temp-layout">
 					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats" style="padding-top: 27px;">
 						<p>Jonas Spring,Ecoman</p>
