@@ -108,7 +108,6 @@ gulp.task(
   "watch",
   gulp.series("browser-sync", function () {
     gulp.watch("src/sass/**/*.scss", ["sass"]);
-    gulp.watch("src/sass/materialize/**/*.scss", ["sass"]);
     gulp.watch("src/images/*", ["images"]);
     gulp.watch("src/js/**/*.js", ["js"]);
     gulp.watch("*.php").on("change", browsersync.reload);
