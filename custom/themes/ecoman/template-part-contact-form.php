@@ -1,7 +1,7 @@
 <div class="full-screen-wrapper contact" id="contact">
 	<div class="outer-container">
 		<div class="contact-section">
-		<!--
+	
 			<div class="contact-form">
 				<div class="contact-form__left">
 					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
@@ -24,9 +24,19 @@
 		                </ul>
 					</div>
 				</div>
-				</div>
-				-->
+				<!-- / .contact-form__left -->
 
+				<div class="contact-form__right -pos-r">
+					<h3>Contact Form</h3>
+					<?php echo do_shortcode( '[gravityform id="1" ajax="true" title="false" description="false"]' ); ?>
+				</div>
+				<!-- / .contact-form__right -->
+
+			</div>
+			<!-- / .contact-form -->
+			
+				
+				<!--
 				<div class="contact-temp-layout">
 					<div><?php dynamic_sidebar( 'contact-blurb' ); ?></div>
 					<div class="contact__deats" style="padding-top: 27px;">
@@ -48,8 +58,10 @@
 		                </ul>
 					</div>
 				</div>
+				-->
 				
 			
 		</div>
+		<!-- /. contact-section -->
 	</div>
 </div>

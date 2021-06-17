@@ -59,7 +59,7 @@ Template Name: Store
             <div>
                 <img style="object-fit: cover; max-width: 100%; height: 300px" src="<?php echo get_bloginfo('template_url').'/dist/images/store_soil.jpg';?>" alt="">
                 <h3 style="margin-top: 40px;">Mineral Soil mix<br><span style="color: #C25B24; font-style:italic">$25</span></h3>
-                <p>Ecoman mineral-based soil mix, tested and optimized for plants that thrive in natural cliff and crevice conditions.</p><p>37 litres/order (about 50 lbs.) fills 1 planter w/12plants</p>
+                <p>Ecoman mineral-based soil mix, tested and optimized for plants that thrive in natural cliff and crevice conditions.</p><p>37 litres/order (about 50 lbs.) fills 1 planter w/12 plants</p>
                 <?php echo do_shortcode('[ecwid_product id="301417470" display="price addtobag"  version="2" show_border="0" show_price_on_button="1" center_align="0"]'); ?>
             </div>
         <div>
