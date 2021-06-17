@@ -27,13 +27,14 @@
 				<!-- / .contact-form__left -->
 
 				<div class="contact-form__right -pos-r">
-					<?php echo do_shortcode( '[gravityform id="1"]' ); ?>
+					<h3>Contact Form</h3>
+					<?php echo do_shortcode( '[gravityform id="1" ajax="true" title="false" description="false"]' ); ?>
 				</div>
 				<!-- / .contact-form__right -->
 
 			</div>
 			<!-- / .contact-form -->
-				
+			
 				
 				<!--
 				<div class="contact-temp-layout">
