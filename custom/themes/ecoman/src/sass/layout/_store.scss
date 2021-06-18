@@ -116,6 +116,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  width: 1030px;
+  max-width: 100%;
+  margin: 0 auto;
   @media (max-width: 767px) {
     flex-direction: column;
   }
