@@ -66,6 +66,66 @@ Template Name: Store
     </div>
 </section>
 
+<section class="composition">
+    <h3>Composition</h3>
+    <p>Each Arrangement or Dozen contains:</p>
+    <div class="icons-row">
+        <div class="icons-row__box">
+            <div>
+                <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_deciduous.svg';?>" alt="Deciduous Tree">
+            </div>
+            <h4>
+                1 Deciduous Tree 
+                <span>Thriller</span>
+            </h4>
+        </div>
+        <!-- / .icons-row__box -->
+        <div class="icons-row__box">
+            <div>
+                <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_pine.svg';?>" alt="Evergreen Plant">
+            </div>
+            <h4>    
+                1 Evergreen
+                <span>Thriller</span>
+            </h4>
+        </div>
+        <!-- / .icons-row__box -->
+        <div class="icons-row__box">
+            <div>
+                <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_wildflowers.svg';?>" alt="Wildflowers">
+            </div>
+            <h4>
+                8 Wildflowers
+                <span>Show-Stoppers</span>
+            </h4>
+        </div>
+        <!-- / .icons-row__box -->
+        <div class="icons-row__box">
+            <div>
+                <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_grass.svg';?>" alt="Wildflowers">
+            </div>
+            <h4>
+                1 Grass
+                <span>Filler</span>
+            </h4>
+        </div>
+        <!-- / .icons-row__box -->
+        <div class="icons-row__box">
+            <div>
+                <img src="<?php echo get_bloginfo('template_url').'/dist/images/icon_strawberry.svg';?>" alt="Strawberry">
+            </div>
+            <h4>
+                1 Strawberry
+                <span>Spiller</span>
+            </h4>
+        </div>    
+        <!-- / .icons-row__box -->     
+    </div>
+    <!-- / .icons-row -->
+
+    <!-- <a href="" class="btn -bg-accent">Selection Details</a> -->
+</section>
+
 <section class="cta-layout">
     <img style="margin-bottom: 30px;" src="<?php echo get_bloginfo('template_url').'/dist/images/icon_phone.svg';?>" alt="">
     <h3>CUSTOM ORDERS</h3>
